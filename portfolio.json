@@ -10,14 +10,87 @@
     "dip_ratio": 0.4
   },
   "targets": {
-    "463250.KS": { "name": "KODEX 미국휴머노이드로봇", "type": "etf", "monthly": 600000, "account": "ISA" },
-    "0057A0.KS": { "name": "SOL 미국양자컴퓨팅TOP10", "type": "etf", "monthly": 400000, "account": "ISA" },
-    "AVGO": { "name": "Broadcom", "type": "stock", "monthly": 400000, "account": "general" },
-    "PLTR": { "name": "Palantir", "type": "stock", "monthly": 300000, "account": "general" },
-    "NVDA": { "name": "Nvidia", "type": "stock", "monthly": 300000, "account": "general" }
+    "463250.KS": {
+      "name": "KODEX 미국휴머노이드로봇",
+      "type": "etf",
+      "monthly": 600000,
+      "account": "ISA"
+    },
+    "0057A0.KS": {
+      "name": "SOL 미국양자컴퓨팅TOP10",
+      "type": "etf",
+      "monthly": 400000,
+      "account": "ISA"
+    },
+    "AVGO": {
+      "name": "Broadcom",
+      "type": "stock",
+      "monthly": 400000,
+      "account": "general"
+    },
+    "PLTR": {
+      "name": "Palantir",
+      "type": "stock",
+      "monthly": 300000,
+      "account": "general"
+    },
+    "NVDA": {
+      "name": "Nvidia",
+      "type": "stock",
+      "monthly": 300000,
+      "account": "general"
+    }
   },
   "holdings": [],
   "transactions": [],
   "monthly_deposits": [],
-  "last_analysis": null
+  "last_analysis": {
+    "date": "2026-07-10",
+    "actions": [
+      {
+        "ticker": "463250.KS",
+        "name": "KODEX 미국휴머노이드로봇",
+        "account": "ISA",
+        "current": 36075.0,
+        "change": 5.82,
+        "base_buy": 18000,
+        "bonus": 0,
+        "total": 18000,
+        "signal": ""
+      },
+      {
+        "ticker": "AVGO",
+        "name": "Broadcom",
+        "account": "general",
+        "current": 401.11,
+        "change": 3.2,
+        "base_buy": 12000,
+        "bonus": 0,
+        "total": 12000,
+        "signal": ""
+      },
+      {
+        "ticker": "PLTR",
+        "name": "Palantir",
+        "account": "general",
+        "current": 129.04,
+        "change": -2.41,
+        "base_buy": 9000,
+        "bonus": 0,
+        "total": 9000,
+        "signal": ""
+      },
+      {
+        "ticker": "NVDA",
+        "name": "Nvidia",
+        "account": "general",
+        "current": 202.78,
+        "change": -0.66,
+        "base_buy": 9000,
+        "bonus": 0,
+        "total": 9000,
+        "signal": ""
+      }
+    ]
+  }
 }
