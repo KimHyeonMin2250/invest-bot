@@ -44,8 +44,84 @@
   "holdings": [],
   "transactions": [],
   "monthly_deposits": [],
-  "last_analysis": null,
-  "carryover": {},
+  "last_analysis": {
+    "date": "2026-07-10",
+    "actions": [
+      {
+        "ticker": "0038A0.KS",
+        "name": "KODEX 미국휴머노이드로봇",
+        "account": "ISA",
+        "current": 17375.0,
+        "krw_price": 17375,
+        "change": 0.43,
+        "signal": "",
+        "shares": 1,
+        "spent": 17375,
+        "carry": 625,
+        "available": 18000
+      },
+      {
+        "ticker": "0023A0.KS",
+        "name": "SOL 미국양자컴퓨팅TOP10",
+        "account": "ISA",
+        "current": 29560.0,
+        "krw_price": 29560,
+        "change": -0.82,
+        "signal": "",
+        "shares": 0,
+        "spent": 0,
+        "carry": 12000,
+        "available": 12000
+      },
+      {
+        "ticker": "AVGO",
+        "name": "Broadcom",
+        "account": "general",
+        "current": 401.11,
+        "krw_price": 602896,
+        "change": 3.2,
+        "signal": "",
+        "shares": 0.0199,
+        "spent": 12000,
+        "carry": 0,
+        "available": 12000
+      },
+      {
+        "ticker": "PLTR",
+        "name": "Palantir",
+        "account": "general",
+        "current": 129.04,
+        "krw_price": 193956,
+        "change": -2.41,
+        "signal": "",
+        "shares": 0.0464,
+        "spent": 9000,
+        "carry": 0,
+        "available": 9000
+      },
+      {
+        "ticker": "NVDA",
+        "name": "Nvidia",
+        "account": "general",
+        "current": 202.78,
+        "krw_price": 304793,
+        "change": -0.66,
+        "signal": "",
+        "shares": 0.0295,
+        "spent": 9000,
+        "carry": 0,
+        "available": 9000
+      }
+    ],
+    "ai_comment": null
+  },
+  "carryover": {
+    "0038A0.KS": 625.0,
+    "0023A0.KS": 12000.0,
+    "AVGO": 0,
+    "PLTR": 0,
+    "NVDA": 0
+  },
   "base_monthly_total": 2000000,
   "current_month_budget": 2000000
 }
