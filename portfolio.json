@@ -1,6 +1,6 @@
 {
   "goal": 100000000,
-  "start_date": "2026-08-21",
+  "start_date": "2026-09-21",
   "end_date": "2028-03-31",
   "monthly_project_budget": 2000000,
   "deposit": 0,
@@ -44,64 +44,8 @@
   "holdings": [],
   "transactions": [],
   "monthly_deposits": [],
-  "last_analysis": {
-    "date": "2026-07-10",
-    "actions": [
-      {
-        "ticker": "0038A0.KS",
-        "name": "KODEX 미국휴머노이드로봇",
-        "account": "ISA",
-        "current": 17515.0,
-        "change": 1.24,
-        "base_buy": 18000,
-        "bonus": 0,
-        "total": 18000,
-        "signal": ""
-      },
-      {
-        "ticker": "0023A0.KS",
-        "name": "SOL 미국양자컴퓨팅TOP10",
-        "account": "ISA",
-        "current": 29825.0,
-        "change": 0.07,
-        "base_buy": 12000,
-        "bonus": 0,
-        "total": 12000,
-        "signal": ""
-      },
-      {
-        "ticker": "AVGO",
-        "name": "Broadcom",
-        "account": "general",
-        "current": 401.11,
-        "change": 3.2,
-        "base_buy": 12000,
-        "bonus": 0,
-        "total": 12000,
-        "signal": ""
-      },
-      {
-        "ticker": "PLTR",
-        "name": "Palantir",
-        "account": "general",
-        "current": 129.04,
-        "change": -2.41,
-        "base_buy": 9000,
-        "bonus": 0,
-        "total": 9000,
-        "signal": ""
-      },
-      {
-        "ticker": "NVDA",
-        "name": "Nvidia",
-        "account": "general",
-        "current": 202.78,
-        "change": -0.66,
-        "base_buy": 9000,
-        "bonus": 0,
-        "total": 9000,
-        "signal": ""
-      }
-    ]
-  }
+  "last_analysis": null,
+  "carryover": {},
+  "base_monthly_total": 2000000,
+  "current_month_budget": 2000000
 }

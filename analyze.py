@@ -1,15 +1,15 @@
 """
-매일 실행되는 하락일 매수 판단 엔진.
-1. 종목 시세 수집 (야후 파이낸스)
-2. 전일 대비 하락률 계산
-3. 하락일 매수 규칙 적용 (기본풀 + 급락풀)
-4. 슬랙으로 오늘의 매수 지시 발송
+매일 실행되는 하락일 매수 판단 엔진 (v3).
+
+변경점:
+- 금액이 아니라 '몇 주 살지'로 변환 (ISA 소수점 매수 불가 대응)
+- 오늘 못 산 예산은 다음날로 이월 (carryover)
+- ANTHROPIC_API_KEY가 있으면 Claude가 규칙 결과를 한 겹 검토
 """
 import json
 import os
 import datetime
 import calendar
-import urllib.request
 
 import yfinance as yf
 import requests
@@ -17,7 +17,6 @@ import requests
 PORTFOLIO_FILE = "portfolio.json"
 
 
-# ── 데이터 입출력 ────────────────────────────────────────
 def load():
     with open(PORTFOLIO_FILE, encoding="utf-8") as f:
         return json.load(f)
@@ -28,20 +27,26 @@ def save(data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
-# ── 거래일 계산 (이번 달 남은 평일 수) ───────────────────
 def trading_days_left(today):
-    year, month = today.year, today.month
-    last_day = calendar.monthrange(year, month)[1]
-    days = 0
-    for d in range(today.day, last_day + 1):
-        wd = datetime.date(year, month, d).weekday()
-        if wd < 5:  # 월~금
-            days += 1
-    return max(days, 1)
+    last_day = calendar.monthrange(today.year, today.month)[1]
+    return max(sum(
+        1 for d in range(today.day, last_day + 1)
+        if datetime.date(today.year, today.month, d).weekday() < 5
+    ), 1)
 
 
-# ── 시세 수집 ────────────────────────────────────────────
-def fetch_prices(targets):
+def fetch_fx():
+    """원달러 환율. 실패 시 보수적 기본값."""
+    try:
+        hist = yf.Ticker("USDKRW=X").history(period="5d")
+        if not hist.empty:
+            return round(float(hist["Close"].iloc[-1]), 2)
+    except Exception as e:
+        print(f"  ! 환율 수집 실패: {e}")
+    return 1400.0  # 기본값
+
+
+def fetch_prices(targets, fx):
     prices = {}
     for ticker, info in targets.items():
         try:
@@ -52,161 +57,202 @@ def fetch_prices(targets):
             close = hist["Close"]
             current = float(close.iloc[-1])
             prev = float(close.iloc[-2])
-            change = (current - prev) / prev * 100
-            ma5 = float(close.tail(5).mean())
+            # 개별주(달러)는 원화로 환산, ETF(원화)는 그대로
+            krw_price = current * fx if info["type"] == "stock" else current
             prices[ticker] = {
-                "name": info["name"],
-                "type": info["type"],
-                "account": info["account"],
-                "monthly": info["monthly"],
+                **info,
                 "current": round(current, 2),
-                "change": round(change, 2),
-                "vs_ma5": round((current - ma5) / ma5 * 100, 2),
+                "krw_price": round(krw_price),
+                "change": round((current - prev) / prev * 100, 2),
+                "ma5": round(float(close.tail(5).mean()), 2),
             }
         except Exception as e:
             print(f"  ! 시세 실패 {ticker}: {e}")
     return prices
 
 
-# ── 하락일 매수 판단 ─────────────────────────────────────
-def decide(prices, base_ratio, dip_ratio, days_left):
-    """
-    각 종목마다:
-      기본 매수 = (월 배정액 * base_ratio) / 이번달 총 거래일 근사
-      급락 보너스 = 하락폭에 따라 급락풀에서 차등 투입
-    """
+def daily_budget(p, base_ratio, dip_ratio, budget_scale):
+    # 이번 달 예산 비율만큼 종목 배정액을 조정 (예: 예산 절반이면 monthly도 절반)
+    monthly = p["monthly"] * budget_scale
+    base_buy = monthly * base_ratio / 20
+    dip_pool = monthly * dip_ratio
+    change = p["change"]
+    is_etf = p["type"] == "etf"
+
+    bonus, signal = 0, ""
+    if is_etf:
+        if change <= -3:   bonus, signal = dip_pool * 0.30, "🔴 큰 급락 (-3% 이하)"
+        elif change <= -2: bonus, signal = dip_pool * 0.20, "🟠 급락 (-2%대)"
+        elif change <= -1: bonus, signal = dip_pool * 0.10, "🟡 소폭 하락"
+    else:
+        if change <= -7:   bonus, signal = dip_pool * 0.35, "🔴 큰 급락 (-7% 이하)"
+        elif change <= -5: bonus, signal = dip_pool * 0.22, "🟠 급락 (-5%대)"
+        elif change <= -3: bonus, signal = dip_pool * 0.12, "🟡 하락 (-3%대)"
+
+    return base_buy + bonus, signal
+
+
+def decide(prices, cfg, carryover, budget_scale):
     actions = []
+    new_carryover = {}
     for ticker, p in prices.items():
-        monthly = p["monthly"]
-        base_pool = monthly * base_ratio
-        dip_pool = monthly * dip_ratio
+        base, signal = daily_budget(p, cfg["base_ratio"], cfg["dip_ratio"], budget_scale)
+        prev_left = carryover.get(ticker, 0)
+        available = base + prev_left
+        price = p["krw_price"]   # 원화 기준 (개별주는 환산됨)
 
-        # 기본 매수 (매 거래일 꾸준히)
-        base_buy = round(base_pool / 20 / 1000) * 1000  # 월 20거래일 가정, 천원 단위
+        if p["account"] == "ISA":
+            # ISA: 소수점 매수 불가 → 정수 주, 잔액 이월
+            shares = int(available // price)
+            spent = shares * price
+            left = available - spent
+            frac_shares = shares                    # 정수
+        else:
+            # 일반계좌(토스): 소수점 매수 가능 → 배정액 전부 사용
+            spent = round(base)                     # 오늘 배정액 그대로 매수
+            left = 0                                # 이월 없음
+            frac_shares = round(base / price, 4)    # 소수점 주식 수 (참고용)
 
-        # 급락 보너스 판단
-        change = p["change"]
-        is_etf = p["type"] == "etf"
-        bonus = 0
-        signal = ""
+        new_carryover[ticker] = round(left, 2)
 
-        if is_etf:
-            if change <= -3:
-                bonus = round(dip_pool * 0.30 / 1000) * 1000
-                signal = "🔴 큰 급락 (-3% 이하)"
-            elif change <= -2:
-                bonus = round(dip_pool * 0.20 / 1000) * 1000
-                signal = "🟠 급락 (-2%대)"
-            elif change <= -1:
-                bonus = round(dip_pool * 0.10 / 1000) * 1000
-                signal = "🟡 소폭 하락"
-        else:  # 개별주는 변동성 커서 기준을 넓게
-            if change <= -7:
-                bonus = round(dip_pool * 0.35 / 1000) * 1000
-                signal = "🔴 큰 급락 (-7% 이하)"
-            elif change <= -5:
-                bonus = round(dip_pool * 0.22 / 1000) * 1000
-                signal = "🟠 급락 (-5%대)"
-            elif change <= -3:
-                bonus = round(dip_pool * 0.12 / 1000) * 1000
-                signal = "🟡 하락 (-3%대)"
-
-        total = base_buy + bonus
         actions.append({
             "ticker": ticker,
             "name": p["name"],
             "account": p["account"],
             "current": p["current"],
-            "change": change,
-            "base_buy": base_buy,
-            "bonus": bonus,
-            "total": total,
+            "krw_price": price,
+            "change": p["change"],
             "signal": signal,
+            "shares": frac_shares,
+            "spent": round(spent),
+            "carry": round(left),
+            "available": round(available),
         })
-    return actions
+    return actions, new_carryover
 
 
-# ── 슬랙 메시지 생성 & 발송 ──────────────────────────────
-def build_slack_message(actions, today):
-    total_today = sum(a["total"] for a in actions)
+def claude_review(actions, prices):
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key:
+        return None
+    try:
+        summary = "\n".join(
+            f"- {a['name']}: 전일대비 {a['change']:+.1f}%, {a['shares']}주 매수 예정"
+            for a in actions
+        )
+        prompt = (
+            "당신은 신중한 투자 어드바이저입니다. 아래는 오늘 규칙 기반으로 계산된 "
+            "매수 계획입니다. 시장 상황을 고려해 이 계획에 대한 2~3문장의 간단한 코멘트와 "
+            "주의할 점을 한국어로 말해주세요. 매수 자체를 뒤집지는 말고, 참고 의견만 주세요.\n\n"
+            f"{summary}"
+        )
+        resp = requests.post(
+            "https://api.anthropic.com/v1/messages",
+            headers={
+                "x-api-key": api_key,
+                "anthropic-version": "2023-06-01",
+                "content-type": "application/json",
+            },
+            json={
+                "model": "claude-sonnet-4-20250514",
+                "max_tokens": 300,
+                "messages": [{"role": "user", "content": prompt}],
+            },
+            timeout=30,
+        )
+        data = resp.json()
+        return data["content"][0]["text"].strip()
+    except Exception as e:
+        print(f"Claude 검토 실패(무시하고 진행): {e}")
+        return None
 
-    lines = [
-        {"type": "header", "text": {"type": "plain_text", "text": f"📊 오늘의 매수 판단 ({today})"}},
+
+def build_message(actions, today, ai_comment):
+    total_spent = sum(a["spent"] for a in actions)
+    buy_lines = [a for a in actions if a["spent"] > 0]
+    skip_lines = [a for a in actions if a["spent"] == 0]
+
+    blocks = [
+        {"type": "header", "text": {"type": "plain_text", "text": f"📊 오늘의 매수 ({today})"}},
         {"type": "context", "elements": [
-            {"type": "mrkdwn", "text": f"오늘 총 매수 권장액: *{total_today:,}원*"}
+            {"type": "mrkdwn", "text": f"오늘 매수 합계 약 *{total_spent:,}원*"}
         ]},
         {"type": "divider"},
     ]
 
-    for a in actions:
-        chg = a["change"]
-        chg_txt = f"{chg:+.2f}%"
-        signal_txt = f"\n{a['signal']}" if a["signal"] else ""
-        acct = "ISA" if a["account"] == "ISA" else "일반계좌"
+    for a in buy_lines:
+        sig = f"\n{a['signal']}" if a["signal"] else ""
+        if a["account"] == "general":
+            # 일반계좌: 금액 기준 소수점 매수
+            price_txt = f"${a['current']:,} (약 {a['krw_price']:,}원)"
+            buy_txt = f"👉 *{a['spent']:,}원어치 매수* (약 {a['shares']}주, 소수점)"
+            acct = "일반계좌·토스"
+        else:
+            # ISA: 정수 주
+            price_txt = f"{a['current']:,}원"
+            buy_txt = f"👉 *{a['shares']}주 매수* (약 {a['spent']:,}원)"
+            acct = "ISA"
+        blocks.append({"type": "section", "text": {"type": "mrkdwn", "text": (
+            f"*{a['name']}* ({acct})\n"
+            f"현재가 {price_txt} · 전일대비 {a['change']:+.2f}%{sig}\n"
+            f"{buy_txt}"
+        )}})
 
-        detail = f"기본 {a['base_buy']:,}원"
-        if a["bonus"] > 0:
-            detail += f" + 급락 보너스 {a['bonus']:,}원"
+    if skip_lines:
+        skip_txt = "\n".join(
+            f"· {a['name']}: 예산 모으는 중 (이월 {a['carry']:,}원)"
+            for a in skip_lines
+        )
+        blocks.append({"type": "section", "text": {"type": "mrkdwn",
+            "text": f"*오늘 스킵 (다음날 이월)*\n{skip_txt}"}})
 
-        lines.append({
-            "type": "section",
-            "text": {
-                "type": "mrkdwn",
-                "text": (
-                    f"*{a['name']}* ({acct})\n"
-                    f"현재가 {a['current']:,} · 전일대비 {chg_txt}{signal_txt}\n"
-                    f"👉 *오늘 {a['total']:,}원 매수* ({detail})"
-                )
-            }
-        })
+    if ai_comment:
+        blocks.append({"type": "divider"})
+        blocks.append({"type": "section", "text": {"type": "mrkdwn",
+            "text": f"🤖 *Claude 코멘트*\n{ai_comment}"}})
 
-    lines.append({"type": "divider"})
-    lines.append({
-        "type": "context",
-        "elements": [{
-            "type": "mrkdwn",
-            "text": "카카오페이·토스에서 직접 매수 후, 앱에서 기록해주세요. 매수 판단은 참고용이며 투자 책임은 본인에게 있습니다."
-        }]
-    })
-    return {"blocks": lines}
+    blocks.append({"type": "divider"})
+    blocks.append({"type": "context", "elements": [{"type": "mrkdwn",
+        "text": "카카오페이·토스에서 직접 매수 후 앱에 기록하세요. 참고용이며 투자 책임은 본인에게 있습니다."}]})
+    return {"blocks": blocks}
 
 
 def send_slack(message):
     url = os.environ.get("SLACK_WEBHOOK_URL")
     if not url:
-        print("SLACK_WEBHOOK_URL 없음 — 콘솔에만 출력")
         print(json.dumps(message, ensure_ascii=False, indent=2))
         return
-    resp = requests.post(url, json=message, timeout=10)
-    print(f"슬랙 발송: {resp.status_code}")
+    r = requests.post(url, json=message, timeout=10)
+    print(f"슬랙 발송: {r.status_code}")
 
 
-# ── 메인 ─────────────────────────────────────────────────
 def main():
     today = datetime.date.today()
     print(f"[{today}] 분석 시작")
 
     data = load()
-    targets = data["targets"]
-    cfg = data["pool_config"]
-
-    prices = fetch_prices(targets)
+    fx = fetch_fx()
+    print(f"원달러 환율: {fx}")
+    prices = fetch_prices(data["targets"], fx)
     if not prices:
-        print("시세를 하나도 못 가져옴 — 종료")
+        print("시세 수집 실패 — 종료")
         return
 
-    days_left = trading_days_left(today)
-    actions = decide(prices, cfg["base_ratio"], cfg["dip_ratio"], days_left)
+    carryover = data.get("carryover", {})
+    # 이번 달 예산 비율 = 이번 달 실제 예산 / 기준 총액
+    base_total = data.get("base_monthly_total", 2000000)
+    cur_budget = data.get("current_month_budget", base_total)
+    budget_scale = cur_budget / base_total if base_total else 1.0
+    print(f"이번 달 예산 비율: {budget_scale:.2f} (예산 {cur_budget:,}원)")
 
-    # 오늘 판단 기록
-    data["last_analysis"] = {
-        "date": today.isoformat(),
-        "actions": actions,
-    }
+    actions, new_carryover = decide(prices, data["pool_config"], carryover, budget_scale)
+    ai_comment = claude_review(actions, prices)
+
+    data["carryover"] = new_carryover
+    data["last_analysis"] = {"date": today.isoformat(), "actions": actions, "ai_comment": ai_comment}
     save(data)
 
-    message = build_slack_message(actions, today.isoformat())
-    send_slack(message)
+    send_slack(build_message(actions, today.isoformat(), ai_comment))
     print("완료")
 
 
