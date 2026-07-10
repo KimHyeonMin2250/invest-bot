@@ -51,11 +51,22 @@
         "ticker": "463250.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 36075.0,
-        "change": 5.82,
+        "current": 36110.0,
+        "change": 5.93,
         "base_buy": 18000,
         "bonus": 0,
         "total": 18000,
+        "signal": ""
+      },
+      {
+        "ticker": "0023A0.KS",
+        "name": "SOL 미국양자컴퓨팅TOP10",
+        "account": "ISA",
+        "current": 29805.0,
+        "change": 0.0,
+        "base_buy": 12000,
+        "bonus": 0,
+        "total": 12000,
         "signal": ""
       },
       {
