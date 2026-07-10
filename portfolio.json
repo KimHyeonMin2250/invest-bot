@@ -10,7 +10,7 @@
     "dip_ratio": 0.4
   },
   "targets": {
-    "463250.KS": {
+    "0038A0.KS": {
       "name": "KODEX 미국휴머노이드로봇",
       "type": "etf",
       "monthly": 600000,
