@@ -1,0 +1,23 @@
+{
+  "goal": 100000000,
+  "start_date": "2026-08-21",
+  "end_date": "2028-03-31",
+  "monthly_project_budget": 2000000,
+  "deposit": 0,
+  "total_invested": 0,
+  "pool_config": {
+    "base_ratio": 0.6,
+    "dip_ratio": 0.4
+  },
+  "targets": {
+    "463250.KS": { "name": "KODEX 미국휴머노이드로봇", "type": "etf", "monthly": 600000, "account": "ISA" },
+    "0057A0.KS": { "name": "SOL 미국양자컴퓨팅TOP10", "type": "etf", "monthly": 400000, "account": "ISA" },
+    "AVGO": { "name": "Broadcom", "type": "stock", "monthly": 400000, "account": "general" },
+    "PLTR": { "name": "Palantir", "type": "stock", "monthly": 300000, "account": "general" },
+    "NVDA": { "name": "Nvidia", "type": "stock", "monthly": 300000, "account": "general" }
+  },
+  "holdings": [],
+  "transactions": [],
+  "monthly_deposits": [],
+  "last_analysis": null
+}
