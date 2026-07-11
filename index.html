@@ -223,6 +223,14 @@
   .tab.on { color: var(--violet); }
   .tab-ic { font-size: 19px; }
 
+
+  .btn-row { display: flex; gap: 8px; margin-top: 12px; }
+  .bt { flex: 1; padding: 11px; border: none; border-radius: 12px; font-family: 'Sora'; font-size: 13.5px; font-weight: 600; cursor: pointer; transition: opacity 0.18s; }
+  .bt:active { opacity: 0.7; }
+  .bt-yes { background: var(--green); color: #fff; }
+  .bt-no { background: var(--bg); color: var(--ink-2); border: 1.5px solid var(--line); }
+  .done-tag { margin-top: 12px; text-align: center; padding: 10px; border-radius: 12px; background: var(--green-soft); color: var(--green); font-size: 13px; font-weight: 600; }
+
   /* 토스트 */
   .toast {
     position: fixed; left: 50%; bottom: 100px; transform: translateX(-50%) translateY(140px);
@@ -357,8 +365,8 @@
 
 <script>
 // ── 설정: 본인 GitHub 정보로 교체 ──
-const GH_USER = 'KimHyeonMin2250';
-const GH_REPO = 'invest-bot';
+const GH_USER = 'YOUR_GITHUB_USERNAME';
+const GH_REPO = 'YOUR_REPO_NAME';
 const GH_TOKEN = '';   // (선택) 앱에서 저장까지 하려면 fine-grained 토큰
 // ──────────────────────────────
 
@@ -373,7 +381,8 @@ let P = {
   goal: 100000000, start_date: '2026-09-21',
   deposit: 0, total_invested: 0,
   base_monthly_total: 2000000, current_month_budget: 2000000,
-  targets: {}, holdings: [], transactions: [], monthly_deposits: [], last_analysis: null
+  targets: {}, holdings: [], transactions: [], monthly_deposits: [],
+  last_isa: null, last_general: null, action_log: []
 };
 
 const won = n => Math.round(n).toLocaleString('ko-KR') + '원';
@@ -437,46 +446,71 @@ function renderHome() {
 }
 
 function renderToday() {
-  const a = P.last_analysis, box = $('t-body');
-  if (!a || !a.actions || !a.actions.length) {
-    box.innerHTML = `<div class="list"><div class="empty"><div class="empty-ic">⚡</div><b>오늘의 판단을 기다리는 중</b>매일 밤 미국장 시간에<br>슬랙으로 매수 판단이 도착해요</div></div>`;
+  const box = $('t-body');
+  const isa = P.last_isa, gen = P.last_general;
+  if ((!isa || !isa.actions?.length) && (!gen || !gen.actions?.length)) {
+    box.innerHTML = `<div class="list"><div class="empty"><div class="empty-ic">⚡</div><b>오늘의 판단을 기다리는 중</b>ISA는 낮 12시 30분<br>미국주식은 밤 11시 30분에 도착해요</div></div>`;
     return;
   }
   let html = '';
-  if (a.ai_comment) {
-    html += `<div class="ai"><div class="ai-top"><span>🤖</span><span class="ai-badge">Claude 코멘트</span></div><div class="ai-text">${a.ai_comment}</div></div>`;
-  }
-  const buys = a.actions.filter(x => x.spent > 0);
-  html += buys.map(x => {
-    const up = x.change >= 0;
-    const acct = x.account==='ISA' ? 'ISA' : '일반계좌·토스';
-    let detail, amt;
-    if (x.account === 'general') {
-      amt = `${won(x.spent)}어치`;
-      detail = `약 ${x.shares}주 (소수점) · 현재가 $${x.current}`;
-    } else {
-      amt = `${x.shares}주`;
-      detail = `약 ${won(x.spent)} · 현재가 ${won(x.current)}`;
-    }
-    return `<div class="buy-card">
-      <div class="buy-top">
-        <span class="buy-name">${x.name}</span>
-        <span class="buy-chg ${up?'chg-up':'chg-down'}">${up?'+':''}${x.change.toFixed(2)}%</span>
-      </div>
-      ${x.signal ? `<div class="buy-signal">${x.signal}</div>` : ''}
-      <div class="buy-action">
-        <span class="buy-a-k">${acct} · 매수</span>
-        <span class="buy-a-v">${amt}</span>
-      </div>
-      <div class="buy-detail">${detail}</div>
-    </div>`;
-  }).join('');
-
-  const skips = a.actions.filter(x => x.spent === 0);
-  if (skips.length) {
-    html += `<div class="callout">💡 예산 모으는 중: ${skips.map(s=>`${s.name} (이월 ${won(s.carry)})`).join(', ')}</div>`;
-  }
+  [['isa', isa, '🇰🇷 ISA · 카카오페이', '국내장'], ['general', gen, '🇺🇸 일반계좌 · 토스', '미국장']].forEach(([key, a, label, mkt]) => {
+    if (!a || !a.actions?.length) return;
+    html += `<div class="sec" style="margin-top:18px"><span class="sec-t">${label}</span><span class="sec-more">${a.date}</span></div>`;
+    if (a.dip_note) html += `<div class="ai" style="background:linear-gradient(135deg,#ffe8e8,#fff5f5);border-color:#ffc9c9"><div class="ai-top"><span>⚠️</span><span class="ai-badge" style="color:#c73939">급락 분석</span></div><div class="ai-text" style="color:#7a2e2e">${a.dip_note}</div></div>`;
+    if (a.ai_comment) html += `<div class="ai"><div class="ai-top"><span>🤖</span><span class="ai-badge">Claude 코멘트</span></div><div class="ai-text">${a.ai_comment}</div></div>`;
+    a.actions.filter(x => x.spent > 0).forEach((x, i) => {
+      const up = x.change >= 0;
+      const done = isDone(x.ticker, a.date);
+      let amt, detail;
+      if (x.account === 'general') {
+        amt = `${won(x.spent)}어치`; detail = `약 ${x.shares}주 (소수점) · $${x.current}`;
+      } else {
+        amt = `${x.shares}주`; detail = `약 ${won(x.spent)} · ${won(x.current)}`;
+      }
+      html += `<div class="buy-card">
+        <div class="buy-top"><span class="buy-name">${x.name}</span>
+          <span class="buy-chg ${up?'chg-up':'chg-down'}">${up?'+':''}${x.change.toFixed(2)}%</span></div>
+        ${x.signal ? `<div class="buy-signal">${x.signal}</div>` : ''}
+        <div class="buy-action"><span class="buy-a-k">매수</span><span class="buy-a-v">${amt}</span></div>
+        <div class="buy-detail">${detail}</div>
+        ${done
+          ? `<div class="done-tag">${done === 'bought' ? '✅ 매수 완료' : '⏭️ 건너뜀'}</div>`
+          : `<div class="btn-row">
+              <button class="bt bt-yes" onclick="mark('${x.ticker}','${a.date}','bought',${x.spent},'${x.name.replace(/'/g,"")}')">✅ 샀어요</button>
+              <button class="bt bt-no" onclick="mark('${x.ticker}','${a.date}','skipped',0,'')">⏭️ 건너뜀</button>
+            </div>`}
+      </div>`;
+    });
+    const sk = a.actions.filter(x => x.spent === 0);
+    if (sk.length) html += `<div class="callout">💡 예산 모으는 중: ${sk.map(s=>`${s.name} (${won(s.carry)})`).join(', ')}</div>`;
+  });
   box.innerHTML = html;
+}
+
+function isDone(ticker, date) {
+  const log = (P.action_log || []).find(l => l.ticker === ticker && l.date === date);
+  return log ? log.status : null;
+}
+
+async function mark(ticker, date, status, spent, name) {
+  P.action_log = P.action_log || [];
+  P.action_log = P.action_log.filter(l => !(l.ticker === ticker && l.date === date));
+  P.action_log.unshift({ ticker, date, status });
+
+  if (status === 'bought' && spent > 0) {
+    P.deposit = Math.max(0, (P.deposit || 0) - spent);
+    P.holdings = P.holdings || [];
+    const ex = P.holdings.find(x => x.ticker === ticker);
+    if (ex) ex.invested = (ex.invested || 0) + spent;
+    else P.holdings.push({ ticker, name, invested: spent });
+    P.transactions = P.transactions || [];
+    P.transactions.unshift({ type: 'buy', ticker, name, amount: spent, date });
+    toast(`✅ ${name} 매수 기록됨`);
+  } else {
+    toast('⏭️ 건너뜀으로 기록');
+  }
+  await persist();
+  renderAll();
 }
 
 function renderMoney() {
