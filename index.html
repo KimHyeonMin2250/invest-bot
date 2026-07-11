@@ -406,7 +406,7 @@ async function persist() {
   try {
     // 현재 파일 SHA 가져오기
     const metaRes = await fetch(API_URL, {
-      headers: { Authorization: `token ${GH_TOKEN}`, 'Accept': 'application/vnd.github.v3+json' }
+      headers: { Authorization: `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github.v3+json' }
     });
     if (!metaRes.ok) {
       toast(`❌ GitHub 읽기 실패: ${metaRes.status}`);
@@ -418,7 +418,7 @@ async function persist() {
     const saveRes = await fetch(API_URL, {
       method: 'PUT',
       headers: {
-        Authorization: `token ${GH_TOKEN}`,
+        Authorization: `Bearer ${GH_TOKEN}`,
         'Content-Type': 'application/json',
         'Accept': 'application/vnd.github.v3+json'
       },
