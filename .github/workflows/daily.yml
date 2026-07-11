@@ -1,9 +1,19 @@
-name: Daily Dip-Buy Analysis
+name: Investment Alerts
 
 on:
   schedule:
+    # ISA(국내ETF): 한국시간 12:30 = UTC 03:30, 평일
+    - cron: '30 3 * * 1-5'
+    # 일반계좌(미국주식): 한국시간 23:30 = UTC 14:30, 평일
     - cron: '30 14 * * 1-5'
   workflow_dispatch:
+    inputs:
+      market:
+        description: '수동 실행할 시장'
+        required: false
+        default: 'all'
+        type: choice
+        options: [all, isa, general]
 
 jobs:
   analyze:
@@ -12,23 +22,35 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
       - name: Install dependencies
         run: pip install yfinance requests
 
-      - name: Run daily analysis
+      - name: Decide market by schedule
+        id: mkt
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "market=${{ github.event.inputs.market }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "30 3 * * 1-5" ]; then
+            echo "market=isa" >> $GITHUB_OUTPUT
+          else
+            echo "market=general" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Run analysis
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MARKET: ${{ steps.mkt.outputs.market }}
         run: python analyze.py
 
-      - name: Save updated portfolio
+      - name: Save state
         run: |
           git config --local user.email "bot@github.com"
           git config --local user.name "Investment Bot"
           git add portfolio.json
-          git diff --staged --quiet || git commit -m "update"
+          git diff --staged --quiet || git commit -m "update $(date +'%Y-%m-%d %H:%M')"
+          git pull --rebase --autostash || true
           git push
