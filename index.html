@@ -398,45 +398,43 @@ async function load() {
 }
 
 async function persist() {
+  // 로컬에는 항상 저장
   localStorage.setItem('P', JSON.stringify(P));
-  if (!GH_TOKEN || GH_TOKEN === 'YOUR_GITHUB_TOKEN') {
-    toast('⚠️ 토큰 미설정 — 로컬에만 저장됨');
-    return;
-  }
-  try {
-    // 현재 파일 SHA 가져오기
-    const metaRes = await fetch(API_URL, {
-      headers: { Authorization: `Bearer ${GH_TOKEN}`, 'Accept': 'application/vnd.github.v3+json' }
-    });
-    if (!metaRes.ok) {
-      toast(`❌ GitHub 읽기 실패: ${metaRes.status}`);
-      return;
-    }
-    const meta = await metaRes.json();
+}
 
-    // 저장
-    const saveRes = await fetch(API_URL, {
-      method: 'PUT',
-      headers: {
-        Authorization: `Bearer ${GH_TOKEN}`,
-        'Content-Type': 'application/json',
-        'Accept': 'application/vnd.github.v3+json'
-      },
-      body: JSON.stringify({
-        message: `app ${new Date().toISOString().slice(0,10)}`,
-        content: btoa(unescape(encodeURIComponent(JSON.stringify(P, null, 2)))),
-        sha: meta.sha
-      })
-    });
-    if (saveRes.ok) {
-      toast('✅ GitHub 저장 완료');
+async function triggerRecord(actionType, ticker, name, amount, market) {
+  // GitHub Actions workflow_dispatch로 기록
+  const REPO = `${GH_USER}/${GH_REPO}`;
+  try {
+    const res = await fetch(
+      `https://api.github.com/repos/${REPO}/actions/workflows/record.yml/dispatches`,
+      {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${GH_TOKEN}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          ref: 'main',
+          inputs: {
+            action_type: actionType,
+            ticker: ticker,
+            name: name,
+            amount: String(amount),
+            market: market
+          }
+        })
+      }
+    );
+    if (res.status === 204) {
+      toast('✅ 기록 중... (30초 후 반영)');
     } else {
-      const err = await saveRes.json();
-      toast(`❌ 저장 실패: ${err.message}`);
+      const err = await res.json();
+      toast(`❌ 기록 실패: ${err.message}`);
     }
   } catch(e) {
-    toast(`❌ 저장 오류: ${e.message}`);
-    console.error(e);
+    toast(`❌ 오류: ${e.message}`);
   }
 }
 
@@ -522,6 +520,7 @@ function isDone(ticker, date) {
 }
 
 async function mark(ticker, date, status, spent, name) {
+  // 로컬 기록
   P.action_log = P.action_log || [];
   P.action_log = P.action_log.filter(l => !(l.ticker === ticker && l.date === date));
   P.action_log.unshift({ ticker, date, status });
@@ -533,13 +532,16 @@ async function mark(ticker, date, status, spent, name) {
     if (ex) ex.invested = (ex.invested || 0) + spent;
     else P.holdings.push({ ticker, name, invested: spent });
     P.transactions = P.transactions || [];
-    P.transactions.unshift({ type: 'buy', ticker, name, amount: spent, date });
-    toast(`✅ ${name} 매수 기록됨`);
-  } else {
-    toast('⏭️ 건너뜀으로 기록');
+    P.transactions.unshift({ type:'buy', ticker, name, amount: spent, date });
   }
+
+  // 로컬 저장
   await persist();
   renderAll();
+
+  // GitHub Actions 트리거 (GitHub에 영구 저장)
+  const market = (P.targets[ticker] || {}).account === 'ISA' ? 'isa' : 'general';
+  await triggerRecord(status, ticker, name, spent, market);
 }
 
 function renderMoney() {
