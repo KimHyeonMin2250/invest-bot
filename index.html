@@ -399,16 +399,45 @@ async function load() {
 
 async function persist() {
   localStorage.setItem('P', JSON.stringify(P));
-  if (!GH_TOKEN || GH_TOKEN === 'YOUR_GITHUB_TOKEN') { console.warn('토큰 미설정: 로컬에만 저장됨'); return; }
+  if (!GH_TOKEN || GH_TOKEN === 'YOUR_GITHUB_TOKEN') {
+    toast('⚠️ 토큰 미설정 — 로컬에만 저장됨');
+    return;
+  }
   try {
-    const meta = await (await fetch(API_URL, { headers:{ Authorization:`token ${GH_TOKEN}` }})).json();
-    await fetch(API_URL, { method:'PUT',
-      headers:{ Authorization:`token ${GH_TOKEN}`, 'Content-Type':'application/json' },
+    // 현재 파일 SHA 가져오기
+    const metaRes = await fetch(API_URL, {
+      headers: { Authorization: `token ${GH_TOKEN}`, 'Accept': 'application/vnd.github.v3+json' }
+    });
+    if (!metaRes.ok) {
+      toast(`❌ GitHub 읽기 실패: ${metaRes.status}`);
+      return;
+    }
+    const meta = await metaRes.json();
+
+    // 저장
+    const saveRes = await fetch(API_URL, {
+      method: 'PUT',
+      headers: {
+        Authorization: `token ${GH_TOKEN}`,
+        'Content-Type': 'application/json',
+        'Accept': 'application/vnd.github.v3+json'
+      },
       body: JSON.stringify({
-        message:`app ${new Date().toISOString().slice(0,10)}`,
-        content: btoa(unescape(encodeURIComponent(JSON.stringify(P,null,2)))),
-        sha: meta.sha })});
-  } catch(e){ console.error(e); }
+        message: `app ${new Date().toISOString().slice(0,10)}`,
+        content: btoa(unescape(encodeURIComponent(JSON.stringify(P, null, 2)))),
+        sha: meta.sha
+      })
+    });
+    if (saveRes.ok) {
+      toast('✅ GitHub 저장 완료');
+    } else {
+      const err = await saveRes.json();
+      toast(`❌ 저장 실패: ${err.message}`);
+    }
+  } catch(e) {
+    toast(`❌ 저장 오류: ${e.message}`);
+    console.error(e);
+  }
 }
 
 function renderHome() {
