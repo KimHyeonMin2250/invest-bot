@@ -365,9 +365,9 @@
 
 <script>
 // ── 설정: 본인 GitHub 정보로 교체 ──
-const GH_USER = 'YOUR_GITHUB_USERNAME';
-const GH_REPO = 'YOUR_REPO_NAME';
-const GH_TOKEN = '';   // (선택) 앱에서 저장까지 하려면 fine-grained 토큰
+const GH_USER = 'KimHyeonMin2250';
+const GH_REPO = 'invest-bot';
+const GH_TOKEN = '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';
 // ──────────────────────────────
 
 const RAW_URL = `https://raw.githubusercontent.com/${GH_USER}/${GH_REPO}/main/portfolio.json`;
@@ -399,7 +399,7 @@ async function load() {
 
 async function persist() {
   localStorage.setItem('P', JSON.stringify(P));
-  if (!GH_TOKEN) return;
+  if (!GH_TOKEN || GH_TOKEN === 'YOUR_GITHUB_TOKEN') { console.warn('토큰 미설정: 로컬에만 저장됨'); return; }
   try {
     const meta = await (await fetch(API_URL, { headers:{ Authorization:`token ${GH_TOKEN}` }})).json();
     await fetch(API_URL, { method:'PUT',

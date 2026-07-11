@@ -44,88 +44,10 @@
   "holdings": [],
   "transactions": [],
   "monthly_deposits": [],
-  "carryover": {
-    "0038A0.KS": 0,
-    "0023A0.KS": 0,
-    "AVGO": 0,
-    "PLTR": 0,
-    "NVDA": 0
-  },
+  "carryover": {},
   "base_monthly_total": 2000000,
   "current_month_budget": 2000000,
   "action_log": [],
   "last_isa": null,
-  "last_general": {
-    "date": "2026-07-11",
-    "actions": [
-      {
-        "ticker": "0038A0.KS",
-        "name": "KODEX 미국휴머노이드로봇",
-        "account": "ISA",
-        "current": 17370.0,
-        "krw_price": 17370,
-        "change": 0.4,
-        "signal": "",
-        "shares": 1,
-        "spent": 17370,
-        "carry": 630,
-        "available": 18000
-      },
-      {
-        "ticker": "0023A0.KS",
-        "name": "SOL 미국양자컴퓨팅TOP10",
-        "account": "ISA",
-        "current": 29505.0,
-        "krw_price": 29505,
-        "change": -1.01,
-        "signal": "🟡 소폭 하락",
-        "shares": 0,
-        "spent": 0,
-        "carry": 28000,
-        "available": 28000
-      },
-      {
-        "ticker": "AVGO",
-        "name": "Broadcom",
-        "account": "general",
-        "current": 399.97,
-        "krw_price": 599503,
-        "change": -0.28,
-        "signal": "",
-        "shares": 0.02,
-        "spent": 12000,
-        "carry": 0,
-        "available": 12000
-      },
-      {
-        "ticker": "PLTR",
-        "name": "Palantir",
-        "account": "general",
-        "current": 126.79,
-        "krw_price": 190042,
-        "change": -1.74,
-        "signal": "",
-        "shares": 0.0474,
-        "spent": 9000,
-        "carry": 0,
-        "available": 9000
-      },
-      {
-        "ticker": "NVDA",
-        "name": "Nvidia",
-        "account": "general",
-        "current": 210.96,
-        "krw_price": 316202,
-        "change": 4.03,
-        "signal": "",
-        "shares": 0.0285,
-        "spent": 9000,
-        "carry": 0,
-        "available": 9000
-      }
-    ],
-    "ai_comment": null,
-    "dip_note": null
-  },
-  "fx": 1498.87
+  "last_general": null
 }

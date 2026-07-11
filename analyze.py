@@ -8,7 +8,7 @@ import yfinance as yf
 import requests
 
 PF = "portfolio.json"
-MARKET = os.environ.get("MARKET", "all")          # isa | general | all
+MARKET = os.environ.get("MARKET", "all")
 API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 MODEL = "claude-sonnet-5"
 
@@ -31,7 +31,6 @@ def fetch_fx():
 def fetch_prices(targets, fx, market):
     prices = {}
     for tk, info in targets.items():
-        # 시장 필터
         if market == "isa" and info["account"] != "ISA": continue
         if market == "general" and info["account"] != "general": continue
         try:
@@ -67,29 +66,52 @@ def daily_budget(p, base_r, dip_r, scale):
     return base + bonus, sig
 
 
-def decide(prices, cfg, carry, scale):
+def decide(prices, cfg, carry, scale, pending):
     acts, new_carry = [], dict(carry)
     for tk, p in prices.items():
         base, sig = daily_budget(p, cfg["base_ratio"], cfg["dip_ratio"], scale)
-        avail = base + carry.get(tk, 0)
+        skipped = pending.get(tk, 0)
+        avail = base + carry.get(tk, 0) + skipped
         price = p["krw_price"]
         if p["account"] == "ISA":
             shares = int(avail // price)
             spent = shares * price
             left = avail - spent
         else:
-            shares = round(base / price, 4)
-            spent = round(base)
+            spent = round(base + skipped)
+            shares = round(spent / price, 4)
             left = 0
         new_carry[tk] = round(left, 2)
         acts.append({"ticker": tk, "name": p["name"], "account": p["account"],
             "current": p["current"], "krw_price": price, "change": p["change"],
             "signal": sig, "shares": shares, "spent": round(spent),
-            "carry": round(left), "available": round(avail)})
+            "carry": round(left), "available": round(avail),
+            "skipped_added": round(skipped)})
     return acts, new_carry
 
 
-# ── Claude ───────────────────────────────────────────────
+def get_pending(data, market):
+    log = data.get("action_log", [])
+    key = "last_isa" if market == "isa" else "last_general"
+    last = data.get(key) or {}
+    last_acts = {a["ticker"]: a for a in last.get("actions", [])}
+
+    pending = {}
+    for entry in log:
+        if entry.get("settled"): continue
+        if entry.get("status") != "skipped": continue
+        tk = entry["ticker"]
+        if tk not in last_acts: continue
+        pending[tk] = pending.get(tk, 0) + last_acts[tk].get("spent", 0)
+        entry["settled"] = True
+
+    for entry in log:
+        if entry.get("status") == "bought":
+            entry["settled"] = True
+
+    return pending
+
+
 def call_claude(prompt, max_tokens=500):
     if not API_KEY: return None
     try:
@@ -106,7 +128,6 @@ def call_claude(prompt, max_tokens=500):
 
 
 def claude_comment(acts):
-    """기능1: 매일 코멘트"""
     s = "\n".join(f"- {a['name']}: 전일대비 {a['change']:+.1f}%, "
                   f"{'MA5 대비 하회' if a['signal'] else '정상 범위'}" for a in acts)
     return call_claude(
@@ -115,7 +136,6 @@ def claude_comment(acts):
 
 
 def claude_dip_check(acts, prices):
-    """기능2: 급락 성격 구분 — 급락 신호가 있을 때만 호출"""
     dips = [a for a in acts if a["signal"]]
     if not dips: return None
     lines = []
@@ -132,7 +152,6 @@ def claude_dip_check(acts, prices):
 
 
 def claude_monthly(data):
-    """기능3: 월간 리뷰 — 매달 1일에만"""
     holdings = data.get("holdings", [])
     if not holdings: return None
     total = sum(h.get("invested", 0) for h in holdings)
@@ -147,7 +166,6 @@ def claude_monthly(data):
         f"[현재 비중]\n" + "\n".join(lines) + f"\n\n[계획 비중]\n" + "\n".join(plan), 500)
 
 
-# ── 슬랙 ─────────────────────────────────────────────────
 def build_msg(acts, today, market, comment, dip_note, monthly):
     total = sum(a["spent"] for a in acts)
     buys = [a for a in acts if a["spent"] > 0]
@@ -165,6 +183,7 @@ def build_msg(acts, today, market, comment, dip_note, monthly):
 
     for a in buys:
         sig = f"\n{a['signal']}" if a["signal"] else ""
+        add = f"\n↩️ 어제 건너뛴 {a['skipped_added']:,}원 합산됨" if a.get("skipped_added") else ""
         if a["account"] == "general":
             pt = f"${a['current']:,} (약 {a['krw_price']:,}원)"
             bt = f"👉 *{a['spent']:,}원어치* (약 {a['shares']}주, 소수점)"
@@ -172,7 +191,7 @@ def build_msg(acts, today, market, comment, dip_note, monthly):
             pt = f"{a['current']:,}원"
             bt = f"👉 *{a['shares']}주 매수* (약 {a['spent']:,}원)"
         b.append({"type": "section", "text": {"type": "mrkdwn",
-            "text": f"*{a['name']}*\n현재가 {pt} · 전일대비 {a['change']:+.2f}%{sig}\n{bt}"}})
+            "text": f"*{a['name']}*\n현재가 {pt} · 전일대비 {a['change']:+.2f}%{sig}{add}\n{bt}"}})
 
     if skips:
         b.append({"type": "section", "text": {"type": "mrkdwn",
@@ -215,7 +234,10 @@ def main():
     scale = budget / base_total if base_total else 1.0
 
     carry = data.get("carryover", {})
-    acts, new_carry = decide(prices, data["pool_config"], carry, scale)
+    pending = get_pending(data, MARKET)
+    if pending:
+        print(f"건너뛴 금액 이월: {pending}")
+    acts, new_carry = decide(prices, data["pool_config"], carry, scale, pending)
 
     comment = claude_comment(acts)
     dip_note = claude_dip_check(acts, prices)
