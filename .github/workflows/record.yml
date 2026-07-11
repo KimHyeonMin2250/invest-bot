@@ -1,0 +1,49 @@
+name: Record Action
+
+on:
+  workflow_dispatch:
+    inputs:
+      action_type:
+        description: 'bought or skipped'
+        required: true
+      ticker:
+        description: 'ticker'
+        required: true
+      name:
+        description: 'name'
+        required: true
+      amount:
+        description: 'amount'
+        required: true
+      market:
+        description: 'isa or general'
+        required: true
+
+jobs:
+  record:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Record action
+        env:
+          ACTION_TYPE: ${{ github.event.inputs.action_type }}
+          TICKER: ${{ github.event.inputs.ticker }}
+          NAME: ${{ github.event.inputs.name }}
+          AMOUNT: ${{ github.event.inputs.amount }}
+          MARKET: ${{ github.event.inputs.market }}
+        run: python record.py
+
+      - name: Save
+        run: |
+          git config --local user.email "bot@github.com"
+          git config --local user.name "Investment Bot"
+          git add portfolio.json
+          git diff --staged --quiet || git commit -m "record $(date +'%Y-%m-%d %H:%M')"
+          git pull --rebase --autostash || true
+          git push
