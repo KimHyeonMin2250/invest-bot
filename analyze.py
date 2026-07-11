@@ -121,7 +121,16 @@ def call_claude(prompt, max_tokens=500):
             json={"model": MODEL, "max_tokens": max_tokens,
                   "messages": [{"role": "user", "content": prompt}]},
             timeout=40)
-        return r.json()["content"][0]["text"].strip()
+        data = r.json()
+        print(f"Claude 응답 구조: {list(data.keys())}")
+        # 응답 구조 유연하게 처리
+        if "content" in data:
+            for block in data["content"]:
+                if isinstance(block, dict) and block.get("type") == "text":
+                    return block["text"].strip()
+        if "error" in data:
+            print(f"Claude API 에러: {data['error']}")
+        return None
     except Exception as e:
         print(f"Claude 실패: {e}")
         return None
