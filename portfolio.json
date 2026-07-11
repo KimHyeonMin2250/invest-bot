@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 630.0,
-    "0023A0.KS": 28000.0,
+    "0038A0.KS": 0,
+    "0023A0.KS": 0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
