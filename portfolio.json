@@ -90,59 +90,31 @@
     "dip_note": "**KODEX 미국휴머노이드로봇** (-1.1%)\n하락폭이 5일/20일 평균 대비 완만한 수준으로, 개별 악재보다는 최근 조정 흐름의 연장으로 보입니다. 다만 실제 시장 전반의 등락 상황이나 관련 뉴스를 확인할 수 없어 확정적으로 판단하기는 어렵습니다.\n\n**SOL 미국양자컴퓨팅TOP10** (-4.5%)\n하락폭이 상대적으로 크고"
   },
   "last_general": {
-    "date": "2026-07-11",
+    "date": "2026-07-13",
     "actions": [
-      {
-        "ticker": "0038A0.KS",
-        "name": "KODEX 미국휴머노이드로봇",
-        "account": "ISA",
-        "current": 17370.0,
-        "krw_price": 17370,
-        "change": 0.4,
-        "signal": "",
-        "shares": 1,
-        "spent": 17370,
-        "carry": 630,
-        "available": 18000,
-        "skipped_added": 0
-      },
-      {
-        "ticker": "0023A0.KS",
-        "name": "SOL 미국양자컴퓨팅TOP10",
-        "account": "ISA",
-        "current": 29505.0,
-        "krw_price": 29505,
-        "change": -1.01,
-        "signal": "🟡 소폭 하락",
-        "shares": 0,
-        "spent": 0,
-        "carry": 28000,
-        "available": 28000,
-        "skipped_added": 0
-      },
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 399.97,
-        "krw_price": 599435,
-        "change": -0.28,
-        "signal": "",
-        "shares": 0.02,
-        "spent": 12000,
+        "current": 387.64,
+        "krw_price": 579534,
+        "change": -3.08,
+        "signal": "🟡 하락 (-3%대)",
+        "shares": 0.0538,
+        "spent": 31200,
         "carry": 0,
-        "available": 12000,
+        "available": 31200,
         "skipped_added": 0
       },
       {
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 126.79,
-        "krw_price": 190020,
-        "change": -1.74,
+        "current": 129.67,
+        "krw_price": 193863,
+        "change": 2.27,
         "signal": "",
-        "shares": 0.0474,
+        "shares": 0.0464,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -152,19 +124,19 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 210.96,
-        "krw_price": 316166,
-        "change": 4.03,
+        "current": 205.18,
+        "krw_price": 306754,
+        "change": -2.74,
         "signal": "",
-        "shares": 0.0285,
+        "shares": 0.0293,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "전반적으로 로봇·반도체 테마는 견조하나, 양자컴퓨팅 ETF는 MA5를 하회하며 단기 조정 흐름을 보이고 있어 변동성 확대 가능성에 유의할 필요가 있습니다. Nvidia는 +4% 급등 후라 단기 과열 부담이 있고 Palantir는 약세이므로, 매수는 계획대로 진행하되 진입 타이밍 분산과 리스크 관리를 함께 고려하시는 것이 좋겠습니다.",
-    "dip_note": null
+    "ai_comment": "반도체/AI 관련주 전반적으로 변동성이 확대된 하루로, 브로드컴이 5일 이동평균선을 하회하며 상대적으로 약세가 두드러지네요. 팔란티어는 홀로 반등하며 온도차를 보이는데, 엔비디아 낙폭도 함께 고려하면 섹터 전반의 조정 가능성을 염두에 두시는 게 좋겠습니다. 매수 계획은 유지하시되, 브로드컴은 추가 하락 시 분할 매수 타이밍을 조금 더 지켜보셔도 될 것 같습니다.",
+    "dip_note": "**Broadcom (-3.1%, 현재가 387.64)**: 제공된 정보만으로는 이번 하락이 시장 전체 조정에 따른 것인지, 반도체 업종 또는 개별 종목 관련 악재(실적 우려, 뉴스 등) 때문인지 판단하기 어렵습니다. 현재가가 20일 이동평균(382.71)보다는 높고 5일 이동평균(389.64)보다는 약간 낮은 수준이라 단기 조정 범위로 보이지만, 시장 전체 지수 동향이나 관련 뉴스 확인 없이는 확실히 말씀드릴 수 없습니다. 투자 결"
   },
-  "fx": 1502.72
+  "fx": 1495.05
 }
