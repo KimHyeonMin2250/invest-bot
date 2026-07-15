@@ -15,6 +15,10 @@ on:
       amount:
         description: 'amount'
         required: true
+      shares:
+        description: 'shares (optional)'
+        required: false
+        default: '0'
       market:
         description: 'isa or general'
         required: true
@@ -36,6 +40,7 @@ jobs:
           TICKER: ${{ github.event.inputs.ticker }}
           NAME: ${{ github.event.inputs.name }}
           AMOUNT: ${{ github.event.inputs.amount }}
+          SHARES: ${{ github.event.inputs.shares }}
           MARKET: ${{ github.event.inputs.market }}
         run: python record.py
 
