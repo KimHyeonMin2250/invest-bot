@@ -401,7 +401,7 @@ def main():
                  "ai_comment": comment, "dip_note": dip_note}
     data["fx"] = fx
     data["valuation"] = valuation
-    data["valuation_date"] = today.isoformat()
+    data["valuation_date"] = datetime.datetime.now().isoformat(timespec="minutes")
     data["sell_signals"] = signals
     data["sell_note"] = sell_note
     data["sell_config"] = cfg

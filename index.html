@@ -216,7 +216,7 @@
       <div class="mini"><div class="mini-ic" style="background:var(--green-soft)">📈</div><div class="mini-k">평가 손익</div><div class="mini-v" id="h-pl">0원</div></div>
       <div class="mini"><div class="mini-ic" style="background:var(--violet-soft)">📅</div><div class="mini-k">경과</div><div class="mini-v" id="h-mon">0개월</div></div>
     </div>
-    <div class="sec"><span class="sec-t">보유 종목</span></div>
+    <div class="sec"><span class="sec-t">보유 종목</span><span class="sec-more" id="h-vdate"></span></div>
     <div id="h-holdings"></div>
   </section>
 
@@ -433,6 +433,14 @@ function renderHome() {
   plEl.textContent = (pl>=0?'+':'') + won(pl) + (inv>0 ? ` (${plPct>=0?'+':''}${plPct.toFixed(1)}%)` : '');
   plEl.style.color = pl>=0 ? 'var(--green)' : 'var(--red)';
 
+  const vEl = $('h-vdate');
+  if (P.valuation_date) {
+    const diffMin = Math.max(0, Math.round((now - new Date(P.valuation_date)) / 60000));
+    vEl.textContent = diffMin < 1 ? '방금 갱신' : diffMin < 60 ? `${diffMin}분 전 시세` : `${Math.round(diffMin/60)}시간 전 시세`;
+  } else {
+    vEl.textContent = '';
+  }
+
   const box = $('h-holdings');
   if (!hs.length) {
     box.innerHTML = `<div class="list"><div class="empty"><div class="empty-ic">📊</div><b>아직 보유 종목이 없어요</b>예산을 설정하고 첫 매수를 시작해보세요</div></div>`;
@@ -509,7 +517,7 @@ function renderToday() {
       </div>`;
     });
     const sk = a.actions.filter(x => x.spent === 0);
-    if (sk.length) html += `<div class="callout">💡 예산 모으는 중: ${sk.map(s=>`${s.name} (${won(s.carry)})`).join(', ')}</div>`;
+    if (sk.length) html += `<div class="callout">💡 예산 모으는 중 (가격 아님, 이월된 매수 예산이에요): ${sk.map(s=>`${s.name} 이월금 ${won(s.carry)}`).join(', ')}</div>`;
   });
   box.innerHTML = html;
 }
