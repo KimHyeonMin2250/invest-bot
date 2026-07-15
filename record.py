@@ -17,6 +17,7 @@ def main():
     ticker      = os.environ.get("TICKER", "")
     name        = os.environ.get("NAME", "")
     amount      = int(os.environ.get("AMOUNT", "0"))
+    shares      = float(os.environ.get("SHARES", "0") or 0)
     market      = os.environ.get("MARKET", "")
     today       = datetime.date.today().isoformat()
 
@@ -46,8 +47,9 @@ def main():
         existing = next((h for h in holdings if h["ticker"] == ticker), None)
         if existing:
             existing["invested"] = existing.get("invested", 0) + amount
+            existing["shares"] = existing.get("shares", 0) + shares
         else:
-            holdings.append({"ticker": ticker, "name": name, "invested": amount})
+            holdings.append({"ticker": ticker, "name": name, "invested": amount, "shares": shares})
         data["holdings"] = holdings
 
         # 거래 내역 추가

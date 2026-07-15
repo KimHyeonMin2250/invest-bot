@@ -53,6 +53,16 @@
   },
   "base_monthly_total": 2000000,
   "current_month_budget": 2000000,
+  "sell_config": {
+    "take_profit_pct": 30,
+    "stop_loss_pct": -15,
+    "ma20_overheat_pct": 15,
+    "wedding_fund_start": "2027-07-01"
+  },
+  "valuation": {},
+  "valuation_date": null,
+  "sell_signals": [],
+  "sell_note": null,
   "action_log": [],
   "last_isa": {
     "date": "2026-07-15",

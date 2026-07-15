@@ -1,7 +1,8 @@
 """
-투자 알림 엔진 v4
+투자 알림 엔진 v5
 - MARKET 환경변수로 ISA(국내ETF) / general(미국주식) 분리 알림
-- Claude: 매일 코멘트 + 급락 성격 구분 + 월간 리뷰
+- Claude: 매일 코멘트 + 급락 성격 구분 + 월간 리뷰 + 매도 신호 해설
+- 보유 종목 실시간 평가(전 종목) + Firestore 보유현황 연동 + 매도 타이밍 알림
 """
 import json, os, datetime, calendar
 import yfinance as yf
@@ -11,6 +12,20 @@ PF = "portfolio.json"
 MARKET = os.environ.get("MARKET", "all")
 API_KEY = os.environ.get("ANTHROPIC_API_KEY")
 MODEL = "claude-sonnet-5"
+
+# 앱과 동일한 방식(공개 REST, 인증 없음)으로 Firestore에서 보유 현황을 읽어옵니다.
+FIREBASE_PROJECT = "invest-bot-6ab6e"
+FIRESTORE_DOC_URL = (
+    f"https://firestore.googleapis.com/v1/projects/{FIREBASE_PROJECT}"
+    "/databases/(default)/documents/portfolio/main"
+)
+
+DEFAULT_SELL_CONFIG = {
+    "take_profit_pct": 30,       # 개별주 평단 대비 +N% 익절 제안
+    "stop_loss_pct": -15,        # 개별주 평단 대비 -N% 손절 경고
+    "ma20_overheat_pct": 15,     # 20일 이동평균 대비 +N% 과열 시 일부 매도 고려
+    "wedding_fund_start": "2027-07-01",  # 이 날짜 이후 매달 1일, 결혼자금 안전자산 이동 안내
+}
 
 
 def load():
@@ -47,6 +62,91 @@ def fetch_prices(targets, fx, market):
             }
         except Exception as e: print(f"시세 실패 {tk}: {e}")
     return prices
+
+
+def fetch_all_prices(targets, fx):
+    """실시간 평가용: 시장(ISA/general) 구분 없이 전체 종목 시세를 조회합니다."""
+    prices = {}
+    for tk, info in targets.items():
+        try:
+            h = yf.Ticker(tk).history(period="20d")
+            if h.empty or len(h) < 2: continue
+            c = h["Close"]
+            cur = float(c.iloc[-1])
+            mult = fx if info["type"] == "stock" else 1
+            prices[tk] = {
+                "name": info["name"], "account": info["account"], "type": info["type"],
+                "current": round(cur, 2),
+                "krw_price": round(cur * mult),
+                "ma20_krw": round(float(c.tail(20).mean()) * mult),
+            }
+        except Exception as e:
+            print(f"평가 시세 실패 {tk}: {e}")
+    return prices
+
+
+def fs_value(v):
+    """Firestore REST 응답의 typed value를 파이썬 값으로 변환."""
+    if v is None: return None
+    if "stringValue" in v: return v["stringValue"]
+    if "integerValue" in v: return int(v["integerValue"])
+    if "doubleValue" in v: return float(v["doubleValue"])
+    if "booleanValue" in v: return v["booleanValue"]
+    if "nullValue" in v: return None
+    if "arrayValue" in v:
+        return [fs_value(x) for x in v["arrayValue"].get("values", [])]
+    if "mapValue" in v:
+        return {k: fs_value(val) for k, val in v["mapValue"].get("fields", {}).items()}
+    return None
+
+
+def fetch_holdings():
+    """Firestore에서 보유 종목(수량/투자원금) 읽기. 앱과 동일하게 인증 없는 공개 REST 접근."""
+    try:
+        r = requests.get(FIRESTORE_DOC_URL, timeout=15)
+        if r.status_code != 200:
+            print(f"Firestore 읽기 실패: {r.status_code}")
+            return []
+        fields = r.json().get("fields", {})
+        raw = fields.get("holdings")
+        return fs_value(raw) or [] if raw else []
+    except Exception as e:
+        print(f"Firestore 읽기 예외: {e}")
+        return []
+
+
+def sell_signals(holdings, valuation, cfg):
+    """보유 종목별 매도 신호 계산 (익절/손절/과열)."""
+    tp = cfg.get("take_profit_pct", 30)
+    sl = cfg.get("stop_loss_pct", -15)
+    heat = cfg.get("ma20_overheat_pct", 15)
+    signals = []
+    for h in holdings:
+        tk = h.get("ticker")
+        shares = h.get("shares") or 0
+        invested = h.get("invested") or 0
+        if not tk or shares <= 0 or invested <= 0: continue
+        v = valuation.get(tk)
+        if not v: continue
+        value = shares * v["krw_price"]
+        pl_pct = (value - invested) / invested * 100
+        is_stock = v["type"] == "stock"
+        msgs = []
+        if is_stock and pl_pct >= tp:
+            msgs.append(f"💰 수익 실현 제안 (평단 대비 {pl_pct:+.1f}%)")
+        if is_stock and pl_pct <= sl:
+            msgs.append(f"🔻 손절 라인 도달 (평단 대비 {pl_pct:+.1f}%)")
+        ma20 = v.get("ma20_krw")
+        if ma20 and v["krw_price"] >= ma20 * (1 + heat / 100):
+            over = (v["krw_price"] / ma20 - 1) * 100
+            msgs.append(f"🌡️ MA20 대비 {over:+.1f}% 과열, 일부 매도 고려")
+        if msgs:
+            signals.append({
+                "ticker": tk, "name": h.get("name", tk),
+                "pl_pct": round(pl_pct, 1), "value": round(value),
+                "invested": invested, "messages": msgs,
+            })
+    return signals
 
 
 def daily_budget(p, base_r, dip_r, scale):
@@ -160,14 +260,12 @@ def claude_dip_check(acts, prices):
         + "\n".join(lines), 500)
 
 
-def claude_monthly(data):
-    holdings = data.get("holdings", [])
+def claude_monthly(holdings, targets):
     if not holdings: return None
     total = sum(h.get("invested", 0) for h in holdings)
     if total == 0: return None
     lines = [f"- {h.get('name', h['ticker'])}: {h.get('invested',0):,}원 "
              f"({h.get('invested',0)/total*100:.0f}%)" for h in holdings]
-    targets = data["targets"]
     plan = [f"- {v['name']}: 목표 {v['monthly']/20000*100:.0f}%" for v in targets.values()]
     return call_claude(
         "월간 포트폴리오 리뷰입니다. 현재 보유 비중이 계획 대비 얼마나 틀어졌는지 "
@@ -175,7 +273,34 @@ def claude_monthly(data):
         f"[현재 비중]\n" + "\n".join(lines) + f"\n\n[계획 비중]\n" + "\n".join(plan), 500)
 
 
-def build_msg(acts, today, market, comment, dip_note, monthly):
+def claude_sell_note(signals):
+    if not signals: return None
+    lines = [f"- {s['name']}: 손익 {s['pl_pct']:+.1f}%, " + " / ".join(s["messages"]) for s in signals]
+    return call_claude(
+        "아래는 보유 종목 중 매도 신호가 발생한 종목들입니다. 종목별로 1~2문장씩, "
+        "왜 이 신호가 떴는지와 지금 팔지 계속 들고갈지에 대한 균형잡힌 참고 의견을 "
+        "한국어로 제안해주세요. 확정적으로 강요하지 말고, 확실하지 않으면 확실하지 않다고 "
+        "솔직히 말하세요.\n\n" + "\n".join(lines), 500)
+
+
+def claude_wedding_note(today, cfg):
+    start = cfg.get("wedding_fund_start")
+    if not start: return None
+    try:
+        start_date = datetime.date.fromisoformat(start)
+    except Exception:
+        return None
+    if today < start_date or today.day != 1:
+        return None
+    return call_claude(
+        "2028년 초 결혼 예정이며, 이 투자 프로젝트 자금 안에서 결혼자금 약 2,000만원이 "
+        "필요할 수 있습니다. 지금 시점부터 결혼자금에 해당하는 일부를 변동성 낮은 자산으로 "
+        "서서히 옮겨가는 것을 고려해야 한다는 점을 2~3문장으로 부드럽게 안내해주세요. 한국어로.",
+        300)
+
+
+def build_msg(acts, today, market, comment, dip_note, monthly,
+              signals=None, sell_note=None, wedding_note=None):
     total = sum(a["spent"] for a in acts)
     buys = [a for a in acts if a["spent"] > 0]
     skips = [a for a in acts if a["spent"] == 0]
@@ -217,6 +342,16 @@ def build_msg(acts, today, market, comment, dip_note, monthly):
         b += [{"type": "divider"}, {"type": "section", "text": {"type": "mrkdwn",
             "text": f"📅 *월간 리뷰*\n{monthly}"}}]
 
+    if signals:
+        lines = [f"*{s['name']}* ({s['pl_pct']:+.1f}%)\n" + "\n".join(s["messages"]) for s in signals]
+        b += [{"type": "divider"}, {"type": "section", "text": {"type": "mrkdwn",
+            "text": "📤 *매도 신호*\n" + "\n\n".join(lines)}}]
+    if sell_note:
+        b += [{"type": "section", "text": {"type": "mrkdwn", "text": f"🤖 *매도 의견*\n{sell_note}"}}]
+    if wedding_note:
+        b += [{"type": "divider"}, {"type": "section", "text": {"type": "mrkdwn",
+            "text": f"💍 *결혼자금 안내*\n{wedding_note}"}}]
+
     b += [{"type": "divider"}, {"type": "context", "elements": [{"type": "mrkdwn",
         "text": "매수 후 앱에서 '샀어요' 버튼을 눌러주세요. 참고용이며 투자 책임은 본인에게 있습니다."}]}]
     return {"blocks": b}
@@ -250,16 +385,30 @@ def main():
 
     comment = claude_comment(acts)
     dip_note = claude_dip_check(acts, prices)
-    monthly = claude_monthly(data) if today.day == 1 else None
+
+    # ── 보유 종목 실시간 평가 + 매도 신호 (시장 구분 없이 매 실행마다 전체 갱신) ──
+    valuation = fetch_all_prices(data["targets"], fx)
+    holdings = fetch_holdings()
+    cfg = data.get("sell_config") or DEFAULT_SELL_CONFIG
+    signals = sell_signals(holdings, valuation, cfg)
+    sell_note = claude_sell_note(signals)
+    wedding_note = claude_wedding_note(today, cfg)
+    monthly = claude_monthly(holdings, data["targets"]) if today.day == 1 else None
 
     data["carryover"] = new_carry
     key = "last_isa" if MARKET == "isa" else "last_general"
     data[key] = {"date": today.isoformat(), "actions": acts,
                  "ai_comment": comment, "dip_note": dip_note}
     data["fx"] = fx
+    data["valuation"] = valuation
+    data["valuation_date"] = today.isoformat()
+    data["sell_signals"] = signals
+    data["sell_note"] = sell_note
+    data["sell_config"] = cfg
     save(data)
 
-    send(build_msg(acts, today.isoformat(), MARKET, comment, dip_note, monthly))
+    send(build_msg(acts, today.isoformat(), MARKET, comment, dip_note, monthly,
+                    signals, sell_note, wedding_note))
     print("완료")
 
 

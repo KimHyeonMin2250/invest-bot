@@ -170,6 +170,22 @@
 
   .toast { position: fixed; left: 50%; bottom: 100px; transform: translateX(-50%) translateY(140px); background: var(--ink); color: #fff; font-size: 13.5px; font-weight: 500; padding: 13px 20px; border-radius: 100px; z-index: 99; max-width: 88%; transition: transform 0.34s cubic-bezier(0.2,0.9,0.2,1); box-shadow: var(--shadow-lg); }
   .toast.show { transform: translateX(-50%) translateY(0); }
+
+  .row { cursor: pointer; transition: background 0.15s; }
+  .row:active { background: var(--bg); }
+
+  .sheet-overlay { position: fixed; inset: 0; background: rgba(20,22,35,0.45); z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.25s; display: flex; align-items: flex-end; justify-content: center; }
+  .sheet-overlay.show { opacity: 1; pointer-events: auto; }
+  .sheet { width: 100%; max-width: 460px; background: var(--card); border-radius: 24px 24px 0 0; padding: 10px 20px calc(env(safe-area-inset-bottom) + 22px); transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.2,0.9,0.2,1); box-shadow: 0 -8px 28px rgba(30,35,60,0.12); }
+  .sheet-overlay.show .sheet { transform: translateY(0); }
+  .sheet-handle { width: 36px; height: 4px; background: var(--line); border-radius: 100px; margin: 4px auto 16px; }
+  .sheet-title { font-family: 'Sora'; font-size: 17px; font-weight: 700; }
+  .sheet-sub { font-size: 12.5px; color: var(--ink-2); margin-top: 3px; margin-bottom: 16px; }
+  .sheet-tabs { display: flex; gap: 8px; margin-bottom: 14px; }
+  .sheet-tab { flex: 1; padding: 10px; border: 1.5px solid var(--line); background: transparent; border-radius: 12px; font-family: 'Sora'; font-size: 13px; font-weight: 600; color: var(--ink-2); cursor: pointer; }
+  .sheet-tab.on { background: var(--violet); border-color: var(--violet); color: #fff; }
+  .sheet-panel { display: none; }
+  .sheet-panel.on { display: block; }
 </style>
 </head>
 <body>
@@ -238,6 +254,14 @@
         <button class="chip" data-d="1000000">100만</button>
       </div>
     </div>
+    <div class="form">
+      <div class="form-head"><div class="form-ic" style="background:var(--red-soft)">🏧</div><div class="form-t">예치금 출금</div></div>
+      <div class="form-desc">다른 용도로 예치금을 뺄 때 사용하세요. 매도 대금도 예치금으로 들어오니, 매도 후 출금하면 됩니다.</div>
+      <div class="in-row">
+        <input class="in" type="number" id="w-input" placeholder="출금 금액" inputmode="numeric">
+        <button class="go" id="w-go" style="background:var(--red)">출금</button>
+      </div>
+    </div>
     <div class="callout" id="money-status">현재 예치금 0원 · 이번 달 예산 200만원</div>
     <div class="sec"><span class="sec-t">입금 내역</span></div>
     <div id="d-history"></div>
@@ -258,6 +282,35 @@
 </nav>
 
 <div class="toast" id="toast"></div>
+
+<div class="sheet-overlay" id="sheet-overlay" onclick="closeSheet(event)">
+  <div class="sheet" onclick="event.stopPropagation()">
+    <div class="sheet-handle"></div>
+    <div class="sheet-title" id="sheet-title">종목명</div>
+    <div class="sheet-sub" id="sheet-sub"></div>
+    <div class="sheet-tabs">
+      <button class="sheet-tab on" data-stab="sell" onclick="sheetTab('sell')">매도</button>
+      <button class="sheet-tab" data-stab="edit" onclick="sheetTab('edit')">수량 직접 수정</button>
+    </div>
+    <div class="sheet-panel on" id="sheet-sell">
+      <div class="form-desc">매도할 수량을 입력하면 현재가 기준 금액이 예치금으로 들어와요.</div>
+      <div class="in-row">
+        <input class="in" type="number" id="sell-shares" placeholder="매도 수량" step="any" inputmode="decimal">
+        <button class="go" id="sell-go">매도</button>
+      </div>
+      <div class="chips"><button class="chip" onclick="fillSellAll()">전량 매도</button></div>
+    </div>
+    <div class="sheet-panel" id="sheet-edit">
+      <div class="form-desc">실제 잔고와 다를 때 수량·투자원금을 직접 맞출 수 있어요. 수량을 0으로 두고 저장하면 삭제돼요.</div>
+      <div class="in-row"><input class="in" type="number" id="edit-shares" placeholder="보유 수량" step="any" inputmode="decimal"></div>
+      <div class="in-row" style="margin-top:9px"><input class="in" type="number" id="edit-invested" placeholder="투자원금(원)" inputmode="numeric"></div>
+      <div class="in-row" style="margin-top:9px">
+        <button class="go" id="edit-go" style="flex:1">저장</button>
+        <button class="go" id="edit-del" style="flex:1;background:var(--red)">삭제</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script>
 // ── Firebase 설정 ──
@@ -286,8 +339,14 @@ let P = {
   deposit: 0, total_invested: 0,
   base_monthly_total: 2000000, current_month_budget: 2000000,
   targets: {}, holdings: [], transactions: [], monthly_deposits: [],
-  last_isa: null, last_general: null, action_log: []
+  last_isa: null, last_general: null, action_log: [],
+  valuation: {}, valuation_date: null, sell_signals: [], sell_note: null
 };
+
+function curPrice(ticker) {
+  const v = (P.valuation || {})[ticker];
+  return v ? v.krw_price : null;
+}
 
 const won = n => Math.round(n).toLocaleString('ko-KR') + '원';
 const man = n => (n/10000).toLocaleString('ko-KR') + '만원';
@@ -351,8 +410,14 @@ async function persist() {
 // ── 렌더링 ──
 function renderHome() {
   const dep = P.deposit||0;
-  let hv = 0; (P.holdings||[]).forEach(h => hv += (h.invested||0));
-  const total = dep + hv, inv = P.total_invested||0, pl = total - inv;
+  const hs = P.holdings||[];
+  let inv = 0, evalTotal = 0;
+  hs.forEach(h => {
+    inv += (h.invested||0);
+    const cp = curPrice(h.ticker);
+    evalTotal += cp != null ? (h.shares||0) * cp : (h.invested||0);
+  });
+  const total = dep + evalTotal, pl = evalTotal - inv, plPct = inv > 0 ? (pl/inv*100) : 0;
   const pct = Math.min(total/P.goal*100, 100);
   const start = new Date(P.start_date), now = new Date();
   const mon = Math.max(0, (now.getFullYear()-start.getFullYear())*12 + now.getMonth()-start.getMonth());
@@ -365,10 +430,10 @@ function renderHome() {
   $('h-inv').textContent = won(inv);
   $('h-mon').textContent = mon + '개월';
   const plEl = $('h-pl');
-  plEl.textContent = (pl>=0?'+':'') + won(pl);
+  plEl.textContent = (pl>=0?'+':'') + won(pl) + (inv>0 ? ` (${plPct>=0?'+':''}${plPct.toFixed(1)}%)` : '');
   plEl.style.color = pl>=0 ? 'var(--green)' : 'var(--red)';
 
-  const box = $('h-holdings'), hs = P.holdings||[];
+  const box = $('h-holdings');
   if (!hs.length) {
     box.innerHTML = `<div class="list"><div class="empty"><div class="empty-ic">📊</div><b>아직 보유 종목이 없어요</b>예산을 설정하고 첫 매수를 시작해보세요</div></div>`;
     return;
@@ -376,12 +441,22 @@ function renderHome() {
   box.innerHTML = '<div class="list">' + hs.map((h,i) => {
     const t = P.targets[h.ticker]||{};
     const [bg,fg] = ICON_COLORS[i%5];
-    const acct = t.account==='ISA' ? '<span class="pill pill-isa">ISA</span>' : '<span class="pill pill-gen">일반</span>';
+    const acct = (h.account||t.account)==='ISA' ? '<span class="pill pill-isa">ISA</span>' : '<span class="pill pill-gen">일반</span>';
     const init = (h.name||h.ticker).replace(/[^A-Za-z가-힣]/g,'').slice(0,2);
-    return `<div class="row">
+    const cp = curPrice(h.ticker);
+    const val = cp != null ? (h.shares||0) * cp : (h.invested||0);
+    const hpl = val - (h.invested||0);
+    const hplPct = (h.invested||0) > 0 ? (hpl/(h.invested||0)*100) : 0;
+    const shareTxt = h.shares ? `${Number.isInteger(h.shares) ? h.shares : h.shares.toFixed(4)}주` : '수량 미기록';
+    return `<div class="row" onclick="openHoldingSheet('${h.ticker}')">
       <div class="row-ic" style="background:${bg};color:${fg}">${init}</div>
-      <div class="row-main"><div class="row-name">${h.name||h.ticker}</div><div class="row-sub">투자금 ${won(h.invested||0)}</div></div>
-      <div class="row-right"><div class="row-v">${won(h.invested||0)}</div>${acct}</div>
+      <div class="row-main"><div class="row-name">${h.name||h.ticker}</div><div class="row-sub">${shareTxt} · 투자금 ${won(h.invested||0)}</div></div>
+      <div class="row-right"><div class="row-v">${won(val)}</div>
+        <div style="display:flex;align-items:center;gap:5px;justify-content:flex-end;margin-top:2px">
+          <span style="font-size:11px;font-weight:600;color:${hpl>=0?'var(--green)':'var(--red)'}">${cp!=null ? (hpl>=0?'+':'')+hplPct.toFixed(1)+'%' : '시세 대기'}</span>
+          ${acct}
+        </div>
+      </div>
     </div>`;
   }).join('') + '</div>';
 }
@@ -389,11 +464,22 @@ function renderHome() {
 function renderToday() {
   const box = $('t-body');
   const isa = P.last_isa, gen = P.last_general;
+  let html = '';
+
+  if (P.sell_signals && P.sell_signals.length) {
+    html += `<div class="ai" style="background:linear-gradient(135deg,#e5f0ff,#f2f7ff);border-color:#bcd7ff;margin-bottom:12px">
+      <div class="ai-top"><span>📤</span><span class="ai-badge" style="color:#2266cc">매도 신호</span></div>
+      <div class="ai-text" style="color:#1c3f66">${P.sell_signals.map(s =>
+        `<b>${s.name}</b> ${s.pl_pct>=0?'+':''}${s.pl_pct}%<br>${s.messages.join('<br>')}`
+      ).join('<br><br>')}</div>
+    </div>`;
+    if (P.sell_note) html += `<div class="ai" style="margin-bottom:12px"><div class="ai-top"><span>🤖</span><span class="ai-badge">매도 의견</span></div><div class="ai-text">${P.sell_note}</div></div>`;
+  }
+
   if ((!isa || !isa.actions?.length) && (!gen || !gen.actions?.length)) {
-    box.innerHTML = `<div class="list"><div class="empty"><div class="empty-ic">⚡</div><b>오늘의 판단을 기다리는 중</b>ISA는 낮 12시 30분<br>미국주식은 밤 11시 30분에 도착해요</div></div>`;
+    box.innerHTML = html || `<div class="list"><div class="empty"><div class="empty-ic">⚡</div><b>오늘의 판단을 기다리는 중</b>ISA는 낮 12시 30분<br>미국주식은 밤 11시 30분에 도착해요</div></div>`;
     return;
   }
-  let html = '';
   [['isa', isa, '🇰🇷 ISA · 카카오페이', '국내장'], ['general', gen, '🇺🇸 일반계좌 · 토스', '미국장']].forEach(([key, a, label, mkt]) => {
     if (!a || !a.actions?.length) return;
     html += `<div class="sec" style="margin-top:18px"><span class="sec-t">${label}</span><span class="sec-more">${a.date}</span></div>`;
@@ -417,7 +503,7 @@ function renderToday() {
         ${done
           ? `<div class="done-tag">${done === 'bought' ? '✅ 매수 완료' : '⏭️ 건너뜀'}</div>`
           : `<div class="btn-row">
-              <button class="bt bt-yes" onclick="mark('${x.ticker}','${a.date}','bought',${x.spent},'${x.name.replace(/'/g,"")}')">✅ 샀어요</button>
+              <button class="bt bt-yes" onclick="mark('${x.ticker}','${a.date}','bought',${x.spent},'${x.name.replace(/'/g,"")}',${x.shares},'${x.account}')">✅ 샀어요</button>
               <button class="bt bt-no" onclick="mark('${x.ticker}','${a.date}','skipped',0,'')">⏭️ 건너뜀</button>
             </div>`}
       </div>`;
@@ -433,7 +519,7 @@ function isDone(ticker, date) {
   return log ? log.status : null;
 }
 
-async function mark(ticker, date, status, spent, name) {
+async function mark(ticker, date, status, spent, name, shares, account) {
   P.action_log = P.action_log || [];
   P.action_log = P.action_log.filter(l => !(l.ticker === ticker && l.date === date));
   P.action_log.unshift({ ticker, date, status });
@@ -442,10 +528,14 @@ async function mark(ticker, date, status, spent, name) {
     P.deposit = Math.max(0, (P.deposit || 0) - spent);
     P.holdings = P.holdings || [];
     const ex = P.holdings.find(x => x.ticker === ticker);
-    if (ex) ex.invested = (ex.invested || 0) + spent;
-    else P.holdings.push({ ticker, name, invested: spent });
+    if (ex) {
+      ex.invested = (ex.invested || 0) + spent;
+      ex.shares = (ex.shares || 0) + (shares || 0);
+    } else {
+      P.holdings.push({ ticker, name, invested: spent, shares: shares || 0, account: account || '' });
+    }
     P.transactions = P.transactions || [];
-    P.transactions.unshift({ type:'buy', ticker, name, amount: spent, date });
+    P.transactions.unshift({ type:'buy', ticker, name, amount: spent, shares: shares || 0, date });
   }
 
   await persist();
@@ -463,19 +553,22 @@ function renderMoney() {
   ).join('') + '</div>';
 }
 
+const TX_META = {
+  deposit:  { bg: 'var(--amber-soft)', sym: '💰', nm: () => '예치금 입금', col: 'var(--amber)', sign: '+' },
+  withdraw: { bg: 'var(--red-soft)',   sym: '🏧', nm: () => '예치금 출금', col: 'var(--red)',   sign: '-' },
+  buy:      { bg: 'var(--green-soft)',sym: '📈', nm: t => `${t.name||t.ticker} 매수`, col: 'var(--green)', sign: '+' },
+  sell:     { bg: 'var(--blue-soft)', sym: '📉', nm: t => `${t.name||t.ticker} 매도`, col: 'var(--blue)',  sign: '+' },
+};
+
 function renderHistory() {
   const txs = P.transactions||[], box = $('tx-body');
   if (!txs.length) { box.innerHTML = `<div class="list"><div class="empty"><div class="empty-ic">📋</div><b>거래 내역이 없어요</b>매수·입금 기록이 여기 쌓여요</div></div>`; return; }
   box.innerHTML = '<div class="list">' + txs.slice(0,60).map(t => {
-    const dep = t.type==='deposit', buy = t.type==='buy';
-    const bg = dep?'var(--amber-soft)':buy?'var(--green-soft)':'var(--red-soft)';
-    const sym = dep?'💰':buy?'📈':'📉';
-    const nm = dep?'예치금 입금':`${t.name||t.ticker} ${buy?'매수':'매도'}`;
-    const col = dep?'var(--amber)':buy?'var(--green)':'var(--red)';
-    const amt = t.amount ? ((buy||dep?'+':'-')+won(t.amount)) : '-';
-    return `<div class="tx"><div class="tx-ic" style="background:${bg}">${sym}</div>
-      <div class="tx-main"><div class="tx-n">${nm}</div><div class="tx-d">${t.date}</div></div>
-      <div class="tx-a" style="color:${col}">${amt}</div></div>`;
+    const meta = TX_META[t.type] || { bg: 'var(--line)', sym: '•', nm: () => t.type, col: 'var(--ink-2)', sign: '' };
+    const amt = t.amount ? (meta.sign + won(t.amount)) : '-';
+    return `<div class="tx"><div class="tx-ic" style="background:${meta.bg}">${meta.sym}</div>
+      <div class="tx-main"><div class="tx-n">${meta.nm(t)}</div><div class="tx-d">${t.date}</div></div>
+      <div class="tx-a" style="color:${meta.col}">${amt}</div></div>`;
   }).join('') + '</div>';
 }
 
@@ -500,6 +593,97 @@ async function addDeposit(v) {
   toast(`${won(v)} 추가됨`);
 }
 
+async function withdraw(v) {
+  if (!v || v <= 0) { toast('금액을 입력해주세요'); return; }
+  if (v > (P.deposit||0)) { toast('예치금보다 많이 뺄 수 없어요'); return; }
+  P.deposit = (P.deposit||0) - v;
+  P.total_invested = Math.max(0, (P.total_invested||0) - v);
+  P.transactions = P.transactions||[];
+  P.transactions.unshift({ type:'withdraw', amount:v, date:new Date().toISOString().slice(0,10) });
+  await persist(); renderAll();
+  toast(`${won(v)} 출금됨`);
+}
+
+// ── 보유 종목 매도 / 수량 직접 수정 바텀시트 ──
+let sheetTicker = null;
+
+function openHoldingSheet(ticker) {
+  const h = (P.holdings||[]).find(x => x.ticker === ticker);
+  if (!h) return;
+  sheetTicker = ticker;
+  const cp = curPrice(ticker);
+  $('sheet-title').textContent = h.name || ticker;
+  $('sheet-sub').textContent = `보유 ${h.shares||0}주 · ${cp!=null ? '현재가 '+won(cp) : '시세 대기중 (평단 기준으로 매도됩니다)'}`;
+  $('sell-shares').value = '';
+  $('edit-shares').value = h.shares || 0;
+  $('edit-invested').value = h.invested || 0;
+  sheetTab('sell');
+  $('sheet-overlay').classList.add('show');
+}
+
+function closeSheet(e) {
+  if (e && e.target !== $('sheet-overlay')) return;
+  $('sheet-overlay').classList.remove('show');
+  sheetTicker = null;
+}
+
+function sheetTab(name) {
+  document.querySelectorAll('.sheet-tab').forEach(b => b.classList.toggle('on', b.dataset.stab === name));
+  document.querySelectorAll('.sheet-panel').forEach(p => p.classList.remove('on'));
+  $('sheet-' + name).classList.add('on');
+}
+
+function fillSellAll() {
+  const h = (P.holdings||[]).find(x => x.ticker === sheetTicker);
+  if (h) $('sell-shares').value = h.shares || 0;
+}
+
+async function sellHolding() {
+  const h = (P.holdings||[]).find(x => x.ticker === sheetTicker);
+  if (!h) return;
+  const shares = parseFloat($('sell-shares').value || '0');
+  if (!shares || shares <= 0) { toast('수량을 입력해주세요'); return; }
+  if (shares > (h.shares||0) + 1e-9) { toast('보유 수량보다 많아요'); return; }
+
+  const avgCost = (h.shares||0) > 0 ? (h.invested||0) / h.shares : 0;
+  const cp = curPrice(sheetTicker) ?? avgCost;
+  const proceeds = Math.round(shares * cp);
+  const costRemoved = avgCost * shares;
+
+  h.shares = Math.max(0, (h.shares||0) - shares);
+  h.invested = Math.max(0, Math.round((h.invested||0) - costRemoved));
+  if (h.shares < 1e-6) P.holdings = P.holdings.filter(x => x.ticker !== sheetTicker);
+
+  P.deposit = (P.deposit||0) + proceeds;
+  P.transactions = P.transactions||[];
+  P.transactions.unshift({ type:'sell', ticker: sheetTicker, name: h.name, amount: proceeds, shares, date: new Date().toISOString().slice(0,10) });
+
+  await persist(); renderAll(); closeSheet();
+  toast(`${won(proceeds)} 매도 완료`);
+}
+
+async function saveHoldingEdit() {
+  const h = (P.holdings||[]).find(x => x.ticker === sheetTicker);
+  if (!h) return;
+  const shares = parseFloat($('edit-shares').value || '0');
+  const invested = parseInt($('edit-invested').value || '0');
+  if (shares <= 0) {
+    P.holdings = P.holdings.filter(x => x.ticker !== sheetTicker);
+  } else {
+    h.shares = shares;
+    h.invested = invested;
+  }
+  await persist(); renderAll(); closeSheet();
+  toast('수정 완료');
+}
+
+async function deleteHolding() {
+  if (!sheetTicker) return;
+  P.holdings = (P.holdings||[]).filter(x => x.ticker !== sheetTicker);
+  await persist(); renderAll(); closeSheet();
+  toast('삭제 완료');
+}
+
 let tt;
 function toast(m) { const t = $('toast'); t.textContent = m; t.classList.add('show'); clearTimeout(tt); tt = setTimeout(()=>t.classList.remove('show'), 2500); }
 
@@ -512,8 +696,12 @@ document.querySelectorAll('.tab').forEach(b => b.addEventListener('click', () =>
 
 $('b-set').addEventListener('click', () => { const v = parseInt($('b-input').value||'0'); $('b-input').value=''; setBudget(v); });
 $('d-add').addEventListener('click', () => { const v = parseInt($('d-input').value||'0'); $('d-input').value=''; addDeposit(v); });
+$('w-go').addEventListener('click', () => { const v = parseInt($('w-input').value||'0'); $('w-input').value=''; withdraw(v); });
 document.querySelectorAll('[data-b]').forEach(c => c.addEventListener('click', ()=> $('b-input').value = c.dataset.b));
 document.querySelectorAll('[data-d]').forEach(c => c.addEventListener('click', ()=> $('d-input').value = c.dataset.d));
+$('sell-go').addEventListener('click', sellHolding);
+$('edit-go').addEventListener('click', saveHoldingEdit);
+$('edit-del').addEventListener('click', deleteHolding);
 
 (async () => { await load(); renderAll(); })();
 </script>
