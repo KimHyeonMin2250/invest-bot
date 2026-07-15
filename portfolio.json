@@ -59,8 +59,49 @@
     "ma20_overheat_pct": 15,
     "wedding_fund_start": "2027-07-01"
   },
-  "valuation": {},
-  "valuation_date": null,
+  "valuation": {
+    "0038A0.KS": {
+      "name": "KODEX 미국휴머노이드로봇",
+      "account": "ISA",
+      "type": "etf",
+      "current": 17060.0,
+      "krw_price": 17060,
+      "ma20_krw": 17927
+    },
+    "0023A0.KS": {
+      "name": "SOL 미국양자컴퓨팅TOP10",
+      "account": "ISA",
+      "type": "etf",
+      "current": 27500.0,
+      "krw_price": 27500,
+      "ma20_krw": 32058
+    },
+    "AVGO": {
+      "name": "Broadcom",
+      "account": "general",
+      "type": "stock",
+      "current": 391.07,
+      "krw_price": 583344,
+      "ma20_krw": 570523
+    },
+    "PLTR": {
+      "name": "Palantir",
+      "account": "general",
+      "type": "stock",
+      "current": 133.94,
+      "krw_price": 199796,
+      "ma20_krw": 186632
+    },
+    "NVDA": {
+      "name": "Nvidia",
+      "account": "general",
+      "type": "stock",
+      "current": 210.15,
+      "krw_price": 313477,
+      "ma20_krw": 300707
+    }
+  },
+  "valuation_date": "2026-07-15T14:47",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -148,5 +189,5 @@
     "ai_comment": "오늘 브로드컴, 팔란티어, 엔비디아 모두 상승세이며 변동폭도 정상 범위 내에 있어 특별한 이상 신호는 보이지 않습니다. 다만 세 종목 모두 AI 반도체/소프트웨어 테마에 쏠려 있어 섹터 전반의 되돌림이 올 경우 동반 하락할 수 있으니 포지션 집중도는 참고하시기 바랍니다. 매수 계획 자체에 반대할 근거는 없어 보입니다.",
     "dip_note": null
   },
-  "fx": 1485.18
+  "fx": 1491.68
 }
