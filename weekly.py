@@ -19,7 +19,7 @@ def pace_summary_line(pace):
             f"기한(2028-03-31) 안에 맞추려면 남은 기간 동안 월 {pace.get('required_monthly_remaining',0):,}원이 필요합니다.")
 
 
-def claude_weekly(holdings, pace, history):
+def claude_weekly(holdings, pace, history, rebalance):
     total = sum(h.get("invested", 0) for h in holdings)
     if holdings and total > 0:
         weights = "\n".join(f"- {h.get('name', h['ticker'])}: {h.get('invested',0):,}원 "
@@ -35,13 +35,19 @@ def claude_weekly(holdings, pace, history):
             diff = history[-1]["total"] - past[-1]["total"]
             week_change = f"\n\n[최근 1주 자산 변화]\n{diff:+,}원"
 
+    rebal_line = ""
+    if rebalance:
+        lines = [f"- {r['name']}: 현재 {r['current_weight']}% → 목표 {r['target_weight']}% "
+                 f"({'매수' if r['action']=='buy' else '매도'} {r['amount_krw']:,}원 필요)" for r in rebalance]
+        rebal_line = "\n\n[비중 이탈 종목]\n" + "\n".join(lines)
+
     prompt = (
         "당신은 든든하고 유능한 전담 자산관리사입니다. 아래 정보로 이번 주 리뷰를 작성해주세요. "
         "차갑지 않고 신뢰감 있는 톤으로, 확정적으로 강요하지 말고 참고 의견으로 말하세요. "
         "확실하지 않은 부분은 확실하지 않다고 솔직히 말하세요. 4~6문장, 한국어로.\n\n"
         f"[현재 보유 비중]\n{weights}\n\n"
         f"[목표 페이스]\n{pace_summary_line(pace)}"
-        f"{week_change}"
+        f"{week_change}{rebal_line}"
     )
     return a.call_claude(prompt, 700)
 
@@ -56,25 +62,35 @@ def main():
     eval_total = a.eval_holdings(holdings, valuation)
     total = deposit + eval_total
 
-    a.upsert_history(data, today, total, deposit, eval_total)
+    a.upsert_history(data, today, total, deposit, eval_total, holdings)
     pace = a.compute_pace(data["asset_history"], total, data["goal"], data["start_date"],
                           data.get("end_date", "2028-03-31"), today)
-    review = claude_weekly(holdings, pace, data["asset_history"])
+    rebalance = a.rebalance_suggestion(holdings, valuation, data["targets"])
+    review = claude_weekly(holdings, pace, data["asset_history"], rebalance)
 
     data["fx"] = fx
     data["valuation"] = valuation
     data["valuation_date"] = datetime.datetime.now().isoformat(timespec="minutes")
     data["goal_pace"] = pace
+    data["rebalance_suggestions"] = rebalance
     data["weekly_review"] = {"date": today.isoformat(), "text": review}
+    if review:
+        a.append_history(data, "weekly_review_history", {"date": today.isoformat(), "text": review})
     a.save(data)
 
     if review:
-        a.send({"blocks": [
+        blocks = [
             {"type": "header", "text": {"type": "plain_text", "text": f"📅 주간 리뷰 · {today.isoformat()}"}},
             {"type": "section", "text": {"type": "mrkdwn", "text": review}},
-            {"type": "context", "elements": [{"type": "mrkdwn",
-                "text": "참고용이며 투자 책임은 본인에게 있습니다."}]},
-        ]})
+        ]
+        if rebalance:
+            lines = [f"*{r['name']}* {r['current_weight']}% → {r['target_weight']}% "
+                     f"({'매수' if r['action']=='buy' else '매도'} {r['amount_krw']:,}원)" for r in rebalance]
+            blocks += [{"type": "divider"}, {"type": "section", "text": {"type": "mrkdwn",
+                "text": "⚖️ *리밸런싱 제안*\n" + "\n".join(lines)}}]
+        blocks += [{"type": "context", "elements": [{"type": "mrkdwn",
+            "text": "참고용이며 투자 책임은 본인에게 있습니다."}]}]
+        a.send({"blocks": blocks})
     print("주간 리뷰 완료")
 
 

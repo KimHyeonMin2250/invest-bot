@@ -150,6 +150,10 @@
   .chip:active { background: var(--bg); }
 
   .callout { background: var(--violet-soft); border-radius: 14px; padding: 14px 16px; font-size: 12px; color: #5847c4; line-height: 1.6; margin-bottom: 14px; }
+  .acct-card { background: var(--card); border-radius: 16px; box-shadow: var(--shadow); padding: 4px 16px; margin-bottom: 14px; }
+  .acct-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; font-size: 13px; font-weight: 600; border-bottom: 1px solid var(--line); }
+  .acct-row:last-child { border-bottom: none; }
+  .acct-row b { font-family: 'Sora'; margin-left: 6px; }
 
   .tx { display: flex; align-items: center; padding: 14px 17px; border-bottom: 1px solid var(--line); }
   .tx:last-child { border-bottom: none; }
@@ -225,6 +229,9 @@
       <div class="mini"><div class="mini-ic" style="background:var(--green-soft)">📈</div><div class="mini-k">평가 손익</div><div class="mini-v" id="h-pl">0원</div></div>
       <div class="mini"><div class="mini-ic" style="background:var(--violet-soft)">📅</div><div class="mini-k">경과</div><div class="mini-v" id="h-mon">0개월</div></div>
     </div>
+    <div class="callout" id="h-dep-warn" style="display:none;background:var(--red-soft);color:#a12f2f"></div>
+    <div id="h-account-breakdown"></div>
+    <div id="h-rebalance"></div>
     <div class="sec" id="h-chart-sec" style="display:none"><span class="sec-t">자산 추이</span></div>
     <div class="chart-card" id="h-chart-card" style="display:none">
       <div id="h-chart"></div>
@@ -276,6 +283,7 @@
       </div>
     </div>
     <div class="callout" id="money-status">현재 예치금 0원 · 이번 달 예산 200만원</div>
+    <div class="callout" id="h-tax-status" style="display:none;background:var(--amber-soft);color:#8a5a00"></div>
     <div class="sec"><span class="sec-t">입금 내역</span></div>
     <div id="d-history"></div>
   </section>
@@ -363,7 +371,9 @@ let P = {
   targets: {}, holdings: [], transactions: [], monthly_deposits: [],
   last_isa: null, last_general: null, action_log: [],
   valuation: {}, valuation_date: null, sell_signals: [], sell_note: null,
-  asset_history: [], goal_pace: null, weekly_review: null
+  asset_history: [], goal_pace: null, weekly_review: null,
+  realized_gains: {}, rebalance_suggestions: [],
+  sell_note_history: [], weekly_review_history: [], monthly_review_history: [], daily_comment_history: []
 };
 
 function curPrice(ticker) {
@@ -408,6 +418,7 @@ async function load() {
       P.monthly_deposits = fs.monthly_deposits ?? P.monthly_deposits;
       P.action_log = fs.action_log ?? P.action_log;
       P.current_month_budget = fs.current_month_budget ?? P.current_month_budget;
+      P.realized_gains = fs.realized_gains ?? P.realized_gains;
     }
   } catch(e){ console.log('Firestore 읽기 실패:', e); errors.push('내 보유 현황을 불러오지 못했어요'); }
 
@@ -417,7 +428,86 @@ async function load() {
 }
 
 // ── Firestore 저장 ──
+// ── 세금 추정 (근사치, 실제 신고 기준과 다를 수 있음) ──
+// ISA: 순이익 누적 기준 비과세한도 초과분 분리과세 / 일반계좌(해외주식): 연간 기본공제 초과분 양도소득세
+const TAX_CFG = { isaFreeLimit: 4000000, isaRate: 0.099, generalDeduction: 2500000, generalRate: 0.22 };
+
+function estimateTax(account, gain, realizedGains) {
+  if (!gain || gain <= 0) return 0;
+  const rg = realizedGains || {};
+  if (account === 'ISA') {
+    const prior = rg.isa_cumulative || 0;
+    const remainFree = Math.max(0, TAX_CFG.isaFreeLimit - prior);
+    return Math.round(Math.max(0, gain - remainFree) * TAX_CFG.isaRate);
+  }
+  const year = String(new Date().getFullYear());
+  const prior = (rg.general || {})[year] || 0;
+  const remainDeduction = Math.max(0, TAX_CFG.generalDeduction - prior);
+  return Math.round(Math.max(0, gain - remainDeduction) * TAX_CFG.generalRate);
+}
+
+function applyRealizedGain(realizedGains, account, gain) {
+  const rg = { ...realizedGains, general: { ...(realizedGains?.general || {}) } };
+  if (gain <= 0) return rg;
+  if (account === 'ISA') {
+    rg.isa_cumulative = (rg.isa_cumulative || 0) + gain;
+  } else {
+    const year = String(new Date().getFullYear());
+    rg.general[year] = (rg.general[year] || 0) + gain;
+  }
+  return rg;
+}
+
+function totalTaxOwedEstimate(realizedGains) {
+  const rg = realizedGains || {};
+  const isaTax = Math.round(Math.max(0, (rg.isa_cumulative || 0) - TAX_CFG.isaFreeLimit) * TAX_CFG.isaRate);
+  const year = String(new Date().getFullYear());
+  const genGain = (rg.general || {})[year] || 0;
+  const genTax = Math.round(Math.max(0, genGain - TAX_CFG.generalDeduction) * TAX_CFG.generalRate);
+  return isaTax + genTax;
+}
+
+// ── Firestore 트랜잭션 기반 저장 (여러 기기 동시 조작 시 데이터 유실 방지) ──
+// mutator(fresh)는 Firestore의 "지금 시점 최신 데이터"를 받아 직접 수정 후 반환한다.
+// 로컬 P가 아니라 fresh를 기준으로 계산하므로, 다른 기기가 먼저 써놓은 변경도 함께 반영된다.
+const FRESH_DEFAULTS = {
+  deposit: 0, total_invested: 0, holdings: [], transactions: [],
+  monthly_deposits: [], action_log: [], current_month_budget: 2000000,
+  realized_gains: {},
+};
+
+async function runFirestoreTx(mutator) {
+  const ref = db.collection('portfolio').doc('main');
+  try {
+    const result = await db.runTransaction(async (t) => {
+      const doc = await t.get(ref);
+      const fresh = { ...FRESH_DEFAULTS, ...(doc.exists ? doc.data() : {}) };
+      const updated = mutator(fresh);
+      if (updated === null) return null; // mutator가 null 반환 시 중단(검증 실패 등)
+      updated.updated_at = new Date().toISOString();
+      t.set(ref, updated);
+      return updated;
+    });
+    if (result) {
+      P.deposit = result.deposit;
+      P.total_invested = result.total_invested;
+      P.holdings = result.holdings;
+      P.transactions = result.transactions;
+      P.monthly_deposits = result.monthly_deposits;
+      P.action_log = result.action_log;
+      P.current_month_budget = result.current_month_budget;
+      P.realized_gains = result.realized_gains || {};
+      localStorage.setItem('P', JSON.stringify(P));
+    }
+    return result;
+  } catch (e) {
+    toast(`❌ 저장 실패: ${e.message}`);
+    return null;
+  }
+}
+
 async function persist() {
+  // 구버전 방식 (전체 로컬 상태를 그대로 덮어씀). 트랜잭션이 불필요한 곳(백업 없음)에서만 사용.
   localStorage.setItem('P', JSON.stringify(P));
   try {
     await db.collection('portfolio').doc('main').set({
@@ -428,9 +518,9 @@ async function persist() {
       monthly_deposits: P.monthly_deposits || [],
       action_log: P.action_log || [],
       current_month_budget: P.current_month_budget || 2000000,
+      realized_gains: P.realized_gains || {},
       updated_at: new Date().toISOString()
     });
-    toast('✅ 저장 완료');
   } catch(e) {
     toast(`❌ 저장 실패: ${e.message}`);
   }
@@ -456,11 +546,20 @@ function renderHome() {
   $('h-fill').style.width = pct + '%';
   $('h-pct').textContent = pct.toFixed(1) + '%';
   $('h-dep').textContent = won(dep);
+  $('h-dep').style.color = dep < 0 ? 'var(--red)' : '';
   $('h-inv').textContent = won(inv);
   $('h-mon').textContent = mon + '개월';
   const plEl = $('h-pl');
   plEl.textContent = (pl>=0?'+':'') + won(pl) + (inv>0 ? ` (${plPct>=0?'+':''}${plPct.toFixed(1)}%)` : '');
   plEl.style.color = pl>=0 ? 'var(--green)' : 'var(--red)';
+
+  const depWarn = $('h-dep-warn');
+  if (dep < 0) {
+    depWarn.style.display = '';
+    depWarn.textContent = `⚠️ 예치금이 ${won(-dep)} 부족해요. 매수한 만큼 입금해주세요.`;
+  } else {
+    depWarn.style.display = 'none';
+  }
 
   const vEl = $('h-vdate');
   if (P.valuation_date) {
@@ -472,6 +571,8 @@ function renderHome() {
 
   renderPace();
   renderChart();
+  renderAccountBreakdown(hs);
+  renderRebalance();
 
   const box = $('h-holdings');
   if (!hs.length) {
@@ -502,6 +603,44 @@ function renderHome() {
 }
 
 // ── 목표 페이스 ──
+// ── 계좌별(ISA/일반) 성과 요약 ──
+function renderAccountBreakdown(hs) {
+  const box = $('h-account-breakdown');
+  if (!hs.length) { box.innerHTML = ''; return; }
+  const groups = { ISA: { inv: 0, val: 0 }, general: { inv: 0, val: 0 } };
+  hs.forEach(h => {
+    const acct = (h.account || P.targets?.[h.ticker]?.account) === 'ISA' ? 'ISA' : 'general';
+    const cp = curPrice(h.ticker);
+    const val = cp != null ? (h.shares||0) * cp : (h.invested||0);
+    groups[acct].inv += (h.invested || 0);
+    groups[acct].val += val;
+  });
+  const rows = [['ISA', '🇰🇷', groups.ISA], ['일반계좌', '🇺🇸', groups.general]]
+    .filter(([,,g]) => g.inv > 0)
+    .map(([label, flag, g]) => {
+      const pl = g.val - g.inv, plPct = g.inv > 0 ? (pl/g.inv*100) : 0;
+      return `<div class="acct-row">
+        <span>${flag} ${label}</span>
+        <span>${won(g.val)} <b style="color:${pl>=0?'var(--green)':'var(--red)'}">${pl>=0?'+':''}${plPct.toFixed(1)}%</b></span>
+      </div>`;
+    }).join('');
+  box.innerHTML = rows ? `<div class="acct-card">${rows}</div>` : '';
+}
+
+// ── 리밸런싱 제안 ──
+function renderRebalance() {
+  const box = $('h-rebalance');
+  const sug = P.rebalance_suggestions || [];
+  if (!sug.length) { box.innerHTML = ''; return; }
+  box.innerHTML = `<div class="ai" style="background:linear-gradient(135deg,#eef4ff,#f7faff);border-color:#c8dcff">
+    <div class="ai-top"><span>⚖️</span><span class="ai-badge" style="color:#3e6bcc">리밸런싱 제안</span></div>
+    <div class="ai-text" style="color:#2b4a7a">${sug.map(s =>
+      `<b>${s.name}</b> ${s.current_weight}% → ${s.target_weight}% (${s.action==='buy'?'매수':'매도'} ${won(s.amount_krw)} 필요)`
+      + (s.action === 'sell' ? ` <a href="#" onclick="openHoldingSheet('${s.ticker}');return false" style="color:#3e6bcc;font-weight:600">매도하기</a>` : '')
+    ).join('<br>')}</div>
+  </div>`;
+}
+
 function renderPace() {
   const el = $('h-pace');
   const p = P.goal_pace;
@@ -562,35 +701,48 @@ function renderChart() {
 // ── 알림 (매도신호 / 주간리뷰 / 목표페이스) ──
 function collectNotifs() {
   const items = [];
-  if (P.sell_signals && P.sell_signals.length) {
-    items.push({ icon: '📤', title: '매도 신호', date: P.valuation_date?.slice(0,10) || '',
-      body: P.sell_signals.map(s => `<b>${s.name}</b> ${s.pl_pct>=0?'+':''}${s.pl_pct}%<br>${s.messages.join('<br>')}`).join('<br><br>')
-        + (P.sell_note ? `<br><br>🤖 ${P.sell_note}` : '') });
-  }
-  if (P.weekly_review && P.weekly_review.text) {
-    items.push({ icon: '📅', title: '주간 리뷰', date: P.weekly_review.date, body: P.weekly_review.text });
+  // 현재 상태성 알림 (로그가 아니라 "지금 이렇다"는 것들)
+  if (P.rebalance_suggestions && P.rebalance_suggestions.length) {
+    const s = P.rebalance_suggestions;
+    items.push({ icon: '⚖️', title: '리밸런싱 제안', date: '', current: true,
+      body: s.map(r => `<b>${r.name}</b> ${r.current_weight}%→${r.target_weight}% (${r.action==='buy'?'매수':'매도'} ${won(r.amount_krw)})`).join('<br>') });
   }
   if (P.goal_pace && P.goal_pace.status && P.goal_pace.status !== 'unknown' && P.goal_pace.status !== 'ahead') {
     const label = P.goal_pace.status === 'behind' ? '목표 페이스가 느려요' : '목표 페이스 안내';
-    items.push({ icon: '🎯', title: label, date: '',
+    items.push({ icon: '🎯', title: label, date: '', current: true,
       body: `현재 속도면 ${P.goal_pace.projected_date || '미상'}경 도달 예상이에요. 기한 맞추려면 월 ${won(P.goal_pace.required_monthly_remaining||0)}이 필요해요.` });
   }
-  return items;
+
+  // 로그성 알림 히스토리 (매도신호 / 주간리뷰 / 월간리뷰) — 최근순으로 합쳐서 표시
+  const logItems = [];
+  (P.sell_note_history || []).forEach(e => logItems.push({ icon: '📤', title: '매도 신호', date: e.date,
+    body: (e.signals||[]).map(s => `<b>${s.name}</b> ${s.pl_pct>=0?'+':''}${s.pl_pct}%<br>${s.messages.join('<br>')}`).join('<br><br>')
+      + (e.text ? `<br><br>🤖 ${e.text}` : '') }));
+  (P.weekly_review_history || []).forEach(e => logItems.push({ icon: '📅', title: '주간 리뷰', date: e.date, body: e.text }));
+  (P.monthly_review_history || []).forEach(e => logItems.push({ icon: '🗓️', title: '월간 리뷰', date: e.date, body: e.text }));
+  logItems.sort((a,b) => (b.date||'').localeCompare(a.date||''));
+
+  return { current: items, log: logItems.slice(0, 20) };
 }
 
 function renderNotifBadge() {
-  $('bell-dot').classList.toggle('on', collectNotifs().length > 0);
+  const n = collectNotifs();
+  $('bell-dot').classList.toggle('on', n.current.length > 0);
 }
 
 function openNotif() {
-  const items = collectNotifs();
+  const { current, log } = collectNotifs();
   const body = $('notif-body');
-  body.innerHTML = items.length
-    ? items.map(n => `<div class="ai" style="margin-bottom:10px">
-        <div class="ai-top"><span>${n.icon}</span><span class="ai-badge">${n.title}</span>${n.date ? `<span style="margin-left:auto;font-size:11px;color:var(--ink-3)">${n.date}</span>` : ''}</div>
-        <div class="ai-text">${n.body}</div>
-      </div>`).join('')
-    : `<div class="empty"><div class="empty-ic">🔕</div><b>새 알림이 없어요</b>매도 신호나 주간 리뷰가 오면 여기 모여요</div>`;
+  const renderItem = n => `<div class="ai" style="margin-bottom:10px">
+      <div class="ai-top"><span>${n.icon}</span><span class="ai-badge">${n.title}</span>${n.date ? `<span style="margin-left:auto;font-size:11px;color:var(--ink-3)">${n.date}</span>` : ''}</div>
+      <div class="ai-text">${n.body}</div>
+    </div>`;
+  let html = current.map(renderItem).join('');
+  if (log.length) {
+    html += `<div class="sec" style="margin:18px 2px 10px"><span class="sec-t" style="font-size:13px">지난 알림</span></div>`;
+    html += log.map(renderItem).join('');
+  }
+  body.innerHTML = html || `<div class="empty"><div class="empty-ic">🔕</div><b>새 알림이 없어요</b>매도 신호나 주간 리뷰가 오면 여기 모여요</div>`;
   $('notif-overlay').classList.add('show');
 }
 function closeNotif(e) {
@@ -668,30 +820,44 @@ function isDone(ticker, date) {
 }
 
 async function mark(ticker, date, status, spent, name, shares, account) {
-  P.action_log = P.action_log || [];
-  P.action_log = P.action_log.filter(l => !(l.ticker === ticker && l.date === date));
-  P.action_log.unshift({ ticker, date, status });
+  const result = await runFirestoreTx(fresh => {
+    fresh.action_log = (fresh.action_log || []).filter(l => !(l.ticker === ticker && l.date === date));
+    fresh.action_log.unshift({ ticker, date, status });
 
-  if (status === 'bought' && spent > 0) {
-    P.deposit = Math.max(0, (P.deposit || 0) - spent);
-    P.holdings = P.holdings || [];
-    const ex = P.holdings.find(x => x.ticker === ticker);
-    if (ex) {
-      ex.invested = (ex.invested || 0) + spent;
-      ex.shares = (ex.shares || 0) + (shares || 0);
-    } else {
-      P.holdings.push({ ticker, name, invested: spent, shares: shares || 0, account: account || '' });
+    if (status === 'bought' && spent > 0) {
+      fresh.deposit = (fresh.deposit || 0) - spent; // 바닥을 0으로 막지 않음 — 부족하면 마이너스로 남겨서 눈에 보이게
+      fresh.holdings = fresh.holdings || [];
+      const ex = fresh.holdings.find(x => x.ticker === ticker);
+      if (ex) {
+        ex.invested = (ex.invested || 0) + spent;
+        ex.shares = (ex.shares || 0) + (shares || 0);
+      } else {
+        fresh.holdings.push({ ticker, name, invested: spent, shares: shares || 0, account: account || '' });
+      }
+      fresh.transactions = fresh.transactions || [];
+      fresh.transactions.unshift({ type:'buy', ticker, name, amount: spent, shares: shares || 0, date });
     }
-    P.transactions = P.transactions || [];
-    P.transactions.unshift({ type:'buy', ticker, name, amount: spent, shares: shares || 0, date });
-  }
-
-  await persist();
+    return fresh;
+  });
+  if (!result) return;
   renderAll();
+  if (status === 'bought' && result.deposit < 0) {
+    toast(`⚠️ 예치금이 ${won(-result.deposit)} 부족해요. 입금해주세요`);
+  }
 }
 
 function renderMoney() {
   $('money-status').textContent = `현재 예치금 ${won(P.deposit||0)} · 이번 달 예산 ${man(P.current_month_budget||2000000)}`;
+
+  const taxEl = $('h-tax-status');
+  const taxOwed = totalTaxOwedEstimate(P.realized_gains);
+  if (taxOwed > 0) {
+    taxEl.style.display = '';
+    taxEl.textContent = `💸 올해 실현손익 기준 예상 세금 약 ${won(taxOwed)} — 다음해 5월 신고 시즌에 대비해 미리 떼어두면 좋아요. (근사치, 실제 신고 기준과 다를 수 있어요)`;
+  } else {
+    taxEl.style.display = 'none';
+  }
+
   const hist = P.monthly_deposits||[], box = $('d-history');
   if (!hist.length) { box.innerHTML = `<div class="list"><div class="empty">입금 내역이 없어요</div></div>`; return; }
   box.innerHTML = '<div class="list">' + hist.slice(0,20).map(d =>
@@ -714,8 +880,11 @@ function renderHistory() {
   box.innerHTML = '<div class="list">' + txs.slice(0,60).map(t => {
     const meta = TX_META[t.type] || { bg: 'var(--line)', sym: '•', nm: () => t.type, col: 'var(--ink-2)', sign: '' };
     const amt = t.amount ? (meta.sign + won(t.amount)) : '-';
+    const sub = (t.type === 'sell' && t.gain != null)
+      ? `실현손익 ${t.gain>=0?'+':''}${won(t.gain)}${t.tax_estimate>0 ? ` · 예상세금 ${won(t.tax_estimate)}` : ''}`
+      : t.date;
     return `<div class="tx"><div class="tx-ic" style="background:${meta.bg}">${meta.sym}</div>
-      <div class="tx-main"><div class="tx-n">${meta.nm(t)}</div><div class="tx-d">${t.date}</div></div>
+      <div class="tx-main"><div class="tx-n">${meta.nm(t)}</div><div class="tx-d">${sub}</div></div>
       <div class="tx-a" style="color:${meta.col}">${amt}</div></div>`;
   }).join('') + '</div>';
 }
@@ -724,31 +893,44 @@ function renderAll() { renderHome(); renderToday(); renderMoney(); renderHistory
 
 async function setBudget(v) {
   if (!v || v <= 0) { toast('금액을 입력해주세요'); return; }
-  P.current_month_budget = v;
-  await persist(); renderAll();
+  const result = await runFirestoreTx(fresh => { fresh.current_month_budget = v; return fresh; });
+  if (!result) return;
+  renderAll();
   toast(`이번 달 예산 ${man(v)}으로 설정`);
 }
 
 async function addDeposit(v) {
   if (!v || v <= 0) { toast('금액을 입력해주세요'); return; }
-  P.deposit = (P.deposit||0) + v;
-  P.total_invested = (P.total_invested||0) + v;
-  P.monthly_deposits = P.monthly_deposits||[];
-  P.monthly_deposits.unshift({ amount:v, date:new Date().toISOString().slice(0,10) });
-  P.transactions = P.transactions||[];
-  P.transactions.unshift({ type:'deposit', amount:v, date:new Date().toISOString().slice(0,10) });
-  await persist(); renderAll();
+  const date = new Date().toISOString().slice(0,10);
+  const result = await runFirestoreTx(fresh => {
+    fresh.deposit = (fresh.deposit || 0) + v;
+    fresh.total_invested = (fresh.total_invested || 0) + v;
+    fresh.monthly_deposits = fresh.monthly_deposits || [];
+    fresh.monthly_deposits.unshift({ amount: v, date });
+    fresh.transactions = fresh.transactions || [];
+    fresh.transactions.unshift({ type: 'deposit', amount: v, date });
+    return fresh;
+  });
+  if (!result) return;
+  renderAll();
   toast(`${won(v)} 추가됨`);
 }
 
 async function withdraw(v) {
   if (!v || v <= 0) { toast('금액을 입력해주세요'); return; }
-  if (v > (P.deposit||0)) { toast('예치금보다 많이 뺄 수 없어요'); return; }
-  P.deposit = (P.deposit||0) - v;
-  P.total_invested = Math.max(0, (P.total_invested||0) - v);
-  P.transactions = P.transactions||[];
-  P.transactions.unshift({ type:'withdraw', amount:v, date:new Date().toISOString().slice(0,10) });
-  await persist(); renderAll();
+  const date = new Date().toISOString().slice(0,10);
+  let insufficient = false;
+  const result = await runFirestoreTx(fresh => {
+    if (v > (fresh.deposit || 0)) { insufficient = true; return null; }
+    fresh.deposit = (fresh.deposit || 0) - v;
+    fresh.total_invested = Math.max(0, (fresh.total_invested || 0) - v);
+    fresh.transactions = fresh.transactions || [];
+    fresh.transactions.unshift({ type: 'withdraw', amount: v, date });
+    return fresh;
+  });
+  if (insufficient) { toast('예치금보다 많이 뺄 수 없어요 (다른 기기에서 방금 바뀌었을 수도 있어요)'); return; }
+  if (!result) return;
+  renderAll();
   toast(`${won(v)} 출금됨`);
 }
 
@@ -787,48 +969,71 @@ function fillSellAll() {
 }
 
 async function sellHolding() {
-  const h = (P.holdings||[]).find(x => x.ticker === sheetTicker);
-  if (!h) return;
   const shares = parseFloat($('sell-shares').value || '0');
   if (!shares || shares <= 0) { toast('수량을 입력해주세요'); return; }
-  if (shares > (h.shares||0) + 1e-9) { toast('보유 수량보다 많아요'); return; }
 
-  const avgCost = (h.shares||0) > 0 ? (h.invested||0) / h.shares : 0;
-  const cp = curPrice(sheetTicker) ?? avgCost;
-  const proceeds = Math.round(shares * cp);
-  const costRemoved = avgCost * shares;
+  let toastMsg = null, insufficient = false;
+  const result = await runFirestoreTx(fresh => {
+    const h = (fresh.holdings || []).find(x => x.ticker === sheetTicker);
+    if (!h) { insufficient = true; return null; }
+    if (shares > (h.shares || 0) + 1e-9) { insufficient = true; return null; }
 
-  h.shares = Math.max(0, (h.shares||0) - shares);
-  h.invested = Math.max(0, Math.round((h.invested||0) - costRemoved));
-  if (h.shares < 1e-6) P.holdings = P.holdings.filter(x => x.ticker !== sheetTicker);
+    const avgCost = (h.shares || 0) > 0 ? (h.invested || 0) / h.shares : 0;
+    const cp = curPrice(sheetTicker) ?? avgCost;
+    const proceeds = Math.round(shares * cp);
+    const costRemoved = avgCost * shares;
+    const gain = Math.round(proceeds - costRemoved);
+    const account = h.account || P.targets?.[sheetTicker]?.account || '';
+    const tax = estimateTax(account, gain, fresh.realized_gains);
 
-  P.deposit = (P.deposit||0) + proceeds;
-  P.transactions = P.transactions||[];
-  P.transactions.unshift({ type:'sell', ticker: sheetTicker, name: h.name, amount: proceeds, shares, date: new Date().toISOString().slice(0,10) });
+    h.shares = Math.max(0, (h.shares || 0) - shares);
+    h.invested = Math.max(0, Math.round((h.invested || 0) - costRemoved));
+    if (h.shares < 1e-6) fresh.holdings = fresh.holdings.filter(x => x.ticker !== sheetTicker);
 
-  await persist(); renderAll(); closeSheet();
-  toast(`${won(proceeds)} 매도 완료`);
+    fresh.deposit = (fresh.deposit || 0) + proceeds;
+    fresh.realized_gains = applyRealizedGain(fresh.realized_gains, account, gain);
+    fresh.transactions = fresh.transactions || [];
+    fresh.transactions.unshift({ type: 'sell', ticker: sheetTicker, name: h.name, amount: proceeds,
+      shares, gain, tax_estimate: tax, date: new Date().toISOString().slice(0,10) });
+
+    toastMsg = `${won(proceeds)} 매도 완료` + (gain !== 0
+      ? ` (실현손익 ${gain>=0?'+':''}${won(gain)}${tax>0 ? `, 예상세금 약 ${won(tax)}` : ''})`
+      : '');
+    return fresh;
+  });
+  if (insufficient) { toast('보유 수량보다 많거나 종목을 찾을 수 없어요 (다른 기기에서 방금 바뀌었을 수도 있어요)'); return; }
+  if (!result) return;
+  renderAll(); closeSheet();
+  toast(toastMsg || '매도 완료');
 }
 
 async function saveHoldingEdit() {
-  const h = (P.holdings||[]).find(x => x.ticker === sheetTicker);
-  if (!h) return;
   const shares = parseFloat($('edit-shares').value || '0');
   const invested = parseInt($('edit-invested').value || '0');
-  if (shares <= 0) {
-    P.holdings = P.holdings.filter(x => x.ticker !== sheetTicker);
-  } else {
-    h.shares = shares;
-    h.invested = invested;
-  }
-  await persist(); renderAll(); closeSheet();
+  const result = await runFirestoreTx(fresh => {
+    const h = (fresh.holdings || []).find(x => x.ticker === sheetTicker);
+    if (!h) return null;
+    if (shares <= 0) {
+      fresh.holdings = fresh.holdings.filter(x => x.ticker !== sheetTicker);
+    } else {
+      h.shares = shares;
+      h.invested = invested;
+    }
+    return fresh;
+  });
+  if (!result) return;
+  renderAll(); closeSheet();
   toast('수정 완료');
 }
 
 async function deleteHolding() {
   if (!sheetTicker) return;
-  P.holdings = (P.holdings||[]).filter(x => x.ticker !== sheetTicker);
-  await persist(); renderAll(); closeSheet();
+  const result = await runFirestoreTx(fresh => {
+    fresh.holdings = (fresh.holdings || []).filter(x => x.ticker !== sheetTicker);
+    return fresh;
+  });
+  if (!result) return;
+  renderAll(); closeSheet();
   toast('삭제 완료');
 }
 

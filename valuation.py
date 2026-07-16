@@ -25,7 +25,7 @@ def main():
     cfg = data.get("sell_config") or a.DEFAULT_SELL_CONFIG
     signals = a.sell_signals(holdings, valuation, cfg)
 
-    a.upsert_history(data, today, total, deposit, eval_total)
+    a.upsert_history(data, today, total, deposit, eval_total, holdings)
     pace = a.compute_pace(data["asset_history"], total, data["goal"], data["start_date"],
                           data.get("end_date", "2028-03-31"), today)
 

@@ -63,20 +63,25 @@ def fetch_prices(targets, fx, market):
     return prices
 
 
-def fetch_all_prices(targets, fx):
-    """실시간 평가용: 시장(ISA/general) 구분 없이 전체 종목 시세를 조회합니다."""
+def fetch_all_prices(targets, fx, fx_spread_pct=0.3):
+    """실시간 평가용: 시장(ISA/general) 구분 없이 전체 종목 시세를 조회합니다.
+    fx_spread_pct: 원화로 환전할 때 실제로 발생하는 스프레드(%)를 반영해 평가금액을 보수적으로 계산.
+    """
     prices = {}
+    sell_fx = fx * (1 - fx_spread_pct / 100)
     for tk, info in targets.items():
         try:
             h = yf.Ticker(tk).history(period="20d")
             if h.empty or len(h) < 2: continue
             c = h["Close"]
             cur = float(c.iloc[-1])
-            mult = fx if info["type"] == "stock" else 1
+            is_stock = info["type"] == "stock"
+            mult = sell_fx if is_stock else 1
             prices[tk] = {
                 "name": info["name"], "account": info["account"], "type": info["type"],
                 "current": round(cur, 2),
                 "krw_price": round(cur * mult),
+                "krw_price_gross": round(cur * fx) if is_stock else round(cur * mult),
                 "ma20_krw": round(float(c.tail(20).mean()) * mult),
             }
         except Exception as e:
@@ -133,13 +138,61 @@ def eval_holdings(holdings, valuation):
     return total
 
 
-def upsert_history(data, today, total, deposit, eval_total):
-    """일별 자산 스냅샷 기록 (하루 여러 번 실행돼도 그날 값은 마지막 것으로 덮어씀)."""
+def append_history(data, key, entry, cap=100):
+    """알림/코멘트류를 최신 1건이 아니라 누적 기록으로 저장 (최근 cap개만 유지)."""
+    hist = data.get(key, [])
+    hist.append(entry)
+    data[key] = hist[-cap:]
+
+
+def upsert_history(data, today, total, deposit, eval_total, holdings=None):
+    """일별 자산 스냅샷 기록 (하루 여러 번 실행돼도 그날 값은 마지막 것으로 덮어씀).
+    holdings를 같이 저장해서 git 커밋 기록 자체가 Firestore 데이터의 백업 역할도 하도록 함.
+    """
     hist = [h for h in data.get("asset_history", []) if h.get("date") != today.isoformat()]
-    hist.append({"date": today.isoformat(), "total": round(total),
-                 "deposit": round(deposit), "eval": round(eval_total)})
+    entry = {"date": today.isoformat(), "total": round(total),
+              "deposit": round(deposit), "eval": round(eval_total)}
+    if holdings is not None:
+        entry["holdings_backup"] = [
+            {"ticker": h.get("ticker"), "name": h.get("name"), "shares": h.get("shares"),
+             "invested": h.get("invested"), "account": h.get("account")}
+            for h in holdings
+        ]
+    hist.append(entry)
     hist.sort(key=lambda h: h["date"])
     data["asset_history"] = hist[-600:]  # 20개월 프로젝트 + 여유
+
+
+def rebalance_suggestion(holdings, valuation, targets, threshold_pct=5):
+    """목표 비중(월 계획 금액 기준) 대비 현재 비중이 threshold_pct% 이상 벌어진 종목에 대해
+    매수/매도 제안 금액을 계산. Claude가 아니라 결정론적 계산 — Claude는 이 결과를 서술만 함.
+    """
+    total_planned = sum(v["monthly"] for v in targets.values())
+    if total_planned == 0: return []
+    cur_value = {}
+    for h in holdings:
+        tk = h.get("ticker")
+        v = valuation.get(tk)
+        if not v: continue
+        cur_value[tk] = cur_value.get(tk, 0) + (h.get("shares") or 0) * v["krw_price"]
+    total_now = sum(cur_value.values())
+    if total_now <= 0: return []
+
+    suggestions = []
+    for tk, info in targets.items():
+        target_w = info["monthly"] / total_planned
+        cur_w = cur_value.get(tk, 0) / total_now
+        diff_pct = (cur_w - target_w) * 100
+        if abs(diff_pct) >= threshold_pct:
+            diff_amount = round((target_w - cur_w) * total_now)
+            suggestions.append({
+                "ticker": tk, "name": info["name"],
+                "current_weight": round(cur_w * 100, 1), "target_weight": round(target_w * 100, 1),
+                "action": "buy" if diff_amount > 0 else "sell",
+                "amount_krw": abs(diff_amount),
+            })
+    suggestions.sort(key=lambda s: -abs(s["current_weight"] - s["target_weight"]))
+    return suggestions
 
 
 def compute_pace(history, total, goal, start_date_str, end_date_str, today=None):
@@ -455,17 +508,26 @@ def main():
     cfg = data.get("sell_config") or DEFAULT_SELL_CONFIG
     signals = sell_signals(holdings, valuation, cfg)
     sell_note = claude_sell_note(signals)
+    if sell_note:
+        append_history(data, "sell_note_history", {"date": today.isoformat(), "text": sell_note, "signals": signals})
 
-    upsert_history(data, today, total, deposit, eval_total)
+    upsert_history(data, today, total, deposit, eval_total, holdings)
     pace = compute_pace(data["asset_history"], total, data["goal"], data["start_date"],
                         data.get("end_date", "2028-03-31"), today)
 
+    rebalance = rebalance_suggestion(holdings, valuation, data["targets"])
+
     monthly = claude_monthly(holdings, data["targets"], pace) if today.day == 1 else None
+    if monthly:
+        append_history(data, "monthly_review_history", {"date": today.isoformat(), "text": monthly})
 
     data["carryover"] = new_carry
     key = "last_isa" if MARKET == "isa" else "last_general"
     data[key] = {"date": today.isoformat(), "actions": acts,
                  "ai_comment": comment, "dip_note": dip_note}
+    if comment or dip_note:
+        append_history(data, "daily_comment_history",
+                        {"date": today.isoformat(), "market": MARKET, "comment": comment, "dip_note": dip_note})
     data["fx"] = fx
     data["valuation"] = valuation
     data["valuation_date"] = datetime.datetime.now().isoformat(timespec="minutes")
@@ -473,6 +535,7 @@ def main():
     data["sell_note"] = sell_note
     data["sell_config"] = cfg
     data["goal_pace"] = pace
+    data["rebalance_suggestions"] = rebalance
     save(data)
 
     send(build_msg(acts, today.isoformat(), MARKET, comment, dip_note, monthly,
