@@ -24,7 +24,6 @@ DEFAULT_SELL_CONFIG = {
     "take_profit_pct": 30,       # 개별주 평단 대비 +N% 익절 제안
     "stop_loss_pct": -15,        # 개별주 평단 대비 -N% 손절 경고
     "ma20_overheat_pct": 15,     # 20일 이동평균 대비 +N% 과열 시 일부 매도 고려
-    "wedding_fund_start": "2027-07-01",  # 이 날짜 이후 매달 1일, 결혼자금 안전자산 이동 안내
 }
 
 
@@ -362,24 +361,8 @@ def claude_sell_note(signals):
         "솔직히 말하세요.\n\n" + "\n".join(lines), 500)
 
 
-def claude_wedding_note(today, cfg):
-    start = cfg.get("wedding_fund_start")
-    if not start: return None
-    try:
-        start_date = datetime.date.fromisoformat(start)
-    except Exception:
-        return None
-    if today < start_date or today.day != 1:
-        return None
-    return call_claude(
-        "2028년 초 결혼 예정이며, 이 투자 프로젝트 자금 안에서 결혼자금 약 2,000만원이 "
-        "필요할 수 있습니다. 지금 시점부터 결혼자금에 해당하는 일부를 변동성 낮은 자산으로 "
-        "서서히 옮겨가는 것을 고려해야 한다는 점을 2~3문장으로 부드럽게 안내해주세요. 한국어로.",
-        300)
-
-
 def build_msg(acts, today, market, comment, dip_note, monthly,
-              signals=None, sell_note=None, wedding_note=None):
+              signals=None, sell_note=None):
     total = sum(a["spent"] for a in acts)
     buys = [a for a in acts if a["spent"] > 0]
     skips = [a for a in acts if a["spent"] == 0]
@@ -427,9 +410,6 @@ def build_msg(acts, today, market, comment, dip_note, monthly,
             "text": "📤 *매도 신호*\n" + "\n\n".join(lines)}}]
     if sell_note:
         b += [{"type": "section", "text": {"type": "mrkdwn", "text": f"🤖 *매도 의견*\n{sell_note}"}}]
-    if wedding_note:
-        b += [{"type": "divider"}, {"type": "section", "text": {"type": "mrkdwn",
-            "text": f"💍 *결혼자금 안내*\n{wedding_note}"}}]
 
     b += [{"type": "divider"}, {"type": "context", "elements": [{"type": "mrkdwn",
         "text": "매수 후 앱에서 '샀어요' 버튼을 눌러주세요. 참고용이며 투자 책임은 본인에게 있습니다."}]}]
@@ -475,7 +455,6 @@ def main():
     cfg = data.get("sell_config") or DEFAULT_SELL_CONFIG
     signals = sell_signals(holdings, valuation, cfg)
     sell_note = claude_sell_note(signals)
-    wedding_note = claude_wedding_note(today, cfg)
 
     upsert_history(data, today, total, deposit, eval_total)
     pace = compute_pace(data["asset_history"], total, data["goal"], data["start_date"],
@@ -494,12 +473,10 @@ def main():
     data["sell_note"] = sell_note
     data["sell_config"] = cfg
     data["goal_pace"] = pace
-    if wedding_note:
-        data["wedding_note"] = {"date": today.isoformat(), "text": wedding_note}
     save(data)
 
     send(build_msg(acts, today.isoformat(), MARKET, comment, dip_note, monthly,
-                    signals, sell_note, wedding_note))
+                    signals, sell_note))
     print("완료")
 
 
