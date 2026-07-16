@@ -363,7 +363,7 @@ let P = {
   targets: {}, holdings: [], transactions: [], monthly_deposits: [],
   last_isa: null, last_general: null, action_log: [],
   valuation: {}, valuation_date: null, sell_signals: [], sell_note: null,
-  asset_history: [], goal_pace: null, weekly_review: null, wedding_note: null
+  asset_history: [], goal_pace: null, weekly_review: null
 };
 
 function curPrice(ticker) {
@@ -559,7 +559,7 @@ function renderChart() {
   }
 }
 
-// ── 알림 (매도신호 / 결혼자금 / 주간리뷰 / 목표페이스) ──
+// ── 알림 (매도신호 / 주간리뷰 / 목표페이스) ──
 function collectNotifs() {
   const items = [];
   if (P.sell_signals && P.sell_signals.length) {
@@ -569,9 +569,6 @@ function collectNotifs() {
   }
   if (P.weekly_review && P.weekly_review.text) {
     items.push({ icon: '📅', title: '주간 리뷰', date: P.weekly_review.date, body: P.weekly_review.text });
-  }
-  if (P.wedding_note && P.wedding_note.text) {
-    items.push({ icon: '💍', title: '결혼자금 안내', date: P.wedding_note.date, body: P.wedding_note.text });
   }
   if (P.goal_pace && P.goal_pace.status && P.goal_pace.status !== 'unknown' && P.goal_pace.status !== 'ahead') {
     const label = P.goal_pace.status === 'behind' ? '목표 페이스가 느려요' : '목표 페이스 안내';
