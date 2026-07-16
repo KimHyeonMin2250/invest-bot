@@ -66,6 +66,7 @@
       "type": "etf",
       "current": 16800.0,
       "krw_price": 16800,
+      "krw_price_gross": 16800,
       "ma20_krw": 17854
     },
     "0023A0.KS": {
@@ -74,6 +75,7 @@
       "type": "etf",
       "current": 26135.0,
       "krw_price": 26135,
+      "krw_price_gross": 26135,
       "ma20_krw": 31656
     },
     "AVGO": {
@@ -81,27 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 394.28,
-      "krw_price": 582935,
-      "ma20_krw": 566203
+      "krw_price": 581615,
+      "krw_price_gross": 583365,
+      "ma20_krw": 564920
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 133.76,
-      "krw_price": 197761,
-      "ma20_krw": 184967
+      "krw_price": 197314,
+      "krw_price_gross": 197907,
+      "ma20_krw": 184549
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 212.5,
-      "krw_price": 314177,
-      "ma20_krw": 298975
+      "krw_price": 313465,
+      "krw_price_gross": 314409,
+      "ma20_krw": 298297
     }
   },
-  "valuation_date": "2026-07-16T06:51",
+  "valuation_date": "2026-07-16T09:06",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -189,13 +194,14 @@
     "ai_comment": "오늘은 세 종목 모두 큰 변동 없이 정상 범위 내에서 움직이고 있어 계획대로 매수 진행하기에 무리가 없어 보입니다. 다만 Nvidia의 -1.5%는 상대적으로 낙폭이 큰 편이라 반도체 섹터 전반의 뉴스나 이벤트가 있었는지 정도는 확인해보시는 게 좋겠습니다. 전체적으로 변동성이 크지 않은 만큼 계획된 매수 규칙을 그대로 따르셔도 무방할 것 같습니다.",
     "dip_note": null
   },
-  "fx": 1478.48,
+  "fx": 1479.57,
   "asset_history": [
     {
       "date": "2026-07-16",
       "total": 0,
       "deposit": 0,
-      "eval": 0
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
