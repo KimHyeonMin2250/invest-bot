@@ -1,0 +1,35 @@
+name: Weekly Review
+
+on:
+  schedule:
+    # 매주 일요일 20:00 KST = 11:00 UTC
+    - cron: '0 11 * * 0'
+  workflow_dispatch: {}
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install yfinance requests
+
+      - name: Run weekly review
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python weekly.py
+
+      - name: Save state
+        run: |
+          git config --local user.email "bot@github.com"
+          git config --local user.name "Investment Bot"
+          git add portfolio.json
+          git diff --staged --quiet || git commit -m "weekly review $(date -u +'%Y-%m-%d')"
+          git pull --rebase --autostash || true
+          git push
