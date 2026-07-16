@@ -60,35 +60,53 @@
     "wedding_fund_start": "2027-07-01"
   },
   "valuation": {
+    "0038A0.KS": {
+      "name": "KODEX 미국휴머노이드로봇",
+      "account": "ISA",
+      "type": "etf",
+      "current": 16800.0,
+      "krw_price": 16800,
+      "krw_price_gross": 16800,
+      "ma20_krw": 17854
+    },
+    "0023A0.KS": {
+      "name": "SOL 미국양자컴퓨팅TOP10",
+      "account": "ISA",
+      "type": "etf",
+      "current": 26135.0,
+      "krw_price": 26135,
+      "krw_price_gross": 26135,
+      "ma20_krw": 31656
+    },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 380.58,
-      "krw_price": 561971,
-      "krw_price_gross": 563662,
-      "ma20_krw": 565819
+      "current": 382.48,
+      "krw_price": 563896,
+      "krw_price_gross": 565592,
+      "ma20_krw": 565076
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 132.52,
-      "krw_price": 195689,
-      "krw_price_gross": 196277,
-      "ma20_krw": 184681
+      "current": 133.15,
+      "krw_price": 196305,
+      "krw_price_gross": 196896,
+      "ma20_krw": 184439
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 206.59,
-      "krw_price": 305054,
-      "krw_price_gross": 305972,
-      "ma20_krw": 298537
+      "current": 207.88,
+      "krw_price": 306480,
+      "krw_price_gross": 307403,
+      "ma20_krw": 298167
     }
   },
-  "valuation_date": "2026-07-16T15:10",
+  "valuation_date": "2026-07-16T15:52",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -128,17 +146,17 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-07-15",
+    "date": "2026-07-16",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 388.81,
-        "krw_price": 578625,
-        "change": -0.08,
+        "current": 382.48,
+        "krw_price": 565592,
+        "change": -2.99,
         "signal": "",
-        "shares": 0.0207,
+        "shares": 0.0212,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -148,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 134.73,
-        "krw_price": 200507,
-        "change": 0.76,
+        "current": 133.15,
+        "krw_price": 196896,
+        "change": -0.46,
         "signal": "",
-        "shares": 0.0449,
+        "shares": 0.0457,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -162,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 208.66,
-        "krw_price": 310530,
-        "change": -1.48,
+        "current": 207.88,
+        "krw_price": 307403,
+        "change": -2.17,
         "signal": "",
-        "shares": 0.029,
+        "shares": 0.0293,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 세 종목 모두 큰 변동 없이 정상 범위 내에서 움직이고 있어 계획대로 매수 진행하기에 무리가 없어 보입니다. 다만 Nvidia의 -1.5%는 상대적으로 낙폭이 큰 편이라 반도체 섹터 전반의 뉴스나 이벤트가 있었는지 정도는 확인해보시는 게 좋겠습니다. 전체적으로 변동성이 크지 않은 만큼 계획된 매수 규칙을 그대로 따르셔도 무방할 것 같습니다.",
+    "ai_comment": "오늘 세 종목 모두 하락했지만 정상 변동성 범위 내에서 움직이고 있어 계획된 매수를 유지해도 무리는 없어 보입니다. 다만 Broadcom과 Nvidia는 반도체 섹터 전반의 조정 가능성을 반영할 수 있으니, 매수 후에도 섹터 전체 뉴스나 추가 하락 흐름은 주시하시는 게 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1481.06,
+  "fx": 1478.75,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -192,5 +210,14 @@
     "months_diff": null,
     "required_monthly_remaining": 4878049,
     "daily_rate": null
-  }
+  },
+  "daily_comment_history": [
+    {
+      "date": "2026-07-16",
+      "market": "general",
+      "comment": "오늘 세 종목 모두 하락했지만 정상 변동성 범위 내에서 움직이고 있어 계획된 매수를 유지해도 무리는 없어 보입니다. 다만 Broadcom과 Nvidia는 반도체 섹터 전반의 조정 가능성을 반영할 수 있으니, 매수 후에도 섹터 전체 뉴스나 추가 하락 흐름은 주시하시는 게 좋겠습니다.",
+      "dip_note": null
+    }
+  ],
+  "rebalance_suggestions": []
 }
