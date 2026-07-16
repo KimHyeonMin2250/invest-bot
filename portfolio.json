@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 1265.0,
-    "0023A0.KS": 19870.0,
+    "0038A0.KS": 2205.0,
+    "0023A0.KS": 4370.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -64,80 +64,80 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 16805.0,
-      "krw_price": 16805,
-      "ma20_krw": 17854
+      "current": 17060.0,
+      "krw_price": 17060,
+      "ma20_krw": 17866
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 26130.0,
-      "krw_price": 26130,
-      "ma20_krw": 31656
+      "current": 27500.0,
+      "krw_price": 27500,
+      "ma20_krw": 31724
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 394.28,
-      "krw_price": 583881,
-      "ma20_krw": 567122
+      "krw_price": 584607,
+      "ma20_krw": 567826
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 133.76,
-      "krw_price": 198083,
-      "ma20_krw": 185268
+      "krw_price": 198329,
+      "ma20_krw": 185498
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 212.5,
-      "krw_price": 314687,
-      "ma20_krw": 299460
+      "krw_price": 315078,
+      "ma20_krw": 299832
     }
   },
-  "valuation_date": "2026-07-16T05:24",
+  "valuation_date": "2026-07-16T05:58",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-07-15",
+    "date": "2026-07-16",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 17095.0,
-        "krw_price": 17095,
-        "change": 0.89,
+        "current": 17060.0,
+        "krw_price": 17060,
+        "change": 0.0,
         "signal": "",
         "shares": 1,
-        "spent": 17095,
-        "carry": 1265,
-        "available": 18360,
+        "spent": 17060,
+        "carry": 2205,
+        "available": 19265,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 27505.0,
-        "krw_price": 27505,
-        "change": 0.97,
+        "current": 27500.0,
+        "krw_price": 27500,
+        "change": 0.0,
         "signal": "",
-        "shares": 0,
-        "spent": 0,
-        "carry": 19870,
-        "available": 19870,
+        "shares": 1,
+        "spent": 27500,
+        "carry": 4370,
+        "available": 31870,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 두 종목 모두 전일 대비 소폭 상승(+0.9~1.0%)하며 정상 변동 범위 내에서 움직이고 있어 특별한 이상 신호는 보이지 않습니다. 다만 휴머노이드 로봇과 양자컴퓨팅 테마는 변동성이 큰 성장주 섹터인 만큼, 매수 이후에도 단기 급등락 가능성을 염두에 두고 분할 매수·리스크 관리를 유지하시는 것이 좋겠습니다. 전체적인 계획 자체는 무리 없어 보이니 그대로 진행하셔도 될 것 같습니다.",
+    "ai_comment": "오늘은 두 종목 모두 전일 대비 변동이 거의 없어 특별한 이상 신호 없이 정상 범위에서 움직이고 있는 모습입니다. 다만 휴머노이드로봇과 양자컴퓨팅 테마는 변동성이 큰 성장 섹터인 만큼, 매수 자체는 계획대로 진행하되 이후 급등락 구간에서는 분할 매수 타이밍을 조금 더 유연하게 조정하는 것이 좋겠습니다. 최근 관련 테마 전반의 뉴스 흐름(정책, 기술 이슈)도 함께 체크하시길 권합니다.",
     "dip_note": null
   },
   "last_general": {
@@ -189,5 +189,5 @@
     "ai_comment": "오늘은 세 종목 모두 큰 변동 없이 정상 범위 내에서 움직이고 있어 계획대로 매수 진행하기에 무리가 없어 보입니다. 다만 Nvidia의 -1.5%는 상대적으로 낙폭이 큰 편이라 반도체 섹터 전반의 뉴스나 이벤트가 있었는지 정도는 확인해보시는 게 좋겠습니다. 전체적으로 변동성이 크지 않은 만큼 계획된 매수 규칙을 그대로 따르셔도 무방할 것 같습니다.",
     "dip_note": null
   },
-  "fx": 1480.88
+  "fx": 1482.72
 }
