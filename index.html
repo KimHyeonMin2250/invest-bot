@@ -57,10 +57,13 @@
   .top-hi { font-size: 13px; color: var(--ink-2); }
   .top-name { font-family: 'Sora'; font-size: 16px; font-weight: 600; margin-top: 1px; }
   .top-bell {
-    margin-left: auto; width: 40px; height: 40px; border-radius: 12px;
+    width: 40px; height: 40px; border-radius: 12px; border: none; cursor: pointer;
     background: var(--card); box-shadow: var(--shadow);
     display: flex; align-items: center; justify-content: center; font-size: 17px;
   }
+  .top-bell + .top-bell { margin-left: 8px; }
+  .bell-dot { position: absolute; top: 7px; right: 8px; width: 8px; height: 8px; border-radius: 50%; background: var(--red); display: none; border: 2px solid var(--card); }
+  .bell-dot.on { display: block; }
 
   .panel { display: none; padding: 6px 20px 0; animation: rise 0.35s cubic-bezier(0.2,0.8,0.2,1); }
   .panel.on { display: block; }
@@ -85,6 +88,8 @@
   .hero-fill { height: 100%; background: #fff; border-radius: 100px; width: 0%; transition: width 1s cubic-bezier(0.2,0.8,0.2,1); }
   .hero-nums { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; }
   .hero-pct { font-weight: 700; }
+  .hero-pace { margin-top: 12px; font-size: 12px; opacity: 0.92; background: rgba(255,255,255,0.14); border-radius: 10px; padding: 8px 11px; line-height: 1.5; position: relative; display: none; }
+  .hero-pace.on { display: block; }
 
   .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
   .mini { background: var(--card); border-radius: 18px; padding: 15px 16px; box-shadow: var(--shadow); }
@@ -97,6 +102,8 @@
   .sec-more { font-size: 12px; color: var(--violet); font-weight: 500; }
 
   .list { background: var(--card); border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; }
+  .chart-card { background: var(--card); border-radius: 20px; box-shadow: var(--shadow); padding: 18px 16px 14px; }
+  .chart-legend { display: flex; justify-content: space-between; font-size: 11px; color: var(--ink-3); margin-top: 6px; padding: 0 2px; }
   .row { display: flex; align-items: center; padding: 15px 17px; border-bottom: 1px solid var(--line); }
   .row:last-child { border-bottom: none; }
   .row-ic { width: 40px; height: 40px; border-radius: 12px; margin-right: 13px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Sora'; font-weight: 700; font-size: 13px; }
@@ -197,7 +204,8 @@
       <div class="top-hi">안녕하세요 👋</div>
       <div class="top-name" id="top-name">현민님</div>
     </div>
-    <div class="top-bell">🔔</div>
+    <button class="top-bell" id="refresh-btn" style="margin-left:auto" title="새로고침">🔄</button>
+    <button class="top-bell" id="bell-btn" style="position:relative">🔔<span class="bell-dot" id="bell-dot"></span></button>
   </div>
 
   <section class="panel on" id="p-home">
@@ -209,12 +217,17 @@
         <div class="hero-track"><div class="hero-fill" id="h-fill"></div></div>
         <div class="hero-nums"><span class="hero-pct" id="h-pct">0%</span><span>1억원</span></div>
       </div>
+      <div class="hero-pace" id="h-pace"></div>
     </div>
     <div class="grid2">
       <div class="mini"><div class="mini-ic" style="background:var(--amber-soft)">💰</div><div class="mini-k">예치금</div><div class="mini-v" id="h-dep">0원</div></div>
       <div class="mini"><div class="mini-ic" style="background:var(--blue-soft)">📥</div><div class="mini-k">투자 원금</div><div class="mini-v" id="h-inv">0원</div></div>
       <div class="mini"><div class="mini-ic" style="background:var(--green-soft)">📈</div><div class="mini-k">평가 손익</div><div class="mini-v" id="h-pl">0원</div></div>
       <div class="mini"><div class="mini-ic" style="background:var(--violet-soft)">📅</div><div class="mini-k">경과</div><div class="mini-v" id="h-mon">0개월</div></div>
+    </div>
+    <div class="sec" id="h-chart-sec" style="display:none"><span class="sec-t">자산 추이</span></div>
+    <div class="chart-card" id="h-chart-card" style="display:none">
+      <div id="h-chart"></div>
     </div>
     <div class="sec"><span class="sec-t">보유 종목</span><span class="sec-more" id="h-vdate"></span></div>
     <div id="h-holdings"></div>
@@ -312,6 +325,15 @@
   </div>
 </div>
 
+<div class="sheet-overlay" id="notif-overlay" onclick="closeNotif(event)">
+  <div class="sheet" onclick="event.stopPropagation()" style="max-height:70vh;overflow-y:auto">
+    <div class="sheet-handle"></div>
+    <div class="sheet-title">알림</div>
+    <div class="sheet-sub">매도 신호 · 주간 리뷰 · 목표 페이스</div>
+    <div id="notif-body" style="margin-top:6px"></div>
+  </div>
+</div>
+
 <script>
 // ── Firebase 설정 ──
 firebase.initializeApp({
@@ -335,12 +357,13 @@ const ICON_COLORS = [
 ];
 
 let P = {
-  goal: 100000000, start_date: '2026-09-21',
+  goal: 100000000, start_date: '2026-09-21', end_date: '2028-03-31',
   deposit: 0, total_invested: 0,
   base_monthly_total: 2000000, current_month_budget: 2000000,
   targets: {}, holdings: [], transactions: [], monthly_deposits: [],
   last_isa: null, last_general: null, action_log: [],
-  valuation: {}, valuation_date: null, sell_signals: [], sell_note: null
+  valuation: {}, valuation_date: null, sell_signals: [], sell_note: null,
+  asset_history: [], goal_pace: null, weekly_review: null, wedding_note: null
 };
 
 function curPrice(ticker) {
@@ -354,6 +377,8 @@ const $ = id => document.getElementById(id);
 
 // ── 데이터 로드 ──
 async function load() {
+  const errors = [];
+
   // 1. 로컬 캐시 (빠른 첫 렌더)
   try {
     const c = localStorage.getItem('P');
@@ -366,8 +391,10 @@ async function load() {
     if (r.ok) {
       const remote = await r.json();
       P = { ...P, ...remote };
+    } else {
+      errors.push('시세 데이터를 불러오지 못했어요');
     }
-  } catch(e){ console.log('GitHub 읽기 실패'); }
+  } catch(e){ console.log('GitHub 읽기 실패'); errors.push('시세 데이터를 불러오지 못했어요'); }
 
   // 3. Firestore에서 앱 데이터 읽기 (예치금, 거래내역, 버튼 기록)
   try {
@@ -382,9 +409,11 @@ async function load() {
       P.action_log = fs.action_log ?? P.action_log;
       P.current_month_budget = fs.current_month_budget ?? P.current_month_budget;
     }
-  } catch(e){ console.log('Firestore 읽기 실패:', e); }
+  } catch(e){ console.log('Firestore 읽기 실패:', e); errors.push('내 보유 현황을 불러오지 못했어요'); }
 
   localStorage.setItem('P', JSON.stringify(P));
+  P._errors = errors;
+  return errors;
 }
 
 // ── Firestore 저장 ──
@@ -441,6 +470,9 @@ function renderHome() {
     vEl.textContent = '';
   }
 
+  renderPace();
+  renderChart();
+
   const box = $('h-holdings');
   if (!hs.length) {
     box.innerHTML = `<div class="list"><div class="empty"><div class="empty-ic">📊</div><b>아직 보유 종목이 없어요</b>예산을 설정하고 첫 매수를 시작해보세요</div></div>`;
@@ -467,6 +499,117 @@ function renderHome() {
       </div>
     </div>`;
   }).join('') + '</div>';
+}
+
+// ── 목표 페이스 ──
+function renderPace() {
+  const el = $('h-pace');
+  const p = P.goal_pace;
+  if (!p || p.status === 'unknown') {
+    el.classList.remove('on');
+    return;
+  }
+  el.classList.add('on');
+  if (p.status === 'reached') {
+    el.textContent = '🎉 이미 목표 금액에 도달했어요';
+    return;
+  }
+  const labelMap = { ahead: '📈 목표 기한보다 빠른 페이스', behind: '📉 목표 기한보다 느린 페이스', on_track: '➡️ 목표 기한과 거의 일치' };
+  const label = labelMap[p.status] || '';
+  const reqLine = p.required_monthly_remaining != null ? ` · 기한 맞추려면 월 ${won(p.required_monthly_remaining)} 필요` : '';
+  el.textContent = `${label}${p.projected_date ? ` · 예상 도달 ${p.projected_date}` : ''}${reqLine}`;
+}
+
+// ── 자산 추이 미니 차트 (의존성 없는 인라인 SVG) ──
+function renderChart() {
+  const sec = $('h-chart-sec'), card = $('h-chart-card'), box = $('h-chart');
+  const hist = (P.asset_history || []).slice(-60); // 최근 60개 스냅샷
+  if (hist.length < 2) { sec.style.display = 'none'; card.style.display = 'none'; return; }
+  sec.style.display = ''; card.style.display = '';
+
+  const W = 400, H = 120, PAD = 6;
+  const vals = hist.map(h => h.total);
+  const min = Math.min(...vals), max = Math.max(...vals);
+  const range = (max - min) || 1;
+  const stepX = (W - PAD * 2) / (hist.length - 1);
+  const pts = hist.map((h, i) => {
+    const x = PAD + i * stepX;
+    const y = H - PAD - ((h.total - min) / range) * (H - PAD * 2);
+    return [x, y];
+  });
+  const pathD = pts.map((p, i) => (i === 0 ? 'M' : 'L') + p[0].toFixed(1) + ',' + p[1].toFixed(1)).join(' ');
+  const areaD = pathD + ` L${pts[pts.length-1][0].toFixed(1)},${H} L${pts[0][0].toFixed(1)},${H} Z`;
+  const up = vals[vals.length-1] >= vals[0];
+  const color = up ? '#16c784' : '#ff5b5b';
+
+  box.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" preserveAspectRatio="none">
+    <defs><linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="${color}" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="${color}" stop-opacity="0"/>
+    </linearGradient></defs>
+    <path d="${areaD}" fill="url(#chartGrad)"/>
+    <path d="${pathD}" fill="none" stroke="${color}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="${pts[pts.length-1][0]}" cy="${pts[pts.length-1][1]}" r="3.5" fill="${color}"/>
+  </svg>`;
+  const legendHtml = `<div class="chart-legend"><span>${hist[0].date}</span><span>${won(vals[vals.length-1])}</span><span>${hist[hist.length-1].date}</span></div>`;
+  if (!box.nextElementSibling || !box.nextElementSibling.classList.contains('chart-legend')) {
+    box.insertAdjacentHTML('afterend', legendHtml);
+  } else {
+    box.nextElementSibling.outerHTML = legendHtml;
+  }
+}
+
+// ── 알림 (매도신호 / 결혼자금 / 주간리뷰 / 목표페이스) ──
+function collectNotifs() {
+  const items = [];
+  if (P.sell_signals && P.sell_signals.length) {
+    items.push({ icon: '📤', title: '매도 신호', date: P.valuation_date?.slice(0,10) || '',
+      body: P.sell_signals.map(s => `<b>${s.name}</b> ${s.pl_pct>=0?'+':''}${s.pl_pct}%<br>${s.messages.join('<br>')}`).join('<br><br>')
+        + (P.sell_note ? `<br><br>🤖 ${P.sell_note}` : '') });
+  }
+  if (P.weekly_review && P.weekly_review.text) {
+    items.push({ icon: '📅', title: '주간 리뷰', date: P.weekly_review.date, body: P.weekly_review.text });
+  }
+  if (P.wedding_note && P.wedding_note.text) {
+    items.push({ icon: '💍', title: '결혼자금 안내', date: P.wedding_note.date, body: P.wedding_note.text });
+  }
+  if (P.goal_pace && P.goal_pace.status && P.goal_pace.status !== 'unknown' && P.goal_pace.status !== 'ahead') {
+    const label = P.goal_pace.status === 'behind' ? '목표 페이스가 느려요' : '목표 페이스 안내';
+    items.push({ icon: '🎯', title: label, date: '',
+      body: `현재 속도면 ${P.goal_pace.projected_date || '미상'}경 도달 예상이에요. 기한 맞추려면 월 ${won(P.goal_pace.required_monthly_remaining||0)}이 필요해요.` });
+  }
+  return items;
+}
+
+function renderNotifBadge() {
+  $('bell-dot').classList.toggle('on', collectNotifs().length > 0);
+}
+
+function openNotif() {
+  const items = collectNotifs();
+  const body = $('notif-body');
+  body.innerHTML = items.length
+    ? items.map(n => `<div class="ai" style="margin-bottom:10px">
+        <div class="ai-top"><span>${n.icon}</span><span class="ai-badge">${n.title}</span>${n.date ? `<span style="margin-left:auto;font-size:11px;color:var(--ink-3)">${n.date}</span>` : ''}</div>
+        <div class="ai-text">${n.body}</div>
+      </div>`).join('')
+    : `<div class="empty"><div class="empty-ic">🔕</div><b>새 알림이 없어요</b>매도 신호나 주간 리뷰가 오면 여기 모여요</div>`;
+  $('notif-overlay').classList.add('show');
+}
+function closeNotif(e) {
+  if (e && e.target !== $('notif-overlay')) return;
+  $('notif-overlay').classList.remove('show');
+}
+
+// ── 새로고침 ──
+async function refresh() {
+  const btn = $('refresh-btn');
+  btn.style.transition = 'transform 0.6s'; btn.style.transform = 'rotate(360deg)';
+  setTimeout(() => { btn.style.transition = ''; btn.style.transform = ''; }, 650);
+  const errors = await load();
+  renderAll();
+  if (errors.length) toast('⚠️ ' + errors[0]);
+  else toast('✅ 최신 정보로 갱신됐어요');
 }
 
 function renderToday() {
@@ -580,7 +723,7 @@ function renderHistory() {
   }).join('') + '</div>';
 }
 
-function renderAll() { renderHome(); renderToday(); renderMoney(); renderHistory(); }
+function renderAll() { renderHome(); renderToday(); renderMoney(); renderHistory(); renderNotifBadge(); }
 
 async function setBudget(v) {
   if (!v || v <= 0) { toast('금액을 입력해주세요'); return; }
@@ -711,7 +854,14 @@ $('sell-go').addEventListener('click', sellHolding);
 $('edit-go').addEventListener('click', saveHoldingEdit);
 $('edit-del').addEventListener('click', deleteHolding);
 
-(async () => { await load(); renderAll(); })();
+$('refresh-btn').addEventListener('click', refresh);
+$('bell-btn').addEventListener('click', openNotif);
+
+(async () => {
+  const errors = await load();
+  renderAll();
+  if (errors.length) toast('⚠️ ' + errors[0]);
+})();
 </script>
 </body>
 </html>

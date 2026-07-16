@@ -102,17 +102,88 @@ def fs_value(v):
 
 def fetch_holdings():
     """Firestore에서 보유 종목(수량/투자원금) 읽기. 앱과 동일하게 인증 없는 공개 REST 접근."""
+    return fetch_state()["holdings"]
+
+
+def fetch_state():
+    """Firestore 전체 상태(예치금 + 보유 종목) 읽기."""
     try:
         r = requests.get(FIRESTORE_DOC_URL, timeout=15)
         if r.status_code != 200:
             print(f"Firestore 읽기 실패: {r.status_code}")
-            return []
+            return {"deposit": 0, "holdings": []}
         fields = r.json().get("fields", {})
-        raw = fields.get("holdings")
-        return fs_value(raw) or [] if raw else []
+        deposit = fs_value(fields.get("deposit")) or 0
+        raw_holdings = fields.get("holdings")
+        holdings = fs_value(raw_holdings) or [] if raw_holdings else []
+        return {"deposit": deposit, "holdings": holdings}
     except Exception as e:
         print(f"Firestore 읽기 예외: {e}")
-        return []
+        return {"deposit": 0, "holdings": []}
+
+
+def eval_holdings(holdings, valuation):
+    """보유 종목 평가금액 합계 (시세 없는 종목은 투자원금으로 대체)."""
+    total = 0
+    for h in holdings:
+        v = valuation.get(h.get("ticker"))
+        if v:
+            total += (h.get("shares") or 0) * v["krw_price"]
+        else:
+            total += h.get("invested") or 0
+    return total
+
+
+def upsert_history(data, today, total, deposit, eval_total):
+    """일별 자산 스냅샷 기록 (하루 여러 번 실행돼도 그날 값은 마지막 것으로 덮어씀)."""
+    hist = [h for h in data.get("asset_history", []) if h.get("date") != today.isoformat()]
+    hist.append({"date": today.isoformat(), "total": round(total),
+                 "deposit": round(deposit), "eval": round(eval_total)})
+    hist.sort(key=lambda h: h["date"])
+    data["asset_history"] = hist[-600:]  # 20개월 프로젝트 + 여유
+
+
+def compute_pace(history, total, goal, start_date_str, end_date_str, today=None):
+    """최근 자산 증가 속도로 목표 도달 예상일을 추정하고, 남은 기간 필요 월 투자금을 계산."""
+    today = today or datetime.date.today()
+    try:
+        end = datetime.date.fromisoformat(end_date_str)
+    except Exception:
+        return {"status": "unknown"}
+
+    months_remaining = max(0.1, (end.year - today.year) * 12 + (end.month - today.month)
+                           + (end.day - today.day) / 30)
+    remaining_amount = max(0, goal - total)
+    required_monthly_remaining = round(remaining_amount / months_remaining)
+
+    usable = sorted([h for h in history if h.get("total") is not None], key=lambda h: h["date"])
+    daily_rate, projected_date, status, months_diff = None, None, "unknown", None
+    if len(usable) >= 2:
+        first, last = usable[0], usable[-1]
+        try:
+            d0 = datetime.date.fromisoformat(first["date"])
+            d1 = datetime.date.fromisoformat(last["date"])
+            days = (d1 - d0).days
+            if days >= 7:
+                daily_rate = (last["total"] - first["total"]) / days
+        except Exception:
+            pass
+
+    if daily_rate and daily_rate > 0 and total < goal:
+        days_needed = (goal - total) / daily_rate
+        projected = today + datetime.timedelta(days=days_needed)
+        projected_date = projected.isoformat()
+        months_diff = round(((end.year - projected.year) * 12 + (end.month - projected.month))
+                            + (end.day - projected.day) / 30, 1)
+        status = "ahead" if projected < end else ("behind" if projected > end else "on_track")
+    elif total >= goal:
+        status, projected_date = "reached", today.isoformat()
+
+    return {
+        "status": status, "projected_date": projected_date, "months_diff": months_diff,
+        "required_monthly_remaining": required_monthly_remaining,
+        "daily_rate": round(daily_rate) if daily_rate else None,
+    }
 
 
 def sell_signals(holdings, valuation, cfg):
@@ -260,17 +331,25 @@ def claude_dip_check(acts, prices):
         + "\n".join(lines), 500)
 
 
-def claude_monthly(holdings, targets):
+def claude_monthly(holdings, targets, pace=None):
     if not holdings: return None
     total = sum(h.get("invested", 0) for h in holdings)
     if total == 0: return None
     lines = [f"- {h.get('name', h['ticker'])}: {h.get('invested',0):,}원 "
              f"({h.get('invested',0)/total*100:.0f}%)" for h in holdings]
     plan = [f"- {v['name']}: 목표 {v['monthly']/20000*100:.0f}%" for v in targets.values()]
+    pace_line = ""
+    if pace and pace.get("status") not in (None, "unknown"):
+        label = {"ahead": "목표 기한보다 빠른 페이스", "behind": "목표 기한보다 느린 페이스",
+                  "on_track": "목표 기한과 거의 일치", "reached": "이미 목표 달성"}.get(pace["status"], "")
+        pace_line = (f"\n\n[목표 페이스]\n{label}. "
+                     f"현재 속도면 {pace.get('projected_date','미상')}경 1억 도달 예상. "
+                     f"기한(2028-03-31) 안에 맞추려면 남은 기간 월 {pace.get('required_monthly_remaining',0):,}원 필요.")
     return call_claude(
-        "월간 포트폴리오 리뷰입니다. 현재 보유 비중이 계획 대비 얼마나 틀어졌는지 "
-        "점검하고, 다음 달 조정이 필요하면 알려주세요. 3~4문장, 한국어로.\n\n"
-        f"[현재 비중]\n" + "\n".join(lines) + f"\n\n[계획 비중]\n" + "\n".join(plan), 500)
+        "월간 포트폴리오 리뷰입니다. 현재 보유 비중이 계획 대비 얼마나 틀어졌는지, "
+        "목표 페이스는 어떤지 점검하고 다음 달 조정이 필요하면 알려주세요. 유능한 자산관리사 "
+        "톤으로 4~5문장, 한국어로.\n\n"
+        f"[현재 비중]\n" + "\n".join(lines) + f"\n\n[계획 비중]\n" + "\n".join(plan) + pace_line, 600)
 
 
 def claude_sell_note(signals):
@@ -386,14 +465,23 @@ def main():
     comment = claude_comment(acts)
     dip_note = claude_dip_check(acts, prices)
 
-    # ── 보유 종목 실시간 평가 + 매도 신호 (시장 구분 없이 매 실행마다 전체 갱신) ──
+    # ── 보유 종목 실시간 평가 + 매도 신호 + 자산 히스토리/페이스 (시장 구분 없이 매번 갱신) ──
     valuation = fetch_all_prices(data["targets"], fx)
-    holdings = fetch_holdings()
+    state = fetch_state()
+    holdings, deposit = state["holdings"], state["deposit"]
+    eval_total = eval_holdings(holdings, valuation)
+    total = deposit + eval_total
+
     cfg = data.get("sell_config") or DEFAULT_SELL_CONFIG
     signals = sell_signals(holdings, valuation, cfg)
     sell_note = claude_sell_note(signals)
     wedding_note = claude_wedding_note(today, cfg)
-    monthly = claude_monthly(holdings, data["targets"]) if today.day == 1 else None
+
+    upsert_history(data, today, total, deposit, eval_total)
+    pace = compute_pace(data["asset_history"], total, data["goal"], data["start_date"],
+                        data.get("end_date", "2028-03-31"), today)
+
+    monthly = claude_monthly(holdings, data["targets"], pace) if today.day == 1 else None
 
     data["carryover"] = new_carry
     key = "last_isa" if MARKET == "isa" else "last_general"
@@ -405,6 +493,9 @@ def main():
     data["sell_signals"] = signals
     data["sell_note"] = sell_note
     data["sell_config"] = cfg
+    data["goal_pace"] = pace
+    if wedding_note:
+        data["wedding_note"] = {"date": today.isoformat(), "text": wedding_note}
     save(data)
 
     send(build_msg(acts, today.isoformat(), MARKET, comment, dip_note, monthly,
