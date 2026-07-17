@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 370.83,
-      "krw_price": 550099,
-      "krw_price_gross": 551754,
-      "ma20_krw": 566390
+      "krw_price": 549933,
+      "krw_price_gross": 551587,
+      "ma20_krw": 566219
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 132.38,
-      "krw_price": 196379,
-      "krw_price_gross": 196970,
-      "ma20_krw": 185807
+      "krw_price": 196319,
+      "krw_price_gross": 196910,
+      "ma20_krw": 185751
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 202.81,
-      "krw_price": 300858,
-      "krw_price_gross": 301763,
-      "ma20_krw": 299842
+      "krw_price": 300767,
+      "krw_price_gross": 301672,
+      "ma20_krw": 299751
     }
   },
-  "valuation_date": "2026-07-17T20:38",
+  "valuation_date": "2026-07-17T21:36",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 완만한 하락에 그치며 정상 변동성 범위 내에서 움직이고 있어, 계획된 매수를 그대로 진행하기에 무리 없는 흐름입니다. 다만 Palantir는 상대적으로 낙폭이 커 변동성이 높은 종목인 만큼 체결가 슬리피지에 유의하시고, 반도체 섹터(Broadcom·Nvidia) 전반의 약세가 이어지는지는 장 마감 전까지 한 번 더 확인해보시는 게 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1487.91,
+  "fx": 1487.46,
   "asset_history": [
     {
       "date": "2026-07-16",
