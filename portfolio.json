@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 2205.0,
-    "0023A0.KS": 4370.0,
+    "0038A0.KS": 10605.0,
+    "0023A0.KS": 12100.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -83,67 +83,67 @@
       "account": "general",
       "type": "stock",
       "current": 374.45,
-      "krw_price": 552759,
-      "krw_price_gross": 554422,
-      "ma20_krw": 565202
+      "krw_price": 551829,
+      "krw_price_gross": 553490,
+      "ma20_krw": 564252
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 134.44,
-      "krw_price": 198459,
-      "krw_price_gross": 199056,
-      "ma20_krw": 184769
+      "krw_price": 198125,
+      "krw_price_gross": 198721,
+      "ma20_krw": 184458
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 207.4,
-      "krw_price": 306161,
-      "krw_price_gross": 307083,
-      "ma20_krw": 298510
+      "krw_price": 305647,
+      "krw_price_gross": 306566,
+      "ma20_krw": 298008
     }
   },
-  "valuation_date": "2026-07-17T03:31",
+  "valuation_date": "2026-07-17T05:59",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-07-16",
+    "date": "2026-07-17",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 17060.0,
-        "krw_price": 17060,
-        "change": 0.0,
-        "signal": "",
-        "shares": 1,
-        "spent": 17060,
-        "carry": 2205,
-        "available": 19265,
+        "current": 16800.0,
+        "krw_price": 16800,
+        "change": -1.52,
+        "signal": "🟡 소폭 하락",
+        "shares": 2,
+        "spent": 33600,
+        "carry": 10605,
+        "available": 44205,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 27500.0,
-        "krw_price": 27500,
-        "change": 0.0,
-        "signal": "",
-        "shares": 1,
-        "spent": 27500,
-        "carry": 4370,
-        "available": 31870,
+        "current": 26135.0,
+        "krw_price": 26135,
+        "change": -4.96,
+        "signal": "🔴 큰 급락 (-3% 이하)",
+        "shares": 2,
+        "spent": 52270,
+        "carry": 12100,
+        "available": 64370,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 두 종목 모두 전일 대비 변동이 거의 없어 특별한 이상 신호 없이 정상 범위에서 움직이고 있는 모습입니다. 다만 휴머노이드로봇과 양자컴퓨팅 테마는 변동성이 큰 성장 섹터인 만큼, 매수 자체는 계획대로 진행하되 이후 급등락 구간에서는 분할 매수 타이밍을 조금 더 유연하게 조정하는 것이 좋겠습니다. 최근 관련 테마 전반의 뉴스 흐름(정책, 기술 이슈)도 함께 체크하시길 권합니다.",
-    "dip_note": null
+    "ai_comment": "오늘 두 종목 모두 5일 이동평균선을 하회하며 조정 국면에 있고, 특히 양자컴퓨팅 테마는 -5% 급락으로 변동성이 커진 상태입니다. 로봇/양자컴퓨팅 같은 테마주는 단기 낙폭이 확대될 수 있으니 분할 매수 관점에서 접근하시고, 반등 시점보다는 추세 전환 신호(거래량, MA 재돌파 여부)를 함께 확인하시는 게 좋겠습니다. 매수 계획 자체는 유지하되 포지션 규모와 리스크 관리에 유의하시길 권합니다.",
+    "dip_note": "**KODEX 미국휴머노이드로봇**: -1.5%는 비교적 작은 낙폭이지만, 5일평균(17069"
   },
   "last_general": {
     "date": "2026-07-16",
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 하락했지만 정상 변동성 범위 내에서 움직이고 있어 계획된 매수를 유지해도 무리는 없어 보입니다. 다만 Broadcom과 Nvidia는 반도체 섹터 전반의 조정 가능성을 반영할 수 있으니, 매수 후에도 섹터 전체 뉴스나 추가 하락 흐름은 주시하시는 게 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1480.63,
+  "fx": 1478.14,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -224,6 +224,12 @@
       "market": "general",
       "comment": "오늘 세 종목 모두 하락했지만 정상 변동성 범위 내에서 움직이고 있어 계획된 매수를 유지해도 무리는 없어 보입니다. 다만 Broadcom과 Nvidia는 반도체 섹터 전반의 조정 가능성을 반영할 수 있으니, 매수 후에도 섹터 전체 뉴스나 추가 하락 흐름은 주시하시는 게 좋겠습니다.",
       "dip_note": null
+    },
+    {
+      "date": "2026-07-17",
+      "market": "isa",
+      "comment": "오늘 두 종목 모두 5일 이동평균선을 하회하며 조정 국면에 있고, 특히 양자컴퓨팅 테마는 -5% 급락으로 변동성이 커진 상태입니다. 로봇/양자컴퓨팅 같은 테마주는 단기 낙폭이 확대될 수 있으니 분할 매수 관점에서 접근하시고, 반등 시점보다는 추세 전환 신호(거래량, MA 재돌파 여부)를 함께 확인하시는 게 좋겠습니다. 매수 계획 자체는 유지하되 포지션 규모와 리스크 관리에 유의하시길 권합니다.",
+      "dip_note": "**KODEX 미국휴머노이드로봇**: -1.5%는 비교적 작은 낙폭이지만, 5일평균(17069"
     }
   ],
   "rebalance_suggestions": []
