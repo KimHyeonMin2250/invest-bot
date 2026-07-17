@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 371.11,
-      "krw_price": 548986,
-      "krw_price_gross": 550638,
-      "ma20_krw": 564831
+      "current": 370.7,
+      "krw_price": 550409,
+      "krw_price_gross": 552065,
+      "ma20_krw": 566891
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 132.2,
-      "krw_price": 195565,
-      "krw_price_gross": 196153,
-      "ma20_krw": 185275
+      "current": 131.12,
+      "krw_price": 194685,
+      "krw_price_gross": 195270,
+      "ma20_krw": 185881
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 204.23,
-      "krw_price": 302118,
-      "krw_price_gross": 303027,
-      "ma20_krw": 299110
+      "current": 204.7,
+      "krw_price": 303935,
+      "krw_price_gross": 304849,
+      "ma20_krw": 300252
     }
   },
-  "valuation_date": "2026-07-17T14:50",
+  "valuation_date": "2026-07-17T15:52",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,17 +146,17 @@
     "dip_note": "**KODEX 미국휴머노이드로봇**: -1.5%는 비교적 작은 낙폭이지만, 5일평균(17069"
   },
   "last_general": {
-    "date": "2026-07-16",
+    "date": "2026-07-17",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 382.48,
-        "krw_price": 565592,
-        "change": -2.99,
+        "current": 370.7,
+        "krw_price": 552065,
+        "change": -1.0,
         "signal": "",
-        "shares": 0.0212,
+        "shares": 0.0217,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -166,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 133.15,
-        "krw_price": 196896,
-        "change": -0.46,
+        "current": 131.12,
+        "krw_price": 195270,
+        "change": -2.47,
         "signal": "",
-        "shares": 0.0457,
+        "shares": 0.0461,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 207.88,
-        "krw_price": 307403,
-        "change": -2.17,
+        "current": 204.7,
+        "krw_price": 304849,
+        "change": -1.3,
         "signal": "",
-        "shares": 0.0293,
+        "shares": 0.0295,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 세 종목 모두 하락했지만 정상 변동성 범위 내에서 움직이고 있어 계획된 매수를 유지해도 무리는 없어 보입니다. 다만 Broadcom과 Nvidia는 반도체 섹터 전반의 조정 가능성을 반영할 수 있으니, 매수 후에도 섹터 전체 뉴스나 추가 하락 흐름은 주시하시는 게 좋겠습니다.",
+    "ai_comment": "오늘은 세 종목 모두 완만한 하락에 그치며 정상 변동성 범위 내에서 움직이고 있어, 계획된 매수를 그대로 진행하기에 무리 없는 흐름입니다. 다만 Palantir는 상대적으로 낙폭이 커 변동성이 높은 종목인 만큼 체결가 슬리피지에 유의하시고, 반도체 섹터(Broadcom·Nvidia) 전반의 약세가 이어지는지는 장 마감 전까지 한 번 더 확인해보시는 게 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1483.76,
+  "fx": 1489.25,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -230,6 +230,12 @@
       "market": "isa",
       "comment": "오늘 두 종목 모두 5일 이동평균선을 하회하며 조정 국면에 있고, 특히 양자컴퓨팅 테마는 -5% 급락으로 변동성이 커진 상태입니다. 로봇/양자컴퓨팅 같은 테마주는 단기 낙폭이 확대될 수 있으니 분할 매수 관점에서 접근하시고, 반등 시점보다는 추세 전환 신호(거래량, MA 재돌파 여부)를 함께 확인하시는 게 좋겠습니다. 매수 계획 자체는 유지하되 포지션 규모와 리스크 관리에 유의하시길 권합니다.",
       "dip_note": "**KODEX 미국휴머노이드로봇**: -1.5%는 비교적 작은 낙폭이지만, 5일평균(17069"
+    },
+    {
+      "date": "2026-07-17",
+      "market": "general",
+      "comment": "오늘은 세 종목 모두 완만한 하락에 그치며 정상 변동성 범위 내에서 움직이고 있어, 계획된 매수를 그대로 진행하기에 무리 없는 흐름입니다. 다만 Palantir는 상대적으로 낙폭이 커 변동성이 높은 종목인 만큼 체결가 슬리피지에 유의하시고, 반도체 섹터(Broadcom·Nvidia) 전반의 약세가 이어지는지는 장 마감 전까지 한 번 더 확인해보시는 게 좋겠습니다.",
+      "dip_note": null
     }
   ],
   "rebalance_suggestions": []
