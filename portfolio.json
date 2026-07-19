@@ -83,8 +83,8 @@
       "account": "general",
       "type": "stock",
       "current": 370.83,
-      "krw_price": 549933,
-      "krw_price_gross": 551587,
+      "krw_price": 549940,
+      "krw_price_gross": 551595,
       "ma20_krw": 566219
     },
     "PLTR": {
@@ -106,7 +106,7 @@
       "ma20_krw": 299751
     }
   },
-  "valuation_date": "2026-07-17T23:30",
+  "valuation_date": "2026-07-19T11:50",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -209,13 +209,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-07-19",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 4885993,
+    "required_monthly_remaining": 4901961,
     "daily_rate": null
   },
   "daily_comment_history": [
@@ -238,5 +245,15 @@
       "dip_note": null
     }
   ],
-  "rebalance_suggestions": []
+  "rebalance_suggestions": [],
+  "weekly_review": {
+    "date": "2026-07-19",
+    "text": "안녕하세요, 이번 주 리뷰 전해드립니다. 확인해보니 아직 매수 이전 단계이거나 투자를 시작하지 않으신 상태라 현재 보유하고 계신 종목은 없으신 것으로 보입니다. 목표 페이스 역시 최소 일주일 이상의 자산 기록이 쌓여야 의미 있는 계산이 가능한데, 아직 데이터가 충분하지 않아 이번 주에는 구체적인 페이스를 말씀드리기 어려운 점 양해 부탁드립니다. 급하게 서두르실 필요는 없으니, 투자 목적과 기간, 감내 가능한 변동성 정도를 먼저 정리해보시는 것도 좋은 시작이 될 수 있을 것 같아요. 준비가 되시면 첫 매수 시점부터 함께 페이스를 잡아드리겠습니다. 다음 주에는 조금 더 구체적인 이야기를 나눌 수 있기를 기대하겠습니다."
+  },
+  "weekly_review_history": [
+    {
+      "date": "2026-07-19",
+      "text": "안녕하세요, 이번 주 리뷰 전해드립니다. 확인해보니 아직 매수 이전 단계이거나 투자를 시작하지 않으신 상태라 현재 보유하고 계신 종목은 없으신 것으로 보입니다. 목표 페이스 역시 최소 일주일 이상의 자산 기록이 쌓여야 의미 있는 계산이 가능한데, 아직 데이터가 충분하지 않아 이번 주에는 구체적인 페이스를 말씀드리기 어려운 점 양해 부탁드립니다. 급하게 서두르실 필요는 없으니, 투자 목적과 기간, 감내 가능한 변동성 정도를 먼저 정리해보시는 것도 좋은 시작이 될 수 있을 것 같아요. 준비가 되시면 첫 매수 시점부터 함께 페이스를 잡아드리겠습니다. 다음 주에는 조금 더 구체적인 이야기를 나눌 수 있기를 기대하겠습니다."
+    }
+  ]
 }
