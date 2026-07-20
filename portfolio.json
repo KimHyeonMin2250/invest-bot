@@ -64,18 +64,18 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15950.0,
-      "krw_price": 15950,
-      "krw_price_gross": 15950,
-      "ma20_krw": 17729
+      "current": 15955.0,
+      "krw_price": 15955,
+      "krw_price_gross": 15955,
+      "ma20_krw": 17730
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 24605.0,
-      "krw_price": 24605,
-      "krw_price_gross": 24605,
+      "current": 24595.0,
+      "krw_price": 24595,
+      "krw_price_gross": 24595,
       "ma20_krw": 31180
     },
     "AVGO": {
@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 370.83,
-      "krw_price": 546568,
-      "krw_price_gross": 548213,
-      "ma20_krw": 562747
+      "krw_price": 547722,
+      "krw_price_gross": 549370,
+      "ma20_krw": 563935
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 132.38,
-      "krw_price": 195116,
-      "krw_price_gross": 195703,
-      "ma20_krw": 184612
+      "krw_price": 195527,
+      "krw_price_gross": 196116,
+      "ma20_krw": 185001
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 202.81,
-      "krw_price": 298923,
-      "krw_price_gross": 299822,
-      "ma20_krw": 297913
+      "krw_price": 299554,
+      "krw_price_gross": 300455,
+      "ma20_krw": 298542
     }
   },
-  "valuation_date": "2026-07-20T06:31",
+  "valuation_date": "2026-07-20T07:21",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 완만한 하락에 그치며 정상 변동성 범위 내에서 움직이고 있어, 계획된 매수를 그대로 진행하기에 무리 없는 흐름입니다. 다만 Palantir는 상대적으로 낙폭이 커 변동성이 높은 종목인 만큼 체결가 슬리피지에 유의하시고, 반도체 섹터(Broadcom·Nvidia) 전반의 약세가 이어지는지는 장 마감 전까지 한 번 더 확인해보시는 게 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1478.34,
+  "fx": 1481.46,
   "asset_history": [
     {
       "date": "2026-07-16",
