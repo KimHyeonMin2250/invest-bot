@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 383.16,
-      "krw_price": 564107,
-      "krw_price_gross": 565805,
-      "ma20_krw": 560088
+      "current": 382.11,
+      "krw_price": 562862,
+      "krw_price_gross": 564556,
+      "ma20_krw": 560303
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 134.71,
-      "krw_price": 198334,
-      "krw_price_gross": 198931,
-      "ma20_krw": 184864
+      "current": 135.43,
+      "krw_price": 199491,
+      "krw_price_gross": 200091,
+      "ma20_krw": 185013
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 206.26,
-      "krw_price": 303672,
-      "krw_price_gross": 304586,
-      "ma20_krw": 297253
+      "current": 204.74,
+      "krw_price": 301586,
+      "krw_price_gross": 302493,
+      "ma20_krw": 297295
     }
   },
-  "valuation_date": "2026-07-20T16:07",
+  "valuation_date": "2026-07-20T16:47",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 변동성 우려는 적어 보입니다. 다만 브로드컴이 상대적으로 상승폭이 크니 매수 시점 분산을 고려해볼 만하고, 반도체/AI 관련주 쏠림 현상이 있는 만큼 포트폴리오 집중도는 한번 점검해보시길 권합니다. 최종 매수 결정은 계획대로 진행하셔도 무방해 보입니다.",
     "dip_note": null
   },
-  "fx": 1476.68,
+  "fx": 1477.45,
   "asset_history": [
     {
       "date": "2026-07-16",
