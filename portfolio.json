@@ -60,35 +60,53 @@
     "wedding_fund_start": "2027-07-01"
   },
   "valuation": {
+    "0038A0.KS": {
+      "name": "KODEX 미국휴머노이드로봇",
+      "account": "ISA",
+      "type": "etf",
+      "current": 15955.0,
+      "krw_price": 15955,
+      "krw_price_gross": 15955,
+      "ma20_krw": 17730
+    },
+    "0023A0.KS": {
+      "name": "SOL 미국양자컴퓨팅TOP10",
+      "account": "ISA",
+      "type": "etf",
+      "current": 24595.0,
+      "krw_price": 24595,
+      "krw_price_gross": 24595,
+      "ma20_krw": 31180
+    },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 379.79,
-      "krw_price": 559884,
-      "krw_price_gross": 561569,
-      "ma20_krw": 560579
+      "current": 383.16,
+      "krw_price": 564107,
+      "krw_price_gross": 565805,
+      "ma20_krw": 560088
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 133.0,
-      "krw_price": 196068,
-      "krw_price_gross": 196658,
-      "ma20_krw": 184982
+      "current": 134.71,
+      "krw_price": 198334,
+      "krw_price_gross": 198931,
+      "ma20_krw": 184864
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 206.09,
-      "krw_price": 303817,
-      "krw_price_gross": 304731,
-      "ma20_krw": 297632
+      "current": 206.26,
+      "krw_price": 303672,
+      "krw_price_gross": 304586,
+      "ma20_krw": 297253
     }
   },
-  "valuation_date": "2026-07-20T15:19",
+  "valuation_date": "2026-07-20T16:07",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -128,17 +146,17 @@
     "dip_note": "**KODEX 미국휴머노이드로봇** (-5.1%)와 **SOL 미국양자컴퓨팅TOP10** (-5.9%) 모두 5일선·20일선을 상당폭 하회하고 있어, 오늘 하루의 이벤트라기보다는 최근 며칠간 이어진 하락 추세의 연장으로 보입니다.\n\n다만 저는 오늘자 코스피/나스닥 지수 움직임이나 로봇·양자컴퓨팅 관련 개별 뉴스(실적, 규제,"
   },
   "last_general": {
-    "date": "2026-07-17",
+    "date": "2026-07-20",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 370.7,
-        "krw_price": 552065,
-        "change": -1.0,
+        "current": 383.16,
+        "krw_price": 565805,
+        "change": 3.32,
         "signal": "",
-        "shares": 0.0217,
+        "shares": 0.0212,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -148,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 131.12,
-        "krw_price": 195270,
-        "change": -2.47,
+        "current": 134.71,
+        "krw_price": 198931,
+        "change": 1.76,
         "signal": "",
-        "shares": 0.0461,
+        "shares": 0.0452,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -162,9 +180,9 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 204.7,
-        "krw_price": 304849,
-        "change": -1.3,
+        "current": 206.26,
+        "krw_price": 304586,
+        "change": 1.7,
         "signal": "",
         "shares": 0.0295,
         "spent": 9000,
@@ -173,10 +191,10 @@
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 세 종목 모두 완만한 하락에 그치며 정상 변동성 범위 내에서 움직이고 있어, 계획된 매수를 그대로 진행하기에 무리 없는 흐름입니다. 다만 Palantir는 상대적으로 낙폭이 커 변동성이 높은 종목인 만큼 체결가 슬리피지에 유의하시고, 반도체 섹터(Broadcom·Nvidia) 전반의 약세가 이어지는지는 장 마감 전까지 한 번 더 확인해보시는 게 좋겠습니다.",
+    "ai_comment": "오늘 세 종목 모두 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 변동성 우려는 적어 보입니다. 다만 브로드컴이 상대적으로 상승폭이 크니 매수 시점 분산을 고려해볼 만하고, 반도체/AI 관련주 쏠림 현상이 있는 만큼 포트폴리오 집중도는 한번 점검해보시길 권합니다. 최종 매수 결정은 계획대로 진행하셔도 무방해 보입니다.",
     "dip_note": null
   },
-  "fx": 1478.63,
+  "fx": 1476.68,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -238,6 +256,12 @@
       "market": "isa",
       "comment": "두 종목 모두 전일 대비 낙폭이 크고 5일 이동평균을 하회하고 있어 단기 조정 국면으로 보이며, 특히 로봇·양자컴퓨팅 테마는 변동성이 큰 섹터인 만큼 분할 매수로 접근하는 것이 리스크 관리에 유리해 보입니다. 매수 이후에도 추가 하락 가능성을 염두에 두고 손절 기준과 비중 조절을 미리 정해두시는 것을 권장드립니다.",
       "dip_note": "**KODEX 미국휴머노이드로봇** (-5.1%)와 **SOL 미국양자컴퓨팅TOP10** (-5.9%) 모두 5일선·20일선을 상당폭 하회하고 있어, 오늘 하루의 이벤트라기보다는 최근 며칠간 이어진 하락 추세의 연장으로 보입니다.\n\n다만 저는 오늘자 코스피/나스닥 지수 움직임이나 로봇·양자컴퓨팅 관련 개별 뉴스(실적, 규제,"
+    },
+    {
+      "date": "2026-07-20",
+      "market": "general",
+      "comment": "오늘 세 종목 모두 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 변동성 우려는 적어 보입니다. 다만 브로드컴이 상대적으로 상승폭이 크니 매수 시점 분산을 고려해볼 만하고, 반도체/AI 관련주 쏠림 현상이 있는 만큼 포트폴리오 집중도는 한번 점검해보시길 권합니다. 최종 매수 결정은 계획대로 진행하셔도 무방해 보입니다.",
+      "dip_note": null
     }
   ],
   "rebalance_suggestions": [],
