@@ -64,10 +64,10 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 16075.0,
-      "krw_price": 16075,
-      "krw_price_gross": 16075,
-      "ma20_krw": 17603
+      "current": 16095.0,
+      "krw_price": 16095,
+      "krw_price_gross": 16095,
+      "ma20_krw": 17604
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 378.16,
-      "krw_price": 555238,
-      "krw_price_gross": 556909,
-      "ma20_krw": 558204
+      "krw_price": 554835,
+      "krw_price_gross": 556504,
+      "ma20_krw": 557798
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 134.85,
-      "krw_price": 197995,
-      "krw_price_gross": 198591,
-      "ma20_krw": 184373
+      "krw_price": 197851,
+      "krw_price_gross": 198447,
+      "ma20_krw": 184239
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 203.28,
-      "krw_price": 298468,
-      "krw_price_gross": 299366,
-      "ma20_krw": 296228
+      "krw_price": 298251,
+      "krw_price_gross": 299149,
+      "ma20_krw": 296013
     }
   },
-  "valuation_date": "2026-07-21T06:10",
+  "valuation_date": "2026-07-21T06:15",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 변동성 우려는 적어 보입니다. 다만 브로드컴이 상대적으로 상승폭이 크니 매수 시점 분산을 고려해볼 만하고, 반도체/AI 관련주 쏠림 현상이 있는 만큼 포트폴리오 집중도는 한번 점검해보시길 권합니다. 최종 매수 결정은 계획대로 진행하셔도 무방해 보입니다.",
     "dip_note": null
   },
-  "fx": 1472.68,
+  "fx": 1471.61,
   "asset_history": [
     {
       "date": "2026-07-16",
