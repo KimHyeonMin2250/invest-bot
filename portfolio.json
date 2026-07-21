@@ -60,35 +60,53 @@
     "wedding_fund_start": "2027-07-01"
   },
   "valuation": {
+    "0038A0.KS": {
+      "name": "KODEX 미국휴머노이드로봇",
+      "account": "ISA",
+      "type": "etf",
+      "current": 16115.0,
+      "krw_price": 16115,
+      "krw_price_gross": 16115,
+      "ma20_krw": 17605
+    },
+    "0023A0.KS": {
+      "name": "SOL 미국양자컴퓨팅TOP10",
+      "account": "ISA",
+      "type": "etf",
+      "current": 25210.0,
+      "krw_price": 25210,
+      "krw_price_gross": 25210,
+      "ma20_krw": 30704
+    },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 385.83,
-      "krw_price": 569654,
-      "krw_price_gross": 571368,
-      "ma20_krw": 560847
+      "current": 385.71,
+      "krw_price": 569131,
+      "krw_price_gross": 570843,
+      "ma20_krw": 560497
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 133.18,
-      "krw_price": 196632,
-      "krw_price_gross": 197223,
-      "ma20_krw": 186410
+      "current": 134.33,
+      "krw_price": 198209,
+      "krw_price_gross": 198806,
+      "ma20_krw": 186381
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 206.15,
-      "krw_price": 304375,
-      "krw_price_gross": 305291,
-      "ma20_krw": 297694
+      "current": 205.87,
+      "krw_price": 303769,
+      "krw_price_gross": 304683,
+      "ma20_krw": 297492
     }
   },
-  "valuation_date": "2026-07-21T15:12",
+  "valuation_date": "2026-07-21T15:59",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -128,17 +146,17 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-07-20",
+    "date": "2026-07-21",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 383.16,
-        "krw_price": 565805,
-        "change": 3.32,
+        "current": 385.71,
+        "krw_price": 570843,
+        "change": 2.0,
         "signal": "",
-        "shares": 0.0212,
+        "shares": 0.021,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -148,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 134.71,
-        "krw_price": 198931,
-        "change": 1.76,
+        "current": 134.33,
+        "krw_price": 198806,
+        "change": -0.39,
         "signal": "",
-        "shares": 0.0452,
+        "shares": 0.0453,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -162,9 +180,9 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 206.26,
-        "krw_price": 304586,
-        "change": 1.7,
+        "current": 205.87,
+        "krw_price": 304683,
+        "change": 1.27,
         "signal": "",
         "shares": 0.0295,
         "spent": 9000,
@@ -173,10 +191,10 @@
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 세 종목 모두 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 변동성 우려는 적어 보입니다. 다만 브로드컴이 상대적으로 상승폭이 크니 매수 시점 분산을 고려해볼 만하고, 반도체/AI 관련주 쏠림 현상이 있는 만큼 포트폴리오 집중도는 한번 점검해보시길 권합니다. 최종 매수 결정은 계획대로 진행하셔도 무방해 보입니다.",
+    "ai_comment": "오늘은 세 종목 모두 정상 변동성 범위 내에서 움직이고 있어 특별한 이상 신호는 없어 보입니다. 다만 브로드컴의 상대적으로 큰 상승폭은 반도체 섹터 전반의 관심이 몰린 결과일 수 있으니, 매수 후에도 섹터 뉴스나 실적 발표 일정은 참고해두시면 좋겠습니다. 계획대로 진행하시되, 체결가와 슬리피지 정도는 한 번 더 확인해보세요.",
     "dip_note": null
   },
-  "fx": 1480.88,
+  "fx": 1479.98,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -256,6 +274,12 @@
       "date": "2026-07-21",
       "market": "isa",
       "comment": "두 종목 모두 전일 대비 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 이상 신호는 없어 보입니다. 다만 로봇·양자컴퓨팅 테마는 변동성이 큰 편이라 매수 후에도 분할 진입 및 손절 기준을 명확히 해두시는 것이 좋겠습니다. 계획된 매수는 그대로 진행하시되, 장중 급격한 변동 시에는 리밸런싱 여부를 다시 체크해보세요.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-07-21",
+      "market": "general",
+      "comment": "오늘은 세 종목 모두 정상 변동성 범위 내에서 움직이고 있어 특별한 이상 신호는 없어 보입니다. 다만 브로드컴의 상대적으로 큰 상승폭은 반도체 섹터 전반의 관심이 몰린 결과일 수 있으니, 매수 후에도 섹터 뉴스나 실적 발표 일정은 참고해두시면 좋겠습니다. 계획대로 진행하시되, 체결가와 슬리피지 정도는 한 번 더 확인해보세요.",
       "dip_note": null
     }
   ],
