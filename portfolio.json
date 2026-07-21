@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 386.35,
-      "krw_price": 570502,
-      "krw_price_gross": 572219,
-      "ma20_krw": 560965
+      "current": 386.5,
+      "krw_price": 570947,
+      "krw_price_gross": 572665,
+      "ma20_krw": 561196
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 132.81,
-      "krw_price": 196113,
-      "krw_price_gross": 196704,
-      "ma20_krw": 186409
+      "current": 132.66,
+      "krw_price": 195969,
+      "krw_price_gross": 196558,
+      "ma20_krw": 186471
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 206.95,
-      "krw_price": 305585,
-      "krw_price_gross": 306504,
-      "ma20_krw": 297794
+      "current": 207.29,
+      "krw_price": 306214,
+      "krw_price_gross": 307135,
+      "ma20_krw": 297936
     }
   },
-  "valuation_date": "2026-07-21T19:46",
+  "valuation_date": "2026-07-21T20:52",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 정상 변동성 범위 내에서 움직이고 있어 특별한 이상 신호는 없어 보입니다. 다만 브로드컴의 상대적으로 큰 상승폭은 반도체 섹터 전반의 관심이 몰린 결과일 수 있으니, 매수 후에도 섹터 뉴스나 실적 발표 일정은 참고해두시면 좋겠습니다. 계획대로 진행하시되, 체결가와 슬리피지 정도는 한 번 더 확인해보세요.",
     "dip_note": null
   },
-  "fx": 1481.09,
+  "fx": 1481.67,
   "asset_history": [
     {
       "date": "2026-07-16",
