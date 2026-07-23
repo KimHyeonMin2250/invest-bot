@@ -64,49 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 16030.0,
-      "krw_price": 16030,
-      "krw_price_gross": 16030,
-      "ma20_krw": 17390
+      "current": 16045.0,
+      "krw_price": 16045,
+      "krw_price_gross": 16045,
+      "ma20_krw": 17391
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 24810.0,
-      "krw_price": 24810,
-      "krw_price_gross": 24810,
-      "ma20_krw": 29697
+      "current": 24865.0,
+      "krw_price": 24865,
+      "krw_price_gross": 24865,
+      "ma20_krw": 29700
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 396.81,
-      "krw_price": 580208,
-      "krw_price_gross": 581954,
-      "ma20_krw": 556698
+      "krw_price": 581707,
+      "krw_price_gross": 583458,
+      "ma20_krw": 558137
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 124.57,
-      "krw_price": 182144,
-      "krw_price_gross": 182692,
-      "ma20_krw": 185147
+      "krw_price": 182614,
+      "krw_price_gross": 183164,
+      "ma20_krw": 185626
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 212.06,
-      "krw_price": 310070,
-      "krw_price_gross": 311003,
-      "ma20_krw": 295781
+      "krw_price": 310871,
+      "krw_price_gross": 311807,
+      "ma20_krw": 296545
     }
   },
-  "valuation_date": "2026-07-23T06:20",
+  "valuation_date": "2026-07-23T09:04",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 브로드컴과 엔비디아가 양호한 흐름을 보이는 가운데 팔란티어가 5일 이평선을 하회하며 상대적으로 약세를 나타내고 있어 반도체 대형주와 소프트웨어/AI 테마주 간 온도차가 느껴지는 장세입니다. 매수 계획 자체는 그대로 진행하시되, 팔란티어는 하락폭이 커진 만큼 진입 타이밍 분할이나 추가 하락 시 대응 시나리오를 함께 점검해보시길 권합니다. 전반적으로 변동성이 존재하니 포지션 비중 관리에 유의하시기 바랍니다.",
     "dip_note": "# 종목별 하락 원인 분석\n\n**Palantir (-4.5%, 현재가 126.76)**\n\n죄송하지만, 제가 가진 정보만으로는 이번 하락이 (a) 시장 전체 조정인지 (b) 개별 종목 악재인지 **확실하게 판단할 수 없습니다**.\n\n제공된 데이터(가격, 이동평균선)는 기술적 지표일 뿐이며, 하락 원인을 파악하려면 다음 정보가 필요합니다:\n\n- 오늘 나스닥/S&P500 등 **주요 지수의 동반 하락 여부**\n- Palantir 관련 **개별 뉴스**(실적 발표, 계약 해지, 경영진 이슈, 애널리스트 하향 등)\n- 동종 업종(AI/데이터 분석주) 전체의 동반 하락 여부\n\n**참고사항**: 현재가(126.76)가 20일 평균(126.73)과는 거의 같지만 5일 평균(132.22)보다는 낮은 상태로, 단기적으로 하락 추세에 있는 것으로 보입니다. 다만 이것만으로 시장 조정인지 개별 악재인지는 구분되지 않습니다.\n\n**권장 조치**: 뉴스 확인 없이 매수/매도를 판단하기보다, 오늘자 Palantir 관련 뉴스와 나스닥 지수 움직임을 먼저 확인하신"
   },
-  "fx": 1466.58,
+  "fx": 1470.37,
   "asset_history": [
     {
       "date": "2026-07-16",
