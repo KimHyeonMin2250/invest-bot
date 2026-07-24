@@ -60,35 +60,53 @@
     "wedding_fund_start": "2027-07-01"
   },
   "valuation": {
+    "0038A0.KS": {
+      "name": "KODEX 미국휴머노이드로봇",
+      "account": "ISA",
+      "type": "etf",
+      "current": 15505.0,
+      "krw_price": 15505,
+      "krw_price_gross": 15505,
+      "ma20_krw": 17258
+    },
+    "0023A0.KS": {
+      "name": "SOL 미국양자컴퓨팅TOP10",
+      "account": "ISA",
+      "type": "etf",
+      "current": 24205.0,
+      "krw_price": 24205,
+      "krw_price_gross": 24205,
+      "ma20_krw": 29188
+    },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 383.57,
-      "krw_price": 558944,
-      "krw_price_gross": 560626,
-      "ma20_krw": 555905
+      "current": 384.31,
+      "krw_price": 559800,
+      "krw_price_gross": 561485,
+      "ma20_krw": 555738
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 123.12,
-      "krw_price": 179408,
-      "krw_price_gross": 179948,
-      "ma20_krw": 186392
+      "current": 123.63,
+      "krw_price": 180084,
+      "krw_price_gross": 180626,
+      "ma20_krw": 186356
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 208.02,
-      "krw_price": 303130,
-      "krw_price_gross": 304042,
-      "ma20_krw": 296382
+      "current": 209.55,
+      "krw_price": 305238,
+      "krw_price_gross": 306157,
+      "ma20_krw": 296376
     }
   },
-  "valuation_date": "2026-07-24T15:03",
+  "valuation_date": "2026-07-24T15:51",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -128,17 +146,17 @@
     "dip_note": "**KODEX 미국휴머노이드로봇** (-3.0%, 20일평균 대비 -"
   },
   "last_general": {
-    "date": "2026-07-23",
+    "date": "2026-07-24",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 388.92,
-        "krw_price": 573405,
-        "change": -1.99,
+        "current": 384.31,
+        "krw_price": 561485,
+        "change": -2.08,
         "signal": "",
-        "shares": 0.0209,
+        "shares": 0.0214,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -148,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 121.6,
-        "krw_price": 179283,
-        "change": -2.38,
+        "current": 123.63,
+        "krw_price": 180626,
+        "change": 0.21,
         "signal": "",
-        "shares": 0.0502,
+        "shares": 0.0498,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -162,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 208.78,
-        "krw_price": 307819,
-        "change": -1.55,
+        "current": 209.55,
+        "krw_price": 306157,
+        "change": 0.38,
         "signal": "",
-        "shares": 0.0292,
+        "shares": 0.0294,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 세 종목 모두 전일 대비 1.5~2.5% 내외 하락으로 정상 변동 범위 안에 있어, 특별히 이상 신호로 보긴 어렵습니다. 다만 Broadcom·Palantir·Nvidia 모두 반도체/AI 테마에 쏠려 있어 섹터 전체가 동시에 밀리는 흐름이라면 개별 종목 이슈보다는 업종 전반의 투자심리 위축일 가능성이 있으니, 매수 후에도 섹터 뉴스나 금리·기술주 전반 동향은 계속 체크하시는 게 좋겠습니다. 계획된 매수는 그대로 진행하시되, 자금 배분과 리밸런싱 타이밍만 참고해두시면 될 것 같습니다.",
+    "ai_comment": "오늘 매수 대상 종목들은 전반적으로 큰 변동성 없이 안정적인 범위 내에서 움직이고 있습니다. Broadcom이 -2.1%로 다소 조정을 받았지만 정상 범위 내라 매수 계획을 유지하셔도 무리 없어 보입니다. 다만 반도체/AI 관련주 전반의 변동성이 클 수 있으니 실행 시점의 실시간 가격과 거래량 정도는 한 번 더 확인해보시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1461.6,
+  "fx": 1461.02,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -314,6 +332,12 @@
       "market": "isa",
       "comment": "두 종목 모두 최근 조정을 받아 MA5를 하회하는 약세 흐름을 보이고 있어, 규칙 기반 매수 진입 시점으로는 눌림목 매수 성격에 가깝습니다. 다만 로봇·양자컴퓨팅 테마 모두 변동성이 큰 성장 섹터인 만큼 추가 하락 가능성을 염두에 두고 분할 매수나 손절 라인 설정을 권장드립니다. 단기 반등 여부는 시장 전반 심리와 관련 테마 뉴스 흐름을 함께 확인하시는 것이 좋겠습니다.",
       "dip_note": "**KODEX 미국휴머노이드로봇** (-3.0%, 20일평균 대비 -"
+    },
+    {
+      "date": "2026-07-24",
+      "market": "general",
+      "comment": "오늘 매수 대상 종목들은 전반적으로 큰 변동성 없이 안정적인 범위 내에서 움직이고 있습니다. Broadcom이 -2.1%로 다소 조정을 받았지만 정상 범위 내라 매수 계획을 유지하셔도 무리 없어 보입니다. 다만 반도체/AI 관련주 전반의 변동성이 클 수 있으니 실행 시점의 실시간 가격과 거래량 정도는 한 번 더 확인해보시길 권합니다.",
+      "dip_note": null
     }
   ],
   "rebalance_suggestions": [],
