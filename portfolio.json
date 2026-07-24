@@ -60,53 +60,35 @@
     "wedding_fund_start": "2027-07-01"
   },
   "valuation": {
-    "0038A0.KS": {
-      "name": "KODEX 미국휴머노이드로봇",
-      "account": "ISA",
-      "type": "etf",
-      "current": 15505.0,
-      "krw_price": 15505,
-      "krw_price_gross": 15505,
-      "ma20_krw": 17258
-    },
-    "0023A0.KS": {
-      "name": "SOL 미국양자컴퓨팅TOP10",
-      "account": "ISA",
-      "type": "etf",
-      "current": 24205.0,
-      "krw_price": 24205,
-      "krw_price_gross": 24205,
-      "ma20_krw": 29188
-    },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 392.47,
-      "krw_price": 572445,
-      "krw_price_gross": 574168,
-      "ma20_krw": 556082
+      "current": 383.57,
+      "krw_price": 558944,
+      "krw_price_gross": 560626,
+      "ma20_krw": 555905
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 123.37,
-      "krw_price": 179944,
-      "krw_price_gross": 180485,
-      "ma20_krw": 185410
+      "current": 123.12,
+      "krw_price": 179408,
+      "krw_price_gross": 179948,
+      "ma20_krw": 186392
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 208.76,
-      "krw_price": 304491,
-      "krw_price_gross": 305408,
-      "ma20_krw": 295762
+      "current": 208.02,
+      "krw_price": 303130,
+      "krw_price_gross": 304042,
+      "ma20_krw": 296382
     }
   },
-  "valuation_date": "2026-07-24T08:46",
+  "valuation_date": "2026-07-24T15:03",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +176,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일 대비 1.5~2.5% 내외 하락으로 정상 변동 범위 안에 있어, 특별히 이상 신호로 보긴 어렵습니다. 다만 Broadcom·Palantir·Nvidia 모두 반도체/AI 테마에 쏠려 있어 섹터 전체가 동시에 밀리는 흐름이라면 개별 종목 이슈보다는 업종 전반의 투자심리 위축일 가능성이 있으니, 매수 후에도 섹터 뉴스나 금리·기술주 전반 동향은 계속 체크하시는 게 좋겠습니다. 계획된 매수는 그대로 진행하시되, 자금 배분과 리밸런싱 타이밍만 참고해두시면 될 것 같습니다.",
     "dip_note": null
   },
-  "fx": 1462.96,
+  "fx": 1461.6,
   "asset_history": [
     {
       "date": "2026-07-16",
