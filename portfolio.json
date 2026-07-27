@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 378.79,
-      "krw_price": 553368,
-      "krw_price_gross": 555033,
-      "ma20_krw": 558203
+      "current": 381.76,
+      "krw_price": 558377,
+      "krw_price_gross": 560057,
+      "ma20_krw": 559078
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 131.77,
-      "krw_price": 192501,
-      "krw_price_gross": 193080,
-      "ma20_krw": 188679
+      "current": 131.57,
+      "krw_price": 192439,
+      "krw_price_gross": 193018,
+      "ma20_krw": 188435
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 195.57,
-      "krw_price": 285705,
-      "krw_price_gross": 286565,
-      "ma20_krw": 297006
+      "current": 197.32,
+      "krw_price": 288608,
+      "krw_price_gross": 289477,
+      "ma20_krw": 297749
     }
   },
-  "valuation_date": "2026-07-27T17:24",
+  "valuation_date": "2026-07-27T18:59",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 반도체·AI 관련주 전반의 변동성이 두드러지는 하루로 보입니다. 특히 Nvidia는 5% 넘게 하락하며 MA5를 하회해 단기 조정 흐름이 나타나고 있어, 매수 후에도 추가 하락 가능성을 염두에 두고 분할 매수나 손절 라인",
     "dip_note": null
   },
-  "fx": 1465.28,
+  "fx": 1467.04,
   "asset_history": [
     {
       "date": "2026-07-16",
