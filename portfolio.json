@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 14645.0,
-    "0023A0.KS": 11710.0,
+    "0038A0.KS": 1645.0,
+    "0023A0.KS": 23710.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -64,59 +64,86 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15430.0,
-      "krw_price": 15430,
-      "krw_price_gross": 15430,
-      "ma20_krw": 17147
+      "current": 15500.0,
+      "krw_price": 15500,
+      "krw_price_gross": 15500,
+      "ma20_krw": 17150
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 23980.0,
-      "krw_price": 23980,
-      "krw_price_gross": 23980,
-      "ma20_krw": 28795
+      "current": 24120.0,
+      "krw_price": 24120,
+      "krw_price_gross": 24120,
+      "ma20_krw": 28802
+    },
+    "AVGO": {
+      "name": "Broadcom",
+      "account": "general",
+      "type": "stock",
+      "current": 381.92,
+      "krw_price": 559445,
+      "krw_price_gross": 561128,
+      "ma20_krw": 558686
+    },
+    "PLTR": {
+      "name": "Palantir",
+      "account": "general",
+      "type": "stock",
+      "current": 122.92,
+      "krw_price": 180056,
+      "krw_price_gross": 180598,
+      "ma20_krw": 187351
+    },
+    "NVDA": {
+      "name": "Nvidia",
+      "account": "general",
+      "type": "stock",
+      "current": 206.84,
+      "krw_price": 302984,
+      "krw_price_gross": 303896,
+      "ma20_krw": 297843
     }
   },
-  "valuation_date": "2026-07-27T03:56",
+  "valuation_date": "2026-07-27T06:48",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-07-24",
+    "date": "2026-07-27",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 15555.0,
-        "krw_price": 15555,
-        "change": -3.05,
-        "signal": "🔴 큰 급락 (-3% 이하)",
-        "shares": 5,
-        "spent": 77775,
-        "carry": 14645,
-        "available": 92420,
+        "current": 15500.0,
+        "krw_price": 15500,
+        "change": -0.03,
+        "signal": "",
+        "shares": 2,
+        "spent": 31000,
+        "carry": 1645,
+        "available": 32645,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 24260.0,
-        "krw_price": 24260,
-        "change": -2.43,
-        "signal": "🟠 급락 (-2%대)",
-        "shares": 2,
-        "spent": 48520,
-        "carry": 11710,
-        "available": 60230,
+        "current": 24120.0,
+        "krw_price": 24120,
+        "change": -0.35,
+        "signal": "",
+        "shares": 0,
+        "spent": 0,
+        "carry": 23710,
+        "available": 23710,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "두 종목 모두 최근 조정을 받아 MA5를 하회하는 약세 흐름을 보이고 있어, 규칙 기반 매수 진입 시점으로는 눌림목 매수 성격에 가깝습니다. 다만 로봇·양자컴퓨팅 테마 모두 변동성이 큰 성장 섹터인 만큼 추가 하락 가능성을 염두에 두고 분할 매수나 손절 라인 설정을 권장드립니다. 단기 반등 여부는 시장 전반 심리와 관련 테마 뉴스 흐름을 함께 확인하시는 것이 좋겠습니다.",
-    "dip_note": "**KODEX 미국휴머노이드로봇** (-3.0%, 20일평균 대비 -"
+    "ai_comment": "오늘은 두 종목 모두 전일 대비 소폭 하락에 그치며 정상 변동 범위 내에서 움직이고 있어 특별한 이상 신호는 보이지 않습니다. 다만 휴머노이드로봇과 양자컴퓨팅 테마 ETF는 변동성이 큰 성장 테마인 만큼, 매수 이후에도 단기 가격 급변 가능성은 염두에 두시는 게 좋겠습니다. 계획대로 매수 진행하시되, 이후 추가 하락 시에도 규칙에 따른 대응 원칙을 유지하시길 권합니다.",
+    "dip_note": null
   },
   "last_general": {
     "date": "2026-07-24",
@@ -167,7 +194,7 @@
     "ai_comment": "오늘 매수 대상 종목들은 전반적으로 큰 변동성 없이 안정적인 범위 내에서 움직이고 있습니다. Broadcom이 -2.1%로 다소 조정을 받았지만 정상 범위 내라 매수 계획을 유지하셔도 무리 없어 보입니다. 다만 반도체/AI 관련주 전반의 변동성이 클 수 있으니 실행 시점의 실시간 가격과 거래량 정도는 한 번 더 확인해보시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1465.89,
+  "fx": 1469.23,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -324,6 +351,12 @@
       "date": "2026-07-24",
       "market": "general",
       "comment": "오늘 매수 대상 종목들은 전반적으로 큰 변동성 없이 안정적인 범위 내에서 움직이고 있습니다. Broadcom이 -2.1%로 다소 조정을 받았지만 정상 범위 내라 매수 계획을 유지하셔도 무리 없어 보입니다. 다만 반도체/AI 관련주 전반의 변동성이 클 수 있으니 실행 시점의 실시간 가격과 거래량 정도는 한 번 더 확인해보시길 권합니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-07-27",
+      "market": "isa",
+      "comment": "오늘은 두 종목 모두 전일 대비 소폭 하락에 그치며 정상 변동 범위 내에서 움직이고 있어 특별한 이상 신호는 보이지 않습니다. 다만 휴머노이드로봇과 양자컴퓨팅 테마 ETF는 변동성이 큰 성장 테마인 만큼, 매수 이후에도 단기 가격 급변 가능성은 염두에 두시는 게 좋겠습니다. 계획대로 매수 진행하시되, 이후 추가 하락 시에도 규칙에 따른 대응 원칙을 유지하시길 권합니다.",
       "dip_note": null
     }
   ],
