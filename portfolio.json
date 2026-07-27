@@ -77,9 +77,36 @@
       "krw_price": 24115,
       "krw_price_gross": 24115,
       "ma20_krw": 28802
+    },
+    "AVGO": {
+      "name": "Broadcom",
+      "account": "general",
+      "type": "stock",
+      "current": 377.83,
+      "krw_price": 552863,
+      "krw_price_gross": 554526,
+      "ma20_krw": 559034
+    },
+    "PLTR": {
+      "name": "Palantir",
+      "account": "general",
+      "type": "stock",
+      "current": 129.29,
+      "krw_price": 189187,
+      "krw_price_gross": 189756,
+      "ma20_krw": 188797
+    },
+    "NVDA": {
+      "name": "Nvidia",
+      "account": "general",
+      "type": "stock",
+      "current": 196.55,
+      "krw_price": 287600,
+      "krw_price_gross": 288465,
+      "ma20_krw": 297823
     }
   },
-  "valuation_date": "2026-07-27T07:43",
+  "valuation_date": "2026-07-27T15:49",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -167,7 +194,7 @@
     "ai_comment": "오늘 매수 대상 종목들은 전반적으로 큰 변동성 없이 안정적인 범위 내에서 움직이고 있습니다. Broadcom이 -2.1%로 다소 조정을 받았지만 정상 범위 내라 매수 계획을 유지하셔도 무리 없어 보입니다. 다만 반도체/AI 관련주 전반의 변동성이 클 수 있으니 실행 시점의 실시간 가격과 거래량 정도는 한 번 더 확인해보시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1469.37,
+  "fx": 1467.68,
   "asset_history": [
     {
       "date": "2026-07-16",
