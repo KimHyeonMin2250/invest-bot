@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 383.22,
-      "krw_price": 559702,
-      "krw_price_gross": 561387,
-      "ma20_krw": 558376
+      "krw_price": 559844,
+      "krw_price_gross": 561528,
+      "ma20_krw": 558547
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 131.53,
-      "krw_price": 192103,
-      "krw_price_gross": 192681,
-      "ma20_krw": 188159
+      "krw_price": 192151,
+      "krw_price_gross": 192730,
+      "ma20_krw": 188661
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 196.51,
-      "krw_price": 287008,
-      "krw_price_gross": 287871,
-      "ma20_krw": 297260
+      "krw_price": 287080,
+      "krw_price_gross": 287944,
+      "ma20_krw": 297081
     }
   },
-  "valuation_date": "2026-07-27T22:47",
+  "valuation_date": "2026-07-27T23:49",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 반도체·AI 관련주 전반의 변동성이 두드러지는 하루로 보입니다. 특히 Nvidia는 5% 넘게 하락하며 MA5를 하회해 단기 조정 흐름이 나타나고 있어, 매수 후에도 추가 하락 가능성을 염두에 두고 분할 매수나 손절 라인",
     "dip_note": null
   },
-  "fx": 1464.92,
+  "fx": 1465.29,
   "asset_history": [
     {
       "date": "2026-07-16",
