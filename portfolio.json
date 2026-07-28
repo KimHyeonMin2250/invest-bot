@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 380.91,
-      "krw_price": 551954,
-      "krw_price_gross": 553615,
-      "ma20_krw": 554598
+      "krw_price": 552018,
+      "krw_price_gross": 553679,
+      "ma20_krw": 554663
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 123.53,
-      "krw_price": 179000,
-      "krw_price_gross": 179539,
-      "ma20_krw": 187247
+      "krw_price": 179021,
+      "krw_price_gross": 179560,
+      "ma20_krw": 187269
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 197.01,
-      "krw_price": 285475,
-      "krw_price_gross": 286334,
-      "ma20_krw": 295070
+      "krw_price": 285509,
+      "krw_price_gross": 286368,
+      "ma20_krw": 295105
     }
   },
-  "valuation_date": "2026-07-28T20:09",
+  "valuation_date": "2026-07-28T21:34",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 반도체·AI 대형주 대부분이 안정적인 흐름을 보이는 가운데, Palantir만 MA5를 하회하며 조정 폭이 두드러지네요. Broadcom과 Nvidia는 등락폭이 크지 않아 매수 계획 진행에 무리는 없어 보입니다. 다만 Palantir는 변동성이 커진 구간이니 계획대로 매수하시더라도 이후 추가 하락 가능성을 염두에 두고 분할 매수나 손절 기준을 한 번 더 점검해보시는 게 좋겠습니다.",
     "dip_note": "**Palantir (PLTR)**: 제공된 정보만으로는 -5.5% 하락이 시장 전체 조정 때문인지, 개별 악재(실적, 뉴스, 소송 등) 때문인지 판단할 근거가 부족합니다. 5일/20일 이동평균 대비 소폭 하락한 수준이라 추세 이탈로 보기는 어렵지만, 확실하지 않으므로 뉴스 확인 전까지는 매수 판단을 유보하시길 권장드립니다.\n\n**참고**: 정확한 판단을 위해서는 (1) 오늘 같은 섹터/시장 지수(나스닥, S&P500)의 등락률과 (2) Palantir 관련 뉴스(실적 발표, 애널리스트 리포트, 계약 소식 등)"
   },
-  "fx": 1453.4,
+  "fx": 1453.57,
   "asset_history": [
     {
       "date": "2026-07-16",
