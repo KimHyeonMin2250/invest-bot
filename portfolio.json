@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 387.84,
-      "krw_price": 553489,
-      "krw_price_gross": 555154,
-      "ma20_krw": 546993
+      "current": 383.56,
+      "krw_price": 549419,
+      "krw_price_gross": 551072,
+      "ma20_krw": 550685
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 122.26,
-      "krw_price": 174478,
-      "krw_price_gross": 175003,
-      "ma20_krw": 184617
+      "current": 120.38,
+      "krw_price": 172435,
+      "krw_price_gross": 172954,
+      "ma20_krw": 184665
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 195.04,
-      "krw_price": 278343,
-      "krw_price_gross": 279180,
-      "ma20_krw": 289703
+      "current": 195.68,
+      "krw_price": 280296,
+      "krw_price_gross": 281139,
+      "ma20_krw": 290843
     }
   },
-  "valuation_date": "2026-07-31T09:29",
+  "valuation_date": "2026-07-31T15:25",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 정상 변동 범위 내에서 움직이고 있어 계획대로 매수 진행하기에 무리 없어 보입니다. 다만 브로드컴이 +3.9%로 상대적으로 강한 상승을 보이고 있어 단기 과열 여부는 체크해두시고, 팔란티어는 소폭 조정 중이니 매수 단가 측면에서는 오히려 나쁘지 않은 타이밍일 수 있습니다. 전반적으로 AI/반도체 섹터 전반의 변동성은 염두에 두시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1431.4,
+  "fx": 1436.73,
   "asset_history": [
     {
       "date": "2026-07-16",
