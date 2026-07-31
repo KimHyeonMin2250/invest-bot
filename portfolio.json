@@ -64,19 +64,19 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15130.0,
-      "krw_price": 15130,
-      "krw_price_gross": 15130,
-      "ma20_krw": 16385
+      "current": 15120.0,
+      "krw_price": 15120,
+      "krw_price_gross": 15120,
+      "ma20_krw": 16371
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 24235.0,
-      "krw_price": 24235,
-      "krw_price_gross": 24235,
-      "ma20_krw": 26792
+      "current": 24215.0,
+      "krw_price": 24215,
+      "krw_price_gross": 24215,
+      "ma20_krw": 26791
     },
     "AVGO": {
       "name": "Broadcom",
@@ -106,7 +106,7 @@
       "ma20_krw": 290776
     }
   },
-  "valuation_date": "2026-07-31T06:28",
+  "valuation_date": "2026-07-31T06:34",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
