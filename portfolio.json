@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 388.42,
-      "krw_price": 553719,
-      "krw_price_gross": 555386,
-      "ma20_krw": 549487
+      "current": 389.69,
+      "krw_price": 555810,
+      "krw_price_gross": 557483,
+      "ma20_krw": 549862
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 125.59,
-      "krw_price": 179035,
-      "krw_price_gross": 179574,
-      "ma20_krw": 183475
+      "current": 125.72,
+      "krw_price": 179320,
+      "krw_price_gross": 179860,
+      "ma20_krw": 183580
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 207.05,
-      "krw_price": 295160,
-      "krw_price_gross": 296048,
-      "ma20_krw": 290629
+      "current": 208.46,
+      "krw_price": 297331,
+      "krw_price_gross": 298226,
+      "ma20_krw": 290880
     }
   },
-  "valuation_date": "2026-08-03T16:44",
+  "valuation_date": "2026-08-03T17:31",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 큰 변동성 없이 정상 범위 내에서 움직이고 있어 전반적으로 안정적인 흐름입니다. 다만 Nvidia와 Palantir는 상승폭이 다소 커 단기 과열 가능성이 있으니 체결가와 슬리피지를 한 번 더 확인하시는 게 좋겠습니다. 매수 계획 자체는 그대로 진행하셔도 무방해 보입니다.",
     "dip_note": null
   },
-  "fx": 1429.84,
+  "fx": 1430.58,
   "asset_history": [
     {
       "date": "2026-07-16",
