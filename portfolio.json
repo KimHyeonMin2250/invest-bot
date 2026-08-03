@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 389.28,
-      "krw_price": 554073,
-      "krw_price_gross": 555740,
-      "ma20_krw": 547597
+      "current": 388.1,
+      "krw_price": 553465,
+      "krw_price_gross": 555130,
+      "ma20_krw": 549672
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 123.06,
-      "krw_price": 175155,
-      "krw_price_gross": 175682,
-      "ma20_krw": 183684
+      "current": 124.82,
+      "krw_price": 178004,
+      "krw_price_gross": 178540,
+      "ma20_krw": 183490
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 200.75,
-      "krw_price": 285733,
-      "krw_price_gross": 286593,
-      "ma20_krw": 289357
+      "current": 206.9,
+      "krw_price": 295058,
+      "krw_price_gross": 295946,
+      "ma20_krw": 290728
     }
   },
-  "valuation_date": "2026-08-03T10:29",
+  "valuation_date": "2026-08-03T15:49",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 대상 종목들은 전일대비 등락률이 ±1% 이내로 특별한 변동성 없이 안정적인 범위에서 움직이고 있어 계획대로 매수를 진행하기에 무리 없는 상황입니다. 다만 브로드컴과 팔란티어가 소폭 하락 중이니 매수 체결 시점의 스프레드나 순간 변동성은 한 번 더 확인하시고, 반도체/AI 섹터 전반의 뉴스 흐름은 계속 참고하시면 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1427.61,
+  "fx": 1430.38,
   "asset_history": [
     {
       "date": "2026-07-16",
