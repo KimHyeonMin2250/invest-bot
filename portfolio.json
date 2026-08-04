@@ -64,22 +64,22 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15720.0,
-      "krw_price": 15720,
-      "krw_price_gross": 15720,
-      "ma20_krw": 16135
+      "current": 15735.0,
+      "krw_price": 15735,
+      "krw_price_gross": 15735,
+      "ma20_krw": 16136
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 25785.0,
-      "krw_price": 25785,
-      "krw_price_gross": 25785,
-      "ma20_krw": 26074
+      "current": 25825.0,
+      "krw_price": 25825,
+      "krw_price_gross": 25825,
+      "ma20_krw": 26076
     }
   },
-  "valuation_date": "2026-08-04T06:09",
+  "valuation_date": "2026-08-04T06:13",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -167,7 +167,7 @@
     "ai_comment": "오늘은 세 종목 모두 큰 변동성 없이 정상 범위 내에서 움직이고 있어 전반적으로 안정적인 흐름입니다. 다만 Nvidia와 Palantir는 상승폭이 다소 커 단기 과열 가능성이 있으니 체결가와 슬리피지를 한 번 더 확인하시는 게 좋겠습니다. 매수 계획 자체는 그대로 진행하셔도 무방해 보입니다.",
     "dip_note": null
   },
-  "fx": 1431.88,
+  "fx": 1430.68,
   "asset_history": [
     {
       "date": "2026-07-16",
