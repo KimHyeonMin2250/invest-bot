@@ -60,26 +60,35 @@
     "wedding_fund_start": "2027-07-01"
   },
   "valuation": {
-    "0038A0.KS": {
-      "name": "KODEX 미국휴머노이드로봇",
-      "account": "ISA",
-      "type": "etf",
-      "current": 15770.0,
-      "krw_price": 15770,
-      "krw_price_gross": 15770,
-      "ma20_krw": 16138
+    "AVGO": {
+      "name": "Broadcom",
+      "account": "general",
+      "type": "stock",
+      "current": 412.73,
+      "krw_price": 586861,
+      "krw_price_gross": 588627,
+      "ma20_krw": 551334
     },
-    "0023A0.KS": {
-      "name": "SOL 미국양자컴퓨팅TOP10",
-      "account": "ISA",
-      "type": "etf",
-      "current": 25905.0,
-      "krw_price": 25905,
-      "krw_price_gross": 25905,
-      "ma20_krw": 26080
+    "PLTR": {
+      "name": "Palantir",
+      "account": "general",
+      "type": "stock",
+      "current": 158.95,
+      "krw_price": 226011,
+      "krw_price_gross": 226691,
+      "ma20_krw": 184758
+    },
+    "NVDA": {
+      "name": "Nvidia",
+      "account": "general",
+      "type": "stock",
+      "current": 209.8,
+      "krw_price": 298315,
+      "krw_price_gross": 299213,
+      "ma20_krw": 290771
     }
   },
-  "valuation_date": "2026-08-04T09:15",
+  "valuation_date": "2026-08-04T15:32",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -167,7 +176,7 @@
     "ai_comment": "오늘은 세 종목 모두 큰 변동성 없이 정상 범위 내에서 움직이고 있어 전반적으로 안정적인 흐름입니다. 다만 Nvidia와 Palantir는 상승폭이 다소 커 단기 과열 가능성이 있으니 체결가와 슬리피지를 한 번 더 확인하시는 게 좋겠습니다. 매수 계획 자체는 그대로 진행하셔도 무방해 보입니다.",
     "dip_note": null
   },
-  "fx": 1433.08,
+  "fx": 1426.18,
   "asset_history": [
     {
       "date": "2026-07-16",
