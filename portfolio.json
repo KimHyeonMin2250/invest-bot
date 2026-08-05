@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 2755.0,
-    "0023A0.KS": 4240.0,
+    "0038A0.KS": 4705.0,
+    "0023A0.KS": 16240.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -64,85 +64,85 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15970.0,
-      "krw_price": 15970,
-      "krw_price_gross": 15970,
-      "ma20_krw": 16041
+      "current": 16050.0,
+      "krw_price": 16050,
+      "krw_price_gross": 16050,
+      "ma20_krw": 16045
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 26955.0,
-      "krw_price": 26955,
-      "krw_price_gross": 26955,
-      "ma20_krw": 25842
+      "current": 27270.0,
+      "krw_price": 27270,
+      "krw_price_gross": 27270,
+      "ma20_krw": 25858
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 418.16,
-      "krw_price": 592769,
-      "krw_price_gross": 594552,
-      "ma20_krw": 550037
+      "krw_price": 593290,
+      "krw_price_gross": 595075,
+      "ma20_krw": 550521
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 162.66,
-      "krw_price": 230581,
-      "krw_price_gross": 231275,
-      "ma20_krw": 184457
+      "krw_price": 230784,
+      "krw_price_gross": 231478,
+      "ma20_krw": 184619
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 211.94,
-      "krw_price": 300439,
-      "krw_price_gross": 301343,
-      "ma20_krw": 290036
+      "krw_price": 300703,
+      "krw_price_gross": 301608,
+      "ma20_krw": 290291
     }
   },
-  "valuation_date": "2026-08-05T03:25",
+  "valuation_date": "2026-08-05T06:05",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-08-04",
+    "date": "2026-08-05",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 15720.0,
-        "krw_price": 15720,
-        "change": 2.41,
+        "current": 16050.0,
+        "krw_price": 16050,
+        "change": 1.78,
         "signal": "",
         "shares": 1,
-        "spent": 15720,
-        "carry": 2755,
-        "available": 18475,
+        "spent": 16050,
+        "carry": 4705,
+        "available": 20755,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 25785.0,
-        "krw_price": 25785,
-        "change": 6.0,
+        "current": 27270.0,
+        "krw_price": 27270,
+        "change": 5.27,
         "signal": "",
-        "shares": 1,
-        "spent": 25785,
-        "carry": 4240,
-        "available": 30025,
+        "shares": 0,
+        "spent": 0,
+        "carry": 16240,
+        "available": 16240,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 두 종목 모두 상승세를 보이고 있으며, 특히 SOL 미국양자컴퓨팅TOP10은 +6.0%로 변동성이 다소 큰 편이라 단기 과열 가능성을 염두에 두시는 게 좋겠습니다. 로봇·양자컴퓨팅 테마 모두 최근 시장에서 주목받는 성장 섹터인 만큼 매수 자체는 합리적이나, 분할매수 원칙과 목표 비중 준수를 통해 단기 변동성에 따른 리스크를 관리하시길 권장드립니다.",
+    "ai_comment": "오늘 두 종목 모두 상승 흐름을 보이고 있으며, 특히 SOL 미국양자컴퓨팅TOP10은 +5.3%로 변동성이 큰 편이라 단기 과열 가능성을 염두에 둘 필요가 있습니다. 휴머노이드로봇과 양자컴퓨팅 테마 모두 시장 관심이 높은 만큼, 매수 자체는 계획대로 진행하되 체결가와 슬리피지는 한 번 더 확인하시는 게 좋겠습니다.",
     "dip_note": null
   },
   "last_general": {
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 상승세지만, 팔란티어는 하루 만에 +28%라는 이례적으로 큰 변동폭을 보이고 있어 단기 과열 가능성을 염두에 둘 필요가 있습니다. 브로드컴(+6.1%)과 엔비디아(+1.8%)는 상대적으로 안정적인 움직임이라 부담이 적어 보입니다. 계획대로 매수를 진행하시더라도, 팔란티어는 변동성이 큰 만큼 이후 가격 흐름을 조금",
     "dip_note": null
   },
-  "fx": 1421.83,
+  "fx": 1423.08,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -491,6 +491,12 @@
       "date": "2026-08-04",
       "market": "general",
       "comment": "오늘 세 종목 모두 상승세지만, 팔란티어는 하루 만에 +28%라는 이례적으로 큰 변동폭을 보이고 있어 단기 과열 가능성을 염두에 둘 필요가 있습니다. 브로드컴(+6.1%)과 엔비디아(+1.8%)는 상대적으로 안정적인 움직임이라 부담이 적어 보입니다. 계획대로 매수를 진행하시더라도, 팔란티어는 변동성이 큰 만큼 이후 가격 흐름을 조금",
+      "dip_note": null
+    },
+    {
+      "date": "2026-08-05",
+      "market": "isa",
+      "comment": "오늘 두 종목 모두 상승 흐름을 보이고 있으며, 특히 SOL 미국양자컴퓨팅TOP10은 +5.3%로 변동성이 큰 편이라 단기 과열 가능성을 염두에 둘 필요가 있습니다. 휴머노이드로봇과 양자컴퓨팅 테마 모두 시장 관심이 높은 만큼, 매수 자체는 계획대로 진행하되 체결가와 슬리피지는 한 번 더 확인하시는 게 좋겠습니다.",
       "dip_note": null
     }
   ],
