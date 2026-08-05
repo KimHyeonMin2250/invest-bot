@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 420.42,
-      "krw_price": 596462,
-      "krw_price_gross": 598256,
-      "ma20_krw": 552733
+      "current": 421.03,
+      "krw_price": 596657,
+      "krw_price_gross": 598452,
+      "ma20_krw": 552162
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 159.56,
-      "krw_price": 226370,
-      "krw_price_gross": 227051,
-      "ma20_krw": 186546
+      "current": 159.43,
+      "krw_price": 225927,
+      "krw_price_gross": 226607,
+      "ma20_krw": 186329
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 220.84,
-      "krw_price": 313308,
-      "krw_price_gross": 314251,
-      "ma20_krw": 291456
+      "current": 221.78,
+      "krw_price": 314292,
+      "krw_price_gross": 315238,
+      "ma20_krw": 291199
     }
   },
-  "valuation_date": "2026-08-05T17:06",
+  "valuation_date": "2026-08-05T18:45",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 정상 변동성 범위 안에서 움직이고 있어 계획대로 매수를 진행해도 무리 없어 보입니다. 다만 엔비디아는 +3.6%로 상대적으로 강한 상승세를 보이고 있어 단기 과열 여부를 체크하고, 팔란티어의 소폭 하락은 특별한 이슈라기보다 자연스러운 변동으로 보입니다. 매수 시점 분할이나 슬리피지 관리 정도만 참고하시면 될 것 같습니다.",
     "dip_note": null
   },
-  "fx": 1422.98,
+  "fx": 1421.4,
   "asset_history": [
     {
       "date": "2026-07-16",
