@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 418.28,
-      "krw_price": 593068,
-      "krw_price_gross": 594853,
-      "ma20_krw": 552255
+      "krw_price": 593006,
+      "krw_price_gross": 594790,
+      "ma20_krw": 552196
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 158.43,
-      "krw_price": 224634,
-      "krw_price_gross": 225310,
-      "ma20_krw": 186355
+      "krw_price": 224610,
+      "krw_price_gross": 225286,
+      "ma20_krw": 186336
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 219.22,
-      "krw_price": 310826,
-      "krw_price_gross": 311762,
-      "ma20_krw": 291170
+      "krw_price": 310793,
+      "krw_price_gross": 311729,
+      "ma20_krw": 291139
     }
   },
-  "valuation_date": "2026-08-05T21:37",
+  "valuation_date": "2026-08-05T22:40",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 정상 변동성 범위 안에서 움직이고 있어 계획대로 매수를 진행해도 무리 없어 보입니다. 다만 엔비디아는 +3.6%로 상대적으로 강한 상승세를 보이고 있어 단기 과열 여부를 체크하고, 팔란티어의 소폭 하락은 특별한 이슈라기보다 자연스러운 변동으로 보입니다. 매수 시점 분할이나 슬리피지 관리 정도만 참고하시면 될 것 같습니다.",
     "dip_note": null
   },
-  "fx": 1422.14,
+  "fx": 1421.99,
   "asset_history": [
     {
       "date": "2026-07-16",
