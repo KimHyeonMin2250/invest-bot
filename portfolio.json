@@ -60,53 +60,35 @@
     "wedding_fund_start": "2027-07-01"
   },
   "valuation": {
-    "0038A0.KS": {
-      "name": "KODEX 미국휴머노이드로봇",
-      "account": "ISA",
-      "type": "etf",
-      "current": 16055.0,
-      "krw_price": 16055,
-      "krw_price_gross": 16055,
-      "ma20_krw": 16045
-    },
-    "0023A0.KS": {
-      "name": "SOL 미국양자컴퓨팅TOP10",
-      "account": "ISA",
-      "type": "etf",
-      "current": 27265.0,
-      "krw_price": 27265,
-      "krw_price_gross": 27265,
-      "ma20_krw": 25858
-    },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 418.16,
-      "krw_price": 594174,
-      "krw_price_gross": 595962,
-      "ma20_krw": 551341
+      "current": 420.73,
+      "krw_price": 596903,
+      "krw_price_gross": 598699,
+      "ma20_krw": 552762
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 162.66,
-      "krw_price": 231128,
-      "krw_price_gross": 231823,
-      "ma20_krw": 184894
+      "current": 159.3,
+      "krw_price": 226011,
+      "krw_price_gross": 226691,
+      "ma20_krw": 186530
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 211.94,
-      "krw_price": 301151,
-      "krw_price_gross": 302057,
-      "ma20_krw": 290723
+      "current": 219.12,
+      "krw_price": 310872,
+      "krw_price_gross": 311808,
+      "ma20_krw": 291339
     }
   },
-  "valuation_date": "2026-08-05T09:11",
+  "valuation_date": "2026-08-05T15:23",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +176,7 @@
     "ai_comment": "오늘 세 종목 모두 상승세지만, 팔란티어는 하루 만에 +28%라는 이례적으로 큰 변동폭을 보이고 있어 단기 과열 가능성을 염두에 둘 필요가 있습니다. 브로드컴(+6.1%)과 엔비디아(+1.8%)는 상대적으로 안정적인 움직임이라 부담이 적어 보입니다. 계획대로 매수를 진행하시더라도, 팔란티어는 변동성이 큰 만큼 이후 가격 흐름을 조금",
     "dip_note": null
   },
-  "fx": 1425.2,
+  "fx": 1423.0,
   "asset_history": [
     {
       "date": "2026-07-16",
