@@ -64,18 +64,18 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 16065.0,
-      "krw_price": 16065,
-      "krw_price_gross": 16065,
-      "ma20_krw": 16046
+      "current": 16055.0,
+      "krw_price": 16055,
+      "krw_price_gross": 16055,
+      "ma20_krw": 16045
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 27270.0,
-      "krw_price": 27270,
-      "krw_price_gross": 27270,
+      "current": 27265.0,
+      "krw_price": 27265,
+      "krw_price_gross": 27265,
       "ma20_krw": 25858
     },
     "AVGO": {
@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 418.16,
-      "krw_price": 593540,
-      "krw_price_gross": 595326,
-      "ma20_krw": 550753
+      "krw_price": 594174,
+      "krw_price_gross": 595962,
+      "ma20_krw": 551341
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 162.66,
-      "krw_price": 230881,
-      "krw_price_gross": 231576,
-      "ma20_krw": 184697
+      "krw_price": 231128,
+      "krw_price_gross": 231823,
+      "ma20_krw": 184894
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 211.94,
-      "krw_price": 300830,
-      "krw_price_gross": 301735,
-      "ma20_krw": 290413
+      "krw_price": 301151,
+      "krw_price_gross": 302057,
+      "ma20_krw": 290723
     }
   },
-  "valuation_date": "2026-08-05T06:09",
+  "valuation_date": "2026-08-05T09:11",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 상승세지만, 팔란티어는 하루 만에 +28%라는 이례적으로 큰 변동폭을 보이고 있어 단기 과열 가능성을 염두에 둘 필요가 있습니다. 브로드컴(+6.1%)과 엔비디아(+1.8%)는 상대적으로 안정적인 움직임이라 부담이 적어 보입니다. 계획대로 매수를 진행하시더라도, 팔란티어는 변동성이 큰 만큼 이후 가격 흐름을 조금",
     "dip_note": null
   },
-  "fx": 1423.68,
+  "fx": 1425.2,
   "asset_history": [
     {
       "date": "2026-07-16",
