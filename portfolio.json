@@ -73,40 +73,40 @@
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 25770.0,
-      "krw_price": 25770,
-      "krw_price_gross": 25770,
-      "ma20_krw": 25493
+      "current": 25790.0,
+      "krw_price": 25790,
+      "krw_price_gross": 25790,
+      "ma20_krw": 25494
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 420.57,
-      "krw_price": 594780,
-      "krw_price_gross": 596570,
-      "ma20_krw": 552209
+      "krw_price": 595242,
+      "krw_price_gross": 597033,
+      "ma20_krw": 552638
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 155.92,
-      "krw_price": 220506,
-      "krw_price_gross": 221169,
-      "ma20_krw": 187776
+      "krw_price": 220677,
+      "krw_price_gross": 221341,
+      "ma20_krw": 187922
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 218.99,
-      "krw_price": 309701,
-      "krw_price_gross": 310633,
-      "ma20_krw": 291566
+      "krw_price": 309941,
+      "krw_price_gross": 310874,
+      "ma20_krw": 291793
     }
   },
-  "valuation_date": "2026-08-07T05:11",
+  "valuation_date": "2026-08-07T05:19",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 정상 변동성 범위 안에서 움직이고 있어 계획대로 매수를 진행해도 무리 없어 보입니다. 다만 엔비디아는 +3.6%로 상대적으로 강한 상승세를 보이고 있어 단기 과열 여부를 체크하고, 팔란티어의 소폭 하락은 특별한 이슈라기보다 자연스러운 변동으로 보입니다. 매수 시점 분할이나 슬리피지 관리 정도만 참고하시면 될 것 같습니다.",
     "dip_note": null
   },
-  "fx": 1418.48,
+  "fx": 1419.58,
   "asset_history": [
     {
       "date": "2026-07-16",
