@@ -60,35 +60,53 @@
     "wedding_fund_start": "2027-07-01"
   },
   "valuation": {
+    "0038A0.KS": {
+      "name": "KODEX 미국휴머노이드로봇",
+      "account": "ISA",
+      "type": "etf",
+      "current": 15800.0,
+      "krw_price": 15800,
+      "krw_price_gross": 15800,
+      "ma20_krw": 15904
+    },
+    "0023A0.KS": {
+      "name": "SOL 미국양자컴퓨팅TOP10",
+      "account": "ISA",
+      "type": "etf",
+      "current": 25890.0,
+      "krw_price": 25890,
+      "krw_price_gross": 25890,
+      "ma20_krw": 25499
+    },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 423.4,
-      "krw_price": 600516,
-      "krw_price_gross": 602323,
-      "ma20_krw": 554003
+      "current": 420.57,
+      "krw_price": 595947,
+      "krw_price_gross": 597741,
+      "ma20_krw": 553299
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 155.61,
-      "krw_price": 220702,
-      "krw_price_gross": 221366,
-      "ma20_krw": 188296
+      "current": 155.92,
+      "krw_price": 220941,
+      "krw_price_gross": 221606,
+      "ma20_krw": 188147
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 218.06,
-      "krw_price": 309275,
-      "krw_price_gross": 310206,
-      "ma20_krw": 292341
+      "current": 218.99,
+      "krw_price": 310312,
+      "krw_price_gross": 311246,
+      "ma20_krw": 292142
     }
   },
-  "valuation_date": "2026-08-06T15:23",
+  "valuation_date": "2026-08-07T00:34",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -176,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 정상 변동성 범위 안에서 움직이고 있어 계획대로 매수를 진행해도 무리 없어 보입니다. 다만 엔비디아는 +3.6%로 상대적으로 강한 상승세를 보이고 있어 단기 과열 여부를 체크하고, 팔란티어의 소폭 하락은 특별한 이슈라기보다 자연스러운 변동으로 보입니다. 매수 시점 분할이나 슬리피지 관리 정도만 참고하시면 될 것 같습니다.",
     "dip_note": null
   },
-  "fx": 1422.57,
+  "fx": 1421.28,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -310,13 +328,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-08-07",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5042017,
+    "required_monthly_remaining": 5050505,
     "daily_rate": null
   },
   "daily_comment_history": [
