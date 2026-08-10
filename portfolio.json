@@ -64,49 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15905.0,
-      "krw_price": 15905,
-      "krw_price_gross": 15905,
-      "ma20_krw": 15826
+      "current": 15940.0,
+      "krw_price": 15940,
+      "krw_price_gross": 15940,
+      "ma20_krw": 15828
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 27120.0,
-      "krw_price": 27120,
-      "krw_price_gross": 27120,
-      "ma20_krw": 25379
+      "current": 27160.0,
+      "krw_price": 27160,
+      "krw_price_gross": 27160,
+      "ma20_krw": 25381
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 427.76,
-      "krw_price": 603801,
-      "krw_price_gross": 605618,
-      "ma20_krw": 553124
+      "krw_price": 603797,
+      "krw_price_gross": 605614,
+      "ma20_krw": 553120
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 172.01,
-      "krw_price": 242799,
-      "krw_price_gross": 243530,
-      "ma20_krw": 190612
+      "krw_price": 242798,
+      "krw_price_gross": 243528,
+      "ma20_krw": 190611
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 223.96,
-      "krw_price": 316129,
-      "krw_price_gross": 317080,
-      "ma20_krw": 291931
+      "krw_price": 316127,
+      "krw_price_gross": 317078,
+      "ma20_krw": 291929
     }
   },
-  "valuation_date": "2026-08-10T05:04",
+  "valuation_date": "2026-08-10T05:48",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 상승세로, 특히 팔란티어는 +8.3%로 변동성이 크니 매수 체결가가 계획 대비 슬리피지 날 수 있는 점 참고하세요. 브로드컴과 엔비디아는 완만한 상승이라 큰 이슈는 없어 보입니다. 다만 팔란티어처럼 단기 급등한 종목은 뉴스나 실적 발표 등 이벤트성 요인이 있었는지 한번 확인해보시는 걸 추천드려요.",
     "dip_note": null
   },
-  "fx": 1415.79,
+  "fx": 1415.78,
   "asset_history": [
     {
       "date": "2026-07-16",
