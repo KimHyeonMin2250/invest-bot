@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 422.4,
-      "krw_price": 597078,
-      "krw_price_gross": 598874,
-      "ma20_krw": 556615
+      "krw_price": 597032,
+      "krw_price_gross": 598828,
+      "ma20_krw": 556572
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 175.23,
-      "krw_price": 247694,
-      "krw_price_gross": 248439,
-      "ma20_krw": 194075
+      "krw_price": 247675,
+      "krw_price_gross": 248420,
+      "ma20_krw": 194060
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 217.55,
-      "krw_price": 307515,
-      "krw_price_gross": 308440,
-      "ma20_krw": 293334
+      "krw_price": 307491,
+      "krw_price_gross": 308416,
+      "ma20_krw": 293312
     }
   },
-  "valuation_date": "2026-08-10T20:19",
+  "valuation_date": "2026-08-10T21:06",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 매수 대상 종목들은 전반적으로 정상 범위 내 등락을 보이고 있어 특별한 이상 신호는 없습니다. 다만 Nvidia는 -2.0%로 상대적으로 하락폭이 크고 Palantir는 +3.4%로 변동성이 있는 편이니, 매수는 계획대로 진행하되 체결 시점의 스프레드나 급격한 추가 변동은 한 번 더 확인하시는 게 좋겠습니다. 반도체 섹터 전반의 뉴스 흐름이 있는지도 참고하시면 좋을 것 같습니다.",
     "dip_note": null
   },
-  "fx": 1417.79,
+  "fx": 1417.68,
   "asset_history": [
     {
       "date": "2026-07-16",
