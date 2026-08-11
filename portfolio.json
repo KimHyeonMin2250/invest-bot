@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 417.77,
-      "krw_price": 588613,
-      "krw_price_gross": 590384,
-      "ma20_krw": 556825
+      "current": 414.84,
+      "krw_price": 584638,
+      "krw_price_gross": 586397,
+      "ma20_krw": 556764
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 176.2,
-      "krw_price": 248248,
-      "krw_price_gross": 248995,
-      "ma20_krw": 196436
+      "current": 175.03,
+      "krw_price": 246671,
+      "krw_price_gross": 247414,
+      "ma20_krw": 196406
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 217.08,
-      "krw_price": 305853,
-      "krw_price_gross": 306773,
-      "ma20_krw": 292752
+      "current": 216.56,
+      "krw_price": 305200,
+      "krw_price_gross": 306118,
+      "ma20_krw": 292792
     }
   },
-  "valuation_date": "2026-08-11T17:33",
+  "valuation_date": "2026-08-11T18:29",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 전일 대비 등락폭이 크지 않아 시장이 비교적 안정적인 구간으로 보입니다. 다만 브로드컴과 팔란티어가 소폭 약세인 점은 섹터 전반의 방향성보다는 개별 노이즈일 가능성이 높으니 참고만 하시고, 정상 범위 내 변동인 만큼 예정된 매수 계획대로 진행하셔도 무리는 없어 보입니다.",
     "dip_note": null
   },
-  "fx": 1413.18,
+  "fx": 1413.55,
   "asset_history": [
     {
       "date": "2026-07-16",
