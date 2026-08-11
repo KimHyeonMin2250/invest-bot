@@ -64,49 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15720.0,
-      "krw_price": 15720,
-      "krw_price_gross": 15720,
-      "ma20_krw": 15758
+      "current": 15700.0,
+      "krw_price": 15700,
+      "krw_price_gross": 15700,
+      "ma20_krw": 15757
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 26150.0,
-      "krw_price": 26150,
-      "krw_price_gross": 26150,
-      "ma20_krw": 25279
+      "current": 26110.0,
+      "krw_price": 26110,
+      "krw_price_gross": 26110,
+      "ma20_krw": 25277
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 422.4,
-      "krw_price": 595511,
-      "krw_price_gross": 597303,
-      "ma20_krw": 555155
+      "krw_price": 595878,
+      "krw_price_gross": 597671,
+      "ma20_krw": 555496
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 175.23,
-      "krw_price": 247044,
-      "krw_price_gross": 247787,
-      "ma20_krw": 193566
+      "krw_price": 247196,
+      "krw_price_gross": 247940,
+      "ma20_krw": 193685
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 217.55,
-      "krw_price": 306708,
-      "krw_price_gross": 307631,
-      "ma20_krw": 292565
+      "krw_price": 306897,
+      "krw_price_gross": 307820,
+      "ma20_krw": 292745
     }
   },
-  "valuation_date": "2026-08-11T05:17",
+  "valuation_date": "2026-08-11T06:08",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 매수 대상 종목들은 전반적으로 정상 범위 내 등락을 보이고 있어 특별한 이상 신호는 없습니다. 다만 Nvidia는 -2.0%로 상대적으로 하락폭이 크고 Palantir는 +3.4%로 변동성이 있는 편이니, 매수는 계획대로 진행하되 체결 시점의 스프레드나 급격한 추가 변동은 한 번 더 확인하시는 게 좋겠습니다. 반도체 섹터 전반의 뉴스 흐름이 있는지도 참고하시면 좋을 것 같습니다.",
     "dip_note": null
   },
-  "fx": 1414.07,
+  "fx": 1414.94,
   "asset_history": [
     {
       "date": "2026-07-16",
