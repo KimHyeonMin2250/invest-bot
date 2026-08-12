@@ -64,40 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15745.0,
-      "krw_price": 15745,
-      "krw_price_gross": 15745,
-      "ma20_krw": 15698
+      "current": 15725.0,
+      "krw_price": 15725,
+      "krw_price_gross": 15725,
+      "ma20_krw": 15504
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 26215.0,
-      "krw_price": 26215,
-      "krw_price_gross": 26215,
-      "ma20_krw": 25226
+      "current": 26195.0,
+      "krw_price": 26195,
+      "krw_price_gross": 26195,
+      "ma20_krw": 25067
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 416.08,
-      "krw_price": 586933,
-      "krw_price_gross": 588699,
-      "ma20_krw": 557371
+      "krw_price": 587348,
+      "krw_price_gross": 589115,
+      "ma20_krw": 557765
+    },
+    "PLTR": {
+      "name": "Palantir",
+      "account": "general",
+      "type": "stock",
+      "current": 174.94,
+      "krw_price": 246949,
+      "krw_price_gross": 247692,
+      "ma20_krw": 196722
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 217.5,
-      "krw_price": 306811,
-      "krw_price_gross": 307734,
-      "ma20_krw": 293132
+      "krw_price": 307028,
+      "krw_price_gross": 307952,
+      "ma20_krw": 293339
     }
   },
-  "valuation_date": "2026-08-12T05:12",
+  "valuation_date": "2026-08-12T06:02",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -185,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 전일 대비 등락폭이 크지 않아 시장이 비교적 안정적인 구간으로 보입니다. 다만 브로드컴과 팔란티어가 소폭 약세인 점은 섹터 전반의 방향성보다는 개별 노이즈일 가능성이 높으니 참고만 하시고, 정상 범위 내 변동인 만큼 예정된 매수 계획대로 진행하셔도 무리는 없어 보입니다.",
     "dip_note": null
   },
-  "fx": 1414.87,
+  "fx": 1415.87,
   "asset_history": [
     {
       "date": "2026-07-16",
