@@ -60,6 +60,15 @@
     "wedding_fund_start": "2027-07-01"
   },
   "valuation": {
+    "0038A0.KS": {
+      "name": "KODEX 미국휴머노이드로봇",
+      "account": "ISA",
+      "type": "etf",
+      "current": 15890.0,
+      "krw_price": 15890,
+      "krw_price_gross": 15890,
+      "ma20_krw": 15640
+    },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
@@ -73,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 422.94,
-      "krw_price": 597900,
-      "krw_price_gross": 599699,
-      "ma20_krw": 563543
+      "current": 422.06,
+      "krw_price": 597022,
+      "krw_price_gross": 598819,
+      "ma20_krw": 563826
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 173.82,
-      "krw_price": 245718,
-      "krw_price_gross": 246458,
-      "ma20_krw": 202426
+      "current": 175.34,
+      "krw_price": 248019,
+      "krw_price_gross": 248765,
+      "ma20_krw": 202658
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 224.18,
-      "krw_price": 316911,
-      "krw_price_gross": 317864,
-      "ma20_krw": 295771
+      "current": 225.3,
+      "krw_price": 318697,
+      "krw_price_gross": 319656,
+      "ma20_krw": 296032
     }
   },
-  "valuation_date": "2026-08-13T15:32",
+  "valuation_date": "2026-08-13T16:29",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -185,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 완만한 상승세로 정상 범위 내 등락을 보이고 있어 특별한 이상 신호는 없어 보입니다. 다만 브로드컴과 팔란티어의 상승폭이 엔비디아 대비 다소 커 단기 변동성이 있을 수 있으니, 체결가와 슬리피지는 한 번 더 확인하시는 게 좋겠습니다. 매수 계획 자체는 유지하시되 시장 전반의 급변 뉴스가 있는지 정도만 참고하시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1417.93,
+  "fx": 1418.8,
   "asset_history": [
     {
       "date": "2026-07-16",
