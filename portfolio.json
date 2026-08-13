@@ -60,35 +60,44 @@
     "wedding_fund_start": "2027-07-01"
   },
   "valuation": {
+    "0023A0.KS": {
+      "name": "SOL 미국양자컴퓨팅TOP10",
+      "account": "ISA",
+      "type": "etf",
+      "current": 27445.0,
+      "krw_price": 27445,
+      "krw_price_gross": 27445,
+      "ma20_krw": 25224
+    },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 423.17,
-      "krw_price": 598225,
-      "krw_price_gross": 600025,
-      "ma20_krw": 563559
+      "current": 422.94,
+      "krw_price": 597900,
+      "krw_price_gross": 599699,
+      "ma20_krw": 563543
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 173.61,
-      "krw_price": 245428,
-      "krw_price_gross": 246167,
-      "ma20_krw": 202412
+      "current": 173.82,
+      "krw_price": 245718,
+      "krw_price_gross": 246458,
+      "ma20_krw": 202426
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 224.54,
-      "krw_price": 317424,
-      "krw_price_gross": 318379,
-      "ma20_krw": 295797
+      "current": 224.18,
+      "krw_price": 316911,
+      "krw_price_gross": 317864,
+      "ma20_krw": 295771
     }
   },
-  "valuation_date": "2026-08-13T15:28",
+  "valuation_date": "2026-08-13T15:32",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
