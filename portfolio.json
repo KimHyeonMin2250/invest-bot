@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 3155.0,
-    "0023A0.KS": 5350.0,
+    "0038A0.KS": 5195.0,
+    "0023A0.KS": 6235.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -64,85 +64,85 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15925.0,
-      "krw_price": 15925,
-      "krw_price_gross": 15925,
-      "ma20_krw": 15597
+      "current": 15960.0,
+      "krw_price": 15960,
+      "krw_price_gross": 15960,
+      "ma20_krw": 15599
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 27120.0,
-      "krw_price": 27120,
-      "krw_price_gross": 27120,
-      "ma20_krw": 25314
+      "current": 27115.0,
+      "krw_price": 27115,
+      "krw_price_gross": 27115,
+      "ma20_krw": 25273
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 417.82,
-      "krw_price": 589517,
-      "krw_price_gross": 591291,
-      "ma20_krw": 562089
+      "krw_price": 589142,
+      "krw_price_gross": 590914,
+      "ma20_krw": 561731
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 179.01,
-      "krw_price": 252571,
-      "krw_price_gross": 253331,
-      "ma20_krw": 202400
+      "krw_price": 252411,
+      "krw_price_gross": 253170,
+      "ma20_krw": 202271
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 225.3,
-      "krw_price": 317884,
-      "krw_price_gross": 318840,
-      "ma20_krw": 295277
+      "krw_price": 317681,
+      "krw_price_gross": 318637,
+      "ma20_krw": 295089
     }
   },
-  "valuation_date": "2026-08-14T04:30",
+  "valuation_date": "2026-08-14T05:13",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-08-13",
+    "date": "2026-08-14",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 15875.0,
-        "krw_price": 15875,
-        "change": 0.86,
+        "current": 15960.0,
+        "krw_price": 15960,
+        "change": 0.44,
         "signal": "",
         "shares": 1,
-        "spent": 15875,
-        "carry": 3155,
-        "available": 19030,
+        "spent": 15960,
+        "carry": 5195,
+        "available": 21155,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 27340.0,
-        "krw_price": 27340,
-        "change": 4.29,
-        "signal": "",
+        "current": 27115.0,
+        "krw_price": 27115,
+        "change": -1.2,
+        "signal": "🟡 소폭 하락",
         "shares": 1,
-        "spent": 27340,
-        "carry": 5350,
-        "available": 32690,
+        "spent": 27115,
+        "carry": 6235,
+        "available": 33350,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "두 종목 모두 전일 대비 상승세를 유지하며 정상 범위 내에서 움직이고 있어 매수 계획 자체에는 무리가 없어 보입니다. 다만 양자컴퓨팅 테마는 변동성이 상대적으로 큰 편이라 단기 급등 이후 되돌림 가능성을 염두에 두고, 로봇 테마와의 상관관계나 포트폴리오 내 비중 조절도 함께 점검해보시길 권합니다.",
+    "ai_comment": "두 종목 모두 전일 대비 변동폭이 크지 않아 정상적인 매수 계획 진행에 무리 없어 보입니다. 다만 SOL 미국양자컴퓨팅TOP10은 MA5를 하회하고 있어 단기 조정 흐름일 수 있으니, 체결 후에도 추가 하락 여지를 염두에 두고 분할 매수나 손절 라인 정도는 미리 생각해두시는 게 좋겠습니다.",
     "dip_note": null
   },
   "last_general": {
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 완만한 상승세로 정상 범위 내 등락을 보이고 있어 특별한 이상 신호는 없어 보입니다. 다만 브로드컴과 팔란티어의 상승폭이 엔비디아 대비 다소 커 단기 변동성이 있을 수 있으니, 체결가와 슬리피지는 한 번 더 확인하시는 게 좋겠습니다. 매수 계획 자체는 유지하시되 시장 전반의 급변 뉴스가 있는지 정도만 참고하시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1415.18,
+  "fx": 1414.28,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -625,6 +625,12 @@
       "date": "2026-08-13",
       "market": "general",
       "comment": "오늘 세 종목 모두 완만한 상승세로 정상 범위 내 등락을 보이고 있어 특별한 이상 신호는 없어 보입니다. 다만 브로드컴과 팔란티어의 상승폭이 엔비디아 대비 다소 커 단기 변동성이 있을 수 있으니, 체결가와 슬리피지는 한 번 더 확인하시는 게 좋겠습니다. 매수 계획 자체는 유지하시되 시장 전반의 급변 뉴스가 있는지 정도만 참고하시길 권합니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-08-14",
+      "market": "isa",
+      "comment": "두 종목 모두 전일 대비 변동폭이 크지 않아 정상적인 매수 계획 진행에 무리 없어 보입니다. 다만 SOL 미국양자컴퓨팅TOP10은 MA5를 하회하고 있어 단기 조정 흐름일 수 있으니, 체결 후에도 추가 하락 여지를 염두에 두고 분할 매수나 손절 라인 정도는 미리 생각해두시는 게 좋겠습니다.",
       "dip_note": null
     }
   ],
