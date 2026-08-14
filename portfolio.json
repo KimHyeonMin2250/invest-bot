@@ -67,7 +67,7 @@
       "current": 15965.0,
       "krw_price": 15965,
       "krw_price_gross": 15965,
-      "ma20_krw": 15552
+      "ma20_krw": 15599
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
@@ -76,7 +76,7 @@
       "current": 27150.0,
       "krw_price": 27150,
       "krw_price_gross": 27150,
-      "ma20_krw": 25316
+      "ma20_krw": 25274
     },
     "AVGO": {
       "name": "Broadcom",
@@ -106,7 +106,7 @@
       "ma20_krw": 297126
     }
   },
-  "valuation_date": "2026-08-14T21:43",
+  "valuation_date": "2026-08-14T22:02",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
