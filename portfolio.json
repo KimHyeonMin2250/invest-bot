@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 392.43,
-      "krw_price": 553595,
-      "krw_price_gross": 555261,
-      "ma20_krw": 564559
+      "krw_price": 553497,
+      "krw_price_gross": 555163,
+      "ma20_krw": 564459
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 172.55,
-      "krw_price": 243414,
-      "krw_price_gross": 244146,
-      "ma20_krw": 207962
+      "krw_price": 243371,
+      "krw_price_gross": 244103,
+      "ma20_krw": 207925
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 225.01,
-      "krw_price": 317418,
-      "krw_price_gross": 318373,
-      "ma20_krw": 298334
+      "krw_price": 317362,
+      "krw_price_gross": 318317,
+      "ma20_krw": 298281
     }
   },
-  "valuation_date": "2026-08-17T21:34",
+  "valuation_date": "2026-08-17T21:55",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일 대비 소폭 등락에 그치며 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 계획된 매수 진행에 무리는 없어 보이나, 반도체·AI 관련주는 장중 뉴스나 거시 지표에 민감하게 반응할 수 있으니 체결 시점의 가격은 한 번 더 확인하시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1414.93,
+  "fx": 1414.68,
   "asset_history": [
     {
       "date": "2026-07-16",
