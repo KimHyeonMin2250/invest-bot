@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 398.0,
-      "krw_price": 560881,
-      "krw_price_gross": 562569,
-      "ma20_krw": 564377
+      "current": 397.4,
+      "krw_price": 559679,
+      "krw_price_gross": 561363,
+      "ma20_krw": 563975
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 175.22,
-      "krw_price": 246930,
-      "krw_price_gross": 247673,
-      "ma20_krw": 207938
+      "current": 174.36,
+      "krw_price": 245560,
+      "krw_price_gross": 246299,
+      "ma20_krw": 207745
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 227.49,
-      "krw_price": 320597,
-      "krw_price_gross": 321562,
-      "ma20_krw": 298205
+      "current": 226.87,
+      "krw_price": 319506,
+      "krw_price_gross": 320467,
+      "ma20_krw": 297971
     }
   },
-  "valuation_date": "2026-08-17T16:03",
+  "valuation_date": "2026-08-17T16:39",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일 대비 소폭 등락에 그치며 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 계획된 매수 진행에 무리는 없어 보이나, 반도체·AI 관련주는 장중 뉴스나 거시 지표에 민감하게 반응할 수 있으니 체결 시점의 가격은 한 번 더 확인하시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1413.49,
+  "fx": 1412.59,
   "asset_history": [
     {
       "date": "2026-07-16",
