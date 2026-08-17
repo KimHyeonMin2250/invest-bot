@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 392.99,
-      "krw_price": 553237,
-      "krw_price_gross": 554902,
-      "ma20_krw": 562386
+      "krw_price": 552975,
+      "krw_price_gross": 554639,
+      "ma20_krw": 562119
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 174.04,
-      "krw_price": 245007,
-      "krw_price_gross": 245744,
-      "ma20_krw": 204878
+      "krw_price": 244891,
+      "krw_price_gross": 245628,
+      "ma20_krw": 204780
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 225.16,
-      "krw_price": 316972,
-      "krw_price_gross": 317926,
-      "ma20_krw": 296187
+      "krw_price": 316822,
+      "krw_price_gross": 317775,
+      "ma20_krw": 296046
     }
   },
-  "valuation_date": "2026-08-16T11:13",
+  "valuation_date": "2026-08-17T01:50",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "반도체/AI 관련주가 전반적으로 약세를 보이는 가운데, 브로드컴이 5일 이동평균선을 하회하며 상대적으로 큰 하락폭을 기록해 단기 변동성이 커진 모습입니다. 팔란티어와 엔비디아는 상대적으로 안정적인 범위를 유지하고 있으나, 브로드컴 매수 시에는 추가 하락 가능성에 대비해 포지션 크기나 진입 시점을 유의하시는 것이 좋겠습니다. 계획된 매수 결정과는 별개로, 전체 기술주 섹터의 모멘텀 변화 여부를 함께 참고하시길 권합니다.",
     "dip_note": "**Broadcom (-5.4%, 395.2 / 5일선 413.51 / 20일선 399.6):**\n제공된 정보(주가와 이동평균선)만으로는 이 하락이 반도체/기술주 전반의 시장 조정 때문인지, 아니면 실적 발표·가이던스 하향·규제 이슈 같은 개별 악재 때문인지 판단할 근거가 없습니다. -5.4%는 20일선과 5일선을 모두 하향 이탈할 정도로 낙폭이 크므로 단순 노이즈로 보기는 어렵고, 최근 뉴스(실적, 관세, AI 반도체"
   },
-  "fx": 1412.0,
+  "fx": 1411.33,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -384,13 +384,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-08-17",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5128205,
+    "required_monthly_remaining": 5136986,
     "daily_rate": null
   },
   "daily_comment_history": [
