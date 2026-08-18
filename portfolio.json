@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 7230.0,
-    "0023A0.KS": 7085.0,
+    "0038A0.KS": 9380.0,
+    "0023A0.KS": 8350.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -64,86 +64,59 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15820.0,
-      "krw_price": 15820,
-      "krw_price_gross": 15820,
-      "ma20_krw": 15593
+      "current": 15850.0,
+      "krw_price": 15850,
+      "krw_price_gross": 15850,
+      "ma20_krw": 15595
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 26755.0,
-      "krw_price": 26755,
-      "krw_price_gross": 26755,
+      "current": 26735.0,
+      "krw_price": 26735,
+      "krw_price_gross": 26735,
       "ma20_krw": 25382
-    },
-    "AVGO": {
-      "name": "Broadcom",
-      "account": "general",
-      "type": "stock",
-      "current": 392.43,
-      "krw_price": 551541,
-      "krw_price_gross": 553201,
-      "ma20_krw": 562464
-    },
-    "PLTR": {
-      "name": "Palantir",
-      "account": "general",
-      "type": "stock",
-      "current": 172.55,
-      "krw_price": 242511,
-      "krw_price_gross": 243240,
-      "ma20_krw": 207190
-    },
-    "NVDA": {
-      "name": "Nvidia",
-      "account": "general",
-      "type": "stock",
-      "current": 225.01,
-      "krw_price": 316241,
-      "krw_price_gross": 317192,
-      "ma20_krw": 297227
     }
   },
-  "valuation_date": "2026-08-18T03:31",
+  "valuation_date": "2026-08-18T04:05",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-08-17",
+    "date": "2026-08-18",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 15965.0,
-        "krw_price": 15965,
-        "change": 0.47,
+        "current": 15850.0,
+        "krw_price": 15850,
+        "change": -0.72,
         "signal": "",
         "shares": 1,
-        "spent": 15965,
-        "carry": 7230,
-        "available": 23195,
+        "spent": 15850,
+        "carry": 9380,
+        "available": 25230,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 27150.0,
-        "krw_price": 27150,
-        "change": -1.07,
+        "current": 26735.0,
+        "krw_price": 26735,
+        "change": -1.53,
         "signal": "🟡 소폭 하락",
         "shares": 1,
-        "spent": 27150,
-        "carry": 7085,
-        "available": 34235,
+        "spent": 26735,
+        "carry": 8350,
+        "available": 35085,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "**시장 코멘트:**\n\n두 종목 모두 테마성 강한 신기술 섹터(휴머노이드 로봇·양자컴퓨팅)로, 변동성이 상대적으로 클 수 있는 구간입니다. 특히 SOL 미국양자컴퓨팅TOP10은 MA5 하회 중이라 단기 조정 흐름이 이어질 가능성이 있으니, 매수 후에도 분할 진입 여지나 추가 하락 시 대응 계획을 미리 점검해두시는 게 좋겠습니다.\n\n(참고 의견입니다 — 계획된 매수 진행에는 영향 없습니다.)",
-    "dip_note": "**SOL 미국양자컴퓨팅TOP10**: 제공된 데이터(현재가, 이동평균)만으로는 하락 원인이 시장 전체 조정인지"
+    "ai_comment": "오늘 두 종목 모두 약세를 보이며 휴머노이드로봇은 정상 범위 내 등락이지만, 양자컴퓨팅TOP10은 MA5 하회로 단기 추세가 다소 꺾인 모습입니다. 매수 계획 자체는 유지하시되, 양자컴퓨팅 관련 종목은 변동성이 큰 테마인 만큼 진입 후 추가 하락 시 분할 대응 여지를 열어두시는 게 좋겠습니다. 전반적으로 하루 등락만으로 방향성을 단정하기 어려우니 이후 며칠간 추세 확인은 필요해 보입니다.",
+    "dip_note": "**SOL 미국양자컴퓨팅TOP10**: 현재가(26735)가 5일 평균(26733)과 거의 일치하고 20일 평균(25381.5)보다 여전히 높은 수준이라, 단기 급등 후 자연스러운 숨고르기(조정) 가능성이 있어 보입니다."
   },
   "last_general": {
     "date": "2026-08-17",
@@ -194,7 +167,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일 대비 소폭 등락에 그치며 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 계획된 매수 진행에 무리는 없어 보이나, 반도체·AI 관련주는 장중 뉴스나 거시 지표에 민감하게 반응할 수 있으니 체결 시점의 가격은 한 번 더 확인하시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1409.68,
+  "fx": 1411.43,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -671,6 +644,12 @@
       "market": "general",
       "comment": "오늘은 세 종목 모두 전일 대비 소폭 등락에 그치며 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 계획된 매수 진행에 무리는 없어 보이나, 반도체·AI 관련주는 장중 뉴스나 거시 지표에 민감하게 반응할 수 있으니 체결 시점의 가격은 한 번 더 확인하시길 권합니다.",
       "dip_note": null
+    },
+    {
+      "date": "2026-08-18",
+      "market": "isa",
+      "comment": "오늘 두 종목 모두 약세를 보이며 휴머노이드로봇은 정상 범위 내 등락이지만, 양자컴퓨팅TOP10은 MA5 하회로 단기 추세가 다소 꺾인 모습입니다. 매수 계획 자체는 유지하시되, 양자컴퓨팅 관련 종목은 변동성이 큰 테마인 만큼 진입 후 추가 하락 시 분할 대응 여지를 열어두시는 게 좋겠습니다. 전반적으로 하루 등락만으로 방향성을 단정하기 어려우니 이후 며칠간 추세 확인은 필요해 보입니다.",
+      "dip_note": "**SOL 미국양자컴퓨팅TOP10**: 현재가(26735)가 5일 평균(26733)과 거의 일치하고 20일 평균(25381.5)보다 여전히 높은 수준이라, 단기 급등 후 자연스러운 숨고르기(조정) 가능성이 있어 보입니다."
     }
   ],
   "rebalance_suggestions": [],
