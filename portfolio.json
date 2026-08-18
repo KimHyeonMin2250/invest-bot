@@ -67,7 +67,7 @@
       "current": 15780.0,
       "krw_price": 15780,
       "krw_price_gross": 15780,
-      "ma20_krw": 15591
+      "ma20_krw": 15564
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
@@ -76,37 +76,37 @@
       "current": 26690.0,
       "krw_price": 26690,
       "krw_price_gross": 26690,
-      "ma20_krw": 25379
+      "ma20_krw": 25388
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 381.42,
-      "krw_price": 536919,
-      "krw_price_gross": 538535,
-      "ma20_krw": 563000
+      "current": 380.12,
+      "krw_price": 535176,
+      "krw_price_gross": 536786,
+      "ma20_krw": 563001
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 172.76,
-      "krw_price": 243192,
-      "krw_price_gross": 243923,
-      "ma20_krw": 210342
+      "current": 173.05,
+      "krw_price": 243639,
+      "krw_price_gross": 244373,
+      "ma20_krw": 210396
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 220.26,
-      "krw_price": 310057,
-      "krw_price_gross": 310989,
-      "ma20_krw": 298612
+      "current": 219.96,
+      "krw_price": 309678,
+      "krw_price_gross": 310609,
+      "ma20_krw": 298639
     }
   },
-  "valuation_date": "2026-08-18T17:36",
+  "valuation_date": "2026-08-18T17:59",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 반도체·AI 관련주 전반이 약세를 보이며 브로드컴이 5일 이평선을 하회할 정도로 조정폭이 큰 편입니다. 엔비디아, 팔란티어도 동반 하락 중이라 섹터 전반의 투자심리가 위축된 것으로 보이니, 계획된 매수는 진행하되 변동성 확대에 대비해 분할 매수나 손절 라인 설정을 함께 고려하시면 좋겠습니다.",
     "dip_note": "**Broadcom (-3.7%, 현재가 378.27)**\n\n죄송하지만 이 정보만으로는 판단이 어렵습니다. 제공해주신 데이터는 Broadcom 한 종목뿐이며, 저는 실시간 뉴스나 시장 전체 지수 동향"
   },
-  "fx": 1411.92,
+  "fx": 1412.15,
   "asset_history": [
     {
       "date": "2026-07-16",
