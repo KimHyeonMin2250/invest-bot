@@ -64,22 +64,22 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15855.0,
-      "krw_price": 15855,
-      "krw_price_gross": 15855,
-      "ma20_krw": 15595
+      "current": 15825.0,
+      "krw_price": 15825,
+      "krw_price_gross": 15825,
+      "ma20_krw": 15567
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 26850.0,
-      "krw_price": 26850,
-      "krw_price_gross": 26850,
-      "ma20_krw": 25387
+      "current": 26725.0,
+      "krw_price": 26725,
+      "krw_price_gross": 26725,
+      "ma20_krw": 25381
     }
   },
-  "valuation_date": "2026-08-18T04:55",
+  "valuation_date": "2026-08-18T05:38",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -167,7 +167,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일 대비 소폭 등락에 그치며 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 계획된 매수 진행에 무리는 없어 보이나, 반도체·AI 관련주는 장중 뉴스나 거시 지표에 민감하게 반응할 수 있으니 체결 시점의 가격은 한 번 더 확인하시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1412.57,
+  "fx": 1409.78,
   "asset_history": [
     {
       "date": "2026-07-16",
