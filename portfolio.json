@@ -67,7 +67,7 @@
       "current": 15780.0,
       "krw_price": 15780,
       "krw_price_gross": 15780,
-      "ma20_krw": 15564
+      "ma20_krw": 15591
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
@@ -76,37 +76,37 @@
       "current": 26690.0,
       "krw_price": 26690,
       "krw_price_gross": 26690,
-      "ma20_krw": 25388
+      "ma20_krw": 25379
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 378.09,
-      "krw_price": 531764,
-      "krw_price_gross": 533364,
-      "ma20_krw": 562816
+      "current": 378.67,
+      "krw_price": 533036,
+      "krw_price_gross": 534640,
+      "ma20_krw": 563342
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 173.17,
-      "krw_price": 243555,
-      "krw_price_gross": 244287,
-      "ma20_krw": 208476
+      "current": 171.2,
+      "krw_price": 240990,
+      "krw_price_gross": 241716,
+      "ma20_krw": 208508
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 219.27,
-      "krw_price": 308395,
-      "krw_price_gross": 309323,
-      "ma20_krw": 297323
+      "current": 219.29,
+      "krw_price": 308677,
+      "krw_price_gross": 309606,
+      "ma20_krw": 297579
     }
   },
-  "valuation_date": "2026-08-18T14:19",
+  "valuation_date": "2026-08-18T14:56",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일 대비 소폭 등락에 그치며 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 계획된 매수 진행에 무리는 없어 보이나, 반도체·AI 관련주는 장중 뉴스나 거시 지표에 민감하게 반응할 수 있으니 체결 시점의 가격은 한 번 더 확인하시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1410.68,
+  "fx": 1411.89,
   "asset_history": [
     {
       "date": "2026-07-16",
