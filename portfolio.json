@@ -64,49 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15970.0,
-      "krw_price": 15970,
-      "krw_price_gross": 15970,
-      "ma20_krw": 15601
+      "current": 15880.0,
+      "krw_price": 15880,
+      "krw_price_gross": 15880,
+      "ma20_krw": 15596
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 27160.0,
-      "krw_price": 27160,
-      "krw_price_gross": 27160,
-      "ma20_krw": 25403
+      "current": 26865.0,
+      "krw_price": 26865,
+      "krw_price_gross": 26865,
+      "ma20_krw": 25388
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 392.43,
-      "krw_price": 551932,
-      "krw_price_gross": 553593,
-      "ma20_krw": 562863
+      "krw_price": 551306,
+      "krw_price_gross": 552965,
+      "ma20_krw": 562225
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 172.55,
-      "krw_price": 242683,
-      "krw_price_gross": 243413,
-      "ma20_krw": 207337
+      "krw_price": 242407,
+      "krw_price_gross": 243137,
+      "ma20_krw": 207102
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 225.01,
-      "krw_price": 316465,
-      "krw_price_gross": 317417,
-      "ma20_krw": 297438
+      "krw_price": 316106,
+      "krw_price_gross": 317057,
+      "ma20_krw": 297100
     }
   },
-  "valuation_date": "2026-08-18T01:45",
+  "valuation_date": "2026-08-18T02:43",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일 대비 소폭 등락에 그치며 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 계획된 매수 진행에 무리는 없어 보이나, 반도체·AI 관련주는 장중 뉴스나 거시 지표에 민감하게 반응할 수 있으니 체결 시점의 가격은 한 번 더 확인하시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1410.68,
+  "fx": 1409.08,
   "asset_history": [
     {
       "date": "2026-07-16",
