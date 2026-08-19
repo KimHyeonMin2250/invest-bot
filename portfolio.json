@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 364.24,
-      "krw_price": 503968,
-      "krw_price_gross": 505485,
-      "ma20_krw": 551016
+      "current": 365.35,
+      "krw_price": 505514,
+      "krw_price_gross": 507035,
+      "ma20_krw": 551116
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 175.16,
-      "krw_price": 242351,
-      "krw_price_gross": 243080,
-      "ma20_krw": 210158
+      "current": 174.88,
+      "krw_price": 241974,
+      "krw_price_gross": 242702,
+      "ma20_krw": 210148
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 219.75,
-      "krw_price": 304045,
-      "krw_price_gross": 304960,
+      "current": 219.56,
+      "krw_price": 303796,
+      "krw_price_gross": 304710,
       "ma20_krw": 293998
     }
   },
-  "valuation_date": "2026-08-19T18:03",
+  "valuation_date": "2026-08-19T18:49",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 매수 계획에 대한 참고 의견입니다:\n\n브로드컴이 전일대비 -4.8%로 5일 이평선을 하회하며 조정을 받고 있어 단기 변동성에 유의할 필요가 있습니다. 팔란티어와 엔비디아는 특별한 이상 신호 없이 정상 범위에서 움직이고 있어 비교적 안정적인 흐름입니다. 브로드컴의 경우 하락폭이 다소 크므로 매수 후에도 추가 하락 가능성을 염두에 두고 분할 매수나 손절 기준을 점검해보시는 것을 권장드립니다.",
     "dip_note": "**Broadcom (-4.8%, 361.77 vs 5일선 389.0 / 20일선 398.12)**\n\n주가가 5일 평균 대비 약 7%, 20일 평균 대비 약 9% 이탈한 상당히 큰 하락폭이지만, 제공된 정보(가격과 이동평균)만으로는 이것이 반도체/기술주 전반의 시장 조정인지, 아니면 실적·가이던스·개별 뉴"
   },
-  "fx": 1387.76,
+  "fx": 1387.82,
   "asset_history": [
     {
       "date": "2026-07-16",
