@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 9380.0,
-    "0023A0.KS": 8350.0,
+    "0038A0.KS": 14040.0,
+    "0023A0.KS": 17480.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -64,18 +64,18 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15340.0,
-      "krw_price": 15340,
-      "krw_price_gross": 15340,
+      "current": 15335.0,
+      "krw_price": 15335,
+      "krw_price_gross": 15335,
       "ma20_krw": 15553
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 25430.0,
-      "krw_price": 25430,
-      "krw_price_gross": 25430,
+      "current": 25435.0,
+      "krw_price": 25435,
+      "krw_price_gross": 25435,
       "ma20_krw": 25390
     },
     "AVGO": {
@@ -83,67 +83,58 @@
       "account": "general",
       "type": "stock",
       "current": 380.0,
-      "krw_price": 530169,
-      "krw_price_gross": 531764,
-      "ma20_krw": 557901
-    },
-    "PLTR": {
-      "name": "Palantir",
-      "account": "general",
-      "type": "stock",
-      "current": 171.54,
-      "krw_price": 239329,
-      "krw_price_gross": 240050,
-      "ma20_krw": 208389
+      "krw_price": 530499,
+      "krw_price_gross": 532095,
+      "ma20_krw": 558248
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 219.74,
-      "krw_price": 306577,
-      "krw_price_gross": 307500,
-      "ma20_krw": 295924
+      "krw_price": 306768,
+      "krw_price_gross": 307691,
+      "ma20_krw": 296108
     }
   },
-  "valuation_date": "2026-08-19T03:33",
+  "valuation_date": "2026-08-19T04:05",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-08-18",
+    "date": "2026-08-19",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 15850.0,
-        "krw_price": 15850,
-        "change": -0.72,
-        "signal": "",
-        "shares": 1,
-        "spent": 15850,
-        "carry": 9380,
-        "available": 25230,
+        "current": 15335.0,
+        "krw_price": 15335,
+        "change": -2.82,
+        "signal": "🟠 급락 (-2%대)",
+        "shares": 4,
+        "spent": 61340,
+        "carry": 14040,
+        "available": 75380,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 26735.0,
-        "krw_price": 26735,
-        "change": -1.53,
-        "signal": "🟡 소폭 하락",
-        "shares": 1,
-        "spent": 26735,
-        "carry": 8350,
-        "available": 35085,
+        "current": 25435.0,
+        "krw_price": 25435,
+        "change": -4.7,
+        "signal": "🔴 큰 급락 (-3% 이하)",
+        "shares": 2,
+        "spent": 50870,
+        "carry": 17480,
+        "available": 68350,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 두 종목 모두 약세를 보이며 휴머노이드로봇은 정상 범위 내 등락이지만, 양자컴퓨팅TOP10은 MA5 하회로 단기 추세가 다소 꺾인 모습입니다. 매수 계획 자체는 유지하시되, 양자컴퓨팅 관련 종목은 변동성이 큰 테마인 만큼 진입 후 추가 하락 시 분할 대응 여지를 열어두시는 게 좋겠습니다. 전반적으로 하루 등락만으로 방향성을 단정하기 어려우니 이후 며칠간 추세 확인은 필요해 보입니다.",
-    "dip_note": "**SOL 미국양자컴퓨팅TOP10**: 현재가(26735)가 5일 평균(26733)과 거의 일치하고 20일 평균(25381.5)보다 여전히 높은 수준이라, 단기 급등 후 자연스러운 숨고르기(조정) 가능성이 있어 보입니다."
+    "ai_comment": "두 종목 모두 최근 조정 국면으로 5일 이평선을 하회하고 있어 단기 변동성이 커진 상태이며, 특히 로보틱스·양자컴퓨팅 같은 테마주는 심리적 요인에 따른 낙폭 확대 가능성이 있으니 참고하시기 바랍니다. 규칙 기반 매수 계획은 유지하되, 분할 매수 시점과 비중 조절로 리스크를 관리하시는 것이 좋겠습니다.",
+    "dip_note": null
   },
   "last_general": {
     "date": "2026-08-18",
@@ -194,7 +185,7 @@
     "ai_comment": "오늘은 반도체·AI 관련주 전반이 약세를 보이며 브로드컴이 5일 이평선을 하회할 정도로 조정폭이 큰 편입니다. 엔비디아, 팔란티어도 동반 하락 중이라 섹터 전반의 투자심리가 위축된 것으로 보이니, 계획된 매수는 진행하되 변동성 확대에 대비해 분할 매수나 손절 라인 설정을 함께 고려하시면 좋겠습니다.",
     "dip_note": "**Broadcom (-3.7%, 현재가 378.27)**\n\n죄송하지만 이 정보만으로는 판단이 어렵습니다. 제공해주신 데이터는 Broadcom 한 종목뿐이며, 저는 실시간 뉴스나 시장 전체 지수 동향"
   },
-  "fx": 1399.38,
+  "fx": 1400.25,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -690,6 +681,12 @@
       "market": "general",
       "comment": "오늘은 반도체·AI 관련주 전반이 약세를 보이며 브로드컴이 5일 이평선을 하회할 정도로 조정폭이 큰 편입니다. 엔비디아, 팔란티어도 동반 하락 중이라 섹터 전반의 투자심리가 위축된 것으로 보이니, 계획된 매수는 진행하되 변동성 확대에 대비해 분할 매수나 손절 라인 설정을 함께 고려하시면 좋겠습니다.",
       "dip_note": "**Broadcom (-3.7%, 현재가 378.27)**\n\n죄송하지만 이 정보만으로는 판단이 어렵습니다. 제공해주신 데이터는 Broadcom 한 종목뿐이며, 저는 실시간 뉴스나 시장 전체 지수 동향"
+    },
+    {
+      "date": "2026-08-19",
+      "market": "isa",
+      "comment": "두 종목 모두 최근 조정 국면으로 5일 이평선을 하회하고 있어 단기 변동성이 커진 상태이며, 특히 로보틱스·양자컴퓨팅 같은 테마주는 심리적 요인에 따른 낙폭 확대 가능성이 있으니 참고하시기 바랍니다. 규칙 기반 매수 계획은 유지하되, 분할 매수 시점과 비중 조절로 리스크를 관리하시는 것이 좋겠습니다.",
+      "dip_note": null
     }
   ],
   "rebalance_suggestions": [],
