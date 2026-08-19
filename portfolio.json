@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 361.95,
-      "krw_price": 500317,
-      "krw_price_gross": 501822,
-      "ma20_krw": 550333
+      "current": 361.65,
+      "krw_price": 499635,
+      "krw_price_gross": 501138,
+      "ma20_krw": 550011
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 173.46,
-      "krw_price": 239770,
-      "krw_price_gross": 240492,
-      "ma20_krw": 209841
+      "current": 173.32,
+      "krw_price": 239439,
+      "krw_price_gross": 240159,
+      "ma20_krw": 209716
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 219.77,
-      "krw_price": 303784,
-      "krw_price_gross": 304698,
-      "ma20_krw": 293720
+      "current": 219.73,
+      "krw_price": 303562,
+      "krw_price_gross": 304475,
+      "ma20_krw": 293556
     }
   },
-  "valuation_date": "2026-08-19T14:57",
+  "valuation_date": "2026-08-19T14:59",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,17 +146,17 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-08-18",
+    "date": "2026-08-19",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 378.27,
-        "krw_price": 534041,
-        "change": -3.74,
+        "current": 361.77,
+        "krw_price": 501297,
+        "change": -4.8,
         "signal": "🟡 하락 (-3%대)",
-        "shares": 0.0584,
+        "shares": 0.0622,
         "spent": 31200,
         "carry": 0,
         "available": 31200,
@@ -166,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 171.79,
-        "krw_price": 242530,
-        "change": -1.29,
+        "current": 173.32,
+        "krw_price": 240173,
+        "change": 1.04,
         "signal": "",
-        "shares": 0.0371,
+        "shares": 0.0375,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 218.83,
-        "krw_price": 308940,
-        "change": -2.81,
+        "current": 219.78,
+        "krw_price": 304545,
+        "change": 0.02,
         "signal": "",
-        "shares": 0.0291,
+        "shares": 0.0296,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 반도체·AI 관련주 전반이 약세를 보이며 브로드컴이 5일 이평선을 하회할 정도로 조정폭이 큰 편입니다. 엔비디아, 팔란티어도 동반 하락 중이라 섹터 전반의 투자심리가 위축된 것으로 보이니, 계획된 매수는 진행하되 변동성 확대에 대비해 분할 매수나 손절 라인 설정을 함께 고려하시면 좋겠습니다.",
-    "dip_note": "**Broadcom (-3.7%, 현재가 378.27)**\n\n죄송하지만 이 정보만으로는 판단이 어렵습니다. 제공해주신 데이터는 Broadcom 한 종목뿐이며, 저는 실시간 뉴스나 시장 전체 지수 동향"
+    "ai_comment": "오늘 매수 계획에 대한 참고 의견입니다:\n\n브로드컴이 전일대비 -4.8%로 5일 이평선을 하회하며 조정을 받고 있어 단기 변동성에 유의할 필요가 있습니다. 팔란티어와 엔비디아는 특별한 이상 신호 없이 정상 범위에서 움직이고 있어 비교적 안정적인 흐름입니다. 브로드컴의 경우 하락폭이 다소 크므로 매수 후에도 추가 하락 가능성을 염두에 두고 분할 매수나 손절 기준을 점검해보시는 것을 권장드립니다.",
+    "dip_note": "**Broadcom (-4.8%, 361.77 vs 5일선 389.0 / 20일선 398.12)**\n\n주가가 5일 평균 대비 약 7%, 20일 평균 대비 약 9% 이탈한 상당히 큰 하락폭이지만, 제공된 정보(가격과 이동평균)만으로는 이것이 반도체/기술주 전반의 시장 조정인지, 아니면 실적·가이던스·개별 뉴"
   },
-  "fx": 1386.44,
+  "fx": 1385.68,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -696,6 +696,12 @@
       "market": "isa",
       "comment": "두 종목 모두 최근 조정 국면으로 5일 이평선을 하회하고 있어 단기 변동성이 커진 상태이며, 특히 로보틱스·양자컴퓨팅 같은 테마주는 심리적 요인에 따른 낙폭 확대 가능성이 있으니 참고하시기 바랍니다. 규칙 기반 매수 계획은 유지하되, 분할 매수 시점과 비중 조절로 리스크를 관리하시는 것이 좋겠습니다.",
       "dip_note": null
+    },
+    {
+      "date": "2026-08-19",
+      "market": "general",
+      "comment": "오늘 매수 계획에 대한 참고 의견입니다:\n\n브로드컴이 전일대비 -4.8%로 5일 이평선을 하회하며 조정을 받고 있어 단기 변동성에 유의할 필요가 있습니다. 팔란티어와 엔비디아는 특별한 이상 신호 없이 정상 범위에서 움직이고 있어 비교적 안정적인 흐름입니다. 브로드컴의 경우 하락폭이 다소 크므로 매수 후에도 추가 하락 가능성을 염두에 두고 분할 매수나 손절 기준을 점검해보시는 것을 권장드립니다.",
+      "dip_note": "**Broadcom (-4.8%, 361.77 vs 5일선 389.0 / 20일선 398.12)**\n\n주가가 5일 평균 대비 약 7%, 20일 평균 대비 약 9% 이탈한 상당히 큰 하락폭이지만, 제공된 정보(가격과 이동평균)만으로는 이것이 반도체/기술주 전반의 시장 조정인지, 아니면 실적·가이던스·개별 뉴"
     }
   ],
   "rebalance_suggestions": [],
