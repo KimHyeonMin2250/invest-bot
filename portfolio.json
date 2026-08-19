@@ -64,49 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15395.0,
-      "krw_price": 15395,
-      "krw_price_gross": 15395,
-      "ma20_krw": 15556
+      "current": 15340.0,
+      "krw_price": 15340,
+      "krw_price_gross": 15340,
+      "ma20_krw": 15553
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 25570.0,
-      "krw_price": 25570,
-      "krw_price_gross": 25570,
-      "ma20_krw": 25397
+      "current": 25430.0,
+      "krw_price": 25430,
+      "krw_price_gross": 25430,
+      "ma20_krw": 25390
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 380.0,
-      "krw_price": 530711,
-      "krw_price_gross": 532308,
-      "ma20_krw": 558471
+      "krw_price": 530169,
+      "krw_price_gross": 531764,
+      "ma20_krw": 557901
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 171.54,
-      "krw_price": 239574,
-      "krw_price_gross": 240295,
-      "ma20_krw": 208601
+      "krw_price": 239329,
+      "krw_price_gross": 240050,
+      "ma20_krw": 208389
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 219.74,
-      "krw_price": 306891,
-      "krw_price_gross": 307814,
-      "ma20_krw": 296226
+      "krw_price": 306577,
+      "krw_price_gross": 307500,
+      "ma20_krw": 295924
     }
   },
-  "valuation_date": "2026-08-19T02:44",
+  "valuation_date": "2026-08-19T03:33",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 반도체·AI 관련주 전반이 약세를 보이며 브로드컴이 5일 이평선을 하회할 정도로 조정폭이 큰 편입니다. 엔비디아, 팔란티어도 동반 하락 중이라 섹터 전반의 투자심리가 위축된 것으로 보이니, 계획된 매수는 진행하되 변동성 확대에 대비해 분할 매수나 손절 라인 설정을 함께 고려하시면 좋겠습니다.",
     "dip_note": "**Broadcom (-3.7%, 현재가 378.27)**\n\n죄송하지만 이 정보만으로는 판단이 어렵습니다. 제공해주신 데이터는 Broadcom 한 종목뿐이며, 저는 실시간 뉴스나 시장 전체 지수 동향"
   },
-  "fx": 1400.81,
+  "fx": 1399.38,
   "asset_history": [
     {
       "date": "2026-07-16",
