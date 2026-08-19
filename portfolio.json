@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 360.14,
-      "krw_price": 498468,
-      "krw_price_gross": 499968,
-      "ma20_krw": 550938
+      "current": 358.79,
+      "krw_price": 495934,
+      "krw_price_gross": 497427,
+      "ma20_krw": 550106
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 172.04,
-      "krw_price": 238130,
-      "krw_price_gross": 238847,
-      "ma20_krw": 210021
+      "current": 172.09,
+      "krw_price": 237873,
+      "krw_price_gross": 238589,
+      "ma20_krw": 209743
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 218.06,
-      "krw_price": 301820,
-      "krw_price_gross": 302728,
-      "ma20_krw": 293992
+      "current": 217.23,
+      "krw_price": 300262,
+      "krw_price_gross": 301165,
+      "ma20_krw": 293540
     }
   },
-  "valuation_date": "2026-08-19T13:51",
+  "valuation_date": "2026-08-19T14:20",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 반도체·AI 관련주 전반이 약세를 보이며 브로드컴이 5일 이평선을 하회할 정도로 조정폭이 큰 편입니다. 엔비디아, 팔란티어도 동반 하락 중이라 섹터 전반의 투자심리가 위축된 것으로 보이니, 계획된 매수는 진행하되 변동성 확대에 대비해 분할 매수나 손절 라인 설정을 함께 고려하시면 좋겠습니다.",
     "dip_note": "**Broadcom (-3.7%, 현재가 378.27)**\n\n죄송하지만 이 정보만으로는 판단이 어렵습니다. 제공해주신 데이터는 Broadcom 한 종목뿐이며, 저는 실시간 뉴스나 시장 전체 지수 동향"
   },
-  "fx": 1388.28,
+  "fx": 1386.42,
   "asset_history": [
     {
       "date": "2026-07-16",
