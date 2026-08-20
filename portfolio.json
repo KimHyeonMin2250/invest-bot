@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 364.03,
-      "krw_price": 505928,
-      "krw_price_gross": 507451,
-      "ma20_krw": 551386
+      "krw_price": 505641,
+      "krw_price_gross": 507163,
+      "ma20_krw": 551074
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 173.96,
-      "krw_price": 241769,
-      "krw_price_gross": 242497,
-      "ma20_krw": 214617
+      "krw_price": 241632,
+      "krw_price_gross": 242359,
+      "ma20_krw": 214496
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 216.85,
-      "krw_price": 301378,
-      "krw_price_gross": 302285,
-      "ma20_krw": 295726
+      "krw_price": 301207,
+      "krw_price_gross": 302113,
+      "ma20_krw": 295559
     }
   },
-  "valuation_date": "2026-08-20T21:14",
+  "valuation_date": "2026-08-20T21:47",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 브로드컴, 팔란티어, 엔비디아 모두 전일 대비 완만한 상승세로 특별한 변동성 없이 정상 범위에서 움직이고 있어 계획대로 매수를 진행하기에 무리 없는 흐름입니다. 다만 세 종목 모두 AI 테마에 쏠려 있어 상관성이 높은 만큼, 향후 섹터 전반의 급락 리스크에는 유의하시는 게 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1393.98,
+  "fx": 1393.19,
   "asset_history": [
     {
       "date": "2026-07-16",
