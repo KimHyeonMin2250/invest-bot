@@ -60,53 +60,35 @@
     "wedding_fund_start": "2027-07-01"
   },
   "valuation": {
-    "0038A0.KS": {
-      "name": "KODEX 미국휴머노이드로봇",
-      "account": "ISA",
-      "type": "etf",
-      "current": 15305.0,
-      "krw_price": 15305,
-      "krw_price_gross": 15305,
-      "ma20_krw": 15502
-    },
-    "0023A0.KS": {
-      "name": "SOL 미국양자컴퓨팅TOP10",
-      "account": "ISA",
-      "type": "etf",
-      "current": 25265.0,
-      "krw_price": 25265,
-      "krw_price_gross": 25265,
-      "ma20_krw": 25374
-    },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 366.02,
-      "krw_price": 508489,
-      "krw_price_gross": 510019,
-      "ma20_krw": 551296
+      "current": 366.29,
+      "krw_price": 508573,
+      "krw_price_gross": 510103,
+      "ma20_krw": 551013
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 174.84,
-      "krw_price": 242891,
-      "krw_price_gross": 243622,
-      "ma20_krw": 214589
+      "current": 176.21,
+      "krw_price": 244661,
+      "krw_price_gross": 245397,
+      "ma20_krw": 214567
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 218.1,
-      "krw_price": 302989,
-      "krw_price_gross": 303901,
-      "ma20_krw": 295690
+      "current": 218.07,
+      "krw_price": 302775,
+      "krw_price_gross": 303686,
+      "ma20_krw": 295526
     }
   },
-  "valuation_date": "2026-08-20T14:47",
+  "valuation_date": "2026-08-20T15:01",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,31 +128,31 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-08-19",
+    "date": "2026-08-20",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 361.77,
-        "krw_price": 501297,
-        "change": -4.8,
-        "signal": "🟡 하락 (-3%대)",
-        "shares": 0.0622,
-        "spent": 31200,
+        "current": 366.29,
+        "krw_price": 510103,
+        "change": 1.05,
+        "signal": "",
+        "shares": 0.0235,
+        "spent": 12000,
         "carry": 0,
-        "available": 31200,
+        "available": 12000,
         "skipped_added": 0
       },
       {
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 173.32,
-        "krw_price": 240173,
-        "change": 1.04,
+        "current": 176.21,
+        "krw_price": 245397,
+        "change": 0.58,
         "signal": "",
-        "shares": 0.0375,
+        "shares": 0.0367,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,9 +162,9 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 219.78,
-        "krw_price": 304545,
-        "change": 0.02,
+        "current": 218.07,
+        "krw_price": 303686,
+        "change": 0.23,
         "signal": "",
         "shares": 0.0296,
         "spent": 9000,
@@ -191,10 +173,10 @@
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 매수 계획에 대한 참고 의견입니다:\n\n브로드컴이 전일대비 -4.8%로 5일 이평선을 하회하며 조정을 받고 있어 단기 변동성에 유의할 필요가 있습니다. 팔란티어와 엔비디아는 특별한 이상 신호 없이 정상 범위에서 움직이고 있어 비교적 안정적인 흐름입니다. 브로드컴의 경우 하락폭이 다소 크므로 매수 후에도 추가 하락 가능성을 염두에 두고 분할 매수나 손절 기준을 점검해보시는 것을 권장드립니다.",
-    "dip_note": "**Broadcom (-4.8%, 361.77 vs 5일선 389.0 / 20일선 398.12)**\n\n주가가 5일 평균 대비 약 7%, 20일 평균 대비 약 9% 이탈한 상당히 큰 하락폭이지만, 제공된 정보(가격과 이동평균)만으로는 이것이 반도체/기술주 전반의 시장 조정인지, 아니면 실적·가이던스·개별 뉴"
+    "ai_comment": "오늘은 브로드컴, 팔란티어, 엔비디아 모두 전일 대비 완만한 상승세로 특별한 변동성 없이 정상 범위에서 움직이고 있어 계획대로 매수를 진행하기에 무리 없는 흐름입니다. 다만 세 종목 모두 AI 테마에 쏠려 있어 상관성이 높은 만큼, 향후 섹터 전반의 급락 리스크에는 유의하시는 게 좋겠습니다.",
+    "dip_note": null
   },
-  "fx": 1393.4,
+  "fx": 1392.64,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -714,6 +696,12 @@
       "date": "2026-08-20",
       "market": "isa",
       "comment": "두 종목 모두 전일 대비 완만한 상승(+0.4~0.5%)을 보이며 정상 변동성 범위 내에서 움직이고 있어, 오늘 매수 계획을 실행하기에 특별히 무리가 없는 시장 상황으로 보입니다. 다만 휴머노이드로봇과 양자컴퓨팅 테마는 정책 뉴스나 기술주 전반의 변동성에 민감하게 반응할 수 있으니, 매수 후에도 당일 장중 급변동 여부는 계속 모니터링하시는 것이 좋겠습니다. 참고로 이는 보조 의견일 뿐이며 실제 매수 실행 여부와는 무관하게 계획대로 진행하시면 됩니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-08-20",
+      "market": "general",
+      "comment": "오늘은 브로드컴, 팔란티어, 엔비디아 모두 전일 대비 완만한 상승세로 특별한 변동성 없이 정상 범위에서 움직이고 있어 계획대로 매수를 진행하기에 무리 없는 흐름입니다. 다만 세 종목 모두 AI 테마에 쏠려 있어 상관성이 높은 만큼, 향후 섹터 전반의 급락 리스크에는 유의하시는 게 좋겠습니다.",
       "dip_note": null
     }
   ],
