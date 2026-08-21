@@ -60,53 +60,35 @@
     "wedding_fund_start": "2027-07-01"
   },
   "valuation": {
-    "0038A0.KS": {
-      "name": "KODEX 미국휴머노이드로봇",
-      "account": "ISA",
-      "type": "etf",
-      "current": 14980.0,
-      "krw_price": 14980,
-      "krw_price_gross": 14980,
-      "ma20_krw": 15450
-    },
-    "0023A0.KS": {
-      "name": "SOL 미국양자컴퓨팅TOP10",
-      "account": "ISA",
-      "type": "etf",
-      "current": 24385.0,
-      "krw_price": 24385,
-      "krw_price_gross": 24385,
-      "ma20_krw": 25350
-    },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 368.33,
-      "krw_price": 509062,
-      "krw_price_gross": 510594,
-      "ma20_krw": 547386
+      "current": 367.17,
+      "krw_price": 507320,
+      "krw_price_gross": 508847,
+      "ma20_krw": 547163
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 175.1,
-      "krw_price": 241996,
-      "krw_price_gross": 242724,
-      "ma20_krw": 217031
+      "current": 176.49,
+      "krw_price": 243853,
+      "krw_price_gross": 244587,
+      "ma20_krw": 217071
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 215.01,
-      "krw_price": 297154,
-      "krw_price_gross": 298049,
-      "ma20_krw": 294648
+      "current": 214.94,
+      "krw_price": 296986,
+      "krw_price_gross": 297880,
+      "ma20_krw": 294567
     }
   },
-  "valuation_date": "2026-08-21T14:47",
+  "valuation_date": "2026-08-21T15:00",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,17 +128,17 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-08-20",
+    "date": "2026-08-21",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 366.29,
-        "krw_price": 510103,
-        "change": 1.05,
+        "current": 367.17,
+        "krw_price": 508847,
+        "change": 0.86,
         "signal": "",
-        "shares": 0.0235,
+        "shares": 0.0236,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -166,11 +148,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 176.21,
-        "krw_price": 245397,
-        "change": 0.58,
+        "current": 176.49,
+        "krw_price": 244587,
+        "change": 1.45,
         "signal": "",
-        "shares": 0.0367,
+        "shares": 0.0368,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +162,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 218.07,
-        "krw_price": 303686,
-        "change": 0.23,
+        "current": 214.94,
+        "krw_price": 297880,
+        "change": -0.88,
         "signal": "",
-        "shares": 0.0296,
+        "shares": 0.0302,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 브로드컴, 팔란티어, 엔비디아 모두 전일 대비 완만한 상승세로 특별한 변동성 없이 정상 범위에서 움직이고 있어 계획대로 매수를 진행하기에 무리 없는 흐름입니다. 다만 세 종목 모두 AI 테마에 쏠려 있어 상관성이 높은 만큼, 향후 섹터 전반의 급락 리스크에는 유의하시는 게 좋겠습니다.",
+    "ai_comment": "오늘 세 종목 모두 등락폭이 크지 않아 특별한 변동성 신호는 없이 정상 범위 내에서 움직이고 있습니다. 다만 Nvidia는 소폭 약세이니 반도체 섹터 전반의 흐름을 참고하시고, 매수 후에도 시장 전체 변동성이나 관련 뉴스는 계속 체크해보시는 걸 추천드립니다.",
     "dip_note": null
   },
-  "fx": 1386.24,
+  "fx": 1385.88,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -733,6 +715,12 @@
       "date": "2026-08-21",
       "market": "isa",
       "comment": "두 종목 모두 MA5를 하회하며 조정을 받고 있어 로봇·양자컴퓨팅 테마 전반의 단기 투자심리가 위축된 모습입니다. 특히 양자컴퓨팅 ETF의 낙폭(-4.0%)이 더 커서 변동성이 상대적으로 크니, 분할 매수 시 진입 타이밍과 비중 조절에 유의하시길 권합니다. 규칙 기반 매수 계획은 그대로 진행하되, 추가 하락 시 손절 라인도 함께 점검해보시면 좋겠습니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-08-21",
+      "market": "general",
+      "comment": "오늘 세 종목 모두 등락폭이 크지 않아 특별한 변동성 신호는 없이 정상 범위 내에서 움직이고 있습니다. 다만 Nvidia는 소폭 약세이니 반도체 섹터 전반의 흐름을 참고하시고, 매수 후에도 시장 전체 변동성이나 관련 뉴스는 계속 체크해보시는 걸 추천드립니다.",
       "dip_note": null
     }
   ],
