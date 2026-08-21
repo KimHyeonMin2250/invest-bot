@@ -60,35 +60,53 @@
     "wedding_fund_start": "2027-07-01"
   },
   "valuation": {
+    "0038A0.KS": {
+      "name": "KODEX 미국휴머노이드로봇",
+      "account": "ISA",
+      "type": "etf",
+      "current": 14980.0,
+      "krw_price": 14980,
+      "krw_price_gross": 14980,
+      "ma20_krw": 15450
+    },
+    "0023A0.KS": {
+      "name": "SOL 미국양자컴퓨팅TOP10",
+      "account": "ISA",
+      "type": "etf",
+      "current": 24385.0,
+      "krw_price": 24385,
+      "krw_price_gross": 24385,
+      "ma20_krw": 25350
+    },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 367.25,
-      "krw_price": 507430,
-      "krw_price_gross": 508957,
-      "ma20_krw": 547161
+      "current": 368.78,
+      "krw_price": 509081,
+      "krw_price_gross": 510613,
+      "ma20_krw": 546769
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 178.05,
-      "krw_price": 246019,
-      "krw_price_gross": 246759,
-      "ma20_krw": 217176
+      "current": 180.79,
+      "krw_price": 249571,
+      "krw_price_gross": 250322,
+      "ma20_krw": 217168
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 215.54,
-      "krw_price": 297812,
-      "krw_price_gross": 298708,
-      "ma20_krw": 294605
+      "current": 216.35,
+      "krw_price": 298660,
+      "krw_price_gross": 299558,
+      "ma20_krw": 294393
     }
   },
-  "valuation_date": "2026-08-21T15:17",
+  "valuation_date": "2026-08-21T15:52",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -176,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 등락폭이 크지 않아 특별한 변동성 신호는 없이 정상 범위 내에서 움직이고 있습니다. 다만 Nvidia는 소폭 약세이니 반도체 섹터 전반의 흐름을 참고하시고, 매수 후에도 시장 전체 변동성이나 관련 뉴스는 계속 체크해보시는 걸 추천드립니다.",
     "dip_note": null
   },
-  "fx": 1385.86,
+  "fx": 1384.6,
   "asset_history": [
     {
       "date": "2026-07-16",
