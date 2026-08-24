@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 360.68,
-      "krw_price": 497295,
-      "krw_price_gross": 498791,
-      "ma20_krw": 544522
+      "current": 361.26,
+      "krw_price": 498005,
+      "krw_price_gross": 499503,
+      "ma20_krw": 544471
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 177.6,
-      "krw_price": 244866,
-      "krw_price_gross": 245603,
-      "ma20_krw": 220018
+      "current": 177.99,
+      "krw_price": 245356,
+      "krw_price_gross": 246095,
+      "ma20_krw": 220008
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 209.4,
-      "krw_price": 288710,
-      "krw_price_gross": 289579,
-      "ma20_krw": 294807
+      "current": 210.0,
+      "krw_price": 289490,
+      "krw_price_gross": 290361,
+      "ma20_krw": 294800
     }
   },
-  "valuation_date": "2026-08-24T17:38",
+  "valuation_date": "2026-08-24T18:16",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 반도체·AI 관련주 전반이 1~3% 내외 약세를 보이며 동반 조정을 받는 모습인데, 특히 Nvidia가 상대적으로 낙폭이 큰 편이라 변동성이 조금 더 있을 수 있습니다. 다만 세 종목 모두 정상 범위 내 움직임이라 계획된 매수를 진행하되, 이후 추가 하락 시 분할 매수 관점에서 여유 물량을 남겨두는 것도 참고해보세요.",
     "dip_note": null
   },
-  "fx": 1382.9,
+  "fx": 1382.67,
   "asset_history": [
     {
       "date": "2026-07-16",
