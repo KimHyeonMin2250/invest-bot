@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 358.76,
-      "krw_price": 494537,
-      "krw_price_gross": 496025,
-      "ma20_krw": 544275
+      "krw_price": 494609,
+      "krw_price_gross": 496097,
+      "ma20_krw": 544353
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 175.89,
-      "krw_price": 242458,
-      "krw_price_gross": 243187,
-      "ma20_krw": 219854
+      "krw_price": 242493,
+      "krw_price_gross": 243222,
+      "ma20_krw": 219886
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 208.48,
-      "krw_price": 287382,
-      "krw_price_gross": 288247,
-      "ma20_krw": 294682
+      "krw_price": 287423,
+      "krw_price_gross": 288288,
+      "ma20_krw": 294725
     }
   },
-  "valuation_date": "2026-08-24T20:12",
+  "valuation_date": "2026-08-24T20:52",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 반도체·AI 관련주 전반이 1~3% 내외 약세를 보이며 동반 조정을 받는 모습인데, 특히 Nvidia가 상대적으로 낙폭이 큰 편이라 변동성이 조금 더 있을 수 있습니다. 다만 세 종목 모두 정상 범위 내 움직임이라 계획된 매수를 진행하되, 이후 추가 하락 시 분할 매수 관점에서 여유 물량을 남겨두는 것도 참고해보세요.",
     "dip_note": null
   },
-  "fx": 1382.61,
+  "fx": 1382.81,
   "asset_history": [
     {
       "date": "2026-07-16",
