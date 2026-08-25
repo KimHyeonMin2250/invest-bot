@@ -64,49 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 14730.0,
-      "krw_price": 14730,
-      "krw_price_gross": 14730,
-      "ma20_krw": 15378
+      "current": 14775.0,
+      "krw_price": 14775,
+      "krw_price_gross": 14775,
+      "ma20_krw": 15380
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 24160.0,
-      "krw_price": 24160,
-      "krw_price_gross": 24160,
-      "ma20_krw": 25380
+      "current": 24215.0,
+      "krw_price": 24215,
+      "krw_price_gross": 24215,
+      "ma20_krw": 25382
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 358.76,
-      "krw_price": 495099,
-      "krw_price_gross": 496588,
-      "ma20_krw": 544893
+      "krw_price": 495521,
+      "krw_price_gross": 497012,
+      "ma20_krw": 545357
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 175.89,
-      "krw_price": 242733,
-      "krw_price_gross": 243463,
-      "ma20_krw": 220104
+      "krw_price": 242940,
+      "krw_price_gross": 243671,
+      "ma20_krw": 220292
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 208.48,
-      "krw_price": 287708,
-      "krw_price_gross": 288574,
-      "ma20_krw": 295017
+      "krw_price": 287953,
+      "krw_price_gross": 288820,
+      "ma20_krw": 295268
     }
   },
-  "valuation_date": "2026-08-25T05:40",
+  "valuation_date": "2026-08-25T06:18",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 반도체·AI 관련주 전반이 1~3% 내외 약세를 보이며 동반 조정을 받는 모습인데, 특히 Nvidia가 상대적으로 낙폭이 큰 편이라 변동성이 조금 더 있을 수 있습니다. 다만 세 종목 모두 정상 범위 내 움직임이라 계획된 매수를 진행하되, 이후 추가 하락 시 분할 매수 관점에서 여유 물량을 남겨두는 것도 참고해보세요.",
     "dip_note": null
   },
-  "fx": 1384.18,
+  "fx": 1385.36,
   "asset_history": [
     {
       "date": "2026-07-16",
