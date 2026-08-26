@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 352.31,
-      "krw_price": 486928,
-      "krw_price_gross": 488393,
-      "ma20_krw": 542797
+      "current": 351.66,
+      "krw_price": 485995,
+      "krw_price_gross": 487457,
+      "ma20_krw": 542713
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 174.79,
-      "krw_price": 241571,
-      "krw_price_gross": 242297,
-      "ma20_krw": 227413
+      "current": 174.83,
+      "krw_price": 241615,
+      "krw_price_gross": 242342,
+      "ma20_krw": 227400
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 211.08,
-      "krw_price": 291734,
-      "krw_price_gross": 292612,
-      "ma20_krw": 298025
+      "current": 210.96,
+      "krw_price": 291547,
+      "krw_price_gross": 292424,
+      "ma20_krw": 297995
     }
   },
-  "valuation_date": "2026-08-26T14:55",
+  "valuation_date": "2026-08-26T15:58",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,17 +146,17 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-08-25",
+    "date": "2026-08-26",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 359.43,
-        "krw_price": 497606,
-        "change": 0.19,
+        "current": 351.66,
+        "krw_price": 487457,
+        "change": -1.42,
         "signal": "",
-        "shares": 0.0241,
+        "shares": 0.0246,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -166,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 174.14,
-        "krw_price": 241082,
-        "change": -1.0,
+        "current": 174.83,
+        "krw_price": 242342,
+        "change": 1.22,
         "signal": "",
-        "shares": 0.0373,
+        "shares": 0.0371,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 210.63,
-        "krw_price": 291602,
-        "change": 1.03,
+        "current": 210.96,
+        "krw_price": 292424,
+        "change": -0.98,
         "signal": "",
-        "shares": 0.0309,
+        "shares": 0.0308,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 세 종목 모두 전일 대비 등락폭이 크지 않아 특별한 변동성 신호는 없는 안정적인 흐름으로 보입니다. 다만 팔란티어가 소폭 하락한 점은 단기 조정 가능성을 시사할 수 있으니 계획대로 매수를 진행하시되 이후 며칠간의 추세는 참고해두시면 좋겠습니다. 브로드컴과 엔비디아는 정상 범위 내 완만한 상승세로 특이사항 없어 보입니다.",
+    "ai_comment": "오늘 세 종목 모두 전일대비 변동폭이 크지 않아 특별한 이상 신호 없이 정상 범위 내에서 움직이고 있습니다. 다만 Broadcom과 Nvidia가 동시에 하락한 점은 반도체 섹터 전반의 약세 흐름일 수 있으니, 계획된 매수는 그대로 진행하되 이후 섹터 뉴스나 거시 지표 발표 여부는 참고해두시면 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1386.26,
+  "fx": 1386.16,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -797,6 +797,12 @@
       "date": "2026-08-26",
       "market": "isa",
       "comment": "오늘은 두 종목 모두 전일 대비 등락률이 크지 않아 정상 매매 범위 내에서 움직이고 있어, 예정된 매수 계획을 그대로 진행하시면 될 것 같습니다. 다만 휴머노이드로봇과 양자컴퓨팅 테마는 변동성이 큰 성장 테마인 만큼, 매수 이후에도 급격한 가격 변동 가능성을 염두에 두고 포지션 관리를 하시는 것이 좋겠습니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-08-26",
+      "market": "general",
+      "comment": "오늘 세 종목 모두 전일대비 변동폭이 크지 않아 특별한 이상 신호 없이 정상 범위 내에서 움직이고 있습니다. 다만 Broadcom과 Nvidia가 동시에 하락한 점은 반도체 섹터 전반의 약세 흐름일 수 있으니, 계획된 매수는 그대로 진행하되 이후 섹터 뉴스나 거시 지표 발표 여부는 참고해두시면 좋겠습니다.",
       "dip_note": null
     }
   ],
