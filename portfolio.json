@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 371.54,
-      "krw_price": 509350,
-      "krw_price_gross": 510882,
-      "ma20_krw": 537511
+      "current": 368.79,
+      "krw_price": 505811,
+      "krw_price_gross": 507333,
+      "ma20_krw": 536352
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 185.93,
-      "krw_price": 254894,
-      "krw_price_gross": 255661,
-      "ma20_krw": 230123
+      "current": 186.29,
+      "krw_price": 255505,
+      "krw_price_gross": 256274,
+      "ma20_krw": 234565
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 227.98,
-      "krw_price": 312541,
-      "krw_price_gross": 313482,
-      "ma20_krw": 297773
+      "current": 217.55,
+      "krw_price": 298379,
+      "krw_price_gross": 299277,
+      "ma20_krw": 299062
     }
   },
-  "valuation_date": "2026-08-28T11:14",
+  "valuation_date": "2026-08-28T22:59",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 4~9%대 상승폭을 보이며 특히 Nvidia는 8.7%로 변동성이 두드러지는 만큼, 반도체·AI 테마 전반에 매수세가 몰리는 흐름으로 보입니다. 다만 단기 급등 이후 되돌림 가능성이 있으니 진입 타이밍 분할이나 변동성 확대에 대비한 리스크 관리를 함께 고려하시는 게 좋겠습니다. (매수 계획 자체는 그대로 유지하시면 됩니다.)",
     "dip_note": null
   },
-  "fx": 1375.04,
+  "fx": 1375.67,
   "asset_history": [
     {
       "date": "2026-07-16",
