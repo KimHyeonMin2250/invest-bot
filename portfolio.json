@@ -64,49 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 14845.0,
-      "krw_price": 14845,
-      "krw_price_gross": 14845,
-      "ma20_krw": 15413
+      "current": 14620.0,
+      "krw_price": 14620,
+      "krw_price_gross": 14620,
+      "ma20_krw": 15391
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 24115.0,
-      "krw_price": 24115,
-      "krw_price_gross": 24115,
-      "ma20_krw": 25565
+      "current": 23170.0,
+      "krw_price": 23170,
+      "krw_price_gross": 23170,
+      "ma20_krw": 25512
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 368.79,
-      "krw_price": 505811,
-      "krw_price_gross": 507333,
-      "ma20_krw": 536352
+      "krw_price": 505355,
+      "krw_price_gross": 506876,
+      "ma20_krw": 535869
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 186.29,
-      "krw_price": 255505,
-      "krw_price_gross": 256274,
-      "ma20_krw": 234565
+      "krw_price": 255274,
+      "krw_price_gross": 256043,
+      "ma20_krw": 234353
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 217.55,
-      "krw_price": 298379,
-      "krw_price_gross": 299277,
-      "ma20_krw": 299062
+      "krw_price": 298110,
+      "krw_price_gross": 299007,
+      "ma20_krw": 298792
     }
   },
-  "valuation_date": "2026-08-30T15:08",
+  "valuation_date": "2026-08-31T05:21",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 계획된 매수 대상 중 Nvidia가 전일대비 -4.6%로 MA5를 하회하며 변동성이 두드러지는 반면, Broadcom과 Palantir는 정상 범위 내에서 안정적인 흐름을 보이고 있습니다. Nvidia는 단기 조정 폭이 큰 만큼 분할 매수나 체결가 확인 등으로 슬리피지에 유의하시고, 반도체 섹터 전반의 뉴스나 변동성 확대 여부를 함께 참고하시면 좋겠습니다.",
     "dip_note": "# 종목별 하락 원인 분석\n\n**Nvidia (-4.6%, 현재가 217.55)**\n\n제공된 정보만으로는 이번 하락이 시장 전체 조정 때문인지, Nvidia 개별 악재(실적 우려, 규제 이슈, 경쟁사 뉴스 등) 때문인지 **확실하게 판단할 수 없습니다.**\n\n- 현재가(217.55)가 5일평균(215.34)보다는 높고 20일평균(218.05)과는 거의 비슷한 수준이라, 가격 지표만으로는 추세 이탈이라기보다 단기 변동성 범위 내에 있는 것으로 보입니다.\n- 다만 이는 **가격/이동평균 데이터일 뿐**이며, 이것만으로는 하락이 시장 전반(예: 금리, 나스닥 전체 조정)에 의한 것인지, 아니면 Nvidia 자체 뉴스(실적 가이던스, 수출규제, 경쟁 심화 등) 때문인지 구분할 수 없습니다.\n\n**⚠️ 판단 보류: 확실하지 않습니다.** 이 정도 정보로는 '매수 보류'나 '저가 매수 기회' 어느 쪽으로도 단정할 수 없으며, 오늘 Nvidia 관련 뉴스(실적 발표, 애널리스트 코멘트, 반도체 섹터 전반 동"
   },
-  "fx": 1375.67,
+  "fx": 1374.43,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -468,13 +468,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-08-31",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5253940,
+    "required_monthly_remaining": 5263158,
     "daily_rate": null
   },
   "daily_comment_history": [
