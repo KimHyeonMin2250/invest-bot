@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 369.37,
-      "krw_price": 505635,
-      "krw_price_gross": 507156,
-      "ma20_krw": 530485
+      "current": 369.19,
+      "krw_price": 505808,
+      "krw_price_gross": 507330,
+      "ma20_krw": 530913
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 182.65,
-      "krw_price": 250025,
-      "krw_price_gross": 250777,
-      "ma20_krw": 239639
+      "current": 182.5,
+      "krw_price": 250034,
+      "krw_price_gross": 250786,
+      "ma20_krw": 239828
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 218.3,
-      "krw_price": 298833,
-      "krw_price_gross": 299732,
-      "ma20_krw": 299891
+      "current": 218.12,
+      "krw_price": 298835,
+      "krw_price_gross": 299734,
+      "ma20_krw": 300127
     }
   },
-  "valuation_date": "2026-09-01T17:18",
+  "valuation_date": "2026-09-01T17:53",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,15 +146,15 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-08-31",
+    "date": "2026-09-01",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 370.34,
-        "krw_price": 506544,
-        "change": -0.32,
+        "current": 369.19,
+        "krw_price": 507330,
+        "change": -0.31,
         "signal": "",
         "shares": 0.0237,
         "spent": 12000,
@@ -166,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 186.38,
-        "krw_price": 254927,
-        "change": 0.24,
+        "current": 182.5,
+        "krw_price": 250786,
+        "change": -2.08,
         "signal": "",
-        "shares": 0.0353,
+        "shares": 0.0359,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 220.5,
-        "krw_price": 301595,
-        "change": -3.28,
-        "signal": "🟡 하락 (-3%대)",
-        "shares": 0.0776,
-        "spent": 23400,
+        "current": 218.12,
+        "krw_price": 299734,
+        "change": -1.2,
+        "signal": "",
+        "shares": 0.03,
+        "spent": 9000,
         "carry": 0,
-        "available": 23400,
+        "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 Broadcom과 Palantir는 전일 대비 등락이 미미해 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 다만 Nvidia는 -3.3%로 5일 이동평균선을 하회하고 있어 단기 조정 국면일 가능성이 있으니, 매수 계획은 유지하되 이후 반등 여부와 거래량 등을 함께 모니터링하시는 것이 좋겠습니다.",
-    "dip_note": "# 종목별 하락 원인 분석\n\n**Nvidia (-3.3%)**\n\n죄송하지만, 제가 실시간 시장 뉴스나 오늘자 시황 정보에 접근할 수 없어 이 하락이 시장 전체 조정 때문인지, 개별 악재(실적 발표, 규제 이슈, 경쟁사 뉴스 등) 때문인지 정확히 판단하기 어렵습니다.\n\n제공해주신 데이터만으로 참고할 수 있는 점:\n- 5일평균(215.93)과 20일평균(218.8)보다는 현재가(220.5)가 여전히 높은 편이라 단기 추세가 완전히 꺾인 것은 아닐 수 있습니다.\n- 다만 하루 -3.3%는 개별 종목치고 꽤 큰 변동폭이라, 뉴스 확인 없이는 단순 조정으로 단정하기 어렵습니다.\n\n**권장사항**: \n1. 오늘 나스닥/S&P500 전체 지수 하락률과 비교해보세요 (비슷한 수준이면 시장 조정 가능성↑)\n2. 오늘자 Nvidia 관련 뉴스(실적, 반도체 규제, 경쟁사 동향 등)를 검색해보세요\n3. 확인 전까지는 **매수 판단을 보류**하시길 권장드립니다.\n\n정확한 판단을 위해서는 코스피/"
+    "ai_comment": "오늘은 세 종목 모두 전일대비 소폭~중폭 하락했지만 정상 범위 내 변동성으로, 계획된 매수를 진행하기에 무리 없는 흐름으로 보입니다. 다만 Palantir가 상대적으로 낙폭이 큰 편이라 변동성이 이어질 수 있으니 체결 시점의 스프레드나 급변 여부는 한 번 더 확인하시는 게 좋겠습니다. 전체적으로 반도체·AI 관련주 전반의 조정 국면일 가능성이 있어, 매수 자체보다는 이후 포지션 비중 관리에 좀 더 신경 쓰시길 권합니다.",
+    "dip_note": null
   },
-  "fx": 1373.03,
+  "fx": 1374.17,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -874,6 +874,12 @@
       "date": "2026-09-01",
       "market": "isa",
       "comment": "오늘 두 종목 모두 완만한 상승세를 보이며 정상 범위 내에서 움직이고 있어 특별한 이상 신호는 없습니다. 다만 휴머노이드로봇과 양자컴퓨팅 테마 모두 변동성이 큰 성장 테마이므로, 매수 후에도 단기 급락 가능성에 대비해 포지션 비중과 리스크 관리에 유의하시길 권합니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-09-01",
+      "market": "general",
+      "comment": "오늘은 세 종목 모두 전일대비 소폭~중폭 하락했지만 정상 범위 내 변동성으로, 계획된 매수를 진행하기에 무리 없는 흐름으로 보입니다. 다만 Palantir가 상대적으로 낙폭이 큰 편이라 변동성이 이어질 수 있으니 체결 시점의 스프레드나 급변 여부는 한 번 더 확인하시는 게 좋겠습니다. 전체적으로 반도체·AI 관련주 전반의 조정 국면일 가능성이 있어, 매수 자체보다는 이후 포지션 비중 관리에 좀 더 신경 쓰시길 권합니다.",
       "dip_note": null
     }
   ],
