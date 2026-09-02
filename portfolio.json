@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 369.68,
-      "krw_price": 503158,
-      "krw_price_gross": 504672,
-      "ma20_krw": 527466
+      "krw_price": 503018,
+      "krw_price_gross": 504532,
+      "ma20_krw": 527319
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 179.92,
-      "krw_price": 244883,
-      "krw_price_gross": 245620,
-      "ma20_krw": 238080
+      "krw_price": 244815,
+      "krw_price_gross": 245551,
+      "ma20_krw": 238014
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 217.44,
-      "krw_price": 295950,
-      "krw_price_gross": 296840,
-      "ma20_krw": 298113
+      "krw_price": 295867,
+      "krw_price_gross": 296758,
+      "ma20_krw": 298030
     }
   },
-  "valuation_date": "2026-09-02T08:02",
+  "valuation_date": "2026-09-02T09:29",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일대비 소폭~중폭 하락했지만 정상 범위 내 변동성으로, 계획된 매수를 진행하기에 무리 없는 흐름으로 보입니다. 다만 Palantir가 상대적으로 낙폭이 큰 편이라 변동성이 이어질 수 있으니 체결 시점의 스프레드나 급변 여부는 한 번 더 확인하시는 게 좋겠습니다. 전체적으로 반도체·AI 관련주 전반의 조정 국면일 가능성이 있어, 매수 자체보다는 이후 포지션 비중 관리에 좀 더 신경 쓰시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1365.16,
+  "fx": 1364.78,
   "asset_history": [
     {
       "date": "2026-07-16",
