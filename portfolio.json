@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 6990.0,
-    "0023A0.KS": 16460.0,
+    "0038A0.KS": 940.0,
+    "0023A0.KS": 9260.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -64,86 +64,86 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 14390.0,
-      "krw_price": 14390,
-      "krw_price_gross": 14390,
+      "current": 14410.0,
+      "krw_price": 14410,
+      "krw_price_gross": 14410,
       "ma20_krw": 15294
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 22420.0,
-      "krw_price": 22420,
-      "krw_price_gross": 22420,
-      "ma20_krw": 25287
+      "current": 22400.0,
+      "krw_price": 22400,
+      "krw_price_gross": 22400,
+      "ma20_krw": 25286
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 369.68,
-      "krw_price": 504784,
-      "krw_price_gross": 506303,
-      "ma20_krw": 529170
+      "krw_price": 503158,
+      "krw_price_gross": 504672,
+      "ma20_krw": 527466
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 179.92,
-      "krw_price": 245674,
-      "krw_price_gross": 246413,
-      "ma20_krw": 238849
+      "krw_price": 244883,
+      "krw_price_gross": 245620,
+      "ma20_krw": 238080
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 217.44,
-      "krw_price": 296906,
-      "krw_price_gross": 297799,
-      "ma20_krw": 299076
+      "krw_price": 295950,
+      "krw_price_gross": 296840,
+      "ma20_krw": 298113
     }
   },
-  "valuation_date": "2026-09-02T04:59",
+  "valuation_date": "2026-09-02T08:02",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-09-01",
+    "date": "2026-09-02",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 14755.0,
-        "krw_price": 14755,
-        "change": 0.79,
-        "signal": "",
-        "shares": 1,
-        "spent": 14755,
-        "carry": 6990,
-        "available": 21745,
+        "current": 14410.0,
+        "krw_price": 14410,
+        "change": -2.34,
+        "signal": "🟠 급락 (-2%대)",
+        "shares": 5,
+        "spent": 72050,
+        "carry": 940,
+        "available": 72990,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 23275.0,
-        "krw_price": 23275,
-        "change": 0.3,
-        "signal": "",
-        "shares": 0,
-        "spent": 0,
-        "carry": 16460,
-        "available": 16460,
+        "current": 22400.0,
+        "krw_price": 22400,
+        "change": -3.76,
+        "signal": "🔴 큰 급락 (-3% 이하)",
+        "shares": 3,
+        "spent": 67200,
+        "carry": 9260,
+        "available": 76460,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 두 종목 모두 완만한 상승세를 보이며 정상 범위 내에서 움직이고 있어 특별한 이상 신호는 없습니다. 다만 휴머노이드로봇과 양자컴퓨팅 테마 모두 변동성이 큰 성장 테마이므로, 매수 후에도 단기 급락 가능성에 대비해 포지션 비중과 리스크 관리에 유의하시길 권합니다.",
-    "dip_note": null
+    "ai_comment": "오늘 두 종목 모두 5일 이동평균선을 하회하며 조정폭이 확대된 모습으로, 휴머노이드·양자컴퓨팅 등 테마주 특성상 변동성이 큰 구간으로 보입니다. 매수 계획은 유지하시되, 분할 매수로 단가를 분산하고 추가 하락 시 손절 기준선을 미리 정해두시는 것을 권장드립니다.",
+    "dip_note": "주어진 정보만으로는 각 하락이 시장 전체 조정 때문인지 개별 종목(또는 섹터) 악재 때문인지 **확실하게 판단할 수 없"
   },
   "last_general": {
     "date": "2026-09-01",
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일대비 소폭~중폭 하락했지만 정상 범위 내 변동성으로, 계획된 매수를 진행하기에 무리 없는 흐름으로 보입니다. 다만 Palantir가 상대적으로 낙폭이 큰 편이라 변동성이 이어질 수 있으니 체결 시점의 스프레드나 급변 여부는 한 번 더 확인하시는 게 좋겠습니다. 전체적으로 반도체·AI 관련주 전반의 조정 국면일 가능성이 있어, 매수 자체보다는 이후 포지션 비중 관리에 좀 더 신경 쓰시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1369.57,
+  "fx": 1365.16,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -888,6 +888,12 @@
       "market": "general",
       "comment": "오늘은 세 종목 모두 전일대비 소폭~중폭 하락했지만 정상 범위 내 변동성으로, 계획된 매수를 진행하기에 무리 없는 흐름으로 보입니다. 다만 Palantir가 상대적으로 낙폭이 큰 편이라 변동성이 이어질 수 있으니 체결 시점의 스프레드나 급변 여부는 한 번 더 확인하시는 게 좋겠습니다. 전체적으로 반도체·AI 관련주 전반의 조정 국면일 가능성이 있어, 매수 자체보다는 이후 포지션 비중 관리에 좀 더 신경 쓰시길 권합니다.",
       "dip_note": null
+    },
+    {
+      "date": "2026-09-02",
+      "market": "isa",
+      "comment": "오늘 두 종목 모두 5일 이동평균선을 하회하며 조정폭이 확대된 모습으로, 휴머노이드·양자컴퓨팅 등 테마주 특성상 변동성이 큰 구간으로 보입니다. 매수 계획은 유지하시되, 분할 매수로 단가를 분산하고 추가 하락 시 손절 기준선을 미리 정해두시는 것을 권장드립니다.",
+      "dip_note": "주어진 정보만으로는 각 하락이 시장 전체 조정 때문인지 개별 종목(또는 섹터) 악재 때문인지 **확실하게 판단할 수 없"
     }
   ],
   "rebalance_suggestions": [],
