@@ -67,7 +67,7 @@
       "current": 14410.0,
       "krw_price": 14410,
       "krw_price_gross": 14410,
-      "ma20_krw": 15294
+      "ma20_krw": 15254
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
@@ -76,37 +76,10 @@
       "current": 22400.0,
       "krw_price": 22400,
       "krw_price_gross": 22400,
-      "ma20_krw": 25286
-    },
-    "AVGO": {
-      "name": "Broadcom",
-      "account": "general",
-      "type": "stock",
-      "current": 367.24,
-      "krw_price": 497351,
-      "krw_price_gross": 498848,
-      "ma20_krw": 521386
-    },
-    "PLTR": {
-      "name": "Palantir",
-      "account": "general",
-      "type": "stock",
-      "current": 169.46,
-      "krw_price": 229499,
-      "krw_price_gross": 230189,
-      "ma20_krw": 237643
-    },
-    "NVDA": {
-      "name": "Nvidia",
-      "account": "general",
-      "type": "stock",
-      "current": 224.41,
-      "krw_price": 303917,
-      "krw_price_gross": 304832,
-      "ma20_krw": 296982
+      "ma20_krw": 25182
     }
   },
-  "valuation_date": "2026-09-02T22:00",
+  "valuation_date": "2026-09-03T00:04",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +167,7 @@
     "ai_comment": "오늘 계획을 보면 Palantir가 전일대비 -5.4%로 MA5를 하회하며 다른 두 종목보다 변동성이 크게 나타나고 있어 단기 수급 이탈 가능성을 참고하실 필요가 있습니다. Broadcom은 소폭 하락이지만 정상 범위 내에 있고, Nvidia는 +3.3%로 상대적으로 강세를 보이고 있어 전반적으로 반도체/AI 관련주 내에서도 종목별 온도차가 뚜렷한 하루로 보입니다. 매수 결정 자체는 유지하시되, Palantir의 경우 매수 후에도 추가 하락 시 대응 계획을 미리 점검해두시는 것이 좋겠습니다.",
     "dip_note": "**Palantir (PLTR)**: 제공된 가격 데이터(전일대비 -5.4%, 현재가 170.15, 5일평균 181.73, 20일평균 175.51)만으로는 이번 하락이 시장 전체 조정 때문인지 개별 종목 악재(실적, 가이던스, 뉴스 등) 때문인지 **확실히 판단할 수 없습니다**."
   },
-  "fx": 1358.37,
+  "fx": 1362.48,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -489,13 +462,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-09-03",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5272408,
+    "required_monthly_remaining": 5281690,
     "daily_rate": null
   },
   "daily_comment_history": [
