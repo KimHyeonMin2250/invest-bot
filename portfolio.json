@@ -64,49 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 14515.0,
-      "krw_price": 14515,
-      "krw_price_gross": 14515,
-      "ma20_krw": 15218
+      "current": 14735.0,
+      "krw_price": 14735,
+      "krw_price_gross": 14735,
+      "ma20_krw": 15166
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 22540.0,
-      "krw_price": 22540,
-      "krw_price_gross": 22540,
-      "ma20_krw": 25050
+      "current": 23025.0,
+      "krw_price": 23025,
+      "krw_price_gross": 23025,
+      "ma20_krw": 24885
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 357.16,
-      "krw_price": 482956,
-      "krw_price_gross": 484409,
-      "ma20_krw": 516297
+      "krw_price": 482635,
+      "krw_price_gross": 484088,
+      "ma20_krw": 515954
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 182.53,
-      "krw_price": 246819,
-      "krw_price_gross": 247562,
-      "ma20_krw": 239076
+      "krw_price": 246655,
+      "krw_price_gross": 247398,
+      "ma20_krw": 238918
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 228.45,
-      "krw_price": 308913,
-      "krw_price_gross": 309842,
-      "ma20_krw": 297165
+      "krw_price": 308708,
+      "krw_price_gross": 309637,
+      "ma20_krw": 296967
     }
   },
-  "valuation_date": "2026-09-03T23:58",
+  "valuation_date": "2026-09-04T04:20",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 반도체/AI 관련주 전반이 혼조세를 보이고 있네요. Broadcom은 MA5를 하회하며 약세 흐름이라 매수 후 단기 추가 하락 가능성에 유의하시고, Palantir는 +8% 급등으로 변동성이 커진 상태라 진입 타이밍상 단기 되돌림 리스크를 참고하시면 좋겠습니다. Nvidia는 상대적으로 안정적인 정상 범위 움직임이라 특별한 주의사항은 없어 보입니다.",
     "dip_note": "**Broadcom (-3.6%, 354.13)**\n\n현재가가 5일 평균(366.04)과 20일 평균(381.66)보다 낮아 단기 하락 추세가 이어지고 있는 것으로 보이지만, 이 하락이 반도체/기술주 전반의 시장 조정 때문인지, Broadcom 개별 이슈(실적 전망 하향, 고객사 이슈 등) 때문인지는 실시간 뉴스나 동종업계 비교 데이터 없이는 **확실하지 않습니다**.\n\n따라서 뉴스 확인 전까지는 매수 여부를 판단하기보다, 관련 반도체 지수(SOX)나 동종 경쟁사(NVIDIA, AMD 등)의 동반 하락 여부를 먼저 확인해보시길 권장합니다. 개별 악재 가능성을 배제할 수 없으니 **매수 보류 권장**에 가깝게 신중히 접근하시는 것이 안전할 것 같습니다."
   },
-  "fx": 1356.28,
+  "fx": 1355.38,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -496,13 +496,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-09-04",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5281690,
+    "required_monthly_remaining": 5291005,
     "daily_rate": null
   },
   "daily_comment_history": [
