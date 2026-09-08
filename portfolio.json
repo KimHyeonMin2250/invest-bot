@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 368.35,
-      "krw_price": 492641,
-      "krw_price_gross": 494123,
-      "ma20_krw": 502365
+      "current": 367.61,
+      "krw_price": 491508,
+      "krw_price_gross": 492987,
+      "ma20_krw": 502170
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 171.7,
-      "krw_price": 229636,
-      "krw_price_gross": 230327,
-      "ma20_krw": 236381
+      "current": 170.1,
+      "krw_price": 227423,
+      "krw_price_gross": 228108,
+      "ma20_krw": 236205
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 225.88,
-      "krw_price": 302091,
-      "krw_price_gross": 303000,
-      "ma20_krw": 294900
+      "current": 225.29,
+      "krw_price": 301228,
+      "krw_price_gross": 302134,
+      "ma20_krw": 294776
     }
   },
-  "valuation_date": "2026-09-08T17:57",
+  "valuation_date": "2026-09-08T19:56",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 브로드컴은 견조한 상승 흐름을 보인 반면 팔란티어와 엔비디아는 소폭 조정을 받는 모습으로, 전반적으로 변동성이 크지 않은 정상 범위 내 움직임입니다. 다만 AI/반도체 관련주들의 단기 조정이 이어질 수 있으니 매수 후에도 추가 하락 가능성과 포지션 비중 관리에 유의하시기 바랍니다.",
     "dip_note": null
   },
-  "fx": 1341.45,
+  "fx": 1341.06,
   "asset_history": [
     {
       "date": "2026-07-16",
