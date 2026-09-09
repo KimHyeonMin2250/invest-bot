@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 364.17,
-      "krw_price": 486270,
-      "krw_price_gross": 487733,
-      "ma20_krw": 498108
+      "current": 364.38,
+      "krw_price": 486510,
+      "krw_price_gross": 487974,
+      "ma20_krw": 498081
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 169.92,
-      "krw_price": 226891,
-      "krw_price_gross": 227574,
-      "ma20_krw": 235574
+      "current": 169.53,
+      "krw_price": 226352,
+      "krw_price_gross": 227033,
+      "ma20_krw": 235528
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 223.82,
-      "krw_price": 298856,
-      "krw_price_gross": 299755,
-      "ma20_krw": 294839
+      "current": 223.67,
+      "krw_price": 298638,
+      "krw_price_gross": 299537,
+      "ma20_krw": 294805
     }
   },
-  "valuation_date": "2026-09-09T19:50",
+  "valuation_date": "2026-09-09T22:00",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일대비 등락폭이 크지 않아 특별한 이벤트성 변동은 없어 보이며, 계획된 매수를 진행하기에 무리 없는 정상 범위입니다. 다만 브로드컴과 엔비디아가 동반 약세인 점은 반도체 섹터 전반의 미세한 조정 가능성을 시사하니, 매수 이후에도 섹터 흐름은 참고해두시면 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1339.3,
+  "fx": 1339.19,
   "asset_history": [
     {
       "date": "2026-07-16",
