@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 360.83,
-      "krw_price": 485357,
-      "krw_price_gross": 486817,
-      "ma20_krw": 498076
+      "krw_price": 485292,
+      "krw_price_gross": 486752,
+      "ma20_krw": 498009
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 165.86,
-      "krw_price": 223100,
-      "krw_price_gross": 223772,
-      "ma20_krw": 236933
+      "krw_price": 223071,
+      "krw_price_gross": 223742,
+      "ma20_krw": 236902
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 218.36,
-      "krw_price": 293719,
-      "krw_price_gross": 294603,
-      "ma20_krw": 296615
+      "krw_price": 293680,
+      "krw_price_gross": 294563,
+      "ma20_krw": 296575
     }
   },
-  "valuation_date": "2026-09-10T21:50",
+  "valuation_date": "2026-09-10T23:26",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 소폭 조정 수준으로 특별히 변동성이 튄 건 아니라서, 계획된 매수 로직을 그대로 따라가도 무리 없어 보입니다. 다만 Nvidia와 Palantir가 -2% 이상 빠진 만큼 반도체·AI 테마 전반의 단기 심리가 다소 위축된 신호일 수 있으니, 이후 며칠간 낙폭이 확대되는지 정도는 지켜보는 게 좋겠습니다. 매수 자체는 계획대로 진행하되, 분할 매수 타이밍이나 다음 매수 시점의 비중 조절 정도만 참고하시면 될 것 같습니다.",
     "dip_note": null
   },
-  "fx": 1349.16,
+  "fx": 1348.98,
   "asset_history": [
     {
       "date": "2026-07-16",
