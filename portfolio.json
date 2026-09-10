@@ -67,7 +67,7 @@
       "current": 14650.0,
       "krw_price": 14650,
       "krw_price_gross": 14650,
-      "ma20_krw": 14989
+      "ma20_krw": 14949
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
@@ -76,37 +76,10 @@
       "current": 23270.0,
       "krw_price": 23270,
       "krw_price_gross": 23270,
-      "ma20_krw": 24371
-    },
-    "AVGO": {
-      "name": "Broadcom",
-      "account": "general",
-      "type": "stock",
-      "current": 364.38,
-      "krw_price": 486510,
-      "krw_price_gross": 487974,
-      "ma20_krw": 498081
-    },
-    "PLTR": {
-      "name": "Palantir",
-      "account": "general",
-      "type": "stock",
-      "current": 169.53,
-      "krw_price": 226352,
-      "krw_price_gross": 227033,
-      "ma20_krw": 235528
-    },
-    "NVDA": {
-      "name": "Nvidia",
-      "account": "general",
-      "type": "stock",
-      "current": 223.67,
-      "krw_price": 298638,
-      "krw_price_gross": 299537,
-      "ma20_krw": 294805
+      "ma20_krw": 24274
     }
   },
-  "valuation_date": "2026-09-09T22:00",
+  "valuation_date": "2026-09-10T00:05",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +167,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일대비 등락폭이 크지 않아 특별한 이벤트성 변동은 없어 보이며, 계획된 매수를 진행하기에 무리 없는 정상 범위입니다. 다만 브로드컴과 엔비디아가 동반 약세인 점은 반도체 섹터 전반의 미세한 조정 가능성을 시사하니, 매수 이후에도 섹터 흐름은 참고해두시면 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1339.19,
+  "fx": 1340.48,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -531,13 +504,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-09-10",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5338078,
+    "required_monthly_remaining": 5347594,
     "daily_rate": null
   },
   "daily_comment_history": [
