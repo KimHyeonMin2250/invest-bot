@@ -64,22 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 14650.0,
-      "krw_price": 14650,
-      "krw_price_gross": 14650,
-      "ma20_krw": 14949
+      "current": 14555.0,
+      "krw_price": 14555,
+      "krw_price_gross": 14555,
+      "ma20_krw": 14930
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 23270.0,
-      "krw_price": 23270,
-      "krw_price_gross": 23270,
-      "ma20_krw": 24274
+      "current": 22680.0,
+      "krw_price": 22680,
+      "krw_price_gross": 22680,
+      "ma20_krw": 24194
+    },
+    "AVGO": {
+      "name": "Broadcom",
+      "account": "general",
+      "type": "stock",
+      "current": 364.38,
+      "krw_price": 485754,
+      "krw_price_gross": 487216,
+      "ma20_krw": 497308
+    },
+    "PLTR": {
+      "name": "Palantir",
+      "account": "general",
+      "type": "stock",
+      "current": 169.53,
+      "krw_price": 226000,
+      "krw_price_gross": 226680,
+      "ma20_krw": 235163
+    },
+    "NVDA": {
+      "name": "Nvidia",
+      "account": "general",
+      "type": "stock",
+      "current": 223.67,
+      "krw_price": 298174,
+      "krw_price_gross": 299071,
+      "ma20_krw": 294348
     }
   },
-  "valuation_date": "2026-09-10T00:05",
+  "valuation_date": "2026-09-10T04:33",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -167,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일대비 등락폭이 크지 않아 특별한 이벤트성 변동은 없어 보이며, 계획된 매수를 진행하기에 무리 없는 정상 범위입니다. 다만 브로드컴과 엔비디아가 동반 약세인 점은 반도체 섹터 전반의 미세한 조정 가능성을 시사하니, 매수 이후에도 섹터 흐름은 참고해두시면 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1340.48,
+  "fx": 1337.11,
   "asset_history": [
     {
       "date": "2026-07-16",
