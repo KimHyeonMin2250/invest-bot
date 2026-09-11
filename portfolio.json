@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 365.14,
-      "krw_price": 487944,
-      "krw_price_gross": 489412,
-      "ma20_krw": 491307
+      "current": 364.94,
+      "krw_price": 487436,
+      "krw_price_gross": 488903,
+      "ma20_krw": 491044
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 166.68,
-      "krw_price": 222741,
-      "krw_price_gross": 223411,
-      "ma20_krw": 234564
+      "current": 167.03,
+      "krw_price": 223095,
+      "krw_price_gross": 223767,
+      "ma20_krw": 234469
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 219.13,
-      "krw_price": 292832,
-      "krw_price_gross": 293713,
-      "ma20_krw": 293972
+      "current": 219.36,
+      "krw_price": 292991,
+      "krw_price_gross": 293872,
+      "ma20_krw": 293838
     }
   },
-  "valuation_date": "2026-09-11T17:00",
+  "valuation_date": "2026-09-11T17:47",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,17 +146,17 @@
     "dip_note": "**SOL 미국양자컴퓨팅TOP10**: 제공된 정보만으로는 이 하락이 시장 전체 조정인지 개별(테마) 악재인지 판단하기 어렵습니다. 다만 20일 평균(23951.5) 대비 약 -6% 하락했고 5일 평균보다도 낮아, 단기적으로 하락 추세가 이어지고 있는 점은 주의가 필요합니다. 양자컴퓨팅 관련 뉴스나 미국 시장(나스닥) 동향을 함께 확인한 후 판단하시길 권장하며, 확실하지 않은 상태에서는 매수 보류를 권장합니다"
   },
   "last_general": {
-    "date": "2026-09-10",
+    "date": "2026-09-11",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 362.73,
-        "krw_price": 487988,
-        "change": -0.45,
+        "current": 364.94,
+        "krw_price": 488903,
+        "change": 1.14,
         "signal": "",
-        "shares": 0.0246,
+        "shares": 0.0245,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -166,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 166.02,
-        "krw_price": 223350,
-        "change": -2.07,
+        "current": 167.03,
+        "krw_price": 223767,
+        "change": 0.71,
         "signal": "",
-        "shares": 0.0403,
+        "shares": 0.0402,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,9 +180,9 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 218.34,
-        "krw_price": 293737,
-        "change": -2.38,
+        "current": 219.36,
+        "krw_price": 293872,
+        "change": 0.46,
         "signal": "",
         "shares": 0.0306,
         "spent": 9000,
@@ -191,10 +191,10 @@
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 세 종목 모두 소폭 조정 수준으로 특별히 변동성이 튄 건 아니라서, 계획된 매수 로직을 그대로 따라가도 무리 없어 보입니다. 다만 Nvidia와 Palantir가 -2% 이상 빠진 만큼 반도체·AI 테마 전반의 단기 심리가 다소 위축된 신호일 수 있으니, 이후 며칠간 낙폭이 확대되는지 정도는 지켜보는 게 좋겠습니다. 매수 자체는 계획대로 진행하되, 분할 매수 타이밍이나 다음 매수 시점의 비중 조절 정도만 참고하시면 될 것 같습니다.",
+    "ai_comment": "오늘은 세 종목 모두 전일 대비 1% 안팎의 완만한 상승세로 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 다만 반도체·AI 관련주는 매크로 이벤트나 실적 발표에 민감하게 반응할 수 있으니, 매수 후에도 분할 매수 비중과 전체 포트폴리오 내 집중도는 주기적으로 점검하시는 것이 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1340.36,
+  "fx": 1339.68,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -1034,6 +1034,12 @@
       "market": "isa",
       "comment": "**시장 코멘트:**\n\n두 종목 모두 소폭 조정 중이나 특별히 이상 신호는 아닙니다. 미국휴머노이드로봇은 정상 범위 내 등락으로 안정적이고, 양자컴퓨팅TOP10은 MA5를 하회하며 단기 조정 신호가 보이지만 -1.1% 수준은 급락이라 보기 어렵습니다.\n\n**주의점:**\n\n양자컴퓨팅 테마는 변동성이 큰 편이라 MA5 하회가 이어지는지 다음 1~2거래일 흐름을 확인하는 게 좋겠습니다. 또한 두 종목 모두 테마주 성격이 강해 미국 증시(특히 나스닥, 반도체/AI 관련 지수) 야간 흐름에 연동될 가능성이 높으니 참고하",
       "dip_note": "**SOL 미국양자컴퓨팅TOP10**: 제공된 정보만으로는 이 하락이 시장 전체 조정인지 개별(테마) 악재인지 판단하기 어렵습니다. 다만 20일 평균(23951.5) 대비 약 -6% 하락했고 5일 평균보다도 낮아, 단기적으로 하락 추세가 이어지고 있는 점은 주의가 필요합니다. 양자컴퓨팅 관련 뉴스나 미국 시장(나스닥) 동향을 함께 확인한 후 판단하시길 권장하며, 확실하지 않은 상태에서는 매수 보류를 권장합니다"
+    },
+    {
+      "date": "2026-09-11",
+      "market": "general",
+      "comment": "오늘은 세 종목 모두 전일 대비 1% 안팎의 완만한 상승세로 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 다만 반도체·AI 관련주는 매크로 이벤트나 실적 발표에 민감하게 반응할 수 있으니, 매수 후에도 분할 매수 비중과 전체 포트폴리오 내 집중도는 주기적으로 점검하시는 것이 좋겠습니다.",
+      "dip_note": null
     }
   ],
   "rebalance_suggestions": [],
