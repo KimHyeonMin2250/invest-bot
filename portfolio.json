@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 363.02,
-      "krw_price": 485624,
-      "krw_price_gross": 487086,
-      "ma20_krw": 491678
+      "current": 361.99,
+      "krw_price": 483990,
+      "krw_price_gross": 485447,
+      "ma20_krw": 491349
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 167.46,
-      "krw_price": 224016,
-      "krw_price_gross": 224690,
-      "ma20_krw": 234861
+      "current": 167.23,
+      "krw_price": 223591,
+      "krw_price_gross": 224264,
+      "ma20_krw": 234722
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 218.46,
-      "krw_price": 292244,
-      "krw_price_gross": 293124,
-      "ma20_krw": 294234
+      "current": 218.29,
+      "krw_price": 291860,
+      "krw_price_gross": 292738,
+      "ma20_krw": 294067
     }
   },
-  "valuation_date": "2026-09-11T19:35",
+  "valuation_date": "2026-09-11T21:53",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일 대비 1% 안팎의 완만한 상승세로 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 다만 반도체·AI 관련주는 매크로 이벤트나 실적 발표에 민감하게 반응할 수 있으니, 매수 후에도 분할 매수 비중과 전체 포트폴리오 내 집중도는 주기적으로 점검하시는 것이 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1341.76,
+  "fx": 1341.05,
   "asset_history": [
     {
       "date": "2026-07-16",
