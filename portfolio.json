@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 346.03,
-      "krw_price": 464069,
-      "krw_price_gross": 465466,
-      "ma20_krw": 489706
+      "current": 345.33,
+      "krw_price": 463427,
+      "krw_price_gross": 464821,
+      "ma20_krw": 489979
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 172.83,
-      "krw_price": 231787,
-      "krw_price_gross": 232484,
-      "ma20_krw": 235360
+      "current": 173.57,
+      "krw_price": 232938,
+      "krw_price_gross": 233639,
+      "ma20_krw": 235564
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 212.12,
-      "krw_price": 284486,
-      "krw_price_gross": 285342,
-      "ma20_krw": 294111
+      "current": 212.13,
+      "krw_price": 284679,
+      "krw_price_gross": 285535,
+      "ma20_krw": 294304
     }
   },
-  "valuation_date": "2026-09-14T18:32",
+  "valuation_date": "2026-09-14T19:30",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,31 +146,31 @@
     "dip_note": "**SOL 미국양자컴퓨팅TOP10**: 현재가(22215)가 5일 평균(22733)과 20일 평균(23704.75)보다 모두 낮아 단기·중기 모두 하락 추세로 보이나, 시장 전체 지수 대비 상대강도나 관련 뉴스 정보가 없어 이번 하"
   },
   "last_general": {
-    "date": "2026-09-11",
+    "date": "2026-09-14",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 364.94,
-        "krw_price": 488903,
-        "change": 1.14,
-        "signal": "",
-        "shares": 0.0245,
-        "spent": 12000,
+        "current": 345.42,
+        "krw_price": 464956,
+        "change": -4.58,
+        "signal": "🟡 하락 (-3%대)",
+        "shares": 0.0671,
+        "spent": 31200,
         "carry": 0,
-        "available": 12000,
+        "available": 31200,
         "skipped_added": 0
       },
       {
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 167.03,
-        "krw_price": 223767,
-        "change": 0.71,
+        "current": 173.6,
+        "krw_price": 233673,
+        "change": 3.81,
         "signal": "",
-        "shares": 0.0402,
+        "shares": 0.0385,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 219.36,
-        "krw_price": 293872,
-        "change": 0.46,
+        "current": 212.17,
+        "krw_price": 285589,
+        "change": -2.8,
         "signal": "",
-        "shares": 0.0306,
+        "shares": 0.0315,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 세 종목 모두 전일 대비 1% 안팎의 완만한 상승세로 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 다만 반도체·AI 관련주는 매크로 이벤트나 실적 발표에 민감하게 반응할 수 있으니, 매수 후에도 분할 매수 비중과 전체 포트폴리오 내 집중도는 주기적으로 점검하시는 것이 좋겠습니다.",
-    "dip_note": null
+    "ai_comment": "반도체/AI 관련주 전반이 조정 흐름을 보이고 있으며, 특히 Broadcom은 MA5를 하회하며 하락폭이 두드러져 단기 변동성에 유의할 필요가 있습니다. 반면 Palantir는 상대적으로 견조한 흐름을 보이고 있어 종목별 온도차가 있는 장세로 판단됩니다. 매수 계획 자체는 유지하되, Broadcom의 추가 하락 가능성과 전체 포지션 비중 관리에 신경 쓰시길 권합니다.",
+    "dip_note": "**안내:** \"아래 종목들\"이라고 하셨지만 Broadcom 하나만 제공되어 있습니다. 다른 종목 정보가 있다면 추가로 주시면 함께 분석하겠습니다.\n\n**Broadcom (AVGO):**\n현재가(345.42)가 5일평균(360.24), 20일평균(365.12) 대비 모두 낮은 상태로, 단기·중기 추세 모두 하락 흐름입니다. 다만 제공된 정보(가격, 이동평균선)만으로는 이 하락이 반도체 업종 전체의 조정인지, 실적 발표·가이던스 하향·특정 이슈(예: 대형 고객사 관련 뉴스, 규제 이슈 등) 같은 개별 악재인지 **확실하지 않"
   },
-  "fx": 1345.16,
+  "fx": 1346.04,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -1067,6 +1067,12 @@
       "market": "isa",
       "comment": "오늘 두 종목 모두 소폭 약세로, 특히 양자컴퓨팅 ETF는 MA5를 하회하며 단기 조정 흐름이 이어지고 있습니다. 휴머노이드 로봇 ETF는 정상 범위 내 등락이라 큰 우려는 없지만, 테마주 특성상 변동성이 커질 수 있으니 매수 후에도 분할 진입 및 손절 라인 점검을 권장드립니다. 계획된 매수는 그대로 진행하시되, 시장 전체 조정 신호가 나올 경우 비중 조절을 고려해보세요.",
       "dip_note": "**SOL 미국양자컴퓨팅TOP10**: 현재가(22215)가 5일 평균(22733)과 20일 평균(23704.75)보다 모두 낮아 단기·중기 모두 하락 추세로 보이나, 시장 전체 지수 대비 상대강도나 관련 뉴스 정보가 없어 이번 하"
+    },
+    {
+      "date": "2026-09-14",
+      "market": "general",
+      "comment": "반도체/AI 관련주 전반이 조정 흐름을 보이고 있으며, 특히 Broadcom은 MA5를 하회하며 하락폭이 두드러져 단기 변동성에 유의할 필요가 있습니다. 반면 Palantir는 상대적으로 견조한 흐름을 보이고 있어 종목별 온도차가 있는 장세로 판단됩니다. 매수 계획 자체는 유지하되, Broadcom의 추가 하락 가능성과 전체 포지션 비중 관리에 신경 쓰시길 권합니다.",
+      "dip_note": "**안내:** \"아래 종목들\"이라고 하셨지만 Broadcom 하나만 제공되어 있습니다. 다른 종목 정보가 있다면 추가로 주시면 함께 분석하겠습니다.\n\n**Broadcom (AVGO):**\n현재가(345.42)가 5일평균(360.24), 20일평균(365.12) 대비 모두 낮은 상태로, 단기·중기 추세 모두 하락 흐름입니다. 다만 제공된 정보(가격, 이동평균선)만으로는 이 하락이 반도체 업종 전체의 조정인지, 실적 발표·가이던스 하향·특정 이슈(예: 대형 고객사 관련 뉴스, 규제 이슈 등) 같은 개별 악재인지 **확실하지 않"
     }
   ],
   "rebalance_suggestions": [],
