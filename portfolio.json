@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 338.73,
-      "krw_price": 459696,
-      "krw_price_gross": 461079,
-      "ma20_krw": 491813
+      "current": 339.1,
+      "krw_price": 460303,
+      "krw_price_gross": 461688,
+      "ma20_krw": 491957
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 175.73,
-      "krw_price": 238486,
-      "krw_price_gross": 239204,
-      "ma20_krw": 238415
+      "current": 174.54,
+      "krw_price": 236930,
+      "krw_price_gross": 237643,
+      "ma20_krw": 238392
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 211.71,
-      "krw_price": 287315,
-      "krw_price_gross": 288180,
-      "ma20_krw": 296653
+      "current": 211.74,
+      "krw_price": 287419,
+      "krw_price_gross": 288284,
+      "ma20_krw": 296727
     }
   },
-  "valuation_date": "2026-09-15T17:38",
+  "valuation_date": "2026-09-15T18:19",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,31 +146,31 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-09-14",
+    "date": "2026-09-15",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 345.42,
-        "krw_price": 464956,
-        "change": -4.58,
-        "signal": "🟡 하락 (-3%대)",
-        "shares": 0.0671,
-        "spent": 31200,
+        "current": 339.1,
+        "krw_price": 461688,
+        "change": -1.63,
+        "signal": "",
+        "shares": 0.026,
+        "spent": 12000,
         "carry": 0,
-        "available": 31200,
+        "available": 12000,
         "skipped_added": 0
       },
       {
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 173.6,
-        "krw_price": 233673,
-        "change": 3.81,
+        "current": 174.54,
+        "krw_price": 237643,
+        "change": 0.71,
         "signal": "",
-        "shares": 0.0385,
+        "shares": 0.0379,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 212.17,
-        "krw_price": 285589,
-        "change": -2.8,
+        "current": 211.74,
+        "krw_price": 288284,
+        "change": 0.37,
         "signal": "",
-        "shares": 0.0315,
+        "shares": 0.0312,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "반도체/AI 관련주 전반이 조정 흐름을 보이고 있으며, 특히 Broadcom은 MA5를 하회하며 하락폭이 두드러져 단기 변동성에 유의할 필요가 있습니다. 반면 Palantir는 상대적으로 견조한 흐름을 보이고 있어 종목별 온도차가 있는 장세로 판단됩니다. 매수 계획 자체는 유지하되, Broadcom의 추가 하락 가능성과 전체 포지션 비중 관리에 신경 쓰시길 권합니다.",
-    "dip_note": "**안내:** \"아래 종목들\"이라고 하셨지만 Broadcom 하나만 제공되어 있습니다. 다른 종목 정보가 있다면 추가로 주시면 함께 분석하겠습니다.\n\n**Broadcom (AVGO):**\n현재가(345.42)가 5일평균(360.24), 20일평균(365.12) 대비 모두 낮은 상태로, 단기·중기 추세 모두 하락 흐름입니다. 다만 제공된 정보(가격, 이동평균선)만으로는 이 하락이 반도체 업종 전체의 조정인지, 실적 발표·가이던스 하향·특정 이슈(예: 대형 고객사 관련 뉴스, 규제 이슈 등) 같은 개별 악재인지 **확실하지 않"
+    "ai_comment": "오늘은 세 종목 모두 전일 대비 등락폭이 크지 않아 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 브로드컴이 소폭 하락했지만 정상 범위 내이므로 계획된 매수를 진행하는 데 무리가 없어 보입니다. 다만 반도체·AI 관련주는 외부 이슈(금리 발표, 실적 시즌 등)에 민감하게 반응할 수 있으니 체결 전 최신 뉴스는 한 번 확인해보시는 걸 권합니다.",
+    "dip_note": null
   },
-  "fx": 1361.2,
+  "fx": 1361.53,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -1085,6 +1085,12 @@
       "date": "2026-09-15",
       "market": "isa",
       "comment": "오늘 매수 계획 참고 의견입니다.\n\n휴머노이드로봇 ETF는 -0.1%로 거의 보합권에서 안정적으로 움직이고 있어 매수 타이밍상 큰 무리는 없어 보입니다. 반면 양자컴퓨팅 ETF는 +2.2% 상승 중인데, 테마주 특성상 변동성이 클 수 있으니 단기 급등 이후 조정 가능성을 염두에 두시고 분할 매수 관점에서 접근하시는 것이 좋겠습니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-09-15",
+      "market": "general",
+      "comment": "오늘은 세 종목 모두 전일 대비 등락폭이 크지 않아 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 브로드컴이 소폭 하락했지만 정상 범위 내이므로 계획된 매수를 진행하는 데 무리가 없어 보입니다. 다만 반도체·AI 관련주는 외부 이슈(금리 발표, 실적 시즌 등)에 민감하게 반응할 수 있으니 체결 전 최신 뉴스는 한 번 확인해보시는 걸 권합니다.",
       "dip_note": null
     }
   ],
