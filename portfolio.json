@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 344.72,
-      "krw_price": 467966,
-      "krw_price_gross": 469374,
-      "ma20_krw": 495606
+      "krw_price": 467612,
+      "krw_price_gross": 469019,
+      "ma20_krw": 495231
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 173.31,
-      "krw_price": 235273,
-      "krw_price_gross": 235981,
-      "ma20_krw": 238271
+      "krw_price": 235095,
+      "krw_price_gross": 235802,
+      "ma20_krw": 238091
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 210.96,
-      "krw_price": 286384,
-      "krw_price_gross": 287245,
-      "ma20_krw": 297628
+      "krw_price": 286167,
+      "krw_price_gross": 287028,
+      "ma20_krw": 297403
     }
   },
-  "valuation_date": "2026-09-15T08:50",
+  "valuation_date": "2026-09-15T10:09",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "반도체/AI 관련주 전반이 조정 흐름을 보이고 있으며, 특히 Broadcom은 MA5를 하회하며 하락폭이 두드러져 단기 변동성에 유의할 필요가 있습니다. 반면 Palantir는 상대적으로 견조한 흐름을 보이고 있어 종목별 온도차가 있는 장세로 판단됩니다. 매수 계획 자체는 유지하되, Broadcom의 추가 하락 가능성과 전체 포지션 비중 관리에 신경 쓰시길 권합니다.",
     "dip_note": "**안내:** \"아래 종목들\"이라고 하셨지만 Broadcom 하나만 제공되어 있습니다. 다른 종목 정보가 있다면 추가로 주시면 함께 분석하겠습니다.\n\n**Broadcom (AVGO):**\n현재가(345.42)가 5일평균(360.24), 20일평균(365.12) 대비 모두 낮은 상태로, 단기·중기 추세 모두 하락 흐름입니다. 다만 제공된 정보(가격, 이동평균선)만으로는 이 하락이 반도체 업종 전체의 조정인지, 실적 발표·가이던스 하향·특정 이슈(예: 대형 고객사 관련 뉴스, 규제 이슈 등) 같은 개별 악재인지 **확실하지 않"
   },
-  "fx": 1361.61,
+  "fx": 1360.58,
   "asset_history": [
     {
       "date": "2026-07-16",
