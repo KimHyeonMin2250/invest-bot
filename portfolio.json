@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 339.51,
-      "krw_price": 468882,
-      "krw_price_gross": 470293,
-      "ma20_krw": 497729
+      "current": 348.76,
+      "krw_price": 480280,
+      "krw_price_gross": 481725,
+      "ma20_krw": 495368
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 174.34,
-      "krw_price": 240773,
-      "krw_price_gross": 241498,
-      "ma20_krw": 242595
+      "current": 174.85,
+      "krw_price": 240791,
+      "krw_price_gross": 241515,
+      "ma20_krw": 241881
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 213.9,
-      "krw_price": 295408,
-      "krw_price_gross": 296296,
-      "ma20_krw": 301531
+      "current": 219.24,
+      "krw_price": 301921,
+      "krw_price_gross": 302830,
+      "ma20_krw": 300806
     }
   },
-  "valuation_date": "2026-09-17T09:40",
+  "valuation_date": "2026-09-17T17:35",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 브로드컴, 팔란티어, 엔비디아 모두 전일대비 완만한 상승세로 정상 범위 내에서 움직이고 있어 특별한 변동성 없이 안정적인 흐름입니다. 다만 엔비디아는 상대적으로 상승폭이 큰 편이라 반도체 섹터 전반의 모멘텀이나 관련 뉴스 흐름을 참고하시면 좋을 것 같습니다. 참고로 이는 계획된 매수 실행에 영향을 주지 않는 단순 시장 참고 의견입니다.",
     "dip_note": null
   },
-  "fx": 1385.21,
+  "fx": 1381.27,
   "asset_history": [
     {
       "date": "2026-07-16",
