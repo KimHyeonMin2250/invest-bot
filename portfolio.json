@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 3795.0,
-    "0023A0.KS": 17255.0,
+    "0038A0.KS": 6555.0,
+    "0023A0.KS": 4500.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -64,85 +64,85 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15200.0,
-      "krw_price": 15200,
-      "krw_price_gross": 15200,
-      "ma20_krw": 14690
+      "current": 15240.0,
+      "krw_price": 15240,
+      "krw_price_gross": 15240,
+      "ma20_krw": 14692
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 24655.0,
-      "krw_price": 24655,
-      "krw_price_gross": 24655,
-      "ma20_krw": 23313
+      "current": 24755.0,
+      "krw_price": 24755,
+      "krw_price_gross": 24755,
+      "ma20_krw": 23318
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 347.3,
-      "krw_price": 479692,
-      "krw_price_gross": 481136,
-      "ma20_krw": 496735
+      "krw_price": 479076,
+      "krw_price_gross": 480517,
+      "ma20_krw": 496097
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 176.24,
-      "krw_price": 243423,
-      "krw_price_gross": 244156,
-      "ma20_krw": 242693
+      "krw_price": 243111,
+      "krw_price_gross": 243842,
+      "ma20_krw": 242382
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 219.34,
-      "krw_price": 302953,
-      "krw_price_gross": 303865,
-      "ma20_krw": 301704
+      "krw_price": 302564,
+      "krw_price_gross": 303474,
+      "ma20_krw": 301316
     }
   },
-  "valuation_date": "2026-09-18T04:31",
+  "valuation_date": "2026-09-18T08:23",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-09-17",
+    "date": "2026-09-18",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 14945.0,
-        "krw_price": 14945,
-        "change": 2.19,
+        "current": 15240.0,
+        "krw_price": 15240,
+        "change": 1.97,
         "signal": "",
         "shares": 1,
-        "spent": 14945,
-        "carry": 3795,
-        "available": 18740,
+        "spent": 15240,
+        "carry": 6555,
+        "available": 21795,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 23430.0,
-        "krw_price": 23430,
-        "change": 2.2,
+        "current": 24755.0,
+        "krw_price": 24755,
+        "change": 5.66,
         "signal": "",
-        "shares": 0,
-        "spent": 0,
-        "carry": 17255,
-        "available": 17255,
+        "shares": 1,
+        "spent": 24755,
+        "carry": 4500,
+        "available": 29255,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 두 종목 모두 +2.2% 상승했지만 정상 범위 내 움직임이라 추세 이탈로 보긴 어렵습니다. 휴머노이드로봇과 양자컴퓨팅 테마 모두 변동성이 큰 성장 테마인 만큼, 매수 이후에도 단기 되돌림 가능성을 염두에 두고 포지션 크기와 분할 진입 여부를 점검하시길 권합니다. 계획된 매수는 그대로 진행하시되, 체결 후 시장 전반의 변동성 지표도 함께 확인하시면 좋겠습니다.",
+    "ai_comment": "오늘은 로봇·양자컴퓨팅 테마 모두 상승 흐름을 보이고 있어 투자 심리가 우호적인 편입니다. 다만 SOL 미국양자컴퓨팅TOP10의 +5.7% 상승은 변동성이 큰 편이니, 단기 과열 가능성을 염두에 두고 분할 매수 관점에서 접근하시는 것이 좋겠습니다. 매수 계획 자체는 그대로 진행하시되, 체결 시점의 스프레드나 추가 급등락 여부는 한 번 더 확인해보시길 권합니다.",
     "dip_note": null
   },
   "last_general": {
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 견조한 상승세를 보이며 정상 변동 범위 내에서 움직이고 있어 특별한 이상 신호는 없어 보입니다. 다만 Broadcom과 Nvidia가 같은 폭(+2.7%)으로 동반 상승한 점은 반도체/AI 섹터 전반의 테마성 자금 유입 가능성을 시사하므로, 개별 종목 이슈보다는 섹터 쏠림 리스크를 함께 참고하시면 좋겠습니다. 매수 계획 자체는 그대로 진행하시되, 체결 시점의 변동성만 가볍게 모니터링하시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1385.36,
+  "fx": 1383.58,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -1136,6 +1136,12 @@
       "date": "2026-09-17",
       "market": "general",
       "comment": "오늘 세 종목 모두 견조한 상승세를 보이며 정상 변동 범위 내에서 움직이고 있어 특별한 이상 신호는 없어 보입니다. 다만 Broadcom과 Nvidia가 같은 폭(+2.7%)으로 동반 상승한 점은 반도체/AI 섹터 전반의 테마성 자금 유입 가능성을 시사하므로, 개별 종목 이슈보다는 섹터 쏠림 리스크를 함께 참고하시면 좋겠습니다. 매수 계획 자체는 그대로 진행하시되, 체결 시점의 변동성만 가볍게 모니터링하시길 권합니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-09-18",
+      "market": "isa",
+      "comment": "오늘은 로봇·양자컴퓨팅 테마 모두 상승 흐름을 보이고 있어 투자 심리가 우호적인 편입니다. 다만 SOL 미국양자컴퓨팅TOP10의 +5.7% 상승은 변동성이 큰 편이니, 단기 과열 가능성을 염두에 두고 분할 매수 관점에서 접근하시는 것이 좋겠습니다. 매수 계획 자체는 그대로 진행하시되, 체결 시점의 스프레드나 추가 급등락 여부는 한 번 더 확인해보시길 권합니다.",
       "dip_note": null
     }
   ],
