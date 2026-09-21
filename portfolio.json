@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 6555.0,
-    "0023A0.KS": 4500.0,
+    "0038A0.KS": 9160.0,
+    "0023A0.KS": 7995.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -73,9 +73,9 @@
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 24510.0,
-      "krw_price": 24510,
-      "krw_price_gross": 24510,
+      "current": 24505.0,
+      "krw_price": 24505,
+      "krw_price_gross": 24505,
       "ma20_krw": 23305
     },
     "AVGO": {
@@ -83,66 +83,66 @@
       "account": "general",
       "type": "stock",
       "current": 357.61,
-      "krw_price": 493726,
-      "krw_price_gross": 495211,
-      "ma20_krw": 496084
+      "krw_price": 489219,
+      "krw_price_gross": 490691,
+      "ma20_krw": 491555
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 177.64,
-      "krw_price": 245254,
-      "krw_price_gross": 245992,
-      "ma20_krw": 242846
+      "krw_price": 243016,
+      "krw_price_gross": 243747,
+      "ma20_krw": 240629
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 222.27,
-      "krw_price": 306872,
-      "krw_price_gross": 307795,
-      "ma20_krw": 301968
+      "krw_price": 304071,
+      "krw_price_gross": 304986,
+      "ma20_krw": 299212
     }
   },
-  "valuation_date": "2026-09-21T04:45",
+  "valuation_date": "2026-09-21T09:10",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-09-18",
+    "date": "2026-09-21",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 15240.0,
-        "krw_price": 15240,
-        "change": 1.97,
+        "current": 15395.0,
+        "krw_price": 15395,
+        "change": 1.02,
         "signal": "",
         "shares": 1,
-        "spent": 15240,
-        "carry": 6555,
-        "available": 21795,
+        "spent": 15395,
+        "carry": 9160,
+        "available": 24555,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 24755.0,
-        "krw_price": 24755,
-        "change": 5.66,
-        "signal": "",
+        "current": 24505.0,
+        "krw_price": 24505,
+        "change": -1.01,
+        "signal": "🟡 소폭 하락",
         "shares": 1,
-        "spent": 24755,
-        "carry": 4500,
-        "available": 29255,
+        "spent": 24505,
+        "carry": 7995,
+        "available": 32500,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 로봇·양자컴퓨팅 테마 모두 상승 흐름을 보이고 있어 투자 심리가 우호적인 편입니다. 다만 SOL 미국양자컴퓨팅TOP10의 +5.7% 상승은 변동성이 큰 편이니, 단기 과열 가능성을 염두에 두고 분할 매수 관점에서 접근하시는 것이 좋겠습니다. 매수 계획 자체는 그대로 진행하시되, 체결 시점의 스프레드나 추가 급등락 여부는 한 번 더 확인해보시길 권합니다.",
+    "ai_comment": "오늘은 로봇 테마(KODEX 미국휴머노이드로봇)가 안정적인 흐름을 보이는 반면, 양자컴퓨팅 테마(SOL 미국양자컴퓨팅TOP10)는 MA5를 하회하며 단기 조정 신호를 보이고 있어 변동성에 유의할 필요가 있습니다. 계획된 매수는 그대로 진행하되, 양자컴퓨팅 종목은 추가 하락 시 분할 매수 관점에서 진입가를 재점검하시는 것을 권장드립니다. 전반적으로 두 테마 모두 해외 지수 및 관련 정책 뉴스에 민감하니 장중 변동성 체크는 필수입니다.",
     "dip_note": null
   },
   "last_general": {
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일 대비 정상 범위 내에서 움직여 특별한 급등락 신호는 없는 안정적인 흐름입니다. 브로드컴이 +2.1%로 상대적으로 강세를 보이고 있어 계획대로 매수 진행하시되, 실행 시점의 스프레드나 급격한 호가 변동은 한번 더 확인하시는 게 좋겠습니다. 팔란티어와 엔비디아는 거의 보합권이라 특이사항 없이 계획대로 진행하셔도 무리 없어 보입니다.",
     "dip_note": null
   },
-  "fx": 1384.78,
+  "fx": 1372.14,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -1162,6 +1162,12 @@
       "date": "2026-09-18",
       "market": "general",
       "comment": "오늘은 세 종목 모두 전일 대비 정상 범위 내에서 움직여 특별한 급등락 신호는 없는 안정적인 흐름입니다. 브로드컴이 +2.1%로 상대적으로 강세를 보이고 있어 계획대로 매수 진행하시되, 실행 시점의 스프레드나 급격한 호가 변동은 한번 더 확인하시는 게 좋겠습니다. 팔란티어와 엔비디아는 거의 보합권이라 특이사항 없이 계획대로 진행하셔도 무리 없어 보입니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-09-21",
+      "market": "isa",
+      "comment": "오늘은 로봇 테마(KODEX 미국휴머노이드로봇)가 안정적인 흐름을 보이는 반면, 양자컴퓨팅 테마(SOL 미국양자컴퓨팅TOP10)는 MA5를 하회하며 단기 조정 신호를 보이고 있어 변동성에 유의할 필요가 있습니다. 계획된 매수는 그대로 진행하되, 양자컴퓨팅 종목은 추가 하락 시 분할 매수 관점에서 진입가를 재점검하시는 것을 권장드립니다. 전반적으로 두 테마 모두 해외 지수 및 관련 정책 뉴스에 민감하니 장중 변동성 체크는 필수입니다.",
       "dip_note": null
     }
   ],
