@@ -64,49 +64,22 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15395.0,
-      "krw_price": 15395,
-      "krw_price_gross": 15395,
-      "ma20_krw": 14721
+      "current": 15650.0,
+      "krw_price": 15650,
+      "krw_price_gross": 15650,
+      "ma20_krw": 14765
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 24505.0,
-      "krw_price": 24505,
-      "krw_price_gross": 24505,
-      "ma20_krw": 23305
-    },
-    "AVGO": {
-      "name": "Broadcom",
-      "account": "general",
-      "type": "stock",
-      "current": 362.66,
-      "krw_price": 497306,
-      "krw_price_gross": 498803,
-      "ma20_krw": 492326
-    },
-    "PLTR": {
-      "name": "Palantir",
-      "account": "general",
-      "type": "stock",
-      "current": 183.09,
-      "krw_price": 251067,
-      "krw_price_gross": 251822,
-      "ma20_krw": 241417
-    },
-    "NVDA": {
-      "name": "Nvidia",
-      "account": "general",
-      "type": "stock",
-      "current": 227.38,
-      "krw_price": 311800,
-      "krw_price_gross": 312738,
-      "ma20_krw": 300807
+      "current": 24655.0,
+      "krw_price": 24655,
+      "krw_price_gross": 24655,
+      "ma20_krw": 23324
     }
   },
-  "valuation_date": "2026-09-21T22:11",
+  "valuation_date": "2026-09-22T00:54",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +167,7 @@
     "ai_comment": "세 종목 모두 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 이상 신호는 없습니다. 다만 팔란티어와 엔비디아처럼 변동성이 큰 성장주는 단기 급등 이후 되돌림이 나올 수 있으니, 매수 후에도 포지션 크기와 전체 포트폴리오 비중 관리에 유의하시기 바랍니다. 이는 참고 의견일 뿐이며 최종 매수 계획은 그대로 진행하시면 됩니다.",
     "dip_note": null
   },
-  "fx": 1375.4,
+  "fx": 1359.78,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -608,13 +581,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-09-22",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5454545,
+    "required_monthly_remaining": 5464481,
     "daily_rate": null
   },
   "daily_comment_history": [
