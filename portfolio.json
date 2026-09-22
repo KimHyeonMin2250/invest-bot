@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 363.91,
-      "krw_price": 492868,
-      "krw_price_gross": 494351,
-      "ma20_krw": 485813
+      "current": 364.24,
+      "krw_price": 493034,
+      "krw_price_gross": 494517,
+      "ma20_krw": 485549
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 184.57,
-      "krw_price": 249977,
-      "krw_price_gross": 250729,
-      "ma20_krw": 239030
+      "current": 184.93,
+      "krw_price": 250317,
+      "krw_price_gross": 251070,
+      "ma20_krw": 238913
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 229.22,
-      "krw_price": 310446,
-      "krw_price_gross": 311380,
-      "ma20_krw": 298520
+      "current": 229.17,
+      "krw_price": 310199,
+      "krw_price_gross": 311133,
+      "ma20_krw": 298341
     }
   },
-  "valuation_date": "2026-09-22T17:36",
+  "valuation_date": "2026-09-22T18:10",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,17 +146,17 @@
     "dip_note": "**SOL 미국양자컴퓨팅TOP10**: -1.2% 하락에도 현재가(24215)가 5일평균(23966)과 20일평균(23302)을 모두 상회하고 있어, 최근 상승 추세 속 단기 조정 성격에 가까워 보입니다. 다만 이는 특정 종목이 아닌 테마 ETF이므로 개별 악재보다는 양자컴퓨팅 섹터 전반의 변동성일 가능성이 높으나, 구체적"
   },
   "last_general": {
-    "date": "2026-09-21",
+    "date": "2026-09-22",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 363.55,
-        "krw_price": 499907,
-        "change": 1.66,
+        "current": 364.24,
+        "krw_price": 494517,
+        "change": 0.44,
         "signal": "",
-        "shares": 0.024,
+        "shares": 0.0243,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -166,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 181.97,
-        "krw_price": 250221,
-        "change": 2.44,
+        "current": 184.93,
+        "krw_price": 251070,
+        "change": 1.0,
         "signal": "",
-        "shares": 0.036,
+        "shares": 0.0358,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 227.42,
-        "krw_price": 312718,
-        "change": 2.32,
+        "current": 229.17,
+        "krw_price": 311133,
+        "change": 0.79,
         "signal": "",
-        "shares": 0.0288,
+        "shares": 0.0289,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "세 종목 모두 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 이상 신호는 없습니다. 다만 팔란티어와 엔비디아처럼 변동성이 큰 성장주는 단기 급등 이후 되돌림이 나올 수 있으니, 매수 후에도 포지션 크기와 전체 포트폴리오 비중 관리에 유의하시기 바랍니다. 이는 참고 의견일 뿐이며 최종 매수 계획은 그대로 진행하시면 됩니다.",
+    "ai_comment": "오늘 세 종목 모두 완만한 상승세를 보이며 정상 변동 범위 내에서 움직이고 있어 특별한 이상 신호는 없어 보입니다. 다만 Palantir가 상대적으로 변동폭이 큰 편이니 단기 변동성 확대 가능성은 염두에 두시고, 반도체·AI 관련주 전반의 매크로 이슈(금리, 실적 발표 일정 등)는 계속 모니터링하시는 게 좋겠습니다. 계획된 매수는 그대로 진행하되 포지션 크기 관리에 유의하세요.",
     "dip_note": null
   },
-  "fx": 1358.45,
+  "fx": 1357.65,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -1188,6 +1188,12 @@
       "market": "isa",
       "comment": "오늘 매수 계획은 참고하되, 시장 상황상 로봇 관련 ETF는 전일 대비 완만한 상승세로 특별한 변동성은 없어 보이나, 양자컴퓨팅 ETF는 MA5를 하회하며 단기 약세 흐름이 나타나고 있어 진입 시점에서의 추가 하락 가능성을 염두에 두시는 것이 좋습니다. 특히 양자컴퓨팅 테마는 변동성이 큰 편이므로 매수 후에도 단기적인 가격 흐름을 주시하며 리스크 관리를 병행하시길 권장드립니다.",
       "dip_note": "**SOL 미국양자컴퓨팅TOP10**: -1.2% 하락에도 현재가(24215)가 5일평균(23966)과 20일평균(23302)을 모두 상회하고 있어, 최근 상승 추세 속 단기 조정 성격에 가까워 보입니다. 다만 이는 특정 종목이 아닌 테마 ETF이므로 개별 악재보다는 양자컴퓨팅 섹터 전반의 변동성일 가능성이 높으나, 구체적"
+    },
+    {
+      "date": "2026-09-22",
+      "market": "general",
+      "comment": "오늘 세 종목 모두 완만한 상승세를 보이며 정상 변동 범위 내에서 움직이고 있어 특별한 이상 신호는 없어 보입니다. 다만 Palantir가 상대적으로 변동폭이 큰 편이니 단기 변동성 확대 가능성은 염두에 두시고, 반도체·AI 관련주 전반의 매크로 이슈(금리, 실적 발표 일정 등)는 계속 모니터링하시는 게 좋겠습니다. 계획된 매수는 그대로 진행하되 포지션 크기 관리에 유의하세요.",
+      "dip_note": null
     }
   ],
   "rebalance_suggestions": [],
