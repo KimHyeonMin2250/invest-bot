@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 9160.0,
-    "0023A0.KS": 7995.0,
+    "0038A0.KS": 11740.0,
+    "0023A0.KS": 11780.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -64,86 +64,86 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15425.0,
-      "krw_price": 15425,
-      "krw_price_gross": 15425,
-      "ma20_krw": 14754
+      "current": 15420.0,
+      "krw_price": 15420,
+      "krw_price_gross": 15420,
+      "ma20_krw": 14753
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 24265.0,
-      "krw_price": 24265,
-      "krw_price_gross": 24265,
-      "ma20_krw": 23304
+      "current": 24215.0,
+      "krw_price": 24215,
+      "krw_price_gross": 24215,
+      "ma20_krw": 23302
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 362.66,
-      "krw_price": 490548,
-      "krw_price_gross": 492024,
-      "ma20_krw": 484798
+      "krw_price": 490610,
+      "krw_price_gross": 492086,
+      "ma20_krw": 484859
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 183.09,
-      "krw_price": 247655,
-      "krw_price_gross": 248400,
-      "ma20_krw": 238136
+      "krw_price": 247686,
+      "krw_price_gross": 248431,
+      "ma20_krw": 238166
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 227.38,
-      "krw_price": 307563,
-      "krw_price_gross": 308489,
-      "ma20_krw": 296720
+      "krw_price": 307602,
+      "krw_price_gross": 308527,
+      "ma20_krw": 296757
     }
   },
-  "valuation_date": "2026-09-22T06:03",
+  "valuation_date": "2026-09-22T08:42",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-09-21",
+    "date": "2026-09-22",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 15395.0,
-        "krw_price": 15395,
-        "change": 1.02,
+        "current": 15420.0,
+        "krw_price": 15420,
+        "change": 0.16,
         "signal": "",
         "shares": 1,
-        "spent": 15395,
-        "carry": 9160,
-        "available": 24555,
+        "spent": 15420,
+        "carry": 11740,
+        "available": 27160,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 24505.0,
-        "krw_price": 24505,
-        "change": -1.01,
+        "current": 24215.0,
+        "krw_price": 24215,
+        "change": -1.18,
         "signal": "🟡 소폭 하락",
         "shares": 1,
-        "spent": 24505,
-        "carry": 7995,
-        "available": 32500,
+        "spent": 24215,
+        "carry": 11780,
+        "available": 35995,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 로봇 테마(KODEX 미국휴머노이드로봇)가 안정적인 흐름을 보이는 반면, 양자컴퓨팅 테마(SOL 미국양자컴퓨팅TOP10)는 MA5를 하회하며 단기 조정 신호를 보이고 있어 변동성에 유의할 필요가 있습니다. 계획된 매수는 그대로 진행하되, 양자컴퓨팅 종목은 추가 하락 시 분할 매수 관점에서 진입가를 재점검하시는 것을 권장드립니다. 전반적으로 두 테마 모두 해외 지수 및 관련 정책 뉴스에 민감하니 장중 변동성 체크는 필수입니다.",
-    "dip_note": null
+    "ai_comment": "오늘 매수 계획은 참고하되, 시장 상황상 로봇 관련 ETF는 전일 대비 완만한 상승세로 특별한 변동성은 없어 보이나, 양자컴퓨팅 ETF는 MA5를 하회하며 단기 약세 흐름이 나타나고 있어 진입 시점에서의 추가 하락 가능성을 염두에 두시는 것이 좋습니다. 특히 양자컴퓨팅 테마는 변동성이 큰 편이므로 매수 후에도 단기적인 가격 흐름을 주시하며 리스크 관리를 병행하시길 권장드립니다.",
+    "dip_note": "**SOL 미국양자컴퓨팅TOP10**: -1.2% 하락에도 현재가(24215)가 5일평균(23966)과 20일평균(23302)을 모두 상회하고 있어, 최근 상승 추세 속 단기 조정 성격에 가까워 보입니다. 다만 이는 특정 종목이 아닌 테마 ETF이므로 개별 악재보다는 양자컴퓨팅 섹터 전반의 변동성일 가능성이 높으나, 구체적"
   },
   "last_general": {
     "date": "2026-09-21",
@@ -194,7 +194,7 @@
     "ai_comment": "세 종목 모두 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 이상 신호는 없습니다. 다만 팔란티어와 엔비디아처럼 변동성이 큰 성장주는 단기 급등 이후 되돌림이 나올 수 있으니, 매수 후에도 포지션 크기와 전체 포트폴리오 비중 관리에 유의하시기 바랍니다. 이는 참고 의견일 뿐이며 최종 매수 계획은 그대로 진행하시면 됩니다.",
     "dip_note": null
   },
-  "fx": 1356.71,
+  "fx": 1356.88,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -1182,6 +1182,12 @@
       "market": "general",
       "comment": "세 종목 모두 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 이상 신호는 없습니다. 다만 팔란티어와 엔비디아처럼 변동성이 큰 성장주는 단기 급등 이후 되돌림이 나올 수 있으니, 매수 후에도 포지션 크기와 전체 포트폴리오 비중 관리에 유의하시기 바랍니다. 이는 참고 의견일 뿐이며 최종 매수 계획은 그대로 진행하시면 됩니다.",
       "dip_note": null
+    },
+    {
+      "date": "2026-09-22",
+      "market": "isa",
+      "comment": "오늘 매수 계획은 참고하되, 시장 상황상 로봇 관련 ETF는 전일 대비 완만한 상승세로 특별한 변동성은 없어 보이나, 양자컴퓨팅 ETF는 MA5를 하회하며 단기 약세 흐름이 나타나고 있어 진입 시점에서의 추가 하락 가능성을 염두에 두시는 것이 좋습니다. 특히 양자컴퓨팅 테마는 변동성이 큰 편이므로 매수 후에도 단기적인 가격 흐름을 주시하며 리스크 관리를 병행하시길 권장드립니다.",
+      "dip_note": "**SOL 미국양자컴퓨팅TOP10**: -1.2% 하락에도 현재가(24215)가 5일평균(23966)과 20일평균(23302)을 모두 상회하고 있어, 최근 상승 추세 속 단기 조정 성격에 가까워 보입니다. 다만 이는 특정 종목이 아닌 테마 ETF이므로 개별 악재보다는 양자컴퓨팅 섹터 전반의 변동성일 가능성이 높으나, 구체적"
     }
   ],
   "rebalance_suggestions": [],
