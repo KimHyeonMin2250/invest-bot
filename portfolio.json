@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 364.24,
-      "krw_price": 493034,
-      "krw_price_gross": 494517,
-      "ma20_krw": 485549
+      "current": 364.54,
+      "krw_price": 492248,
+      "krw_price_gross": 493729,
+      "ma20_krw": 484403
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 184.93,
-      "krw_price": 250317,
-      "krw_price_gross": 251070,
-      "ma20_krw": 238913
+      "current": 184.99,
+      "krw_price": 249797,
+      "krw_price_gross": 250549,
+      "ma20_krw": 238343
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 229.17,
-      "krw_price": 310199,
-      "krw_price_gross": 311133,
-      "ma20_krw": 298341
+      "current": 228.87,
+      "krw_price": 309049,
+      "krw_price_gross": 309979,
+      "ma20_krw": 297605
     }
   },
-  "valuation_date": "2026-09-22T18:10",
+  "valuation_date": "2026-09-22T20:27",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 완만한 상승세를 보이며 정상 변동 범위 내에서 움직이고 있어 특별한 이상 신호는 없어 보입니다. 다만 Palantir가 상대적으로 변동폭이 큰 편이니 단기 변동성 확대 가능성은 염두에 두시고, 반도체·AI 관련주 전반의 매크로 이슈(금리, 실적 발표 일정 등)는 계속 모니터링하시는 게 좋겠습니다. 계획된 매수는 그대로 진행하되 포지션 크기 관리에 유의하세요.",
     "dip_note": null
   },
-  "fx": 1357.65,
+  "fx": 1354.39,
   "asset_history": [
     {
       "date": "2026-07-16",
