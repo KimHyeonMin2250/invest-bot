@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 362.66,
-      "krw_price": 490248,
-      "krw_price_gross": 491723,
-      "ma20_krw": 484502
+      "current": 363.91,
+      "krw_price": 492868,
+      "krw_price_gross": 494351,
+      "ma20_krw": 485813
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 183.09,
-      "krw_price": 247503,
-      "krw_price_gross": 248248,
-      "ma20_krw": 237991
+      "current": 184.57,
+      "krw_price": 249977,
+      "krw_price_gross": 250729,
+      "ma20_krw": 239030
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 227.38,
-      "krw_price": 307375,
-      "krw_price_gross": 308300,
-      "ma20_krw": 296538
+      "current": 229.22,
+      "krw_price": 310446,
+      "krw_price_gross": 311380,
+      "ma20_krw": 298520
     }
   },
-  "valuation_date": "2026-09-22T11:27",
+  "valuation_date": "2026-09-22T17:36",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "세 종목 모두 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 이상 신호는 없습니다. 다만 팔란티어와 엔비디아처럼 변동성이 큰 성장주는 단기 급등 이후 되돌림이 나올 수 있으니, 매수 후에도 포지션 크기와 전체 포트폴리오 비중 관리에 유의하시기 바랍니다. 이는 참고 의견일 뿐이며 최종 매수 계획은 그대로 진행하시면 됩니다.",
     "dip_note": null
   },
-  "fx": 1355.88,
+  "fx": 1358.45,
   "asset_history": [
     {
       "date": "2026-07-16",
