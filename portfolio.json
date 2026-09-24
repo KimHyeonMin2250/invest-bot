@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 354.99,
-      "krw_price": 484934,
-      "krw_price_gross": 486393,
-      "ma20_krw": 489968
+      "current": 350.06,
+      "krw_price": 477320,
+      "krw_price_gross": 478756,
+      "ma20_krw": 488734
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 191.79,
-      "krw_price": 261995,
-      "krw_price_gross": 262783,
-      "ma20_krw": 242421
+      "current": 192.64,
+      "krw_price": 262672,
+      "krw_price_gross": 263462,
+      "ma20_krw": 243007
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 225.51,
-      "krw_price": 308058,
-      "krw_price_gross": 308985,
-      "ma20_krw": 301937
+      "current": 224.15,
+      "krw_price": 305637,
+      "krw_price_gross": 306556,
+      "ma20_krw": 302386
     }
   },
-  "valuation_date": "2026-09-24T09:30",
+  "valuation_date": "2026-09-24T17:50",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 브로드컴이 소폭 조정받는 가운데 팔란티어가 강세를 보이는 전형적인 순환매 장세로, 세 종목 모두 정상 변동성 범위 안에 있어 계획대로 매수 진행에 무리는 없어 보입니다. 다만 팔란티어의 상대적 강세는 밸류에이션 부담으로 이어질 수 있으니 비중 배분 시 체크해두시고, 엔비디아는 반도체 섹터 전반의 방향성을 계속 참고하시면 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1370.16,
+  "fx": 1367.64,
   "asset_history": [
     {
       "date": "2026-07-16",
