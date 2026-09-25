@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 1000.0,
-    "0023A0.KS": 10570.0,
+    "0038A0.KS": 3420.0,
+    "0023A0.KS": 22570.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -83,35 +83,35 @@
       "account": "general",
       "type": "stock",
       "current": 350.36,
-      "krw_price": 475235,
-      "krw_price_gross": 476665,
-      "ma20_krw": 486203
+      "krw_price": 472898,
+      "krw_price_gross": 474321,
+      "ma20_krw": 483812
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 192.59,
-      "krw_price": 261233,
-      "krw_price_gross": 262019,
-      "ma20_krw": 241735
+      "krw_price": 259948,
+      "krw_price_gross": 260730,
+      "ma20_krw": 240546
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 224.58,
-      "krw_price": 304624,
-      "krw_price_gross": 305541,
-      "ma20_krw": 300836
+      "krw_price": 303127,
+      "krw_price_gross": 304039,
+      "ma20_krw": 299357
     }
   },
-  "valuation_date": "2026-09-25T04:45",
+  "valuation_date": "2026-09-25T08:58",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-09-24",
+    "date": "2026-09-25",
     "actions": [
       {
         "ticker": "0038A0.KS",
@@ -121,10 +121,10 @@
         "krw_price": 15580,
         "change": 1.04,
         "signal": "",
-        "shares": 2,
-        "spent": 31160,
-        "carry": 1000,
-        "available": 32160,
+        "shares": 1,
+        "spent": 15580,
+        "carry": 3420,
+        "available": 19000,
         "skipped_added": 0
       },
       {
@@ -135,14 +135,14 @@
         "krw_price": 25210,
         "change": 4.11,
         "signal": "",
-        "shares": 1,
-        "spent": 25210,
-        "carry": 10570,
-        "available": 35780,
+        "shares": 0,
+        "spent": 0,
+        "carry": 22570,
+        "available": 22570,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "**시장 코멘트 및 참고 의견**\n\n두 종목 모두 테마성 강한 성장 섹터(로봇·퀀텀컴퓨팅)로, SOL 양자컴퓨팅의 +4.1% 상승은 정상 범위 내이지만 단기 변동성이 큰 편이라 진입 타이밍에 따른 체결가 차이에 유의하시기 바랍니다. 휴머노이드로봇은 상대적으로 안정적인 흐름을 보이고 있으나, 두 테마 모두 글로벌 기술주 및 관련 정책 이슈에 민감하게 반응할 수 있으니 매수 후에도 관련 뉴스 흐름은 지속적으로 확인하시는 것이 좋겠습니다.",
+    "ai_comment": "오늘 매수 계획은 그대로 진행하셔도 될 것 같습니다. 다만 SOL 미국양자컴퓨팅TOP10이 +4.1%로 휴머노이드로봇 대비 상승폭이 커서 단기 변동성이 높은 테마인 만큼, 진입 후에도 일중 가격 흐름을 한 번 더 확인하시는 게 좋습니다. 두 종목 모두 테마성 ETF라 전체 지수보다 개별 이슈나 관련 종목 뉴스에 더 민감하게 반응할 수 있다는 점 참고하시기 바랍니다.",
     "dip_note": null
   },
   "last_general": {
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 등락폭이 크지 않아 특별한 변동성 이벤트 없이 안정적인 흐름을 보이고 있습니다. 다만 브로드컴의 하락폭이 상대적으로 크니 반도체 섹터 전반의 뉴스나 실적 발표 일정이 있는지 확인해보시면 좋겠습니다. 계획대로 매수 진행하시되, 체결 시점의 스프레드나 거래량은 한 번 더 체크하시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1360.5,
+  "fx": 1353.81,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -1238,6 +1238,12 @@
       "date": "2026-09-24",
       "market": "general",
       "comment": "오늘 세 종목 모두 등락폭이 크지 않아 특별한 변동성 이벤트 없이 안정적인 흐름을 보이고 있습니다. 다만 브로드컴의 하락폭이 상대적으로 크니 반도체 섹터 전반의 뉴스나 실적 발표 일정이 있는지 확인해보시면 좋겠습니다. 계획대로 매수 진행하시되, 체결 시점의 스프레드나 거래량은 한 번 더 체크하시길 권합니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-09-25",
+      "market": "isa",
+      "comment": "오늘 매수 계획은 그대로 진행하셔도 될 것 같습니다. 다만 SOL 미국양자컴퓨팅TOP10이 +4.1%로 휴머노이드로봇 대비 상승폭이 커서 단기 변동성이 높은 테마인 만큼, 진입 후에도 일중 가격 흐름을 한 번 더 확인하시는 게 좋습니다. 두 종목 모두 테마성 ETF라 전체 지수보다 개별 이슈나 관련 종목 뉴스에 더 민감하게 반응할 수 있다는 점 참고하시기 바랍니다.",
       "dip_note": null
     }
   ],
