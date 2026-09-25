@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 352.87,
-      "krw_price": 477144,
-      "krw_price_gross": 478580,
-      "ma20_krw": 483468
+      "current": 352.94,
+      "krw_price": 476760,
+      "krw_price_gross": 478195,
+      "ma20_krw": 482988
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 191.8,
-      "krw_price": 259348,
-      "krw_price_gross": 260129,
-      "ma20_krw": 241377
+      "current": 191.53,
+      "krw_price": 258724,
+      "krw_price_gross": 259502,
+      "ma20_krw": 241116
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 224.75,
-      "krw_price": 303903,
-      "krw_price_gross": 304817,
-      "ma20_krw": 299696
+      "current": 224.2,
+      "krw_price": 302855,
+      "krw_price_gross": 303766,
+      "ma20_krw": 299358
     }
   },
-  "valuation_date": "2026-09-25T17:54",
+  "valuation_date": "2026-09-25T18:45",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,15 +146,15 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-09-24",
+    "date": "2026-09-25",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 349.8,
-        "krw_price": 478666,
-        "change": -1.46,
+        "current": 352.94,
+        "krw_price": 478195,
+        "change": 0.74,
         "signal": "",
         "shares": 0.0251,
         "spent": 12000,
@@ -166,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 192.71,
-        "krw_price": 263711,
-        "change": 0.48,
+        "current": 191.53,
+        "krw_price": 259502,
+        "change": -0.55,
         "signal": "",
-        "shares": 0.0341,
+        "shares": 0.0347,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 223.96,
-        "krw_price": 306470,
-        "change": -0.69,
+        "current": 224.2,
+        "krw_price": 303766,
+        "change": -0.17,
         "signal": "",
-        "shares": 0.0294,
+        "shares": 0.0296,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 세 종목 모두 등락폭이 크지 않아 특별한 변동성 이벤트 없이 안정적인 흐름을 보이고 있습니다. 다만 브로드컴의 하락폭이 상대적으로 크니 반도체 섹터 전반의 뉴스나 실적 발표 일정이 있는지 확인해보시면 좋겠습니다. 계획대로 매수 진행하시되, 체결 시점의 스프레드나 거래량은 한 번 더 체크하시길 권합니다.",
+    "ai_comment": "오늘 세 종목 모두 등락폭이 크지 않은 정상 변동성 범위 안에서 움직이고 있어 특별한 이상 신호는 없어 보입니다. 다만 팔란티어와 엔비디아가 소폭 약세인 만큼 반도체·AI 관련 섹터 전반의 투자심리 변화는 없는지 함께 체크해보시면 좋겠습니다. 계획대로 매수 진행하시되, 체결 시점의 스프레드나 거래량 정도는 한 번 더 확인하시는 걸 권장드립니다.",
     "dip_note": null
   },
-  "fx": 1356.25,
+  "fx": 1354.89,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -646,12 +646,6 @@
     "daily_rate": null
   },
   "daily_comment_history": [
-    {
-      "date": "2026-07-16",
-      "market": "general",
-      "comment": "오늘 세 종목 모두 하락했지만 정상 변동성 범위 내에서 움직이고 있어 계획된 매수를 유지해도 무리는 없어 보입니다. 다만 Broadcom과 Nvidia는 반도체 섹터 전반의 조정 가능성을 반영할 수 있으니, 매수 후에도 섹터 전체 뉴스나 추가 하락 흐름은 주시하시는 게 좋겠습니다.",
-      "dip_note": null
-    },
     {
       "date": "2026-07-17",
       "market": "isa",
@@ -1244,6 +1238,12 @@
       "date": "2026-09-25",
       "market": "isa",
       "comment": "오늘 매수 계획은 그대로 진행하셔도 될 것 같습니다. 다만 SOL 미국양자컴퓨팅TOP10이 +4.1%로 휴머노이드로봇 대비 상승폭이 커서 단기 변동성이 높은 테마인 만큼, 진입 후에도 일중 가격 흐름을 한 번 더 확인하시는 게 좋습니다. 두 종목 모두 테마성 ETF라 전체 지수보다 개별 이슈나 관련 종목 뉴스에 더 민감하게 반응할 수 있다는 점 참고하시기 바랍니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-09-25",
+      "market": "general",
+      "comment": "오늘 세 종목 모두 등락폭이 크지 않은 정상 변동성 범위 안에서 움직이고 있어 특별한 이상 신호는 없어 보입니다. 다만 팔란티어와 엔비디아가 소폭 약세인 만큼 반도체·AI 관련 섹터 전반의 투자심리 변화는 없는지 함께 체크해보시면 좋겠습니다. 계획대로 매수 진행하시되, 체결 시점의 스프레드나 거래량 정도는 한 번 더 확인하시는 걸 권장드립니다.",
       "dip_note": null
     }
   ],
