@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 352.81,
-      "krw_price": 478203,
-      "krw_price_gross": 479642,
-      "ma20_krw": 484619
+      "current": 349.57,
+      "krw_price": 474125,
+      "krw_price_gross": 475552,
+      "ma20_krw": 483681
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 189.67,
-      "krw_price": 257081,
-      "krw_price_gross": 257854,
-      "ma20_krw": 241809
+      "current": 187.48,
+      "krw_price": 254281,
+      "krw_price_gross": 255046,
+      "ma20_krw": 242050
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 225.07,
-      "krw_price": 305062,
-      "krw_price_gross": 305980,
-      "ma20_krw": 300433
+      "current": 228.86,
+      "krw_price": 310405,
+      "krw_price_gross": 311339,
+      "ma20_krw": 301416
     }
   },
-  "valuation_date": "2026-09-28T11:47",
+  "valuation_date": "2026-09-28T20:05",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 등락폭이 크지 않은 정상 변동성 범위 안에서 움직이고 있어 특별한 이상 신호는 없어 보입니다. 다만 팔란티어와 엔비디아가 소폭 약세인 만큼 반도체·AI 관련 섹터 전반의 투자심리 변화는 없는지 함께 체크해보시면 좋겠습니다. 계획대로 매수 진행하시되, 체결 시점의 스프레드나 거래량 정도는 한 번 더 확인하시는 걸 권장드립니다.",
     "dip_note": null
   },
-  "fx": 1359.49,
+  "fx": 1360.39,
   "asset_history": [
     {
       "date": "2026-07-16",
