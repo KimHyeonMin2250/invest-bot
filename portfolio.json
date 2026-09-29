@@ -64,22 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15400.0,
-      "krw_price": 15400,
-      "krw_price_gross": 15400,
-      "ma20_krw": 14855
+      "current": 15260.0,
+      "krw_price": 15260,
+      "krw_price_gross": 15260,
+      "ma20_krw": 14848
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 23910.0,
-      "krw_price": 23910,
-      "krw_price_gross": 23910,
-      "ma20_krw": 23322
+      "current": 23630.0,
+      "krw_price": 23630,
+      "krw_price_gross": 23630,
+      "ma20_krw": 23308
+    },
+    "AVGO": {
+      "name": "Broadcom",
+      "account": "general",
+      "type": "stock",
+      "current": 349.57,
+      "krw_price": 473111,
+      "krw_price_gross": 474534,
+      "ma20_krw": 482647
+    },
+    "PLTR": {
+      "name": "Palantir",
+      "account": "general",
+      "type": "stock",
+      "current": 187.48,
+      "krw_price": 253737,
+      "krw_price_gross": 254500,
+      "ma20_krw": 241532
+    },
+    "NVDA": {
+      "name": "Nvidia",
+      "account": "general",
+      "type": "stock",
+      "current": 228.86,
+      "krw_price": 309741,
+      "krw_price_gross": 310673,
+      "ma20_krw": 300771
     }
   },
-  "valuation_date": "2026-09-29T00:20",
+  "valuation_date": "2026-09-29T05:53",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -167,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 정상 변동 범위 내에서 움직이고 있어 특별한 이상 신호는 없어 보입니다. 브로드컴과 팔란티어는 소폭 조정, 엔비디아는 강세를 보이고 있어 전반적으로 안정적인 흐름이나, 반도체·AI 관련주 특성상 변동성이 커질 수 있으니 매수 후에도 장중 뉴스나 거시 지표 발표에 따른 급변 가능성은 계속 주시하시는 게 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1359.68,
+  "fx": 1357.48,
   "asset_history": [
     {
       "date": "2026-07-16",
