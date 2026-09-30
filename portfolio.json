@@ -67,46 +67,46 @@
       "current": 15295.0,
       "krw_price": 15295,
       "krw_price_gross": 15295,
-      "ma20_krw": 14850
+      "ma20_krw": 14883
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 23735.0,
-      "krw_price": 23735,
-      "krw_price_gross": 23735,
-      "ma20_krw": 23313
+      "current": 23740.0,
+      "krw_price": 23740,
+      "krw_price_gross": 23740,
+      "ma20_krw": 23340
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 355.1,
-      "krw_price": 479051,
-      "krw_price_gross": 480493,
-      "ma20_krw": 480114
+      "krw_price": 480177,
+      "krw_price_gross": 481622,
+      "ma20_krw": 481242
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 186.97,
-      "krw_price": 252234,
-      "krw_price_gross": 252993,
-      "ma20_krw": 240796
+      "krw_price": 252827,
+      "krw_price_gross": 253587,
+      "ma20_krw": 241362
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 227.21,
-      "krw_price": 306520,
-      "krw_price_gross": 307442,
-      "ma20_krw": 300255
+      "krw_price": 307240,
+      "krw_price_gross": 308165,
+      "ma20_krw": 300961
     }
   },
-  "valuation_date": "2026-09-29T22:33",
+  "valuation_date": "2026-09-30T01:29",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 등락폭이 크지 않은 정상 범위 내에서 움직이고 있어 특별한 급변동 리스크는 없어 보입니다. 다만 브로드컴 강세와 팔란티어·엔비디아 약세가 엇갈리는 만큼 AI/반도체 섹터 내 종목별 순환매 가능성을 염두에 두시고, 매수 후에도 장중 변동성은 계속 체크하시는 게 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1353.12,
+  "fx": 1356.3,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -664,13 +664,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-09-30",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5535055,
+    "required_monthly_remaining": 5545287,
     "daily_rate": null
   },
   "daily_comment_history": [
