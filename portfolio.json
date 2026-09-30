@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 2070.0,
-    "0023A0.KS": 14895.0,
+    "0038A0.KS": 4865.0,
+    "0023A0.KS": 3205.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -83,66 +83,66 @@
       "account": "general",
       "type": "stock",
       "current": 355.1,
-      "krw_price": 478715,
-      "krw_price_gross": 480156,
-      "ma20_krw": 479777
+      "krw_price": 479611,
+      "krw_price_gross": 481054,
+      "ma20_krw": 480675
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 186.97,
-      "krw_price": 252057,
-      "krw_price_gross": 252815,
-      "ma20_krw": 240627
+      "krw_price": 252528,
+      "krw_price_gross": 253288,
+      "ma20_krw": 241077
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 227.21,
-      "krw_price": 306305,
-      "krw_price_gross": 307227,
-      "ma20_krw": 300044
+      "krw_price": 306878,
+      "krw_price_gross": 307801,
+      "ma20_krw": 300606
     }
   },
-  "valuation_date": "2026-09-30T07:19",
+  "valuation_date": "2026-09-30T09:53",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-09-29",
+    "date": "2026-09-30",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 15295.0,
-        "krw_price": 15295,
-        "change": -1.1,
-        "signal": "🟡 소폭 하락",
-        "shares": 3,
-        "spent": 45885,
-        "carry": 2070,
-        "available": 47955,
+        "current": 15205.0,
+        "krw_price": 15205,
+        "change": -0.59,
+        "signal": "",
+        "shares": 1,
+        "spent": 15205,
+        "carry": 4865,
+        "available": 20070,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 23735.0,
-        "krw_price": 23735,
-        "change": -1.02,
-        "signal": "🟡 소폭 하락",
+        "current": 23690.0,
+        "krw_price": 23690,
+        "change": -0.19,
+        "signal": "",
         "shares": 1,
-        "spent": 23735,
-        "carry": 14895,
-        "available": 38630,
+        "spent": 23690,
+        "carry": 3205,
+        "available": 26895,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "두 종목 모두 전일대비 소폭 하락하며 5일 이동평균선을 하회하고 있어 단기 조정 국면으로 보입니다. 로봇·양자컴퓨팅 테마는 변동성이 큰 성장주 섹터인 만큼 분할 매수 관점에서 접근하시고, 추가 하락 시 손절 기준선을 미리 정해두시는 것이 좋겠습니다.",
+    "ai_comment": "오늘 두 종목 모두 소폭 하락에 그치며 정상 변동성 범위 내에서 움직이고 있어, 계획된 매수를 진행하기에 무리가 없어 보입니다. 다만 로봇·양자컴퓨팅 테마는 변동성이 큰 성장주 섹터인 만큼 매수 후에도 단기 조정 가능성을 염두에 두고 분할 매수 및 리스크 관리에 유의하시길 권합니다.",
     "dip_note": null
   },
   "last_general": {
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 등락폭이 크지 않은 정상 범위 내에서 움직이고 있어 특별한 급변동 리스크는 없어 보입니다. 다만 브로드컴 강세와 팔란티어·엔비디아 약세가 엇갈리는 만큼 AI/반도체 섹터 내 종목별 순환매 가능성을 염두에 두시고, 매수 후에도 장중 변동성은 계속 체크하시는 게 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1352.17,
+  "fx": 1354.7,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -681,12 +681,6 @@
     "daily_rate": null
   },
   "daily_comment_history": [
-    {
-      "date": "2026-07-21",
-      "market": "isa",
-      "comment": "두 종목 모두 전일 대비 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 이상 신호는 없어 보입니다. 다만 로봇·양자컴퓨팅 테마는 변동성이 큰 편이라 매수 후에도 분할 진입 및 손절 기준을 명확히 해두시는 것이 좋겠습니다. 계획된 매수는 그대로 진행하시되, 장중 급격한 변동 시에는 리밸런싱 여부를 다시 체크해보세요.",
-      "dip_note": null
-    },
     {
       "date": "2026-07-21",
       "market": "general",
@@ -1279,6 +1273,12 @@
       "date": "2026-09-29",
       "market": "general",
       "comment": "오늘 세 종목 모두 등락폭이 크지 않은 정상 범위 내에서 움직이고 있어 특별한 급변동 리스크는 없어 보입니다. 다만 브로드컴 강세와 팔란티어·엔비디아 약세가 엇갈리는 만큼 AI/반도체 섹터 내 종목별 순환매 가능성을 염두에 두시고, 매수 후에도 장중 변동성은 계속 체크하시는 게 좋겠습니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-09-30",
+      "market": "isa",
+      "comment": "오늘 두 종목 모두 소폭 하락에 그치며 정상 변동성 범위 내에서 움직이고 있어, 계획된 매수를 진행하기에 무리가 없어 보입니다. 다만 로봇·양자컴퓨팅 테마는 변동성이 큰 성장주 섹터인 만큼 매수 후에도 단기 조정 가능성을 염두에 두고 분할 매수 및 리스크 관리에 유의하시길 권합니다.",
       "dip_note": null
     }
   ],
