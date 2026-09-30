@@ -64,49 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15295.0,
-      "krw_price": 15295,
-      "krw_price_gross": 15295,
-      "ma20_krw": 14883
+      "current": 15205.0,
+      "krw_price": 15205,
+      "krw_price_gross": 15205,
+      "ma20_krw": 14878
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 23740.0,
-      "krw_price": 23740,
-      "krw_price_gross": 23740,
-      "ma20_krw": 23340
+      "current": 23690.0,
+      "krw_price": 23690,
+      "krw_price_gross": 23690,
+      "ma20_krw": 23337
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 355.1,
-      "krw_price": 480177,
-      "krw_price_gross": 481622,
-      "ma20_krw": 481242
+      "krw_price": 478715,
+      "krw_price_gross": 480156,
+      "ma20_krw": 479777
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 186.97,
-      "krw_price": 252827,
-      "krw_price_gross": 253587,
-      "ma20_krw": 241362
+      "krw_price": 252057,
+      "krw_price_gross": 252815,
+      "ma20_krw": 240627
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 227.21,
-      "krw_price": 307240,
-      "krw_price_gross": 308165,
-      "ma20_krw": 300961
+      "krw_price": 306305,
+      "krw_price_gross": 307227,
+      "ma20_krw": 300044
     }
   },
-  "valuation_date": "2026-09-30T01:29",
+  "valuation_date": "2026-09-30T07:19",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 등락폭이 크지 않은 정상 범위 내에서 움직이고 있어 특별한 급변동 리스크는 없어 보입니다. 다만 브로드컴 강세와 팔란티어·엔비디아 약세가 엇갈리는 만큼 AI/반도체 섹터 내 종목별 순환매 가능성을 염두에 두시고, 매수 후에도 장중 변동성은 계속 체크하시는 게 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1356.3,
+  "fx": 1352.17,
   "asset_history": [
     {
       "date": "2026-07-16",
