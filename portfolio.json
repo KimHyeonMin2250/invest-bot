@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 355.1,
-      "krw_price": 479611,
-      "krw_price_gross": 481054,
-      "ma20_krw": 480675
+      "current": 353.57,
+      "krw_price": 477770,
+      "krw_price_gross": 479208,
+      "ma20_krw": 479859
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 186.97,
-      "krw_price": 252528,
-      "krw_price_gross": 253288,
-      "ma20_krw": 241077
+      "current": 188.18,
+      "krw_price": 254283,
+      "krw_price_gross": 255048,
+      "ma20_krw": 241749
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 227.21,
-      "krw_price": 306878,
-      "krw_price_gross": 307801,
-      "ma20_krw": 300606
+      "current": 230.64,
+      "krw_price": 311658,
+      "krw_price_gross": 312596,
+      "ma20_krw": 301656
     }
   },
-  "valuation_date": "2026-09-30T09:53",
+  "valuation_date": "2026-09-30T18:24",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 등락폭이 크지 않은 정상 범위 내에서 움직이고 있어 특별한 급변동 리스크는 없어 보입니다. 다만 브로드컴 강세와 팔란티어·엔비디아 약세가 엇갈리는 만큼 AI/반도체 섹터 내 종목별 순환매 가능성을 염두에 두시고, 매수 후에도 장중 변동성은 계속 체크하시는 게 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1354.7,
+  "fx": 1355.34,
   "asset_history": [
     {
       "date": "2026-07-16",
