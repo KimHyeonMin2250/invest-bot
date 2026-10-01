@@ -64,22 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15420.0,
-      "krw_price": 15420,
-      "krw_price_gross": 15420,
-      "ma20_krw": 14912
+      "current": 15600.0,
+      "krw_price": 15600,
+      "krw_price_gross": 15600,
+      "ma20_krw": 14920
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 23940.0,
-      "krw_price": 23940,
-      "krw_price_gross": 23940,
-      "ma20_krw": 23370
+      "current": 24285.0,
+      "krw_price": 24285,
+      "krw_price_gross": 24285,
+      "ma20_krw": 23388
+    },
+    "AVGO": {
+      "name": "Broadcom",
+      "account": "general",
+      "type": "stock",
+      "current": 351.19,
+      "krw_price": 476987,
+      "krw_price_gross": 478423,
+      "ma20_krw": 482158
+    },
+    "PLTR": {
+      "name": "Palantir",
+      "account": "general",
+      "type": "stock",
+      "current": 187.05,
+      "krw_price": 254052,
+      "krw_price_gross": 254816,
+      "ma20_krw": 242912
+    },
+    "NVDA": {
+      "name": "Nvidia",
+      "account": "general",
+      "type": "stock",
+      "current": 228.38,
+      "krw_price": 310186,
+      "krw_price_gross": 311120,
+      "ma20_krw": 303049
     }
   },
-  "valuation_date": "2026-10-01T01:29",
+  "valuation_date": "2026-10-01T07:42",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -167,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일 대비 변동폭이 크지 않아 특별한 이상 신호 없이 안정적인 흐름을 보이고 있습니다. Nvidia가 상대적으로 강한 상승세를 보이고 있으나 정상 범위 내이므로 계획대로 진행하되, 실행 시점의 호가 스프레드와 체결가는 한 번 더 확인하시는 것이 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1360.29,
+  "fx": 1362.29,
   "asset_history": [
     {
       "date": "2026-07-16",
