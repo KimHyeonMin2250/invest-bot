@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 346.33,
-      "krw_price": 469347,
-      "krw_price_gross": 470759,
-      "ma20_krw": 479714
+      "current": 343.64,
+      "krw_price": 465935,
+      "krw_price_gross": 467337,
+      "ma20_krw": 479778
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 191.1,
-      "krw_price": 258975,
-      "krw_price_gross": 259755,
-      "ma20_krw": 243838
+      "current": 190.04,
+      "krw_price": 257671,
+      "krw_price_gross": 258447,
+      "ma20_krw": 243892
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 231.32,
-      "krw_price": 313488,
-      "krw_price_gross": 314431,
-      "ma20_krw": 302861
+      "current": 230.86,
+      "krw_price": 313018,
+      "krw_price_gross": 313960,
+      "ma20_krw": 302985
     }
   },
-  "valuation_date": "2026-10-01T19:39",
+  "valuation_date": "2026-10-01T22:56",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 변동폭이 정상 범위 내에 있어 특별한 급등락 리스크 없이 계획대로 매수 진행하기 무난해 보입니다. 다만 팔란티어는 +2.2%로 상대적으로 강한 상승세라 추격 매수 성격이 될 수 있으니 체결가 확인은 한 번 해보시는 게 좋겠습니다. 브로드컴은 소폭 조정 중이라 오히려 평단 관리 측면에서는 나쁘지 않은 타이밍으로 보입니다.",
     "dip_note": null
   },
-  "fx": 1359.26,
+  "fx": 1359.96,
   "asset_history": [
     {
       "date": "2026-07-16",
