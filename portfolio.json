@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 4865.0,
-    "0023A0.KS": 3205.0,
+    "0038A0.KS": 7265.0,
+    "0023A0.KS": 15205.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -83,66 +83,66 @@
       "account": "general",
       "type": "stock",
       "current": 351.19,
-      "krw_price": 476987,
-      "krw_price_gross": 478423,
-      "ma20_krw": 482158
+      "krw_price": 477408,
+      "krw_price_gross": 478844,
+      "ma20_krw": 482582
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 187.05,
-      "krw_price": 254052,
-      "krw_price_gross": 254816,
-      "ma20_krw": 242912
+      "krw_price": 254276,
+      "krw_price_gross": 255041,
+      "ma20_krw": 243126
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 228.38,
-      "krw_price": 310186,
-      "krw_price_gross": 311120,
-      "ma20_krw": 303049
+      "krw_price": 310460,
+      "krw_price_gross": 311394,
+      "ma20_krw": 303316
     }
   },
-  "valuation_date": "2026-10-01T07:42",
+  "valuation_date": "2026-10-01T10:20",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-09-30",
+    "date": "2026-10-01",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 15205.0,
-        "krw_price": 15205,
-        "change": -0.59,
+        "current": 15600.0,
+        "krw_price": 15600,
+        "change": 2.6,
         "signal": "",
         "shares": 1,
-        "spent": 15205,
-        "carry": 4865,
-        "available": 20070,
+        "spent": 15600,
+        "carry": 7265,
+        "available": 22865,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 23690.0,
-        "krw_price": 23690,
-        "change": -0.19,
+        "current": 24285.0,
+        "krw_price": 24285,
+        "change": 2.51,
         "signal": "",
-        "shares": 1,
-        "spent": 23690,
-        "carry": 3205,
-        "available": 26895,
+        "shares": 0,
+        "spent": 0,
+        "carry": 15205,
+        "available": 15205,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 두 종목 모두 소폭 하락에 그치며 정상 변동성 범위 내에서 움직이고 있어, 계획된 매수를 진행하기에 무리가 없어 보입니다. 다만 로봇·양자컴퓨팅 테마는 변동성이 큰 성장주 섹터인 만큼 매수 후에도 단기 조정 가능성을 염두에 두고 분할 매수 및 리스크 관리에 유의하시길 권합니다.",
+    "ai_comment": "오늘 두 종목 모두 전일 대비 2%대 중반 상승으로 정상 범위 내 흐름을 보이고 있어 특별한 이상 신호는 없어 보입니다. 다만 휴머노이드로봇·양자컴퓨팅 테마는 변동성이 큰 섹터인 만큼, 매수 이후에도 추가 급등락 가능성을 염두에 두고 분할 매수나 손절 기준을 미리 정해두시는 것이 좋겠습니다. 참고로 이는 계획 실행에 대한 보조 의견일 뿐, 실제 매수 결정에는 영향을 주지 않습니다.",
     "dip_note": null
   },
   "last_general": {
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일 대비 변동폭이 크지 않아 특별한 이상 신호 없이 안정적인 흐름을 보이고 있습니다. Nvidia가 상대적으로 강한 상승세를 보이고 있으나 정상 범위 내이므로 계획대로 진행하되, 실행 시점의 호가 스프레드와 체결가는 한 번 더 확인하시는 것이 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1362.29,
+  "fx": 1363.49,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -688,12 +688,6 @@
     "daily_rate": null
   },
   "daily_comment_history": [
-    {
-      "date": "2026-07-22",
-      "market": "isa",
-      "comment": "오늘 두 종목 모두 완만한 상승세(+1%대)로 특별한 변동성 없이 정상 범위 내에서 움직이고 있어 계획된 매수를 진행하기에 무리 없는 상황으로 보입니다. 다만 로봇·양자컴퓨팅 테마는 관련 뉴스나 정책 발표에 민감하게 반응할 수 있으니, 매수 후에도 단기 뉴스 흐름은 가볍게 체크하시는 걸 권장드립니다.",
-      "dip_note": null
-    },
     {
       "date": "2026-07-22",
       "market": "general",
@@ -1286,6 +1280,12 @@
       "date": "2026-09-30",
       "market": "general",
       "comment": "오늘은 세 종목 모두 전일 대비 변동폭이 크지 않아 특별한 이상 신호 없이 안정적인 흐름을 보이고 있습니다. Nvidia가 상대적으로 강한 상승세를 보이고 있으나 정상 범위 내이므로 계획대로 진행하되, 실행 시점의 호가 스프레드와 체결가는 한 번 더 확인하시는 것이 좋겠습니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-10-01",
+      "market": "isa",
+      "comment": "오늘 두 종목 모두 전일 대비 2%대 중반 상승으로 정상 범위 내 흐름을 보이고 있어 특별한 이상 신호는 없어 보입니다. 다만 휴머노이드로봇·양자컴퓨팅 테마는 변동성이 큰 섹터인 만큼, 매수 이후에도 추가 급등락 가능성을 염두에 두고 분할 매수나 손절 기준을 미리 정해두시는 것이 좋겠습니다. 참고로 이는 계획 실행에 대한 보조 의견일 뿐, 실제 매수 결정에는 영향을 주지 않습니다.",
       "dip_note": null
     }
   ],
