@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 351.19,
-      "krw_price": 477408,
-      "krw_price_gross": 478844,
-      "ma20_krw": 482582
+      "current": 347.94,
+      "krw_price": 471591,
+      "krw_price_gross": 473011,
+      "ma20_krw": 479893
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 187.05,
-      "krw_price": 254276,
-      "krw_price_gross": 255041,
-      "ma20_krw": 243126
+      "current": 190.08,
+      "krw_price": 257631,
+      "krw_price_gross": 258406,
+      "ma20_krw": 243805
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 228.38,
-      "krw_price": 310460,
-      "krw_price_gross": 311394,
-      "ma20_krw": 303316
+      "current": 232.04,
+      "krw_price": 314503,
+      "krw_price_gross": 315449,
+      "ma20_krw": 302954
     }
   },
-  "valuation_date": "2026-10-01T10:20",
+  "valuation_date": "2026-10-01T18:49",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일 대비 변동폭이 크지 않아 특별한 이상 신호 없이 안정적인 흐름을 보이고 있습니다. Nvidia가 상대적으로 강한 상승세를 보이고 있으나 정상 범위 내이므로 계획대로 진행하되, 실행 시점의 호가 스프레드와 체결가는 한 번 더 확인하시는 것이 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1363.49,
+  "fx": 1359.46,
   "asset_history": [
     {
       "date": "2026-07-16",
