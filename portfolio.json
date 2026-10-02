@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 354.21,
-      "krw_price": 475057,
-      "krw_price_gross": 476487,
-      "ma20_krw": 474420
+      "current": 355.69,
+      "krw_price": 476752,
+      "krw_price_gross": 478186,
+      "ma20_krw": 474230
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 189.26,
-      "krw_price": 253831,
-      "krw_price_gross": 254594,
-      "ma20_krw": 241698
+      "current": 189.52,
+      "krw_price": 254031,
+      "krw_price_gross": 254796,
+      "ma20_krw": 241568
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 234.79,
-      "krw_price": 314894,
-      "krw_price_gross": 315842,
-      "ma20_krw": 300141
+      "current": 233.96,
+      "krw_price": 313583,
+      "krw_price_gross": 314527,
+      "ma20_krw": 299903
     }
   },
-  "valuation_date": "2026-10-02T18:20",
+  "valuation_date": "2026-10-02T19:25",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,17 +146,17 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-10-01",
+    "date": "2026-10-02",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 346.33,
-        "krw_price": 470759,
-        "change": -1.38,
+        "current": 355.69,
+        "krw_price": 478186,
+        "change": 3.51,
         "signal": "",
-        "shares": 0.0255,
+        "shares": 0.0251,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -166,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 191.1,
-        "krw_price": 259755,
-        "change": 2.17,
+        "current": 189.52,
+        "krw_price": 254796,
+        "change": -0.27,
         "signal": "",
-        "shares": 0.0346,
+        "shares": 0.0353,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,9 +180,9 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 231.32,
-        "krw_price": 314431,
-        "change": 1.29,
+        "current": 233.96,
+        "krw_price": 314527,
+        "change": 1.34,
         "signal": "",
         "shares": 0.0286,
         "spent": 9000,
@@ -191,10 +191,10 @@
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 세 종목 모두 변동폭이 정상 범위 내에 있어 특별한 급등락 리스크 없이 계획대로 매수 진행하기 무난해 보입니다. 다만 팔란티어는 +2.2%로 상대적으로 강한 상승세라 추격 매수 성격이 될 수 있으니 체결가 확인은 한 번 해보시는 게 좋겠습니다. 브로드컴은 소폭 조정 중이라 오히려 평단 관리 측면에서는 나쁘지 않은 타이밍으로 보입니다.",
+    "ai_comment": "오늘 세 종목 모두 급변동 없이 정상 범위 내에서 움직이고 있어 매수 계획을 그대로 진행해도 무리는 없어 보입니다. 다만 브로드컴의 +3.5% 상승은 상대적으로 변동폭이 큰 편이니 분할 매수 시 체결가 확인은 한 번 더 해보시는 걸 추천드립니다. 전반적으로 특별한 이상 신호는 없는 평이한 장세로 판단됩니다.",
     "dip_note": null
   },
-  "fx": 1345.21,
+  "fx": 1344.39,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -695,12 +695,6 @@
     "daily_rate": null
   },
   "daily_comment_history": [
-    {
-      "date": "2026-07-23",
-      "market": "general",
-      "comment": "오늘은 세 종목 모두 전일 대비 1.5~2.5% 내외 하락으로 정상 변동 범위 안에 있어, 특별히 이상 신호로 보긴 어렵습니다. 다만 Broadcom·Palantir·Nvidia 모두 반도체/AI 테마에 쏠려 있어 섹터 전체가 동시에 밀리는 흐름이라면 개별 종목 이슈보다는 업종 전반의 투자심리 위축일 가능성이 있으니, 매수 후에도 섹터 뉴스나 금리·기술주 전반 동향은 계속 체크하시는 게 좋겠습니다. 계획된 매수는 그대로 진행하시되, 자금 배분과 리밸런싱 타이밍만 참고해두시면 될 것 같습니다.",
-      "dip_note": null
-    },
     {
       "date": "2026-07-24",
       "market": "isa",
@@ -1293,6 +1287,12 @@
       "date": "2026-10-02",
       "market": "isa",
       "comment": "두 종목 모두 전일 대비 하락하며 5일 이동평균선을 하회하는 모습으로, 단기적으로는 투자심리가 다소 위축된 구간으로 보입니다. 휴머노이드로봇과 양자컴퓨팅 테마 모두 변동성이 큰 성장 테마인 만큼, 분할 매수 관점에서 접근하시되 추가 하락 시 비중 조절 여지를 열어두시는 것이 좋겠습니다. 매수 계획 자체는 규칙에 따라 진행하시돼, 단기 반등 실패 시 손절 기준도 함께 점검해보시길 권합니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-10-02",
+      "market": "general",
+      "comment": "오늘 세 종목 모두 급변동 없이 정상 범위 내에서 움직이고 있어 매수 계획을 그대로 진행해도 무리는 없어 보입니다. 다만 브로드컴의 +3.5% 상승은 상대적으로 변동폭이 큰 편이니 분할 매수 시 체결가 확인은 한 번 더 해보시는 걸 추천드립니다. 전반적으로 특별한 이상 신호는 없는 평이한 장세로 판단됩니다.",
       "dip_note": null
     }
   ],
