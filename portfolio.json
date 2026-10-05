@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 362.51,
-      "krw_price": 484733,
-      "krw_price_gross": 486191,
-      "ma20_krw": 473413
+      "krw_price": 484577,
+      "krw_price_gross": 486035,
+      "ma20_krw": 473261
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 189.4,
-      "krw_price": 253257,
-      "krw_price_gross": 254019,
-      "ma20_krw": 241947
+      "krw_price": 253176,
+      "krw_price_gross": 253938,
+      "ma20_krw": 241870
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 238.9,
-      "krw_price": 319447,
-      "krw_price_gross": 320408,
-      "ma20_krw": 299774
+      "krw_price": 319344,
+      "krw_price_gross": 320305,
+      "ma20_krw": 299678
     }
   },
-  "valuation_date": "2026-10-05T21:14",
+  "valuation_date": "2026-10-05T21:32",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,17 +146,17 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-10-02",
+    "date": "2026-10-05",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 355.69,
-        "krw_price": 478186,
-        "change": 3.51,
+        "current": 362.51,
+        "krw_price": 486035,
+        "change": 2.08,
         "signal": "",
-        "shares": 0.0251,
+        "shares": 0.0247,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -166,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 189.52,
-        "krw_price": 254796,
-        "change": -0.27,
+        "current": 189.4,
+        "krw_price": 253938,
+        "change": 0.34,
         "signal": "",
-        "shares": 0.0353,
+        "shares": 0.0354,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 233.96,
-        "krw_price": 314527,
-        "change": 1.34,
+        "current": 238.9,
+        "krw_price": 320305,
+        "change": 2.12,
         "signal": "",
-        "shares": 0.0286,
+        "shares": 0.0281,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 세 종목 모두 급변동 없이 정상 범위 내에서 움직이고 있어 매수 계획을 그대로 진행해도 무리는 없어 보입니다. 다만 브로드컴의 +3.5% 상승은 상대적으로 변동폭이 큰 편이니 분할 매수 시 체결가 확인은 한 번 더 해보시는 걸 추천드립니다. 전반적으로 특별한 이상 신호는 없는 평이한 장세로 판단됩니다.",
+    "ai_comment": "오늘 세 종목 모두 전일 대비 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 변동성 신호는 없습니다. 다만 브로드컴과 엔비디아가 동반 상승한 점은 반도체 섹터 전반의 분위기에 영향받은 것일 수 있으니, 섹터 전체 뉴스나 이벤트가 있는지 함께 확인해보시면 좋겠습니다. 매수 계획 자체는 유지하되, 체결 시점의 스프레드나 장중 변동성 정도는 가볍게 체크해보세요.",
     "dip_note": null
   },
-  "fx": 1341.18,
+  "fx": 1340.75,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -716,12 +716,6 @@
     "daily_rate": null
   },
   "daily_comment_history": [
-    {
-      "date": "2026-07-24",
-      "market": "general",
-      "comment": "오늘 매수 대상 종목들은 전반적으로 큰 변동성 없이 안정적인 범위 내에서 움직이고 있습니다. Broadcom이 -2.1%로 다소 조정을 받았지만 정상 범위 내라 매수 계획을 유지하셔도 무리 없어 보입니다. 다만 반도체/AI 관련주 전반의 변동성이 클 수 있으니 실행 시점의 실시간 가격과 거래량 정도는 한 번 더 확인해보시길 권합니다.",
-      "dip_note": null
-    },
     {
       "date": "2026-07-27",
       "market": "isa",
@@ -1314,6 +1308,12 @@
       "date": "2026-10-05",
       "market": "isa",
       "comment": "두 종목 모두 전일 대비 하락하며 5일 이동평균선을 하회하고 있어 단기 조정 국면으로 보입니다. 휴머노이드 로봇과 양자컴퓨팅 테마 모두 변동성이 큰 성장주 섹터인 만큼, 분할 매수 관점에서 접근하시되 추가 하락 시 손익비를 재점검하시는 것이 좋겠습니다. 매수 계획 자체는 유지하시더라도 당분간 시장 전반의 리스크 오프 심리가 이어질 수 있어 포지션 비중 관리에 유의하시길 권합니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-10-05",
+      "market": "general",
+      "comment": "오늘 세 종목 모두 전일 대비 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 변동성 신호는 없습니다. 다만 브로드컴과 엔비디아가 동반 상승한 점은 반도체 섹터 전반의 분위기에 영향받은 것일 수 있으니, 섹터 전체 뉴스나 이벤트가 있는지 함께 확인해보시면 좋겠습니다. 매수 계획 자체는 유지하되, 체결 시점의 스프레드나 장중 변동성 정도는 가볍게 체크해보세요.",
       "dip_note": null
     }
   ],
