@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 377.54,
-      "krw_price": 503456,
-      "krw_price_gross": 504971,
-      "ma20_krw": 472768
+      "current": 375.81,
+      "krw_price": 500894,
+      "krw_price_gross": 502402,
+      "ma20_krw": 472412
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 193.03,
-      "krw_price": 257409,
-      "krw_price_gross": 258183,
-      "ma20_krw": 242804
+      "current": 192.07,
+      "krw_price": 255998,
+      "krw_price_gross": 256769,
+      "ma20_krw": 242617
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 239.4,
-      "krw_price": 319237,
-      "krw_price_gross": 320198,
-      "ma20_krw": 299886
+      "current": 239.24,
+      "krw_price": 318869,
+      "krw_price_gross": 319828,
+      "ma20_krw": 299724
     }
   },
-  "valuation_date": "2026-10-06T19:37",
+  "valuation_date": "2026-10-06T22:58",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 전일대비 정상 범위 내 등락을 보이고 있어 특별한 급등락 리스크는 없어 보입니다. 다만 Broadcom이 +4.2%로 상대적으로 변동폭이 크니 매수 시점의 단기 고점 여부는 한 번 확인해보시는 게 좋겠습니다. 전체적으로 계획대로 진행하시되, 체결 전 호가창에서 급격한 변동이 없는지 정도만 참고하시면 될 것 같습니다.",
     "dip_note": null
   },
-  "fx": 1337.53,
+  "fx": 1336.85,
   "asset_history": [
     {
       "date": "2026-07-16",
