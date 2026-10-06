@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 378.63,
-      "krw_price": 504940,
-      "krw_price_gross": 506459,
-      "ma20_krw": 472869
+      "current": 377.54,
+      "krw_price": 503456,
+      "krw_price_gross": 504971,
+      "ma20_krw": 472768
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 192.38,
-      "krw_price": 256557,
-      "krw_price_gross": 257329,
-      "ma20_krw": 242775
+      "current": 193.03,
+      "krw_price": 257409,
+      "krw_price_gross": 258183,
+      "ma20_krw": 242804
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 240.59,
-      "krw_price": 320843,
-      "krw_price_gross": 321809,
-      "ma20_krw": 299984
+      "current": 239.4,
+      "krw_price": 319237,
+      "krw_price_gross": 320198,
+      "ma20_krw": 299886
     }
   },
-  "valuation_date": "2026-10-06T18:52",
+  "valuation_date": "2026-10-06T19:37",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,17 +146,17 @@
     "dip_note": "**SOL 미국양자컴퓨팅TOP10**: -1.7% 하락은 5일/20일 평균 대비 소폭 이탈 수준으로, 특정 종목이 아닌 테마형 ETF라는 점에서 시장 전체 조정인지 양자컴퓨팅 섹터 내 개별 이슈(규제, 실적 등)인지 제공된 데이터만으로는 판단이 어렵습니다. 미국 시장 동향이나 섹터 내 주요"
   },
   "last_general": {
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 362.51,
-        "krw_price": 486035,
-        "change": 2.08,
+        "current": 377.54,
+        "krw_price": 504971,
+        "change": 4.15,
         "signal": "",
-        "shares": 0.0247,
+        "shares": 0.0238,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -166,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 189.4,
-        "krw_price": 253938,
-        "change": 0.34,
+        "current": 193.03,
+        "krw_price": 258183,
+        "change": 1.92,
         "signal": "",
-        "shares": 0.0354,
+        "shares": 0.0349,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,9 +180,9 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 238.9,
-        "krw_price": 320305,
-        "change": 2.12,
+        "current": 239.4,
+        "krw_price": 320198,
+        "change": 0.21,
         "signal": "",
         "shares": 0.0281,
         "spent": 9000,
@@ -191,10 +191,10 @@
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 세 종목 모두 전일 대비 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 변동성 신호는 없습니다. 다만 브로드컴과 엔비디아가 동반 상승한 점은 반도체 섹터 전반의 분위기에 영향받은 것일 수 있으니, 섹터 전체 뉴스나 이벤트가 있는지 함께 확인해보시면 좋겠습니다. 매수 계획 자체는 유지하되, 체결 시점의 스프레드나 장중 변동성 정도는 가볍게 체크해보세요.",
+    "ai_comment": "오늘 세 종목 모두 전일대비 정상 범위 내 등락을 보이고 있어 특별한 급등락 리스크는 없어 보입니다. 다만 Broadcom이 +4.2%로 상대적으로 변동폭이 크니 매수 시점의 단기 고점 여부는 한 번 확인해보시는 게 좋겠습니다. 전체적으로 계획대로 진행하시되, 체결 전 호가창에서 급격한 변동이 없는지 정도만 참고하시면 될 것 같습니다.",
     "dip_note": null
   },
-  "fx": 1337.61,
+  "fx": 1337.53,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -723,12 +723,6 @@
     "daily_rate": null
   },
   "daily_comment_history": [
-    {
-      "date": "2026-07-27",
-      "market": "general",
-      "comment": "오늘은 반도체·AI 관련주 전반의 변동성이 두드러지는 하루로 보입니다. 특히 Nvidia는 5% 넘게 하락하며 MA5를 하회해 단기 조정 흐름이 나타나고 있어, 매수 후에도 추가 하락 가능성을 염두에 두고 분할 매수나 손절 라인",
-      "dip_note": null
-    },
     {
       "date": "2026-07-28",
       "market": "isa",
@@ -1322,6 +1316,12 @@
       "market": "isa",
       "comment": "휴머노이드로봇 ETF는 상승 모멘텀이 양호하고 정상 범위 내 움직임이라 특별한 우려는 없어 보입니다. 다만 양자컴퓨팅 ETF는 MA5를 하회하며 단기 조정 신호가 나타난 상태라, 변동성 테마주",
       "dip_note": "**SOL 미국양자컴퓨팅TOP10**: -1.7% 하락은 5일/20일 평균 대비 소폭 이탈 수준으로, 특정 종목이 아닌 테마형 ETF라는 점에서 시장 전체 조정인지 양자컴퓨팅 섹터 내 개별 이슈(규제, 실적 등)인지 제공된 데이터만으로는 판단이 어렵습니다. 미국 시장 동향이나 섹터 내 주요"
+    },
+    {
+      "date": "2026-10-06",
+      "market": "general",
+      "comment": "오늘 세 종목 모두 전일대비 정상 범위 내 등락을 보이고 있어 특별한 급등락 리스크는 없어 보입니다. 다만 Broadcom이 +4.2%로 상대적으로 변동폭이 크니 매수 시점의 단기 고점 여부는 한 번 확인해보시는 게 좋겠습니다. 전체적으로 계획대로 진행하시되, 체결 전 호가창에서 급격한 변동이 없는지 정도만 참고하시면 될 것 같습니다.",
+      "dip_note": null
     }
   ],
   "rebalance_suggestions": [],
