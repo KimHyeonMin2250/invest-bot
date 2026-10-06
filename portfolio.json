@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 14565.0,
-    "0023A0.KS": 8225.0,
+    "0038A0.KS": 1105.0,
+    "0023A0.KS": 12890.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -83,67 +83,67 @@
       "account": "general",
       "type": "stock",
       "current": 362.51,
-      "krw_price": 484172,
-      "krw_price_gross": 485629,
-      "ma20_krw": 472866
+      "krw_price": 483656,
+      "krw_price_gross": 485111,
+      "ma20_krw": 472361
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 189.4,
-      "krw_price": 252965,
-      "krw_price_gross": 253726,
-      "ma20_krw": 241667
+      "krw_price": 252695,
+      "krw_price_gross": 253455,
+      "ma20_krw": 241410
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 238.9,
-      "krw_price": 319077,
-      "krw_price_gross": 320038,
-      "ma20_krw": 299428
+      "krw_price": 318737,
+      "krw_price_gross": 319696,
+      "ma20_krw": 299108
     }
   },
-  "valuation_date": "2026-10-06T08:10",
+  "valuation_date": "2026-10-06T10:36",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-10-05",
+    "date": "2026-10-06",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 15340.0,
-        "krw_price": 15340,
-        "change": -1.67,
-        "signal": "🟡 소폭 하락",
+        "current": 15730.0,
+        "krw_price": 15730,
+        "change": 2.54,
+        "signal": "",
         "shares": 2,
-        "spent": 30680,
-        "carry": 14565,
-        "available": 45245,
+        "spent": 31460,
+        "carry": 1105,
+        "available": 32565,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 23745.0,
-        "krw_price": 23745,
-        "change": -2.22,
-        "signal": "🟠 급락 (-2%대)",
-        "shares": 2,
-        "spent": 47490,
-        "carry": 8225,
-        "available": 55715,
+        "current": 23335.0,
+        "krw_price": 23335,
+        "change": -1.73,
+        "signal": "🟡 소폭 하락",
+        "shares": 1,
+        "spent": 23335,
+        "carry": 12890,
+        "available": 36225,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "두 종목 모두 전일 대비 하락하며 5일 이동평균선을 하회하고 있어 단기 조정 국면으로 보입니다. 휴머노이드 로봇과 양자컴퓨팅 테마 모두 변동성이 큰 성장주 섹터인 만큼, 분할 매수 관점에서 접근하시되 추가 하락 시 손익비를 재점검하시는 것이 좋겠습니다. 매수 계획 자체는 유지하시더라도 당분간 시장 전반의 리스크 오프 심리가 이어질 수 있어 포지션 비중 관리에 유의하시길 권합니다.",
-    "dip_note": null
+    "ai_comment": "휴머노이드로봇 ETF는 상승 모멘텀이 양호하고 정상 범위 내 움직임이라 특별한 우려는 없어 보입니다. 다만 양자컴퓨팅 ETF는 MA5를 하회하며 단기 조정 신호가 나타난 상태라, 변동성 테마주",
+    "dip_note": "**SOL 미국양자컴퓨팅TOP10**: -1.7% 하락은 5일/20일 평균 대비 소폭 이탈 수준으로, 특정 종목이 아닌 테마형 ETF라는 점에서 시장 전체 조정인지 양자컴퓨팅 섹터 내 개별 이슈(규제, 실적 등)인지 제공된 데이터만으로는 판단이 어렵습니다. 미국 시장 동향이나 섹터 내 주요"
   },
   "last_general": {
     "date": "2026-10-05",
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 전일 대비 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 변동성 신호는 없습니다. 다만 브로드컴과 엔비디아가 동반 상승한 점은 반도체 섹터 전반의 분위기에 영향받은 것일 수 있으니, 섹터 전체 뉴스나 이벤트가 있는지 함께 확인해보시면 좋겠습니다. 매수 계획 자체는 유지하되, 체결 시점의 스프레드나 장중 변동성 정도는 가볍게 체크해보세요.",
     "dip_note": null
   },
-  "fx": 1339.63,
+  "fx": 1338.2,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -723,12 +723,6 @@
     "daily_rate": null
   },
   "daily_comment_history": [
-    {
-      "date": "2026-07-27",
-      "market": "isa",
-      "comment": "오늘은 두 종목 모두 전일 대비 소폭 하락에 그치며 정상 변동 범위 내에서 움직이고 있어 특별한 이상 신호는 보이지 않습니다. 다만 휴머노이드로봇과 양자컴퓨팅 테마 ETF는 변동성이 큰 성장 테마인 만큼, 매수 이후에도 단기 가격 급변 가능성은 염두에 두시는 게 좋겠습니다. 계획대로 매수 진행하시되, 이후 추가 하락 시에도 규칙에 따른 대응 원칙을 유지하시길 권합니다.",
-      "dip_note": null
-    },
     {
       "date": "2026-07-27",
       "market": "general",
@@ -1322,6 +1316,12 @@
       "market": "general",
       "comment": "오늘 세 종목 모두 전일 대비 완만한 상승세로 정상 범위 내 움직임을 보이고 있어 특별한 변동성 신호는 없습니다. 다만 브로드컴과 엔비디아가 동반 상승한 점은 반도체 섹터 전반의 분위기에 영향받은 것일 수 있으니, 섹터 전체 뉴스나 이벤트가 있는지 함께 확인해보시면 좋겠습니다. 매수 계획 자체는 유지하되, 체결 시점의 스프레드나 장중 변동성 정도는 가볍게 체크해보세요.",
       "dip_note": null
+    },
+    {
+      "date": "2026-10-06",
+      "market": "isa",
+      "comment": "휴머노이드로봇 ETF는 상승 모멘텀이 양호하고 정상 범위 내 움직임이라 특별한 우려는 없어 보입니다. 다만 양자컴퓨팅 ETF는 MA5를 하회하며 단기 조정 신호가 나타난 상태라, 변동성 테마주",
+      "dip_note": "**SOL 미국양자컴퓨팅TOP10**: -1.7% 하락은 5일/20일 평균 대비 소폭 이탈 수준으로, 특정 종목이 아닌 테마형 ETF라는 점에서 시장 전체 조정인지 양자컴퓨팅 섹터 내 개별 이슈(규제, 실적 등)인지 제공된 데이터만으로는 판단이 어렵습니다. 미국 시장 동향이나 섹터 내 주요"
     }
   ],
   "rebalance_suggestions": [],
