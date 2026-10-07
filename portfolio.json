@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 373.04,
-      "krw_price": 497858,
-      "krw_price_gross": 499356,
-      "ma20_krw": 473663
+      "current": 376.51,
+      "krw_price": 502773,
+      "krw_price_gross": 504286,
+      "ma20_krw": 474157
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 193.34,
-      "krw_price": 258033,
-      "krw_price_gross": 258810,
-      "ma20_krw": 244529
+      "current": 194.12,
+      "krw_price": 259219,
+      "krw_price_gross": 259998,
+      "ma20_krw": 244716
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 237.04,
-      "krw_price": 316350,
-      "krw_price_gross": 317302,
-      "ma20_krw": 301031
+      "current": 237.47,
+      "krw_price": 317106,
+      "krw_price_gross": 318060,
+      "ma20_krw": 301227
     }
   },
-  "valuation_date": "2026-10-07T19:18",
+  "valuation_date": "2026-10-07T20:02",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,15 +146,15 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 377.54,
-        "krw_price": 504971,
-        "change": 4.15,
+        "current": 376.51,
+        "krw_price": 504286,
+        "change": 0.19,
         "signal": "",
         "shares": 0.0238,
         "spent": 12000,
@@ -166,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 193.03,
-        "krw_price": 258183,
-        "change": 1.92,
+        "current": 194.12,
+        "krw_price": 259998,
+        "change": 1.07,
         "signal": "",
-        "shares": 0.0349,
+        "shares": 0.0346,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 239.4,
-        "krw_price": 320198,
-        "change": 0.21,
+        "current": 237.47,
+        "krw_price": 318060,
+        "change": -0.74,
         "signal": "",
-        "shares": 0.0281,
+        "shares": 0.0283,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 세 종목 모두 전일대비 정상 범위 내 등락을 보이고 있어 특별한 급등락 리스크는 없어 보입니다. 다만 Broadcom이 +4.2%로 상대적으로 변동폭이 크니 매수 시점의 단기 고점 여부는 한 번 확인해보시는 게 좋겠습니다. 전체적으로 계획대로 진행하시되, 체결 전 호가창에서 급격한 변동이 없는지 정도만 참고하시면 될 것 같습니다.",
+    "ai_comment": "오늘은 세 종목 모두 전일대비 변동폭이 크지 않아 특별한 이상 신호 없이 안정적인 흐름을 보이고 있습니다. 다만 Nvidia는 소폭 하락 중이니 매수 체결 전 잠깐의 추가 하락 가능성을 염두에 두시고, 전반적으로 변동성이 낮은 구간이라 계획대로 진행하되 체결가 슬리피지 정도만 확인하시면 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1338.63,
+  "fx": 1339.37,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -730,12 +730,6 @@
     "daily_rate": null
   },
   "daily_comment_history": [
-    {
-      "date": "2026-07-28",
-      "market": "general",
-      "comment": "오늘은 반도체·AI 대형주 대부분이 안정적인 흐름을 보이는 가운데, Palantir만 MA5를 하회하며 조정 폭이 두드러지네요. Broadcom과 Nvidia는 등락폭이 크지 않아 매수 계획 진행에 무리는 없어 보입니다. 다만 Palantir는 변동성이 커진 구간이니 계획대로 매수하시더라도 이후 추가 하락 가능성을 염두에 두고 분할 매수나 손절 기준을 한 번 더 점검해보시는 게 좋겠습니다.",
-      "dip_note": "**Palantir (PLTR)**: 제공된 정보만으로는 -5.5% 하락이 시장 전체 조정 때문인지, 개별 악재(실적, 뉴스, 소송 등) 때문인지 판단할 근거가 부족합니다. 5일/20일 이동평균 대비 소폭 하락한 수준이라 추세 이탈로 보기는 어렵지만, 확실하지 않으므로 뉴스 확인 전까지는 매수 판단을 유보하시길 권장드립니다.\n\n**참고**: 정확한 판단을 위해서는 (1) 오늘 같은 섹터/시장 지수(나스닥, S&P500)의 등락률과 (2) Palantir 관련 뉴스(실적 발표, 애널리스트 리포트, 계약 소식 등)"
-    },
     {
       "date": "2026-07-29",
       "market": "isa",
@@ -1328,6 +1322,12 @@
       "date": "2026-10-07",
       "market": "isa",
       "comment": "오늘 두 종목 모두 전일 대비 소폭 하락(-0.7~-0.8%) 했지만 정상 변동 범위 내에 있어 계획된 매수 진행에는 무리가 없어 보입니다. 다만 휴머노이드 로봇과 양자컴퓨팅 테마는 변동성이 큰 성장주 섹터인 만큼, 매수 이후에도 추가 조정 가능성을 염두에 두고 분할 매수 원칙과 포지션 비중 관리에 유의하시기 바랍니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-10-07",
+      "market": "general",
+      "comment": "오늘은 세 종목 모두 전일대비 변동폭이 크지 않아 특별한 이상 신호 없이 안정적인 흐름을 보이고 있습니다. 다만 Nvidia는 소폭 하락 중이니 매수 체결 전 잠깐의 추가 하락 가능성을 염두에 두시고, 전반적으로 변동성이 낮은 구간이라 계획대로 진행하되 체결가 슬리피지 정도만 확인하시면 좋겠습니다.",
       "dip_note": null
     }
   ],
