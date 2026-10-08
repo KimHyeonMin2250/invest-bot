@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 376.51,
-      "krw_price": 504770,
-      "krw_price_gross": 506289,
-      "ma20_krw": 476040
+      "krw_price": 504249,
+      "krw_price_gross": 505766,
+      "ma20_krw": 475548
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 194.12,
-      "krw_price": 260248,
-      "krw_price_gross": 261031,
-      "ma20_krw": 245688
+      "krw_price": 259979,
+      "krw_price_gross": 260761,
+      "ma20_krw": 245434
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 237.47,
-      "krw_price": 318366,
-      "krw_price_gross": 319324,
-      "ma20_krw": 302423
+      "krw_price": 318036,
+      "krw_price_gross": 318993,
+      "ma20_krw": 302111
     }
   },
-  "valuation_date": "2026-10-08T10:48",
+  "valuation_date": "2026-10-08T12:19",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일대비 변동폭이 크지 않아 특별한 이상 신호 없이 안정적인 흐름을 보이고 있습니다. 다만 Nvidia는 소폭 하락 중이니 매수 체결 전 잠깐의 추가 하락 가능성을 염두에 두시고, 전반적으로 변동성이 낮은 구간이라 계획대로 진행하되 체결가 슬리피지 정도만 확인하시면 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1344.69,
+  "fx": 1343.3,
   "asset_history": [
     {
       "date": "2026-07-16",
