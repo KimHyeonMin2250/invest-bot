@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 3485.0,
-    "0023A0.KS": 1735.0,
+    "0038A0.KS": 14805.0,
+    "0023A0.KS": 7040.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -64,85 +64,85 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15400.0,
-      "krw_price": 15400,
-      "krw_price_gross": 15400,
-      "ma20_krw": 15115
+      "current": 15340.0,
+      "krw_price": 15340,
+      "krw_price_gross": 15340,
+      "ma20_krw": 15112
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 22730.0,
-      "krw_price": 22730,
-      "krw_price_gross": 22730,
-      "ma20_krw": 23504
+      "current": 22695.0,
+      "krw_price": 22695,
+      "krw_price_gross": 22695,
+      "ma20_krw": 23502
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 376.51,
-      "krw_price": 502345,
-      "krw_price_gross": 503857,
-      "ma20_krw": 473753
+      "krw_price": 504770,
+      "krw_price_gross": 506289,
+      "ma20_krw": 476040
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 194.12,
-      "krw_price": 258998,
-      "krw_price_gross": 259777,
-      "ma20_krw": 244508
+      "krw_price": 260248,
+      "krw_price_gross": 261031,
+      "ma20_krw": 245688
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 237.47,
-      "krw_price": 316836,
-      "krw_price_gross": 317789,
-      "ma20_krw": 300970
+      "krw_price": 318366,
+      "krw_price_gross": 319324,
+      "ma20_krw": 302423
     }
   },
-  "valuation_date": "2026-10-08T05:51",
+  "valuation_date": "2026-10-08T10:48",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 15620.0,
-        "krw_price": 15620,
-        "change": -0.7,
-        "signal": "",
-        "shares": 1,
-        "spent": 15620,
-        "carry": 3485,
-        "available": 19105,
+        "current": 15340.0,
+        "krw_price": 15340,
+        "change": -1.79,
+        "signal": "🟡 소폭 하락",
+        "shares": 2,
+        "spent": 30680,
+        "carry": 14805,
+        "available": 45485,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 23155.0,
-        "krw_price": 23155,
-        "change": -0.77,
-        "signal": "",
+        "current": 22695.0,
+        "krw_price": 22695,
+        "change": -1.99,
+        "signal": "🟡 소폭 하락",
         "shares": 1,
-        "spent": 23155,
-        "carry": 1735,
-        "available": 24890,
+        "spent": 22695,
+        "carry": 7040,
+        "available": 29735,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 두 종목 모두 전일 대비 소폭 하락(-0.7~-0.8%) 했지만 정상 변동 범위 내에 있어 계획된 매수 진행에는 무리가 없어 보입니다. 다만 휴머노이드 로봇과 양자컴퓨팅 테마는 변동성이 큰 성장주 섹터인 만큼, 매수 이후에도 추가 조정 가능성을 염두에 두고 분할 매수 원칙과 포지션 비중 관리에 유의하시기 바랍니다.",
+    "ai_comment": "오늘 두 종목 모두 전일 대비 하락하며 MA5를 하회하는 모습으로, 테마주 특성상 단기 변동성이 확대되는 구간으로 보입니다. 로봇·양자컴퓨팅 섹터는 모멘텀 민감도가 높아 추가 조정 가능성도 염두에 두시되, 계획된 분할 매수 전략을 유지하신다면 평균단가 관리 관점에서는 나쁘지 않은 시점입니다. 다만 거래량 동반 여부와 전반적인 기술주 수급 상황은 한 번 더 체크해보시길 권합니다.",
     "dip_note": null
   },
   "last_general": {
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일대비 변동폭이 크지 않아 특별한 이상 신호 없이 안정적인 흐름을 보이고 있습니다. 다만 Nvidia는 소폭 하락 중이니 매수 체결 전 잠깐의 추가 하락 가능성을 염두에 두시고, 전반적으로 변동성이 낮은 구간이라 계획대로 진행하되 체결가 슬리피지 정도만 확인하시면 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1338.23,
+  "fx": 1344.69,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -737,12 +737,6 @@
     "daily_rate": null
   },
   "daily_comment_history": [
-    {
-      "date": "2026-07-29",
-      "market": "isa",
-      "comment": "오늘은 로보틱스 관련 종목이 전반적으로 안정적인 흐름을 보이는 반면, 양자컴퓨팅 테마는 -3.8% 하락하며 MA5를 하회해 단기 변동성이 다소 커진 모습입니다. 매수 계획 자체는 유지하시되, 양자컴퓨팅 비중은 추세 전환 여부를 며칠 더 지켜보며 리스크 관리에 유의하시는 게 좋겠습니다.",
-      "dip_note": "**SOL 미국양자컴퓨팅TOP10**: 제공된 정보(현재가, 5일/20일 이동평균)만으로는 이 하락이 미국 증시 전반의 조정 때문인지, 양자컴퓨팅 테마"
-    },
     {
       "date": "2026-07-29",
       "market": "general",
@@ -1335,6 +1329,12 @@
       "date": "2026-10-07",
       "market": "general",
       "comment": "오늘은 세 종목 모두 전일대비 변동폭이 크지 않아 특별한 이상 신호 없이 안정적인 흐름을 보이고 있습니다. 다만 Nvidia는 소폭 하락 중이니 매수 체결 전 잠깐의 추가 하락 가능성을 염두에 두시고, 전반적으로 변동성이 낮은 구간이라 계획대로 진행하되 체결가 슬리피지 정도만 확인하시면 좋겠습니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-10-08",
+      "market": "isa",
+      "comment": "오늘 두 종목 모두 전일 대비 하락하며 MA5를 하회하는 모습으로, 테마주 특성상 단기 변동성이 확대되는 구간으로 보입니다. 로봇·양자컴퓨팅 섹터는 모멘텀 민감도가 높아 추가 조정 가능성도 염두에 두시되, 계획된 분할 매수 전략을 유지하신다면 평균단가 관리 관점에서는 나쁘지 않은 시점입니다. 다만 거래량 동반 여부와 전반적인 기술주 수급 상황은 한 번 더 체크해보시길 권합니다.",
       "dip_note": null
     }
   ],
