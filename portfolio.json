@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 360.14,
-      "krw_price": 481869,
-      "krw_price_gross": 483319,
-      "ma20_krw": 475096
+      "krw_price": 480924,
+      "krw_price_gross": 482372,
+      "ma20_krw": 474165
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 198.78,
-      "krw_price": 265968,
-      "krw_price_gross": 266769,
-      "ma20_krw": 247404
+      "krw_price": 265447,
+      "krw_price_gross": 266246,
+      "ma20_krw": 246919
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 230.48,
-      "krw_price": 308383,
-      "krw_price_gross": 309311,
-      "ma20_krw": 302636
+      "krw_price": 307779,
+      "krw_price_gross": 308705,
+      "ma20_krw": 302043
     }
   },
-  "valuation_date": "2026-10-08T23:46",
+  "valuation_date": "2026-10-09T05:57",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 반도체/AI 대형주 전반이 조정받는 흐름으로, 특히 브로드컴이 MA5를 하회하며 단기 약세가 두드러집니다. 팔란티어만 상승세를 유지하고 있어 종목별 온도차가 있으니, 매수 체결 시 분할 진입이나 추가 하락 시나리오에 대한 대응 계획을 함께 점검해보시면 좋을 것 같습니다. 특정 뉴스나 실적 이벤트가 있었는지 확인 후 진행하시길 권합니다.",
     "dip_note": "**Broadcom (-4.3%)**: 제공된 정보만으로는 이번 하락이 시장 전체 조정 때문인지 개별 악재(실적 실망, 가이던스 하향, 규제 이슈 등) 때문인지 **확실하지 않습니다**. 현재가(360.14)가 20일 평균(355.08)보다는 높지만 5일 평균(366.02)보다는 낮아 단기 조정처럼 보이기도 하나, 같은 날 반도체 섹터 전반이나 나스닥 지수의 움직임, 그리고 Broadcom"
   },
-  "fx": 1342.03,
+  "fx": 1339.4,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -727,13 +727,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-10-09",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5628518,
+    "required_monthly_remaining": 5639098,
     "daily_rate": null
   },
   "daily_comment_history": [
