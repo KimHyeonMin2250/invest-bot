@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 360.14,
-      "krw_price": 481463,
-      "krw_price_gross": 482912,
-      "ma20_krw": 474696
+      "krw_price": 481897,
+      "krw_price_gross": 483348,
+      "ma20_krw": 475125
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 198.78,
-      "krw_price": 265744,
-      "krw_price_gross": 266544,
-      "ma20_krw": 247196
+      "krw_price": 265984,
+      "krw_price_gross": 266785,
+      "ma20_krw": 247419
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 230.48,
-      "krw_price": 308123,
-      "krw_price_gross": 309051,
-      "ma20_krw": 302381
+      "krw_price": 308402,
+      "krw_price_gross": 309330,
+      "ma20_krw": 302654
     }
   },
-  "valuation_date": "2026-10-09T10:47",
+  "valuation_date": "2026-10-09T13:06",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 반도체/AI 대형주 전반이 조정받는 흐름으로, 특히 브로드컴이 MA5를 하회하며 단기 약세가 두드러집니다. 팔란티어만 상승세를 유지하고 있어 종목별 온도차가 있으니, 매수 체결 시 분할 진입이나 추가 하락 시나리오에 대한 대응 계획을 함께 점검해보시면 좋을 것 같습니다. 특정 뉴스나 실적 이벤트가 있었는지 확인 후 진행하시길 권합니다.",
     "dip_note": "**Broadcom (-4.3%)**: 제공된 정보만으로는 이번 하락이 시장 전체 조정 때문인지 개별 악재(실적 실망, 가이던스 하향, 규제 이슈 등) 때문인지 **확실하지 않습니다**. 현재가(360.14)가 20일 평균(355.08)보다는 높지만 5일 평균(366.02)보다는 낮아 단기 조정처럼 보이기도 하나, 같은 날 반도체 섹터 전반이나 나스닥 지수의 움직임, 그리고 Broadcom"
   },
-  "fx": 1340.9,
+  "fx": 1342.11,
   "asset_history": [
     {
       "date": "2026-07-16",
