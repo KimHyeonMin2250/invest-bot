@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 358.21,
-      "krw_price": 476397,
-      "krw_price_gross": 477831,
-      "ma20_krw": 473185
+      "current": 354.73,
+      "krw_price": 471910,
+      "krw_price_gross": 473330,
+      "ma20_krw": 473095
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 209.22,
-      "krw_price": 278246,
-      "krw_price_gross": 279083,
-      "ma20_krw": 251082
+      "current": 209.0,
+      "krw_price": 278040,
+      "krw_price_gross": 278877,
+      "ma20_krw": 251142
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 228.5,
-      "krw_price": 303890,
-      "krw_price_gross": 304805,
-      "ma20_krw": 302709
+      "current": 226.32,
+      "krw_price": 301082,
+      "krw_price_gross": 301988,
+      "ma20_krw": 302654
     }
   },
-  "valuation_date": "2026-10-12T13:34",
+  "valuation_date": "2026-10-12T21:50",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 브로드컴과 엔비디아는 전일 대비 변동폭이 크지 않아 안정적인 흐름을 보이고 있고, 팔란티어는 +4.8%로 상대적으로 강한 상승세를 나타내고 있습니다. 다만 팔란티어처럼 단기 상승폭이 큰 종목은 변동성이 커질 수 있으니 매수 후에도 포지션 규모나 이후 가격 흐름을 주의 깊게 지켜보시는 게 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1333.94,
+  "fx": 1334.34,
   "asset_history": [
     {
       "date": "2026-07-16",
