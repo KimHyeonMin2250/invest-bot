@@ -64,49 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15340.0,
-      "krw_price": 15340,
-      "krw_price_gross": 15340,
-      "ma20_krw": 15112
+      "current": 15260.0,
+      "krw_price": 15260,
+      "krw_price_gross": 15260,
+      "ma20_krw": 15143
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 22695.0,
-      "krw_price": 22695,
-      "krw_price_gross": 22695,
-      "ma20_krw": 23502
+      "current": 21945.0,
+      "krw_price": 21945,
+      "krw_price_gross": 21945,
+      "ma20_krw": 23454
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 361.54,
-      "krw_price": 483017,
-      "krw_price_gross": 484471,
-      "ma20_krw": 474399
+      "krw_price": 481500,
+      "krw_price_gross": 482949,
+      "ma20_krw": 472908
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 209.05,
-      "krw_price": 279291,
-      "krw_price_gross": 280131,
-      "ma20_krw": 249827
+      "krw_price": 278413,
+      "krw_price_gross": 279251,
+      "ma20_krw": 249042
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 229.28,
-      "krw_price": 306318,
-      "krw_price_gross": 307240,
-      "ma20_krw": 302917
+      "krw_price": 305356,
+      "krw_price_gross": 306275,
+      "ma20_krw": 301965
     }
   },
-  "valuation_date": "2026-10-11T16:28",
+  "valuation_date": "2026-10-12T05:45",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 브로드컴과 엔비디아는 전일 대비 변동폭이 크지 않아 안정적인 흐름을 보이고 있고, 팔란티어는 +4.8%로 상대적으로 강한 상승세를 나타내고 있습니다. 다만 팔란티어처럼 단기 상승폭이 큰 종목은 변동성이 커질 수 있으니 매수 후에도 포지션 규모나 이후 가격 흐름을 주의 깊게 지켜보시는 게 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1340.02,
+  "fx": 1335.81,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -741,13 +741,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-10-12",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5660377,
+    "required_monthly_remaining": 5671078,
     "daily_rate": null
   },
   "daily_comment_history": [
