@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 358.1,
-      "krw_price": 478746,
-      "krw_price_gross": 480187,
-      "ma20_krw": 476732
+      "current": 357.31,
+      "krw_price": 477284,
+      "krw_price_gross": 478720,
+      "ma20_krw": 476274
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 208.35,
-      "krw_price": 278545,
-      "krw_price_gross": 279383,
-      "ma20_krw": 254775
+      "current": 208.67,
+      "krw_price": 278735,
+      "krw_price_gross": 279574,
+      "ma20_krw": 254580
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 227.99,
-      "krw_price": 304801,
-      "krw_price_gross": 305719,
-      "ma20_krw": 305207
+      "current": 228.52,
+      "krw_price": 305250,
+      "krw_price_gross": 306169,
+      "ma20_krw": 304982
     }
   },
-  "valuation_date": "2026-10-13T19:50",
+  "valuation_date": "2026-10-13T20:17",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,17 +146,17 @@
     "dip_note": "**KODEX 미국휴머노이드로봇 (-1.4%)**\n현재가가 20일 평균선 부근에서 완만하게 움직이고 있어 특별한 악재라기보다는 기술적 조정으로 보입니다. '저가 매수 기회'로 볼 수 있으나, 로봇 테마 전체의 자금 흐름은 추가 확인이 필요합니다.\n\n**SOL 미국양자컴퓨팅TOP10 (-4.4%)**\n5일·20일 평균 대비 낙폭이 상당히 크고 하락 속도가 빨라 개별 테마(양자컴퓨팅 섹터) 내 특정 악재나 밸류에이션 조정 가능성이 있습니다. 정확한 원인은 확인되지 않아 **매수 보류"
   },
   "last_general": {
-    "date": "2026-10-12",
+    "date": "2026-10-13",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 354.73,
-        "krw_price": 473252,
-        "change": -1.88,
+        "current": 357.31,
+        "krw_price": 478720,
+        "change": 0.73,
         "signal": "",
-        "shares": 0.0254,
+        "shares": 0.0251,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -166,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 209.0,
-        "krw_price": 278831,
-        "change": -0.02,
+        "current": 208.67,
+        "krw_price": 279574,
+        "change": -0.16,
         "signal": "",
-        "shares": 0.0323,
+        "shares": 0.0322,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 226.32,
-        "krw_price": 301938,
-        "change": -1.29,
+        "current": 228.52,
+        "krw_price": 306169,
+        "change": 0.97,
         "signal": "",
-        "shares": 0.0298,
+        "shares": 0.0294,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 세 종목 모두 전일대비 변동폭이 크지 않은 정상 범위 내에서 움직이고 있어 특별한 급락 리스크는 없어 보입니다. 다만 Broadcom과 Nvidia가 동반 소폭 약세를 보이는 점은 반도체/AI 섹터 전반의 단기 조정 가능성을 시사할 수 있으니 참고하시고, 계획대로 매수 진행하되 체결 시점의 변동성은 유의해서 보시기 바랍니다.",
+    "ai_comment": "오늘 세 종목 모두 전일 대비 ±1% 내外 움직임으로 특별한 변동성 없이 안정적인 흐름을 보이고 있어 계획대로 매수를 진행해도 무리 없어 보입니다. 다만 브로드컴과 엔비디아가 동반 상승 중인 점은 반도체 섹터 전반의 분위기를 반영한 것일 수 있으니, 매수 체결 시점의 스프레드나 장중 변동성은 한 번 더 확인하시는 게 좋겠습니다. 팔란티어는 소폭 조정 구간으로 보이며 추세 전환 신호는 아직 뚜렷하지 않습니다.",
     "dip_note": null
   },
-  "fx": 1340.93,
+  "fx": 1339.79,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -765,12 +765,6 @@
     "daily_rate": null
   },
   "daily_comment_history": [
-    {
-      "date": "2026-08-03",
-      "market": "general",
-      "comment": "오늘은 세 종목 모두 큰 변동성 없이 정상 범위 내에서 움직이고 있어 전반적으로 안정적인 흐름입니다. 다만 Nvidia와 Palantir는 상승폭이 다소 커 단기 과열 가능성이 있으니 체결가와 슬리피지를 한 번 더 확인하시는 게 좋겠습니다. 매수 계획 자체는 그대로 진행하셔도 무방해 보입니다.",
-      "dip_note": null
-    },
     {
       "date": "2026-08-04",
       "market": "isa",
@@ -1364,6 +1358,12 @@
       "market": "isa",
       "comment": "오늘 두 종목 모두 전일 대비 하락하며 5일선 아래에 머물러 있어 단기적으로 모멘텀이 약화된 구간으로 보입니다. 특히 양자컴퓨팅 테마는 -4.4%로 변동성이 커진 상태라 분할 매수 관점에서 접근하되 추가 하락 가능성도 염두에 두시는 게 좋겠습니다. 계획대로 매수를 진행하더라도 이후 반등 신호(거래량 동반 여부 등)를 함께 체크하시길 권합니다.",
       "dip_note": "**KODEX 미국휴머노이드로봇 (-1.4%)**\n현재가가 20일 평균선 부근에서 완만하게 움직이고 있어 특별한 악재라기보다는 기술적 조정으로 보입니다. '저가 매수 기회'로 볼 수 있으나, 로봇 테마 전체의 자금 흐름은 추가 확인이 필요합니다.\n\n**SOL 미국양자컴퓨팅TOP10 (-4.4%)**\n5일·20일 평균 대비 낙폭이 상당히 크고 하락 속도가 빨라 개별 테마(양자컴퓨팅 섹터) 내 특정 악재나 밸류에이션 조정 가능성이 있습니다. 정확한 원인은 확인되지 않아 **매수 보류"
+    },
+    {
+      "date": "2026-10-13",
+      "market": "general",
+      "comment": "오늘 세 종목 모두 전일 대비 ±1% 내外 움직임으로 특별한 변동성 없이 안정적인 흐름을 보이고 있어 계획대로 매수를 진행해도 무리 없어 보입니다. 다만 브로드컴과 엔비디아가 동반 상승 중인 점은 반도체 섹터 전반의 분위기를 반영한 것일 수 있으니, 매수 체결 시점의 스프레드나 장중 변동성은 한 번 더 확인하시는 게 좋겠습니다. 팔란티어는 소폭 조정 구간으로 보이며 추세 전환 신호는 아직 뚜렷하지 않습니다.",
+      "dip_note": null
     }
   ],
   "rebalance_suggestions": [],
