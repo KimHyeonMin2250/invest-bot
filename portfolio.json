@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 357.31,
-      "krw_price": 477284,
-      "krw_price_gross": 478720,
-      "ma20_krw": 476274
+      "krw_price": 477445,
+      "krw_price_gross": 478881,
+      "ma20_krw": 476434
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 208.67,
-      "krw_price": 278735,
-      "krw_price_gross": 279574,
-      "ma20_krw": 254580
+      "krw_price": 278829,
+      "krw_price_gross": 279668,
+      "ma20_krw": 254665
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 228.52,
-      "krw_price": 305250,
-      "krw_price_gross": 306169,
-      "ma20_krw": 304982
+      "krw_price": 305353,
+      "krw_price_gross": 306272,
+      "ma20_krw": 305085
     }
   },
-  "valuation_date": "2026-10-13T20:17",
+  "valuation_date": "2026-10-13T23:27",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 전일 대비 ±1% 내外 움직임으로 특별한 변동성 없이 안정적인 흐름을 보이고 있어 계획대로 매수를 진행해도 무리 없어 보입니다. 다만 브로드컴과 엔비디아가 동반 상승 중인 점은 반도체 섹터 전반의 분위기를 반영한 것일 수 있으니, 매수 체결 시점의 스프레드나 장중 변동성은 한 번 더 확인하시는 게 좋겠습니다. 팔란티어는 소폭 조정 구간으로 보이며 추세 전환 신호는 아직 뚜렷하지 않습니다.",
     "dip_note": null
   },
-  "fx": 1339.79,
+  "fx": 1340.24,
   "asset_history": [
     {
       "date": "2026-07-16",
