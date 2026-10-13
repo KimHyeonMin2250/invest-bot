@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 354.73,
-      "krw_price": 474043,
-      "krw_price_gross": 475469,
-      "ma20_krw": 475233
+      "current": 358.1,
+      "krw_price": 478746,
+      "krw_price_gross": 480187,
+      "ma20_krw": 476732
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 209.0,
-      "krw_price": 279297,
-      "krw_price_gross": 280137,
-      "ma20_krw": 252277
+      "current": 208.35,
+      "krw_price": 278545,
+      "krw_price_gross": 279383,
+      "ma20_krw": 254775
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 226.32,
-      "krw_price": 302442,
-      "krw_price_gross": 303353,
-      "ma20_krw": 304022
+      "current": 227.99,
+      "krw_price": 304801,
+      "krw_price_gross": 305719,
+      "ma20_krw": 305207
     }
   },
-  "valuation_date": "2026-10-13T10:52",
+  "valuation_date": "2026-10-13T19:50",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 세 종목 모두 전일대비 변동폭이 크지 않은 정상 범위 내에서 움직이고 있어 특별한 급락 리스크는 없어 보입니다. 다만 Broadcom과 Nvidia가 동반 소폭 약세를 보이는 점은 반도체/AI 섹터 전반의 단기 조정 가능성을 시사할 수 있으니 참고하시고, 계획대로 매수 진행하되 체결 시점의 변동성은 유의해서 보시기 바랍니다.",
     "dip_note": null
   },
-  "fx": 1340.37,
+  "fx": 1340.93,
   "asset_history": [
     {
       "date": "2026-07-16",
