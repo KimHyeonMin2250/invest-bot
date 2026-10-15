@@ -64,22 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 15040.0,
-      "krw_price": 15040,
-      "krw_price_gross": 15040,
-      "ma20_krw": 15212
+      "current": 14555.0,
+      "krw_price": 14555,
+      "krw_price_gross": 14555,
+      "ma20_krw": 15179
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 20650.0,
-      "krw_price": 20650,
-      "krw_price_gross": 20650,
-      "ma20_krw": 23263
+      "current": 19025.0,
+      "krw_price": 19025,
+      "krw_price_gross": 19025,
+      "ma20_krw": 23051
+    },
+    "AVGO": {
+      "name": "Broadcom",
+      "account": "general",
+      "type": "stock",
+      "current": 346.25,
+      "krw_price": 465455,
+      "krw_price_gross": 466856,
+      "ma20_krw": 479801
+    },
+    "PLTR": {
+      "name": "Palantir",
+      "account": "general",
+      "type": "stock",
+      "current": 200.97,
+      "krw_price": 270159,
+      "krw_price_gross": 270972,
+      "ma20_krw": 257991
+    },
+    "NVDA": {
+      "name": "Nvidia",
+      "account": "general",
+      "type": "stock",
+      "current": 221.3,
+      "krw_price": 297488,
+      "krw_price_gross": 298383,
+      "ma20_krw": 307422
     }
   },
-  "valuation_date": "2026-10-15T00:04",
+  "valuation_date": "2026-10-15T04:27",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -167,7 +194,7 @@
     "ai_comment": "반도체·AI 관련주 전반이 동반 약세를 보이며 단기 이동평균선을 하회하는 조정 국면으로, 섹터 전체의 투자심리 위축이나 공통 매크로 요인(금리, 밸류에이션 부담 등)에 영향받고 있을 가능성이 있습니다. 세 종목 모두 비슷한 낙폭을 보이는 만큼 개별 이슈보다는 업종 전반의 리스크로 해석되며, 규칙 기반 매수를 진행하시더라도 추가 하락 시 변동성 확대 가능성을 염두에 두시기 바랍니다. 참고로 이는 일반적인 시장 코멘트이며 매수 결정 자체에 대한 의견은 아닙니다.",
     "dip_note": null
   },
-  "fx": 1340.52,
+  "fx": 1348.32,
   "asset_history": [
     {
       "date": "2026-07-16",
