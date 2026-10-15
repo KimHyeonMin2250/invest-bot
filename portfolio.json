@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 346.25,
-      "krw_price": 463370,
-      "krw_price_gross": 464764,
-      "ma20_krw": 477651
+      "krw_price": 464043,
+      "krw_price_gross": 465440,
+      "ma20_krw": 478345
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 200.97,
-      "krw_price": 268949,
-      "krw_price_gross": 269758,
-      "ma20_krw": 256835
+      "krw_price": 269339,
+      "krw_price_gross": 270150,
+      "ma20_krw": 257208
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 221.3,
-      "krw_price": 296155,
-      "krw_price_gross": 297047,
-      "ma20_krw": 306044
+      "krw_price": 296586,
+      "krw_price_gross": 297478,
+      "ma20_krw": 306489
     }
   },
-  "valuation_date": "2026-10-15T08:29",
+  "valuation_date": "2026-10-15T09:21",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "반도체·AI 관련주 전반이 동반 약세를 보이며 단기 이동평균선을 하회하는 조정 국면으로, 섹터 전체의 투자심리 위축이나 공통 매크로 요인(금리, 밸류에이션 부담 등)에 영향받고 있을 가능성이 있습니다. 세 종목 모두 비슷한 낙폭을 보이는 만큼 개별 이슈보다는 업종 전반의 리스크로 해석되며, 규칙 기반 매수를 진행하시더라도 추가 하락 시 변동성 확대 가능성을 염두에 두시기 바랍니다. 참고로 이는 일반적인 시장 코멘트이며 매수 결정 자체에 대한 의견은 아닙니다.",
     "dip_note": null
   },
-  "fx": 1342.28,
+  "fx": 1344.23,
   "asset_history": [
     {
       "date": "2026-07-16",
