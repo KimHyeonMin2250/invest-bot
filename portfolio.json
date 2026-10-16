@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 344.33,
-      "krw_price": 457272,
-      "krw_price_gross": 458648,
-      "ma20_krw": 473838
+      "krw_price": 457162,
+      "krw_price_gross": 458537,
+      "ma20_krw": 473724
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 200.5,
-      "krw_price": 266265,
-      "krw_price_gross": 267066,
-      "ma20_krw": 256479
+      "krw_price": 266201,
+      "krw_price_gross": 267002,
+      "ma20_krw": 256417
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 217.23,
-      "krw_price": 288482,
-      "krw_price_gross": 289350,
-      "ma20_krw": 303560
+      "krw_price": 288413,
+      "krw_price_gross": 289281,
+      "ma20_krw": 303488
     }
   },
-  "valuation_date": "2026-10-16T08:22",
+  "valuation_date": "2026-10-16T09:07",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 반도체·AI 관련 종목들이 전반적으로 소폭 조정받는 흐름이네요. Broadcom과 Nvidia의 하락폭이 다소 두드러지지만 정상 범위 내여서 패닉성 매도라기보단 단기 숨 고르기로 보입니다. 계획대로 매수 진행하시되, 장중 변동성이 커질 수 있으니 체결가는 한 번 더 확인해보세요.",
     "dip_note": null
   },
-  "fx": 1332.0,
+  "fx": 1331.68,
   "asset_history": [
     {
       "date": "2026-07-16",
