@@ -77,36 +77,9 @@
       "krw_price": 19905,
       "krw_price_gross": 19905,
       "ma20_krw": 22934
-    },
-    "AVGO": {
-      "name": "Broadcom",
-      "account": "general",
-      "type": "stock",
-      "current": 328.75,
-      "krw_price": 437302,
-      "krw_price_gross": 438618,
-      "ma20_krw": 472744
-    },
-    "PLTR": {
-      "name": "Palantir",
-      "account": "general",
-      "type": "stock",
-      "current": 186.03,
-      "krw_price": 247457,
-      "krw_price_gross": 248201,
-      "ma20_krw": 257460
-    },
-    "NVDA": {
-      "name": "Nvidia",
-      "account": "general",
-      "type": "stock",
-      "current": 214.13,
-      "krw_price": 284835,
-      "krw_price_gross": 285692,
-      "ma20_krw": 303520
     }
   },
-  "valuation_date": "2026-10-16T22:45",
+  "valuation_date": "2026-10-17T00:48",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -776,13 +749,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-10-17",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5714286,
+    "required_monthly_remaining": 5725191,
     "daily_rate": null
   },
   "daily_comment_history": [
