@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 334.59,
-      "krw_price": 444240,
-      "krw_price_gross": 445577,
-      "ma20_krw": 469998
+      "krw_price": 443877,
+      "krw_price_gross": 445212,
+      "ma20_krw": 469614
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 194.15,
-      "krw_price": 257776,
-      "krw_price_gross": 258551,
-      "ma20_krw": 257714
+      "krw_price": 257565,
+      "krw_price_gross": 258340,
+      "ma20_krw": 257503
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 217.09,
-      "krw_price": 288234,
-      "krw_price_gross": 289101,
-      "ma20_krw": 302271
+      "krw_price": 287998,
+      "krw_price_gross": 288864,
+      "ma20_krw": 302023
     }
   },
-  "valuation_date": "2026-10-19T20:01",
+  "valuation_date": "2026-10-19T22:55",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 플러스권에서 정상 범위 내 움직임을 보이고 있어 특별한 이상 신호는 없어 보입니다. 다만 Palantir는 +4.4%로 변동성이 상대적으로 크므로 매수 시점 분할 진입이나 체결가 확인을 한 번 더 챙기시면 좋겠습니다. 반도체/AI 관련주 전반의 공통 모멘테이 작용한 것일 수 있으니 섹터 전체 뉴스도 참고하시길 권합니다.",
     "dip_note": null
   },
-  "fx": 1331.71,
+  "fx": 1330.62,
   "asset_history": [
     {
       "date": "2026-07-16",
