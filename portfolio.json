@@ -64,49 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 14555.0,
-      "krw_price": 14555,
-      "krw_price_gross": 14555,
-      "ma20_krw": 15181
+      "current": 14345.0,
+      "krw_price": 14345,
+      "krw_price_gross": 14345,
+      "ma20_krw": 15174
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 19905.0,
-      "krw_price": 19905,
-      "krw_price_gross": 19905,
-      "ma20_krw": 22934
+      "current": 19480.0,
+      "krw_price": 19480,
+      "krw_price_gross": 19480,
+      "ma20_krw": 22772
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 328.75,
-      "krw_price": 437302,
-      "krw_price_gross": 438618,
-      "ma20_krw": 472744
+      "krw_price": 436650,
+      "krw_price_gross": 437964,
+      "ma20_krw": 472039
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 186.03,
-      "krw_price": 247457,
-      "krw_price_gross": 248201,
-      "ma20_krw": 257460
+      "krw_price": 247088,
+      "krw_price_gross": 247831,
+      "ma20_krw": 257076
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 214.13,
-      "krw_price": 284835,
-      "krw_price_gross": 285692,
-      "ma20_krw": 303520
+      "krw_price": 284410,
+      "krw_price_gross": 285266,
+      "ma20_krw": 303068
     }
   },
-  "valuation_date": "2026-10-18T14:12",
+  "valuation_date": "2026-10-19T04:28",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 브로드컴과 팔란티어가 MA5를 하회하며 조정폭이 크게 나타난 반면, 엔비디아는 상대적으로 안정적인 흐름을 보이고 있어 반도체·AI 섹터 내에서도 종목별 변동성 차이가 뚜렷한 하루였습니다. 특히 팔란티어는 -6.9%로 낙폭이 깊은 만큼 분할매수 단가와 비중 관리에 더 신경 쓰시고, 단기 반등 실패 시 추가 하락 가능성도 염두에 두시는 것이 좋겠습니다.",
     "dip_note": "죄송하지만, 제공된 정보만으로는 각 종목의 하락이 (a) 시장 전체 조정인지 (b) 개별 악재인지 **확실하게 판단할 수 없습니다**.\n\n**판단을 위해 필요한 정보:**\n- 오늘 S&P 500, 나스닥 등 주요 지수의 등락률 (동반 하락했는지 비교 필요)\n- 각 종목 관련 뉴스 (실적 발표, 가이던스 변경, 애널리스트 등급 조정, 소송/규제 이슈 등)\n- 동일 섹터 내 다른 종목들의 움직임 (반도체 섹터, AI/소프트웨어 섹터"
   },
-  "fx": 1334.2,
+  "fx": 1332.21,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -790,13 +790,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-10-19",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5736138,
+    "required_monthly_remaining": 5747126,
     "daily_rate": null
   },
   "daily_comment_history": [
