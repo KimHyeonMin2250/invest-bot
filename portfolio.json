@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 334.92,
-      "krw_price": 444591,
-      "krw_price_gross": 445929,
-      "ma20_krw": 469929
+      "current": 334.59,
+      "krw_price": 444240,
+      "krw_price_gross": 445577,
+      "ma20_krw": 469998
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 194.49,
-      "krw_price": 258177,
-      "krw_price_gross": 258954,
-      "ma20_krw": 257686
+      "current": 194.15,
+      "krw_price": 257776,
+      "krw_price_gross": 258551,
+      "ma20_krw": 257714
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 217.37,
-      "krw_price": 288549,
-      "krw_price_gross": 289417,
-      "ma20_krw": 302230
+      "current": 217.09,
+      "krw_price": 288234,
+      "krw_price_gross": 289101,
+      "ma20_krw": 302271
     }
   },
-  "valuation_date": "2026-10-19T19:14",
+  "valuation_date": "2026-10-19T20:01",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,55 +146,55 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-10-16",
+    "date": "2026-10-19",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 330.81,
-        "krw_price": 441469,
-        "change": -3.93,
-        "signal": "🟡 하락 (-3%대)",
-        "shares": 0.0707,
-        "spent": 31200,
+        "current": 334.59,
+        "krw_price": 445577,
+        "change": 1.78,
+        "signal": "",
+        "shares": 0.0269,
+        "spent": 12000,
         "carry": 0,
-        "available": 31200,
+        "available": 12000,
         "skipped_added": 0
       },
       {
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 186.62,
-        "krw_price": 249040,
-        "change": -6.93,
-        "signal": "🟠 급락 (-5%대)",
-        "shares": 0.1421,
-        "spent": 35400,
+        "current": 194.15,
+        "krw_price": 258551,
+        "change": 4.36,
+        "signal": "",
+        "shares": 0.0348,
+        "spent": 9000,
         "carry": 0,
-        "available": 35400,
+        "available": 9000,
         "skipped_added": 0
       },
       {
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 215.07,
-        "krw_price": 287006,
-        "change": -1.0,
+        "current": 217.09,
+        "krw_price": 289101,
+        "change": 1.38,
         "signal": "",
-        "shares": 0.0314,
+        "shares": 0.0311,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 브로드컴과 팔란티어가 MA5를 하회하며 조정폭이 크게 나타난 반면, 엔비디아는 상대적으로 안정적인 흐름을 보이고 있어 반도체·AI 섹터 내에서도 종목별 변동성 차이가 뚜렷한 하루였습니다. 특히 팔란티어는 -6.9%로 낙폭이 깊은 만큼 분할매수 단가와 비중 관리에 더 신경 쓰시고, 단기 반등 실패 시 추가 하락 가능성도 염두에 두시는 것이 좋겠습니다.",
-    "dip_note": "죄송하지만, 제공된 정보만으로는 각 종목의 하락이 (a) 시장 전체 조정인지 (b) 개별 악재인지 **확실하게 판단할 수 없습니다**.\n\n**판단을 위해 필요한 정보:**\n- 오늘 S&P 500, 나스닥 등 주요 지수의 등락률 (동반 하락했는지 비교 필요)\n- 각 종목 관련 뉴스 (실적 발표, 가이던스 변경, 애널리스트 등급 조정, 소송/규제 이슈 등)\n- 동일 섹터 내 다른 종목들의 움직임 (반도체 섹터, AI/소프트웨어 섹터"
+    "ai_comment": "오늘 세 종목 모두 플러스권에서 정상 범위 내 움직임을 보이고 있어 특별한 이상 신호는 없어 보입니다. 다만 Palantir는 +4.4%로 변동성이 상대적으로 크므로 매수 시점 분할 진입이나 체결가 확인을 한 번 더 챙기시면 좋겠습니다. 반도체/AI 관련주 전반의 공통 모멘테이 작용한 것일 수 있으니 섹터 전체 뉴스도 참고하시길 권합니다.",
+    "dip_note": null
   },
-  "fx": 1331.45,
+  "fx": 1331.71,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -809,12 +809,6 @@
   "daily_comment_history": [
     {
       "date": "2026-08-10",
-      "market": "isa",
-      "comment": "오늘 두 종목 모두 상승세를 보이고 있으며, 특히 SOL 미국양자컴퓨팅TOP10의 경우 +4.8%로 변동폭이 다소 큰 편입니다. 규칙에 따라 정상 범위 내 매수 진행은 문제없어 보이나, 테마주 특성상 단기 변동성이 확대될 수 있으니 이후 흐름을 주시하시는 것이 좋겠습니다. 로봇·양자컴퓨팅 테마 모두 최근 시장 관심이 높은 섹터인 만큼 분할 매수 관점에서 접근하시길 참고하시기 바랍니다.",
-      "dip_note": null
-    },
-    {
-      "date": "2026-08-10",
       "market": "general",
       "comment": "오늘 매수 대상 종목들은 전반적으로 정상 범위 내 등락을 보이고 있어 특별한 이상 신호는 없습니다. 다만 Nvidia는 -2.0%로 상대적으로 하락폭이 크고 Palantir는 +3.4%로 변동성이 있는 편이니, 매수는 계획대로 진행하되 체결 시점의 스프레드나 급격한 추가 변동은 한 번 더 확인하시는 게 좋겠습니다. 반도체 섹터 전반의 뉴스 흐름이 있는지도 참고하시면 좋을 것 같습니다.",
       "dip_note": null
@@ -1405,6 +1399,12 @@
       "date": "2026-10-19",
       "market": "isa",
       "comment": "두 종목 모두 전일 대비 하락하며 MA5를 하회하고 있어 단기적으로 조정 국면에 있는 것으로 보입니다. 특히 양자컴퓨팅 테마는 변동성이 상대적으로 크니 매수 후에도 분할 진입이나 추가 하락 가능성을 염두에 두고 리스크 관리에 유의하시기 바랍니다. 다만 규칙 기반 매수 계획은 그대로 진행하시되, 단기 변동성에 일희일비하지 않는 것이 중요해 보입니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-10-19",
+      "market": "general",
+      "comment": "오늘 세 종목 모두 플러스권에서 정상 범위 내 움직임을 보이고 있어 특별한 이상 신호는 없어 보입니다. 다만 Palantir는 +4.4%로 변동성이 상대적으로 크므로 매수 시점 분할 진입이나 체결가 확인을 한 번 더 챙기시면 좋겠습니다. 반도체/AI 관련주 전반의 공통 모멘테이 작용한 것일 수 있으니 섹터 전체 뉴스도 참고하시길 권합니다.",
       "dip_note": null
     }
   ],
