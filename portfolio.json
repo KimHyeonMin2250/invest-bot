@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 328.75,
-      "krw_price": 436054,
-      "krw_price_gross": 437366,
-      "ma20_krw": 471394
+      "current": 334.92,
+      "krw_price": 444591,
+      "krw_price_gross": 445929,
+      "ma20_krw": 469929
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 186.03,
-      "krw_price": 246750,
-      "krw_price_gross": 247492,
-      "ma20_krw": 256725
+      "current": 194.49,
+      "krw_price": 258177,
+      "krw_price_gross": 258954,
+      "ma20_krw": 257686
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 214.13,
-      "krw_price": 284022,
-      "krw_price_gross": 284876,
-      "ma20_krw": 302654
+      "current": 217.37,
+      "krw_price": 288549,
+      "krw_price_gross": 289417,
+      "ma20_krw": 302230
     }
   },
-  "valuation_date": "2026-10-19T10:13",
+  "valuation_date": "2026-10-19T19:14",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 브로드컴과 팔란티어가 MA5를 하회하며 조정폭이 크게 나타난 반면, 엔비디아는 상대적으로 안정적인 흐름을 보이고 있어 반도체·AI 섹터 내에서도 종목별 변동성 차이가 뚜렷한 하루였습니다. 특히 팔란티어는 -6.9%로 낙폭이 깊은 만큼 분할매수 단가와 비중 관리에 더 신경 쓰시고, 단기 반등 실패 시 추가 하락 가능성도 염두에 두시는 것이 좋겠습니다.",
     "dip_note": "죄송하지만, 제공된 정보만으로는 각 종목의 하락이 (a) 시장 전체 조정인지 (b) 개별 악재인지 **확실하게 판단할 수 없습니다**.\n\n**판단을 위해 필요한 정보:**\n- 오늘 S&P 500, 나스닥 등 주요 지수의 등락률 (동반 하락했는지 비교 필요)\n- 각 종목 관련 뉴스 (실적 발표, 가이던스 변경, 애널리스트 등급 조정, 소송/규제 이슈 등)\n- 동일 섹터 내 다른 종목들의 움직임 (반도체 섹터, AI/소프트웨어 섹터"
   },
-  "fx": 1330.39,
+  "fx": 1331.45,
   "asset_history": [
     {
       "date": "2026-07-16",
