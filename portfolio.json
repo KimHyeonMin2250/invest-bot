@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 334.37,
-      "krw_price": 441571,
-      "krw_price_gross": 442900,
-      "ma20_krw": 465490
+      "krw_price": 441501,
+      "krw_price_gross": 442830,
+      "ma20_krw": 465416
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 192.6,
-      "krw_price": 254349,
-      "krw_price_gross": 255114,
-      "ma20_krw": 256837
+      "krw_price": 254308,
+      "krw_price_gross": 255074,
+      "ma20_krw": 256796
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 216.47,
-      "krw_price": 285872,
-      "krw_price_gross": 286732,
-      "ma20_krw": 299834
+      "krw_price": 285826,
+      "krw_price_gross": 286686,
+      "ma20_krw": 299786
     }
   },
-  "valuation_date": "2026-10-21T08:45",
+  "valuation_date": "2026-10-21T09:35",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 세 종목 모두 전일 대비 변동폭이 ±0.2% 이내로 안정적인 흐름을 보이고 있어 매수 계획을 그대로 진행해도 무리는 없어 보입니다. 다만 변동성이 매우 낮은 구간이라 추세 전환 신호로 보기는 어려우니, 체결 직전 호가 스프레드나 거래량이 평소 대비 급변하지 않았는지 한 번 더 확인하시길 권합니다. 특히 Nvidia는 소폭 하락세이니 분할 매수 타이밍 조절 시 참고하시면 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1324.58,
+  "fx": 1324.37,
   "asset_history": [
     {
       "date": "2026-07-16",
