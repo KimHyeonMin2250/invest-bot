@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 338.25,
-      "krw_price": 446922,
-      "krw_price_gross": 448267,
-      "ma20_krw": 464616
+      "current": 337.8,
+      "krw_price": 446650,
+      "krw_price_gross": 447994,
+      "ma20_krw": 464926
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 199.82,
-      "krw_price": 264015,
-      "krw_price_gross": 264809,
-      "ma20_krw": 257495
+      "current": 201.72,
+      "krw_price": 266721,
+      "krw_price_gross": 267523,
+      "ma20_krw": 257809
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 221.54,
-      "krw_price": 292713,
-      "krw_price_gross": 293594,
-      "ma20_krw": 299721
+      "current": 221.97,
+      "krw_price": 293496,
+      "krw_price_gross": 294379,
+      "ma20_krw": 299969
     }
   },
-  "valuation_date": "2026-10-21T18:47",
+  "valuation_date": "2026-10-21T21:34",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘은 브로드컴, 팔란티어, 엔비디아 모두 완만한 상승세를 보이며 특이 변동성 없이 정상 범위 내에서 움직이고 있어 계획대로 매수 진행에 무리는 없어 보입니다. 다만 팔란티어의 +3.7% 상승폭이 상대적으로 크므로 단기 과열 가능성을 염두에 두고, 반도체 섹터(브로드컴, 엔비디아) 전반의 뉴스 흐름도 함께 체크하시길 권합니다.\n\n**주의**: 이 코멘트는 참고용 의견일 뿐이며 투자 조언이 아닙니다. 최종 판단은 본인 책임하에 신중히 내리시기 바랍니다.",
     "dip_note": null
   },
-  "fx": 1325.24,
+  "fx": 1326.21,
   "asset_history": [
     {
       "date": "2026-07-16",
