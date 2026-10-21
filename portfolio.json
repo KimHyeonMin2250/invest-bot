@@ -67,7 +67,7 @@
       "current": 14310.0,
       "krw_price": 14310,
       "krw_price_gross": 14310,
-      "ma20_krw": 15158
+      "ma20_krw": 15169
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
@@ -76,37 +76,10 @@
       "current": 18700.0,
       "krw_price": 18700,
       "krw_price_gross": 18700,
-      "ma20_krw": 22558
-    },
-    "AVGO": {
-      "name": "Broadcom",
-      "account": "general",
-      "type": "stock",
-      "current": 334.37,
-      "krw_price": 442104,
-      "krw_price_gross": 443435,
-      "ma20_krw": 466052
-    },
-    "PLTR": {
-      "name": "Palantir",
-      "account": "general",
-      "type": "stock",
-      "current": 192.6,
-      "krw_price": 254656,
-      "krw_price_gross": 255422,
-      "ma20_krw": 257147
-    },
-    "NVDA": {
-      "name": "Nvidia",
-      "account": "general",
-      "type": "stock",
-      "current": 216.47,
-      "krw_price": 286217,
-      "krw_price_gross": 287078,
-      "ma20_krw": 300196
+      "ma20_krw": 22512
     }
   },
-  "valuation_date": "2026-10-20T21:31",
+  "valuation_date": "2026-10-21T00:05",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +167,7 @@
     "ai_comment": "오늘 세 종목 모두 전일 대비 변동폭이 ±0.2% 이내로 안정적인 흐름을 보이고 있어 매수 계획을 그대로 진행해도 무리는 없어 보입니다. 다만 변동성이 매우 낮은 구간이라 추세 전환 신호로 보기는 어려우니, 체결 직전 호가 스프레드나 거래량이 평소 대비 급변하지 않았는지 한 번 더 확인하시길 권합니다. 특히 Nvidia는 소폭 하락세이니 분할 매수 타이밍 조절 시 참고하시면 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1326.18,
+  "fx": 1324.78,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -804,13 +777,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-10-21",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5758157,
+    "required_monthly_remaining": 5769231,
     "daily_rate": null
   },
   "daily_comment_history": [
