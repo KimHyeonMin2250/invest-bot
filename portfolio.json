@@ -67,7 +67,7 @@
       "current": 14500.0,
       "krw_price": 14500,
       "krw_price_gross": 14500,
-      "ma20_krw": 15136
+      "ma20_krw": 15131
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
@@ -76,37 +76,10 @@
       "current": 19175.0,
       "krw_price": 19175,
       "krw_price_gross": 19175,
-      "ma20_krw": 22345
-    },
-    "AVGO": {
-      "name": "Broadcom",
-      "account": "general",
-      "type": "stock",
-      "current": 337.8,
-      "krw_price": 446650,
-      "krw_price_gross": 447994,
-      "ma20_krw": 464926
-    },
-    "PLTR": {
-      "name": "Palantir",
-      "account": "general",
-      "type": "stock",
-      "current": 201.72,
-      "krw_price": 266721,
-      "krw_price_gross": 267523,
-      "ma20_krw": 257809
-    },
-    "NVDA": {
-      "name": "Nvidia",
-      "account": "general",
-      "type": "stock",
-      "current": 221.97,
-      "krw_price": 293496,
-      "krw_price_gross": 294379,
-      "ma20_krw": 299969
+      "ma20_krw": 22218
     }
   },
-  "valuation_date": "2026-10-21T21:34",
+  "valuation_date": "2026-10-22T00:09",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +167,7 @@
     "ai_comment": "오늘은 브로드컴, 팔란티어, 엔비디아 모두 완만한 상승세를 보이며 특이 변동성 없이 정상 범위 내에서 움직이고 있어 계획대로 매수 진행에 무리는 없어 보입니다. 다만 팔란티어의 +3.7% 상승폭이 상대적으로 크므로 단기 과열 가능성을 염두에 두고, 반도체 섹터(브로드컴, 엔비디아) 전반의 뉴스 흐름도 함께 체크하시길 권합니다.\n\n**주의**: 이 코멘트는 참고용 의견일 뿐이며 투자 조언이 아닙니다. 최종 판단은 본인 책임하에 신중히 내리시기 바랍니다.",
     "dip_note": null
   },
-  "fx": 1326.21,
+  "fx": 1326.49,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -811,13 +784,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-10-22",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5769231,
+    "required_monthly_remaining": 5780347,
     "daily_rate": null
   },
   "daily_comment_history": [
