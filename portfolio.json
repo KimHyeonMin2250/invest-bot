@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 324.45,
-      "krw_price": 428888,
-      "krw_price_gross": 430179,
-      "ma20_krw": 463095
+      "current": 324.13,
+      "krw_price": 428559,
+      "krw_price_gross": 429848,
+      "ma20_krw": 463175
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 197.64,
-      "krw_price": 261259,
-      "krw_price_gross": 262045,
-      "ma20_krw": 258077
+      "current": 196.32,
+      "krw_price": 259571,
+      "krw_price_gross": 260352,
+      "ma20_krw": 258046
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 212.75,
-      "krw_price": 281233,
-      "krw_price_gross": 282079,
-      "ma20_krw": 299110
+      "current": 212.3,
+      "krw_price": 280699,
+      "krw_price_gross": 281544,
+      "ma20_krw": 299146
     }
   },
-  "valuation_date": "2026-10-22T17:56",
+  "valuation_date": "2026-10-22T18:40",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,31 +146,31 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-10-21",
+    "date": "2026-10-22",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 338.29,
-        "krw_price": 448315,
-        "change": 1.17,
-        "signal": "",
-        "shares": 0.0268,
-        "spent": 12000,
+        "current": 324.13,
+        "krw_price": 429848,
+        "change": -4.05,
+        "signal": "🟡 하락 (-3%대)",
+        "shares": 0.0726,
+        "spent": 31200,
         "carry": 0,
-        "available": 12000,
+        "available": 31200,
         "skipped_added": 0
       },
       {
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 199.7,
-        "krw_price": 264650,
-        "change": 3.69,
+        "current": 196.32,
+        "krw_price": 260352,
+        "change": -2.68,
         "signal": "",
-        "shares": 0.034,
+        "shares": 0.0346,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 221.54,
-        "krw_price": 293587,
-        "change": 2.34,
-        "signal": "",
-        "shares": 0.0307,
-        "spent": 9000,
+        "current": 212.3,
+        "krw_price": 281544,
+        "change": -4.36,
+        "signal": "🟡 하락 (-3%대)",
+        "shares": 0.0831,
+        "spent": 23400,
         "carry": 0,
-        "available": 9000,
+        "available": 23400,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘은 브로드컴, 팔란티어, 엔비디아 모두 완만한 상승세를 보이며 특이 변동성 없이 정상 범위 내에서 움직이고 있어 계획대로 매수 진행에 무리는 없어 보입니다. 다만 팔란티어의 +3.7% 상승폭이 상대적으로 크므로 단기 과열 가능성을 염두에 두고, 반도체 섹터(브로드컴, 엔비디아) 전반의 뉴스 흐름도 함께 체크하시길 권합니다.\n\n**주의**: 이 코멘트는 참고용 의견일 뿐이며 투자 조언이 아닙니다. 최종 판단은 본인 책임하에 신중히 내리시기 바랍니다.",
-    "dip_note": null
+    "ai_comment": "오늘 반도체·AI 관련주 전반이 약세를 보이며 세 종목 모두 하락했고, 특히 Broadcom과 Nvidia는 5일 이동평균선을 하회하며 단기 조정 흐름이 이어지는 모습입니다. 매수 계획은 유지하시되, 변동성이 확대된 구간인 만큼 분할 매수 타이밍과 체결가 슬리피지에 유의하시는 게 좋겠습니다.",
+    "dip_note": "**Broadcom**: 5일/20일 이동평균선 대비 완만한 하락이며, 같은 날 Nvidia도 유사한 폭으로 하락한 점을 고려하면 반도체 섹터 전체 조정일 가능성이 있습니다. 다만 개별 공시나 실적 이슈 여부를 확인할 수 없어 확실하지 않으며, 개별 악재 가능성도 배제할 수 없으니 뉴스 확인 전까지는 신중하게 접근하시길 권합니다.\n\n**Nvidia**: Broadcom과 거의 동시에 비슷한 낙폭(-4.4%)을 보인 점은 AI/반도체 섹터 전반의 조정 신호로 해석될 여지가 있어 '저"
   },
-  "fx": 1325.87,
+  "fx": 1326.16,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -830,12 +830,6 @@
   "daily_comment_history": [
     {
       "date": "2026-08-13",
-      "market": "isa",
-      "comment": "두 종목 모두 전일 대비 상승세를 유지하며 정상 범위 내에서 움직이고 있어 매수 계획 자체에는 무리가 없어 보입니다. 다만 양자컴퓨팅 테마는 변동성이 상대적으로 큰 편이라 단기 급등 이후 되돌림 가능성을 염두에 두고, 로봇 테마와의 상관관계나 포트폴리오 내 비중 조절도 함께 점검해보시길 권합니다.",
-      "dip_note": null
-    },
-    {
-      "date": "2026-08-13",
       "market": "general",
       "comment": "오늘 세 종목 모두 완만한 상승세로 정상 범위 내 등락을 보이고 있어 특별한 이상 신호는 없어 보입니다. 다만 브로드컴과 팔란티어의 상승폭이 엔비디아 대비 다소 커 단기 변동성이 있을 수 있으니, 체결가와 슬리피지는 한 번 더 확인하시는 게 좋겠습니다. 매수 계획 자체는 유지하시되 시장 전반의 급변 뉴스가 있는지 정도만 참고하시길 권합니다.",
       "dip_note": null
@@ -1427,6 +1421,12 @@
       "market": "isa",
       "comment": "오늘은 두 종목 모두 전일 대비 약세를 보이며 5일 이동평균선을 하회하는 조정 국면으로, 로봇·양자컴퓨팅 같은 테마주 특성상 변동성이 큰 구간임을 염두에 두셔야 합니다. 규칙에 따른 분할매수는 그대로 진행하시되, 단기 추세 약화가 이어질 경우를 대비해 포지션 크기와 추가 하락 시 대응 계획을 미리 점검해두시길 권합니다.",
       "dip_note": null
+    },
+    {
+      "date": "2026-10-22",
+      "market": "general",
+      "comment": "오늘 반도체·AI 관련주 전반이 약세를 보이며 세 종목 모두 하락했고, 특히 Broadcom과 Nvidia는 5일 이동평균선을 하회하며 단기 조정 흐름이 이어지는 모습입니다. 매수 계획은 유지하시되, 변동성이 확대된 구간인 만큼 분할 매수 타이밍과 체결가 슬리피지에 유의하시는 게 좋겠습니다.",
+      "dip_note": "**Broadcom**: 5일/20일 이동평균선 대비 완만한 하락이며, 같은 날 Nvidia도 유사한 폭으로 하락한 점을 고려하면 반도체 섹터 전체 조정일 가능성이 있습니다. 다만 개별 공시나 실적 이슈 여부를 확인할 수 없어 확실하지 않으며, 개별 악재 가능성도 배제할 수 없으니 뉴스 확인 전까지는 신중하게 접근하시길 권합니다.\n\n**Nvidia**: Broadcom과 거의 동시에 비슷한 낙폭(-4.4%)을 보인 점은 AI/반도체 섹터 전반의 조정 신호로 해석될 여지가 있어 '저"
     }
   ],
   "rebalance_suggestions": [],
