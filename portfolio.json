@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 330.14,
-      "krw_price": 436373,
-      "krw_price_gross": 437686,
-      "ma20_krw": 459635
+      "current": 329.17,
+      "krw_price": 435075,
+      "krw_price_gross": 436384,
+      "ma20_krw": 459553
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 199.24,
-      "krw_price": 263352,
-      "krw_price_gross": 264144,
-      "ma20_krw": 259205
+      "current": 198.84,
+      "krw_price": 262813,
+      "krw_price_gross": 263604,
+      "ma20_krw": 259169
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 216.18,
-      "krw_price": 285743,
-      "krw_price_gross": 286603,
-      "ma20_krw": 297279
+      "current": 216.0,
+      "krw_price": 285494,
+      "krw_price_gross": 286353,
+      "ma20_krw": 297256
     }
   },
-  "valuation_date": "2026-10-26T19:10",
+  "valuation_date": "2026-10-26T20:01",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,17 +146,17 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-10-23",
+    "date": "2026-10-26",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 324.55,
-        "krw_price": 429954,
-        "change": 0.41,
+        "current": 329.17,
+        "krw_price": 436384,
+        "change": 2.33,
         "signal": "",
-        "shares": 0.0279,
+        "shares": 0.0275,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -166,11 +166,11 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 195.84,
-        "krw_price": 259439,
-        "change": -0.18,
+        "current": 198.84,
+        "krw_price": 263604,
+        "change": 1.06,
         "signal": "",
-        "shares": 0.0347,
+        "shares": 0.0341,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -180,21 +180,21 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 212.06,
-        "krw_price": 280926,
-        "change": -0.07,
+        "current": 216.0,
+        "krw_price": 286353,
+        "change": 2.39,
         "signal": "",
-        "shares": 0.032,
+        "shares": 0.0314,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
         "skipped_added": 0
       }
     ],
-    "ai_comment": "오늘 세 종목 모두 전일 대비 변동폭이 크지 않아 특별한 이벤트 없이 안정적인 흐름을 보이고 있습니다. 다만 반도체·AI 관련주는 거시 지표나 금리 발표에 민감하게 반응할 수 있으니, 계획대로 매수 진행하시되 체결 전 당일 뉴스 플로우 정도는 한 번 확인해보시는 걸 추천드립니다.",
+    "ai_comment": "오늘 반도체·AI 관련주가 전반적으로 강세를 보이며 세 종목 모두 정상 범위 내 상승세를 유지하고 있어 시장 분위기는 긍정적입니다. 다만 Broadcom과 Nvidia의 상승폭이 다소 커서 단기 변동성 확대 가능성이 있으니, 매수 체결 시 슬리피지나 급격한 호가 변화에 유의하시기 바랍니다. 매수 계획 자체는 유지하되, 실행 시점의 추가 뉴스나 거시 지표 발표 여부를 참고하시면 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1325.76,
+  "fx": 1325.71,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -851,12 +851,6 @@
   "daily_comment_history": [
     {
       "date": "2026-08-17",
-      "market": "isa",
-      "comment": "**시장 코멘트:**\n\n두 종목 모두 테마성 강한 신기술 섹터(휴머노이드 로봇·양자컴퓨팅)로, 변동성이 상대적으로 클 수 있는 구간입니다. 특히 SOL 미국양자컴퓨팅TOP10은 MA5 하회 중이라 단기 조정 흐름이 이어질 가능성이 있으니, 매수 후에도 분할 진입 여지나 추가 하락 시 대응 계획을 미리 점검해두시는 게 좋겠습니다.\n\n(참고 의견입니다 — 계획된 매수 진행에는 영향 없습니다.)",
-      "dip_note": "**SOL 미국양자컴퓨팅TOP10**: 제공된 데이터(현재가, 이동평균)만으로는 하락 원인이 시장 전체 조정인지"
-    },
-    {
-      "date": "2026-08-17",
       "market": "general",
       "comment": "오늘은 세 종목 모두 전일 대비 소폭 등락에 그치며 특별한 변동성 없이 안정적인 흐름을 보이고 있습니다. 계획된 매수 진행에 무리는 없어 보이나, 반도체·AI 관련주는 장중 뉴스나 거시 지표에 민감하게 반응할 수 있으니 체결 시점의 가격은 한 번 더 확인하시길 권합니다.",
       "dip_note": null
@@ -1447,6 +1441,12 @@
       "date": "2026-10-26",
       "market": "isa",
       "comment": "두 종목 모두 전일 대비 소폭 하락했지만 정상 변동 범위 내에 있어 예정된 매수 진행에는 큰 무리가 없어 보입니다. 다만 휴머노이드 로봇과 양자컴퓨팅 테마는 변동성이 크고 거시 이슈(금리, 기술주 심리)에 민감하게 반응하는 경향이 있으니, 매수 이후에도 분할 매수 원칙과 리스크 관리 기준을 유지하시는 것이 좋겠습니다. 테마주 특성상 단기 뉴스 흐름에 따라 변동폭이 커질 수 있는 점도 참고하시기 바랍니다.",
+      "dip_note": null
+    },
+    {
+      "date": "2026-10-26",
+      "market": "general",
+      "comment": "오늘 반도체·AI 관련주가 전반적으로 강세를 보이며 세 종목 모두 정상 범위 내 상승세를 유지하고 있어 시장 분위기는 긍정적입니다. 다만 Broadcom과 Nvidia의 상승폭이 다소 커서 단기 변동성 확대 가능성이 있으니, 매수 체결 시 슬리피지나 급격한 호가 변화에 유의하시기 바랍니다. 매수 계획 자체는 유지하되, 실행 시점의 추가 뉴스나 거시 지표 발표 여부를 참고하시면 좋겠습니다.",
       "dip_note": null
     }
   ],
