@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 329.17,
-      "krw_price": 435190,
-      "krw_price_gross": 436499,
-      "ma20_krw": 459675
+      "krw_price": 435751,
+      "krw_price_gross": 437062,
+      "ma20_krw": 460267
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 198.84,
-      "krw_price": 262883,
-      "krw_price_gross": 263674,
-      "ma20_krw": 259237
+      "krw_price": 263222,
+      "krw_price_gross": 264014,
+      "ma20_krw": 259571
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 216.0,
-      "krw_price": 285570,
-      "krw_price_gross": 286429,
-      "ma20_krw": 297334
+      "krw_price": 285938,
+      "krw_price_gross": 286798,
+      "ma20_krw": 297718
     }
   },
-  "valuation_date": "2026-10-27T09:13",
+  "valuation_date": "2026-10-27T10:04",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": "오늘 반도체·AI 관련주가 전반적으로 강세를 보이며 세 종목 모두 정상 범위 내 상승세를 유지하고 있어 시장 분위기는 긍정적입니다. 다만 Broadcom과 Nvidia의 상승폭이 다소 커서 단기 변동성 확대 가능성이 있으니, 매수 체결 시 슬리피지나 급격한 호가 변화에 유의하시기 바랍니다. 매수 계획 자체는 유지하되, 실행 시점의 추가 뉴스나 거시 지표 발표 여부를 참고하시면 좋겠습니다.",
     "dip_note": null
   },
-  "fx": 1326.06,
+  "fx": 1327.77,
   "asset_history": [
     {
       "date": "2026-07-16",
