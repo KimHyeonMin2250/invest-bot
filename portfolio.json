@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 326.08,
-      "krw_price": 434980,
-      "krw_price_gross": 436289,
-      "ma20_krw": 461149
+      "krw_price": 433504,
+      "krw_price_gross": 434808,
+      "ma20_krw": 459584
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 184.11,
-      "krw_price": 245596,
-      "krw_price_gross": 246335,
-      "ma20_krw": 263119
+      "krw_price": 244763,
+      "krw_price_gross": 245500,
+      "ma20_krw": 262226
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 204.64,
-      "krw_price": 272983,
-      "krw_price_gross": 273804,
-      "ma20_krw": 295419
+      "krw_price": 272057,
+      "krw_price_gross": 272875,
+      "ma20_krw": 294417
     }
   },
-  "valuation_date": "2026-10-31T01:47",
+  "valuation_date": "2026-11-01T16:58",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": null,
     "dip_note": null
   },
-  "fx": 1337.98,
+  "fx": 1333.44,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -874,6 +874,13 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-11-01",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
@@ -1487,8 +1494,8 @@
   ],
   "rebalance_suggestions": [],
   "weekly_review": {
-    "date": "2026-10-25",
-    "text": "안녕하세요, 이번 주 리뷰 드립니다. 현재는 아직 보유 종목이 없으신 상태라 자산 변화도 0원으로 나타나고 있는데, 이는 정상적인 시작 전 단계로 보시면 됩니다. 목표 페이스를 계산하려면 최소 일주일 정도의 자산 기록이 쌓여야 해서, 지금은 판단을 내리기엔 아직 이른 시점이에요. 다만 참고로 말씀드리면, 투자를 시작하시기 전에 목표 기간과 리스크 허용 범위를 한 번 더 점검해보시면 이후 포트폴리오 구성이 한결 수월하실 것 같습니다. 매수를 시작하실 계획이 있으시면 편하게 말씀해주세요, 그 시점에 맞춰 구체적인 비중과 전략을 함께 고민해드리겠습니다. 급하게 결정하지 않으셔도 괜찮으니, 준비되실 때 차근차근 진행해보시죠."
+    "date": "2026-11-01",
+    "text": null
   },
   "weekly_review_history": [
     {
