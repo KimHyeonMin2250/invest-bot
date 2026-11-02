@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 8060.0,
-    "0023A0.KS": 14670.0,
+    "0038A0.KS": 12135.0,
+    "0023A0.KS": 8690.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -64,81 +64,81 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 13910.0,
-      "krw_price": 13910,
-      "krw_price_gross": 13910,
-      "ma20_krw": 14641
+      "current": 13925.0,
+      "krw_price": 13925,
+      "krw_price_gross": 13925,
+      "ma20_krw": 14642
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 17945.0,
-      "krw_price": 17945,
-      "krw_price_gross": 17945,
-      "ma20_krw": 20100
+      "current": 17980.0,
+      "krw_price": 17980,
+      "krw_price_gross": 17980,
+      "ma20_krw": 20102
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 326.08,
-      "krw_price": 436150,
-      "krw_price_gross": 437462,
-      "ma20_krw": 462390
+      "krw_price": 435952,
+      "krw_price_gross": 437263,
+      "ma20_krw": 462179
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 184.11,
-      "krw_price": 246257,
-      "krw_price_gross": 246998,
-      "ma20_krw": 263827
+      "krw_price": 246145,
+      "krw_price_gross": 246886,
+      "ma20_krw": 263707
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 204.64,
-      "krw_price": 273717,
-      "krw_price_gross": 274541,
-      "ma20_krw": 296214
+      "krw_price": 273593,
+      "krw_price_gross": 274416,
+      "ma20_krw": 296080
     }
   },
-  "valuation_date": "2026-11-02T05:50",
+  "valuation_date": "2026-11-02T11:31",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-10-30",
+    "date": "2026-11-02",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 13920.0,
-        "krw_price": 13920,
-        "change": -4.26,
-        "signal": "🔴 큰 급락 (-3% 이하)",
-        "shares": 6,
-        "spent": 83520,
-        "carry": 8060,
-        "available": 91580,
+        "current": 13925.0,
+        "krw_price": 13925,
+        "change": 0.04,
+        "signal": "",
+        "shares": 1,
+        "spent": 13925,
+        "carry": 12135,
+        "available": 26060,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 18065.0,
-        "krw_price": 18065,
-        "change": -4.8,
-        "signal": "🔴 큰 급락 (-3% 이하)",
-        "shares": 3,
-        "spent": 54195,
-        "carry": 14670,
-        "available": 68865,
+        "current": 17980.0,
+        "krw_price": 17980,
+        "change": -0.47,
+        "signal": "",
+        "shares": 1,
+        "spent": 17980,
+        "carry": 8690,
+        "available": 26670,
         "skipped_added": 0
       }
     ],
@@ -194,7 +194,7 @@
     "ai_comment": null,
     "dip_note": null
   },
-  "fx": 1341.58,
+  "fx": 1340.97,
   "asset_history": [
     {
       "date": "2026-07-16",
