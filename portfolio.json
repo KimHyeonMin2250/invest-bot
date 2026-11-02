@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 326.08,
-      "krw_price": 435952,
-      "krw_price_gross": 437263,
-      "ma20_krw": 462179
+      "krw_price": 436280,
+      "krw_price_gross": 437593,
+      "ma20_krw": 462527
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 184.11,
-      "krw_price": 246145,
-      "krw_price_gross": 246886,
-      "ma20_krw": 263707
+      "krw_price": 246331,
+      "krw_price_gross": 247072,
+      "ma20_krw": 263905
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 204.64,
-      "krw_price": 273593,
-      "krw_price_gross": 274416,
-      "ma20_krw": 296080
+      "krw_price": 273799,
+      "krw_price_gross": 274623,
+      "ma20_krw": 296303
     }
   },
-  "valuation_date": "2026-11-02T11:31",
+  "valuation_date": "2026-11-02T13:53",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": null,
     "dip_note": null
   },
-  "fx": 1340.97,
+  "fx": 1341.98,
   "asset_history": [
     {
       "date": "2026-07-16",
