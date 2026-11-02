@@ -64,49 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 13920.0,
-      "krw_price": 13920,
-      "krw_price_gross": 13920,
-      "ma20_krw": 14725
+      "current": 13910.0,
+      "krw_price": 13910,
+      "krw_price_gross": 13910,
+      "ma20_krw": 14641
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 18065.0,
-      "krw_price": 18065,
-      "krw_price_gross": 18065,
-      "ma20_krw": 20417
+      "current": 17945.0,
+      "krw_price": 17945,
+      "krw_price_gross": 17945,
+      "ma20_krw": 20100
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 326.08,
-      "krw_price": 433504,
-      "krw_price_gross": 434808,
-      "ma20_krw": 459584
+      "krw_price": 436150,
+      "krw_price_gross": 437462,
+      "ma20_krw": 462390
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 184.11,
-      "krw_price": 244763,
-      "krw_price_gross": 245500,
-      "ma20_krw": 262226
+      "krw_price": 246257,
+      "krw_price_gross": 246998,
+      "ma20_krw": 263827
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 204.64,
-      "krw_price": 272057,
-      "krw_price_gross": 272875,
-      "ma20_krw": 294417
+      "krw_price": 273717,
+      "krw_price_gross": 274541,
+      "ma20_krw": 296214
     }
   },
-  "valuation_date": "2026-11-01T16:58",
+  "valuation_date": "2026-11-02T05:50",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": null,
     "dip_note": null
   },
-  "fx": 1333.44,
+  "fx": 1341.58,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -881,13 +881,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-11-02",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5882353,
+    "required_monthly_remaining": 5893910,
     "daily_rate": null
   },
   "daily_comment_history": [
