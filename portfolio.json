@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 293.69,
-      "krw_price": 397148,
-      "krw_price_gross": 398343,
-      "ma20_krw": 449123
+      "krw_price": 399289,
+      "krw_price_gross": 400490,
+      "ma20_krw": 451544
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 160.38,
-      "krw_price": 216877,
-      "krw_price_gross": 217530,
-      "ma20_krw": 257087
+      "krw_price": 218046,
+      "krw_price_gross": 218702,
+      "ma20_krw": 258473
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 186.64,
-      "krw_price": 252388,
-      "krw_price_gross": 253147,
-      "ma20_krw": 286069
+      "krw_price": 253748,
+      "krw_price_gross": 254512,
+      "ma20_krw": 287611
     }
   },
-  "valuation_date": "2026-11-07T00:03",
+  "valuation_date": "2026-11-08T16:52",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": null,
     "dip_note": null
   },
-  "fx": 1356.34,
+  "fx": 1363.65,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -923,13 +923,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-11-08",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 5952381,
+    "required_monthly_remaining": 5964215,
     "daily_rate": null
   },
   "daily_comment_history": [
@@ -1536,7 +1543,7 @@
   ],
   "rebalance_suggestions": [],
   "weekly_review": {
-    "date": "2026-11-01",
+    "date": "2026-11-08",
     "text": null
   },
   "weekly_review_history": [
