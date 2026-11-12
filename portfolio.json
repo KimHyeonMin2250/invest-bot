@@ -64,49 +64,22 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 13565.0,
-      "krw_price": 13565,
-      "krw_price_gross": 13565,
-      "ma20_krw": 13986
+      "current": 13440.0,
+      "krw_price": 13440,
+      "krw_price_gross": 13440,
+      "ma20_krw": 13932
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 18490.0,
-      "krw_price": 18490,
-      "krw_price_gross": 18490,
-      "ma20_krw": 18378
-    },
-    "AVGO": {
-      "name": "Broadcom",
-      "account": "general",
-      "type": "stock",
-      "current": 345.22,
-      "krw_price": 460832,
-      "krw_price_gross": 462219,
-      "ma20_krw": 439239
-    },
-    "PLTR": {
-      "name": "Palantir",
-      "account": "general",
-      "type": "stock",
-      "current": 172.4,
-      "krw_price": 230136,
-      "krw_price_gross": 230828,
-      "ma20_krw": 246560
-    },
-    "NVDA": {
-      "name": "Nvidia",
-      "account": "general",
-      "type": "stock",
-      "current": 173.73,
-      "krw_price": 231911,
-      "krw_price_gross": 232609,
-      "ma20_krw": 272057
+      "current": 17900.0,
+      "krw_price": 17900,
+      "krw_price_gross": 17900,
+      "ma20_krw": 18323
     }
   },
-  "valuation_date": "2026-11-11T21:28",
+  "valuation_date": "2026-11-12T01:56",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +167,7 @@
     "ai_comment": null,
     "dip_note": null
   },
-  "fx": 1338.91,
+  "fx": 1334.58,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -951,13 +924,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-11-12",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 6000000,
+    "required_monthly_remaining": 6012024,
     "daily_rate": null
   },
   "daily_comment_history": [
