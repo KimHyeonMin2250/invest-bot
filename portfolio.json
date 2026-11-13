@@ -45,8 +45,8 @@
   "transactions": [],
   "monthly_deposits": [],
   "carryover": {
-    "0038A0.KS": 230.0,
-    "0023A0.KS": 15170.0,
+    "0038A0.KS": 4805.0,
+    "0023A0.KS": 7570.0,
     "AVGO": 0,
     "PLTR": 0,
     "NVDA": 0
@@ -83,62 +83,62 @@
       "account": "general",
       "type": "stock",
       "current": 364.36,
-      "krw_price": 485862,
-      "krw_price_gross": 487324,
-      "ma20_krw": 440106
+      "krw_price": 485306,
+      "krw_price_gross": 486767,
+      "ma20_krw": 439602
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 171.58,
-      "krw_price": 228796,
-      "krw_price_gross": 229485,
-      "ma20_krw": 244369
+      "krw_price": 228535,
+      "krw_price_gross": 229222,
+      "ma20_krw": 244089
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 166.19,
-      "krw_price": 221609,
-      "krw_price_gross": 222276,
-      "ma20_krw": 268364
+      "krw_price": 221355,
+      "krw_price_gross": 222022,
+      "ma20_krw": 268057
     }
   },
-  "valuation_date": "2026-11-13T08:41",
+  "valuation_date": "2026-11-13T11:20",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
   "last_isa": {
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "actions": [
       {
         "ticker": "0038A0.KS",
         "name": "KODEX 미국휴머노이드로봇",
         "account": "ISA",
-        "current": 13355.0,
-        "krw_price": 13355,
-        "change": -1.55,
-        "signal": "🟡 소폭 하락",
-        "shares": 4,
-        "spent": 53420,
-        "carry": 230,
-        "available": 53650,
+        "current": 13425.0,
+        "krw_price": 13425,
+        "change": 0.52,
+        "signal": "",
+        "shares": 1,
+        "spent": 13425,
+        "carry": 4805,
+        "available": 18230,
         "skipped_added": 0
       },
       {
         "ticker": "0023A0.KS",
         "name": "SOL 미국양자컴퓨팅TOP10",
         "account": "ISA",
-        "current": 17670.0,
-        "krw_price": 17670,
-        "change": -4.43,
-        "signal": "🔴 큰 급락 (-3% 이하)",
+        "current": 17200.0,
+        "krw_price": 17200,
+        "change": -2.66,
+        "signal": "🟠 급락 (-2%대)",
         "shares": 3,
-        "spent": 53010,
-        "carry": 15170,
-        "available": 68180,
+        "spent": 51600,
+        "carry": 7570,
+        "available": 59170,
         "skipped_added": 0
       }
     ],
@@ -194,7 +194,7 @@
     "ai_comment": null,
     "dip_note": null
   },
-  "fx": 1337.48,
+  "fx": 1335.95,
   "asset_history": [
     {
       "date": "2026-07-16",
