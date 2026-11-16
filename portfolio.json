@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 334.44,
-      "krw_price": 445215,
-      "krw_price_gross": 446554,
-      "ma20_krw": 440571
+      "current": 333.4,
+      "krw_price": 443930,
+      "krw_price_gross": 445266,
+      "ma20_krw": 440600
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 164.23,
-      "krw_price": 218627,
-      "krw_price_gross": 219285,
-      "ma20_krw": 240765
+      "current": 160.39,
+      "krw_price": 213563,
+      "krw_price_gross": 214206,
+      "ma20_krw": 240564
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 159.16,
-      "krw_price": 211878,
-      "krw_price_gross": 212515,
-      "ma20_krw": 260643
+      "current": 156.14,
+      "krw_price": 207904,
+      "krw_price_gross": 208530,
+      "ma20_krw": 260501
     }
   },
-  "valuation_date": "2026-11-16T16:03",
+  "valuation_date": "2026-11-16T23:26",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,17 +146,17 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-11-13",
+    "date": "2026-11-16",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 347.17,
-        "krw_price": 463951,
-        "change": -4.72,
+        "current": 333.4,
+        "krw_price": 445266,
+        "change": -3.92,
         "signal": "🟡 하락 (-3%대)",
-        "shares": 0.0672,
+        "shares": 0.0701,
         "spent": 31200,
         "carry": 0,
         "available": 31200,
@@ -166,35 +166,35 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 167.93,
-        "krw_price": 224422,
-        "change": -2.13,
-        "signal": "",
-        "shares": 0.0401,
-        "spent": 9000,
+        "current": 160.39,
+        "krw_price": 214206,
+        "change": -4.52,
+        "signal": "🟡 하락 (-3%대)",
+        "shares": 0.1092,
+        "spent": 23400,
         "carry": 0,
-        "available": 9000,
+        "available": 23400,
         "skipped_added": 0
       },
       {
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 162.93,
-        "krw_price": 217746,
-        "change": -1.96,
-        "signal": "",
-        "shares": 0.0413,
-        "spent": 9000,
+        "current": 156.14,
+        "krw_price": 208530,
+        "change": -4.12,
+        "signal": "🟡 하락 (-3%대)",
+        "shares": 0.1122,
+        "spent": 23400,
         "carry": 0,
-        "available": 9000,
+        "available": 23400,
         "skipped_added": 0
       }
     ],
     "ai_comment": null,
     "dip_note": null
   },
-  "fx": 1335.23,
+  "fx": 1335.53,
   "asset_history": [
     {
       "date": "2026-07-16",
