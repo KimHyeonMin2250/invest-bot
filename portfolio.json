@@ -67,7 +67,7 @@
       "current": 13050.0,
       "krw_price": 13050,
       "krw_price_gross": 13050,
-      "ma20_krw": 13809
+      "ma20_krw": 13783
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
@@ -76,37 +76,37 @@
       "current": 16265.0,
       "krw_price": 16265,
       "krw_price_gross": 16265,
-      "ma20_krw": 18018
+      "ma20_krw": 17983
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 333.4,
-      "krw_price": 443930,
-      "krw_price_gross": 445266,
-      "ma20_krw": 440600
+      "krw_price": 444146,
+      "krw_price_gross": 445482,
+      "ma20_krw": 440815
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 160.39,
-      "krw_price": 213563,
-      "krw_price_gross": 214206,
-      "ma20_krw": 240564
+      "krw_price": 213667,
+      "krw_price_gross": 214310,
+      "ma20_krw": 240681
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 156.14,
-      "krw_price": 207904,
-      "krw_price_gross": 208530,
-      "ma20_krw": 260501
+      "krw_price": 208005,
+      "krw_price_gross": 208631,
+      "ma20_krw": 260627
     }
   },
-  "valuation_date": "2026-11-16T23:26",
+  "valuation_date": "2026-11-17T00:10",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": null,
     "dip_note": null
   },
-  "fx": 1335.53,
+  "fx": 1336.18,
   "asset_history": [
     {
       "date": "2026-07-16",
@@ -986,13 +986,20 @@
       "deposit": 0,
       "eval": 0,
       "holdings_backup": []
+    },
+    {
+      "date": "2026-11-17",
+      "total": 0,
+      "deposit": 0,
+      "eval": 0,
+      "holdings_backup": []
     }
   ],
   "goal_pace": {
     "status": "unknown",
     "projected_date": null,
     "months_diff": null,
-    "required_monthly_remaining": 6060606,
+    "required_monthly_remaining": 6072874,
     "daily_rate": null
   },
   "daily_comment_history": [
