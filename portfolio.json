@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 354.05,
-      "krw_price": 470469,
-      "krw_price_gross": 471885,
-      "ma20_krw": 441266
+      "krw_price": 470423,
+      "krw_price_gross": 471839,
+      "ma20_krw": 441223
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 156.67,
-      "krw_price": 208186,
-      "krw_price_gross": 208813,
-      "ma20_krw": 234688
+      "krw_price": 208166,
+      "krw_price_gross": 208793,
+      "ma20_krw": 234665
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 150.96,
-      "krw_price": 200599,
-      "krw_price_gross": 201203,
-      "ma20_krw": 251200
+      "krw_price": 200579,
+      "krw_price_gross": 201183,
+      "ma20_krw": 251176
     }
   },
-  "valuation_date": "2026-11-18T21:20",
+  "valuation_date": "2026-11-18T22:10",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,17 +146,17 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
-        "current": 341.6,
-        "krw_price": 455992,
-        "change": 2.46,
+        "current": 354.05,
+        "krw_price": 471839,
+        "change": 3.64,
         "signal": "",
-        "shares": 0.0263,
+        "shares": 0.0254,
         "spent": 12000,
         "carry": 0,
         "available": 12000,
@@ -166,9 +166,9 @@
         "ticker": "PLTR",
         "name": "Palantir",
         "account": "general",
-        "current": 156.56,
-        "krw_price": 208987,
-        "change": -2.39,
+        "current": 156.67,
+        "krw_price": 208793,
+        "change": 0.07,
         "signal": "",
         "shares": 0.0431,
         "spent": 9000,
@@ -180,11 +180,11 @@
         "ticker": "NVDA",
         "name": "Nvidia",
         "account": "general",
-        "current": 155.46,
-        "krw_price": 207519,
-        "change": -0.44,
+        "current": 150.96,
+        "krw_price": 201183,
+        "change": -2.89,
         "signal": "",
-        "shares": 0.0434,
+        "shares": 0.0447,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -194,7 +194,7 @@
     "ai_comment": null,
     "dip_note": null
   },
-  "fx": 1332.82,
+  "fx": 1332.69,
   "asset_history": [
     {
       "date": "2026-07-16",
