@@ -82,31 +82,31 @@
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
-      "current": 354.05,
-      "krw_price": 468591,
-      "krw_price_gross": 470001,
-      "ma20_krw": 439505
+      "current": 346.65,
+      "krw_price": 461189,
+      "krw_price_gross": 462577,
+      "ma20_krw": 443353
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
-      "current": 156.67,
-      "krw_price": 207355,
-      "krw_price_gross": 207979,
-      "ma20_krw": 233751
+      "current": 153.68,
+      "krw_price": 204458,
+      "krw_price_gross": 205074,
+      "ma20_krw": 232142
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
-      "current": 150.96,
-      "krw_price": 199798,
-      "krw_price_gross": 200399,
-      "ma20_krw": 250198
+      "current": 145.98,
+      "krw_price": 194214,
+      "krw_price_gross": 194799,
+      "ma20_krw": 247096
     }
   },
-  "valuation_date": "2026-11-19T11:57",
+  "valuation_date": "2026-11-19T21:23",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": null,
     "dip_note": null
   },
-  "fx": 1327.5,
+  "fx": 1334.42,
   "asset_history": [
     {
       "date": "2026-07-16",
