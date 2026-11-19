@@ -64,49 +64,49 @@
       "name": "KODEX 미국휴머노이드로봇",
       "account": "ISA",
       "type": "etf",
-      "current": 12780.0,
-      "krw_price": 12780,
-      "krw_price_gross": 12780,
-      "ma20_krw": 13580
+      "current": 12890.0,
+      "krw_price": 12890,
+      "krw_price_gross": 12890,
+      "ma20_krw": 13585
     },
     "0023A0.KS": {
       "name": "SOL 미국양자컴퓨팅TOP10",
       "account": "ISA",
       "type": "etf",
-      "current": 15160.0,
-      "krw_price": 15160,
-      "krw_price_gross": 15160,
-      "ma20_krw": 17513
+      "current": 15470.0,
+      "krw_price": 15470,
+      "krw_price_gross": 15470,
+      "ma20_krw": 17528
     },
     "AVGO": {
       "name": "Broadcom",
       "account": "general",
       "type": "stock",
       "current": 354.05,
-      "krw_price": 469502,
-      "krw_price_gross": 470915,
-      "ma20_krw": 440359
+      "krw_price": 468821,
+      "krw_price_gross": 470231,
+      "ma20_krw": 439720
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 156.67,
-      "krw_price": 207758,
-      "krw_price_gross": 208384,
-      "ma20_krw": 234205
+      "krw_price": 207457,
+      "krw_price_gross": 208081,
+      "ma20_krw": 233866
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 150.96,
-      "krw_price": 200187,
-      "krw_price_gross": 200789,
-      "ma20_krw": 250684
+      "krw_price": 199896,
+      "krw_price_gross": 200498,
+      "ma20_krw": 250320
     }
   },
-  "valuation_date": "2026-11-19T02:40",
+  "valuation_date": "2026-11-19T10:47",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -194,7 +194,7 @@
     "ai_comment": null,
     "dip_note": null
   },
-  "fx": 1330.08,
+  "fx": 1328.15,
   "asset_history": [
     {
       "date": "2026-07-16",
