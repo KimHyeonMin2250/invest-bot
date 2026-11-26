@@ -83,30 +83,30 @@
       "account": "general",
       "type": "stock",
       "current": 300.86,
-      "krw_price": 402861,
-      "krw_price_gross": 404073,
-      "ma20_krw": 437849
+      "krw_price": 402921,
+      "krw_price_gross": 404133,
+      "ma20_krw": 437914
     },
     "PLTR": {
       "name": "Palantir",
       "account": "general",
       "type": "stock",
       "current": 163.59,
-      "krw_price": 219052,
-      "krw_price_gross": 219711,
-      "ma20_krw": 222698
+      "krw_price": 219085,
+      "krw_price_gross": 219744,
+      "ma20_krw": 222731
     },
     "NVDA": {
       "name": "Nvidia",
       "account": "general",
       "type": "stock",
       "current": 149.3,
-      "krw_price": 199917,
-      "krw_price_gross": 200519,
-      "ma20_krw": 230953
+      "krw_price": 199947,
+      "krw_price_gross": 200549,
+      "ma20_krw": 230987
     }
   },
-  "valuation_date": "2026-11-26T22:55",
+  "valuation_date": "2026-11-26T23:07",
   "sell_signals": [],
   "sell_note": null,
   "action_log": [],
@@ -146,14 +146,14 @@
     "dip_note": null
   },
   "last_general": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "actions": [
       {
         "ticker": "AVGO",
         "name": "Broadcom",
         "account": "general",
         "current": 300.86,
-        "krw_price": 404202,
+        "krw_price": 404133,
         "change": -0.07,
         "signal": "",
         "shares": 0.0297,
@@ -167,10 +167,10 @@
         "name": "Palantir",
         "account": "general",
         "current": 163.59,
-        "krw_price": 219782,
+        "krw_price": 219744,
         "change": 1.5,
         "signal": "",
-        "shares": 0.0409,
+        "shares": 0.041,
         "spent": 9000,
         "carry": 0,
         "available": 9000,
@@ -181,7 +181,7 @@
         "name": "Nvidia",
         "account": "general",
         "current": 149.3,
-        "krw_price": 200583,
+        "krw_price": 200549,
         "change": -3.91,
         "signal": "🟡 하락 (-3%대)",
         "shares": 0.1167,
@@ -194,7 +194,7 @@
     "ai_comment": null,
     "dip_note": null
   },
-  "fx": 1343.06,
+  "fx": 1343.26,
   "asset_history": [
     {
       "date": "2026-07-16",
